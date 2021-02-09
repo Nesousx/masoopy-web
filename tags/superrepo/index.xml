@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>superrepo - Tag - Masoopy</title><link>https://www.masoopy.com/tags/superrepo/</link><description>superrepo - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Dec 2015 10:58:20 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/superrepo/" rel="self" type="application/rss+xml"/><item><title>Kodi beginner's guide</title><link>https://www.masoopy.com/kodi-beginners-guide/</link><pubDate>Mon, 07 Dec 2015 10:58:20 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-beginners-guide/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/2021/02/kodi_beginner_guide.png" referrerpolicy="no-referrer">
+&lt;/div>As a great alternative to popcorn time, I am going to share with you a nice Kodi beginner’s guide.
+How to install Kodi Browse to official Kodi website, and download the version of your liking (ie. Windows or Mac OS). Click here in order to get directly there!
+Here is a little video to help you :
+Once Kodi is installed, it is time to set up the “appropriate” addons.</description></item><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi_superrepo.png" referrerpolicy="no-referrer">
+            </div>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.
+How to install SuperRepo on Kodi Go to Kodi Settings &gt; File manager :
+ Select Add source :
+ Enter the following URL, “http://SRP.nu” (without quotes) :
+ Once done, it should look like this (notice SRP as name of media source) :
+ Now go to Settings &gt; Add-ons :
+ Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :]]></description></item></channel></rss>

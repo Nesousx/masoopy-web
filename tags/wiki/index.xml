@@ -1,0 +1,11 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>wiki - Tag - Masoopy</title><link>https://www.masoopy.com/tags/wiki/</link><description>wiki - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 16 Sep 2017 10:44:13 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/wiki/" rel="self" type="application/rss+xml"/><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/bios.png" referrerpolicy="no-referrer">
+            </div>In this quick guide, let&rsquo;s see how to access the BIOS of any system.
+What is the BIOS? Basically, the BIOS is the place where you can configure how the hardware works (like speed of the FAN), and how you computer boots (such as booting an external USB disk instead of the internal disk).
+It is pretty common to access the BIOS (or better, the boot menu, which is related to the BIOS) when you can to install a new OS, or reinstall your system.]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/burn_iso_2_usb.png" referrerpolicy="no-referrer">
+            </div>Let&rsquo;s see how to &ldquo;burn&rdquo; an image file (or .iso file) to an USB stick and make it bootable.
+NB: please note that in every case, all the data on your USB stick will be erased!!
+Windows Under Windows, simply download, install and run Rufus. Then follow the on-screen instructions.
+Macos Much like Windows, on Macos, you can use a tool called Etcher and follow the on-screen instructions.
+Linux Now, it becomes a little harder / funnier.]]></description></item></channel></rss>
