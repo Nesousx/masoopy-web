@@ -1,5 +1,5 @@
 ---
-title: "HTM - OpenAdmin"
+title: "HTB - OpenAdmin"
 date: 2021-02-08T12:42:29+01:00
 categories: ["hacking"]
 tags: [HTB]
