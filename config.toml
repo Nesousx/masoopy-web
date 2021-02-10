@@ -2,6 +2,7 @@ baseURL = "https://www.masoopy.com/"
 languageCode = "en-us"
 title = "Masoopy"
 theme = "uBlogger"
+enableRobotsTXT = true
 
 [permalinks]
   posts = "/:title/"
@@ -38,6 +39,13 @@ theme = "uBlogger"
     url = "/categories/"
     title = ""
     weight = 3
+
+  [[menu.main]]
+    identifier = "twitter"
+    name = "React on Twitter!"
+    pre = "<i class='fab fa-twitter'></i>"
+    url = "https://twitter.com/nesousx"
+    weight = 4
 
 # Markup related configuration in Hugo
 [markup]
