@@ -27,11 +27,11 @@ On the 1080p TV, the Shield will only work a 4K resolution with reduced refresh 
 
 Here is a picture of a 1080p TV with 4K resolution at 60Hz, not definitely not usable :
 
-![](/2015/12/4K_60hz.jpg)
+![](/images/2015/12/4K_60hz.jpg)
 
 Now, same 1080p TV but 4K @ 24hz :
 
-![Shield 4K @ 24Hz](/2015/12/4K_24hz.jpg)
+![Shield 4K @ 24Hz](/images/2015/12/4K_24hz.jpg)
 
 On the 4K, it works as it is supposed to. But honestly, sitting on your couch a few meters away, it is hard to tell the difference between a 4K Shield TV vs a Raspberry Pi 2 1080p setup.
 
@@ -43,7 +43,7 @@ Gamepad is pretty big, fat an heavier than any other gamepad. Holding it in your
 
 Let’s compare sizes on a picture :
 
-![](/2015/12/gamepafs1.jpg)
+![](/images/2015/12/gamepafs1.jpg)
 
 Now about the weight :
 
