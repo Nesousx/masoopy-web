@@ -1,7 +1,7 @@
 ---
 title: "HTB - OpenAdmin"
 date: 2021-02-08T12:42:29+01:00
-categories: ["hacking"]
+categories: ["hacking","write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/OpenAdmin.png"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "HTB - Blue"
 date: 2021-01-30T16:37:44+01:00
-categories: ["hacking"]
+categories: ["hacking","write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/Blue.png"
 ---
