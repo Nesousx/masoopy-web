@@ -2,7 +2,6 @@ baseURL = "https://www.masoopy.com/"
 languageCode = "en-us"
 title = "Masoopy"
 theme = "uBlogger"
-disqusShortname = "streaming-generation"
 
 [permalinks]
   posts = "/:title/"
