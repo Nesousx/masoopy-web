@@ -171,6 +171,7 @@
         {{- end -}}
         {{- end -}}
         {{- /* Comment */ -}}
+	{{ template "_internal/disqus.html" . }}
         {{- partial "comment.html" . -}}
     </div>
     {{- end -}}
