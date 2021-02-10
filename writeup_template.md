@@ -1,7 +1,7 @@
 ---
 title: "$platform - $box "
 date: $date
-categories: ["hacking"]
+categories: ["hacking", "write-ups"]
 tags: [$platform]
 featuredImage: "/$box.png"
 ---

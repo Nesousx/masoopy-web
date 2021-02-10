@@ -23,6 +23,19 @@ enableRobotsTXT = true
     # title will be shown when you hover on this menu link
     title = ""
     weight = 1
+
+  [[menu.main]]
+    identifier = "pages"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Pages"
+    url = "/pages/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 2
+
   [[menu.main]]
     identifier = "tags"
     pre = ""
@@ -30,7 +43,8 @@ enableRobotsTXT = true
     name = "Tags"
     url = "/tags/"
     title = ""
-    weight = 2
+    weight = 3
+    
   [[menu.main]]
     identifier = "categories"
     pre = ""
@@ -38,14 +52,14 @@ enableRobotsTXT = true
     name = "Categories"
     url = "/categories/"
     title = ""
-    weight = 3
+    weight = 4
 
   [[menu.main]]
     identifier = "twitter"
     name = "React on Twitter!"
     pre = "<i class='fab fa-twitter'></i>"
     url = "https://twitter.com/nesousx"
-    weight = 4
+    weight = 5
 
 # Markup related configuration in Hugo
 [markup]
