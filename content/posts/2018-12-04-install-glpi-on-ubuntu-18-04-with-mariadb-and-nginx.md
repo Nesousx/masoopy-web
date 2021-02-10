@@ -5,8 +5,8 @@ categories:
 - linux
 tags:
 - asset management
-permalink: "/install-glpi-on-ubuntu-18-04-with-mariadb-and-nginx/"
-FeaturedImage: "/images//2018/12/Install-GLPI-on-Ubuntu-18.04-with-MariaDB-and-NGinX.png"
+aliases: "/install-glpi-on-ubuntu-18-04-with-mariadb-and-nginx/"
+FeaturedImage: "/images/2018/12/Install-GLPI-on-Ubuntu-18-04-with-MariaDB-and-NGinX.png"
 ---
 [GLPI](https://glpi-project.org/) is an asset management software. It can handle automatic inventory of your assets (workstations, servers, printers, etc.) ticketing, and much more. Let's see how to install it under Ubuntu with MariaDB and NGinX.
 
