@@ -1,7 +1,6 @@
 ---
 title: "THM - Alfred"
 date: 2021-02-11T14:26:15+01:00
-draft: true
 categories: ["hacking", "write-ups"]
 tags: [THM]
 featuredImage: "/images/2021/02/Alfred_Logo.png"
