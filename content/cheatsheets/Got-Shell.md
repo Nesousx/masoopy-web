@@ -39,3 +39,5 @@ What to do when you have a shell?
 `arp -a`
 
 `netstat -ano`
+
+`dir C:\`

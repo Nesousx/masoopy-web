@@ -28,8 +28,8 @@ sudo nmap -T4 -A -p- $target_ip
 ```
 
 ```text
-# Nmap 7.91 scan initiated Thu Jan 28 15:27:52 2021 as: nmap -T4 -A -p- -oA HTB/OpenAdmin/nmap 10.129.88.186
-Nmap scan report for 10.129.88.186
+# Nmap 7.91 scan initiated Thu Jan 28 15:27:52 2021 as: nmap -T4 -A -p- -oA HTB/OpenAdmin/nmap $target_ip
+Nmap scan report for $target_ip
 Host is up (0.023s latency).
 Not shown: 65533 closed ports
 PORT   STATE SERVICE VERSION
@@ -60,7 +60,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 TRACEROUTE (using port 143/tcp)
 HOP RTT      ADDRESS
 1   22.95 ms 10.10.14.1
-2   24.65 ms 10.129.88.186
+2   24.65 ms $target_ip
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Thu Jan 28 15:28:39 2021 -- 1 IP address (1 host up) scanned in 47.14 seconds
@@ -181,6 +181,8 @@ john -wordlist=/usr/share/wordlists/rockyou.txt joanna.hash
 ```
 
 We finally, have joanna's ssh key password, we can now connect to the server as her!
+
+### PrivEsc
 
 As usual, we do all our basic checks. Doing so, we will notice :
 
