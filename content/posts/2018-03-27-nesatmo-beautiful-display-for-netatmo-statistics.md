@@ -24,7 +24,7 @@ Usually, I am not much into proprietary solution but I have to admit that this s
 
 However, the website looks really bad and the graphs suck, see :
 
-![netatmo](/images/2018/03/netatmo-1024x671.png)
+![netatmo](/images/2018/03/netatmo.png)
 
 This is why I'll show you how to get beautiful graphs.
 
@@ -44,7 +44,7 @@ Then create a docker-compose.yml file and edit it according to your config :
 
 You can now create your own Grafana dashboard that could look like this :
 
-![nesatmo](/images/2018/03/nesatmo-1024x542.png)
+![nesatmo](/images/2018/03/nesatmo.png)
 
 If you want to get mine, [here it is](https://gist.github.com/Nesousx/3941d33ee6c2282c29fa70e69c54fb1f).
 

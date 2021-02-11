@@ -1,7 +1,7 @@
 ---
 title: "Popping a Shell!"
 date: 2021-02-10T17:23:05+01:00
-categories: ["hacking", "cheat-sheets"]
+categories: []
 tags: []
 ---
 

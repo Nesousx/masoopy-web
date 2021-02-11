@@ -23,7 +23,7 @@ Today, there is hundreds (if not thousands) of TV shows and movies. I enjoy a lo
 
 1. Then, go to "More", then "All Available Plugins", wait for the page to load (it might take a few moments) :
 
-![Plex_plugins_all_howto](/images/2018/04/Plex_plugins_all_howto-1024x403.png)
+![Plex_plugins_all_howto](/images/2018/04/Plex_plugins_all_howto.png)
 
 1. Once the page has finished loading, search for "Sub-zero". Click on the thumbnail and install the plugin.
 
@@ -37,7 +37,7 @@ That's it, the plugin is now installed, it is time to set it up!
 
 1. Go to Settings > Server > Agents, an overwhelmning 3 clicks process :
 
-![Plex_agents_howto-1](/images/2018/04/Plex_agents_howto-1-1024x574.png)
+![Plex_agents_howto-1](/images/2018/04/Plex_agents_howto-1.png)
 
 1. Now, in "Movies" : "Plex Movie" and "The Movie Database", check the "Sub-zero" boxes.
 2. Repeat the same operation for "Shows" : "TheTVDB" and "The Movie Database".
@@ -48,7 +48,7 @@ Finally, we should tweak Sub-zero settings in order to make sure it finds the be
 
 1. Another 3 clicks process, go back to Home screen > Plugins > Mouse over the the Sub-zero thumbnail and click the "Gear icon".
 
-![Plex_subzero_config_howto](/images/2018/04/Plex_subzero_config_howto-1024x326.png)
+![Plex_subzero_config_howto](/images/2018/04/Plex_subzero_config_howto.png)
 
 1. From here, just fill in the fields according to your needs. I highly advise you to create and use accounts from [OpenSubtitles](https://www.opensubtitles.org) and [Addic7ed](http://www.addic7ed.com/).
 

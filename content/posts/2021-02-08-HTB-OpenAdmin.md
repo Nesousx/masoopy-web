@@ -81,7 +81,7 @@ And dirbuster like so :
 
 Dirbuster, will find an interesting dir "ona", browsing to this ressource we discorverd it is running OpenNetAdmni version 18.1.1 which is outdated and probably vulnerable...
 
-![](/ONA.png)
+![](/images/2021/02/ONA.png)
 
 Indeed, after a quick search, we discover that it is vulnerable to Remote Code Execution (RCE), one of the most dangerous vuln we could find. Awesome!
 

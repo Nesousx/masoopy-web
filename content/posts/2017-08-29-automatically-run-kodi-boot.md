@@ -20,11 +20,11 @@ First of all, make sure you can can log into the Windows desktop automatically. 
 
 `control userpasswords2`
 
-![](/images/2017/08/Controluserpasswords21-300x161.gif)
+![](/images/2017/08/Controluserpasswords21.gif)
 
 - Make sure “Users must enter a username and password to use this computer” is unchecked. If not, do it.
 
-![](/images/2017/08/auto_logon_windows-278x300.png)
+![](/images/2017/08/auto_logon_windows.png)
 
 - If prompted, enter the username / password you want to automatically log in with.
 
@@ -34,7 +34,7 @@ Now, that autologin is set-up, we will do what’s necessary in order to automat
 
 `regedit`
 
-![](/images/2017/08/regedit-300x161.png)
+![](/images/2017/08/regedit.png)
 
 - From here, browse to :
 

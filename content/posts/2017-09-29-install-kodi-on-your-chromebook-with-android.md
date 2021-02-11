@@ -26,11 +26,11 @@ So, you have the Play Store icon in the icon bar at the bottom of the screen? Gr
 
 Once the update is over, simply click on Play Store icon one more time, and search for Kodi :
 
-![Screenshot-2017-09-29-at-2.08.19-PM](/images/2017/09/Screenshot-2017-09-29-at-2.08.19-PM-1024x576.png)
+![Screenshot-2017-09-29-at-2.08.19-PM](/images/2017/09/Screenshot-2017-09-29-at-2.08.19-PM.png)
 
 Now, simply install it :
 
-![Optimized-Screenshot-2017-09-29-at-2.08.32-PM](/images/2017/09/Optimized-Screenshot-2017-09-29-at-2.08.32-PM-1024x575.png)
+![Optimized-Screenshot-2017-09-29-at-2.08.32-PM](/images/2017/09/Optimized-Screenshot-2017-09-29-at-2.08.32-PM.png)
 
 That's it! You now have the latest Kodi version installed with no pain.
 
