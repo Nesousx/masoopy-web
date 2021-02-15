@@ -1,7 +1,6 @@
 ---
 title: "HTB - NetMon"
 date: 2021-02-12T14:56:25+01:00
-draft: true
 categories: ["hacking", "write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/NetMon_Logo.png"
