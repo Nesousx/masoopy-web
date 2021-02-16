@@ -172,7 +172,7 @@ From here, we connect to our remote machine :
 Enter-PSsession -ComputerName $target_ip -Authentication Negotiate -Credential pentest
 ```
 
-One we are in, we simply browse to the flag dir and display it :
+One we are in as `SYSTEM`, we simply browse to the flag dir and display it :
 
 ![NetMon Root Flag](/images/2021/02/NetMon_root_flag.png)
 

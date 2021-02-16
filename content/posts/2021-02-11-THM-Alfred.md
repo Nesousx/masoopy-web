@@ -170,7 +170,7 @@ Thanks to power of metasploit, a simple `getsystem` will give us root:
 
 ![Jenkins root](/images/2021/02/jenkins_user_root.png)
 
-NB : this is where MetaSploit is clearly TOO powerful! I gained root, using only one command... I have no idea what went on behind the scenes! I clearly need to look for a manual way to do that. But this will be for another time.
+NB : this is where MetaSploit is clearly TOO powerful! I gained `SYSTEM`, using only one command... I have no idea what went on behind the scenes! I clearly need to look for a manual way to do that. But this will be for another time.
 
 
 Since we are "root", let's search for the flag :
