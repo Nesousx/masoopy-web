@@ -5,10 +5,10 @@ Recon Quick recon based on HTB logo and info :
 Windows box ; Misc info : web, PowerShell, file misconfiguration ; Probably runs PRTG NetWork Monitor tool. Enum sudo nmap -T4 -A -p- -oA nmap $target_ip Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-12 15:25 CET Nmap scan report for $target_ip Host is up (0.</description></item><item><title>HTB - OpenAdmin</title><link>https://www.masoopy.com/htb-openadmin/</link><pubDate>Mon, 08 Feb 2021 12:42:29 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-openadmin/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/OpenAdmin.png" referrerpolicy="no-referrer">
             </div>The importance to also patch your &ldquo;applications&rdquo;, and not just your services.
-Recon Again, this is an HTB box, so recon is mainly active, and I feel like activ recon == enum.
+Recon Again, this is an HTB box, so recon is mainly active, and I feel like active recon == enum.
 Still, we can check :
  Name of the box : OpenAdmin ; OS &ldquo;type&rdquo;, : Linux : Hints given on HTB website, information section :   
 Enum As always, we start with an nmap scan :]]></description></item><item><title>HTB - Blue</title><link>https://www.masoopy.com/htb-blue/</link><pubDate>Sat, 30 Jan 2021 16:37:44 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-blue/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/Blue.png" referrerpolicy="no-referrer">
             </div>A good ol' vuln to get starting!
-This will be my first real tutorial, so I&rsquo;ll try to explain the basics of what I am doing. Please bear in mind that I am very new to haking, probably like you are. I am merely sharing my knowledge and by doing so I am making sure I inderstood what I did. Please correct me if you find anything wrong, or ask question if you need to!]]></description></item></channel></rss>
+This will be my first real tutorial, so I&rsquo;ll try to explain the basics of what I am doing. Please bear in mind that I am very new to hacking, probably like you are. I am merely sharing my knowledge and by doing so I am making sure I understood what I did. Please correct me if you find anything wrong, or ask question if you need to!]]></description></item></channel></rss>
