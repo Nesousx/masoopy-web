@@ -129,9 +129,9 @@ In the `Users\Public` folder we will find our user flag.
 
 ![NetMon User Flag](/images/2021/02/NetMon_user_flag.png)
 
-Now, I am guessing that the most relevant folder will be `/Program Files (x86)/PRTG Network Monitor` in which we might find usefull info such as installation logs, and maybe even credentials if we are super lucky.
+Now, I am guessing that the most relevant folder will be `/Program Files (x86)/PRTG Network Monitor` in which we might find useful info such as installation logs, and maybe even credentials if we are super lucky.
 
-So far, we haven't found much... My guess is still with PRTG logs or sometthing similar. I will then explore PRTG folder for antything intesresting, and also common places we might have access to.
+So far, we haven't found much... My guess is still with PRTG logs or something similar. I will then explore PRTG folder for anything interesting, and also common places we might have access to.
 
 In order to make exploration more easier, I am using `FileZilla`.
 
@@ -145,11 +145,11 @@ Notice the slightly different error message when testing with a fake username (u
 
 ![NetMon Forgot Password NOK](/images/2021/02/NetMon_forgot_pass_NOK.png)
 
-While researching on internet where PRTG stores its credentials, I came across a few pages where it seems that our version leaks clear text password in the `ProgramData` folder. Now, I tried to access this folder from my FTP client and could't do it... I have been stuck here for HOURS! So I cheated, and checked official walkthrough. It turns out, I made a typo... and one can access the said folder and get some juicy files, especially `PRTG Configuration.old.bak`. Inside this file, we'll find Graal (or, do we?) :
+While researching on internet where PRTG stores its credentials, I came across a few pages where it seems that our version leaks clear text password in the `ProgramData` folder. Now, I tried to access this folder from my FTP client and couldn't do it... I have been stuck here for HOURS! So I cheated, and checked official walk through. It turns out, I made a typo... and one can access the said folder and get some juicy files, especially `PRTG Configuration.old.bak`. Inside this file, we'll find Graal (or, do we?) :
 
 ![NetMon Credentials](/images/2021/02/NetMon_credentials.png)
 
-Once agan, and I have no idea why this time (probably another typo?) I also went stuck for too long. The password in the backup file ends in 2018, but unfortunately it doesn't work. One can assume it is an old password, and the year has changed, so has the password. Hence, I tried to replace the year with 2019, 2020, 2021 and even 2022 (current year + 1)... Nothing worked... I was really feeling down and cheated, again. It happens that the second password I tested was the correct one! I tried it again, and this time, it worked and I was finally inside the admin panel!
+Once again, and I have no idea why this time (probably another typo?) I also went stuck for too long. The password in the backup file ends in 2018, but unfortunately it doesn't work. One can assume it is an old password, and the year has changed, so has the password. Hence, I tried to replace the year with 2019, 2020, 2021 and even 2022 (current year + 1)... Nothing worked... I was really feeling down and cheated, again. It happens that the second password I tested was the correct one! I tried it again, and this time, it worked and I was finally inside the admin panel!
 
 Now that we are authenticated, it is finally time to check our [Authenticated RCE we found earlier](https://www.exploit-db.com/exploits/46527).
 

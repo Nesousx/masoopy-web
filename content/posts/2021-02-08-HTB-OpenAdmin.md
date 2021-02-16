@@ -9,7 +9,7 @@ The importance to also patch your "applications", and not just your services.
 
 ## Recon
 
-Again, this is an HTB box, so recon is mainly active, and I feel like activ recon == enum.
+Again, this is an HTB box, so recon is mainly active, and I feel like active recon == enum.
 
 Still, we can check : 
 
@@ -79,7 +79,7 @@ And dirbuster like so :
 
 ![](/images/2021/02/2021-02-08_11-28.png)
 
-Dirbuster, will find an interesting dir "ona", browsing to this ressource we discorverd it is running OpenNetAdmni version 18.1.1 which is outdated and probably vulnerable...
+Dirbuster, will find an interesting dir "ona", browsing to this resource we discovered it is running OpenNetAdmin version 18.1.1 which is outdated and probably vulnerable...
 
 ![](/images/2021/02/ONA.png)
 
@@ -101,13 +101,13 @@ find / -xdev -type f -user $current_user
 ls -lhtrR /etc/sudo*
 ```
 
-I also like to check what users are on the system and see if I can acces some files inside their home's folders :
+I also like to check what users are on the system and see if I can access some files inside their home's folders :
 
 ```text
 cat /etc/passwd && ls -lhtrR /home/
 ```
 
-And of course in our case, explore the webroot folders.
+And of course in our case, explore the web root folders.
 
 Doing so, we discover two users : `joanna` and `jimmy` and an interesting set of credentials inside `/var/www/html/local/ona/config`.
 
