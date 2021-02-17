@@ -1,7 +1,6 @@
 ---
 title: "Going from WordPress to Hugo and GitHub Actions!"
 date: 2021-02-15T15:48:01+01:00
-draft: true
 categories: ["web"]
 tags: [hugo]
 permalinks: "Going from WordPress to Hugo and GitHub Actions!"
@@ -11,7 +10,7 @@ I finally did it! After years thinking about it, I finally migrated my Wordpress
 
 ## Why change?
 
-I got fed up with Wordpress being full of "stuff", loading a webpage took ages (well, seconds..., but still too much) while my content is mostly text and a few small images. Moreover, I wanted to be able to write my posts using Markdown. Last but not least, I hadn't blog for years and when I decided to blog again, I discovered the Gutenberg Experience : this was the last straw to my Wordpress' adventure!
+I got fed up with Wordpress being full of "stuff", loading a webpage took ages (well, seconds..., but still too much) while my content is mostly text and a few small images. Moreover, I wanted to be able to write my posts using Markdown. Also, Wordpress and all its plugin have a lot of vuln, and it is a constant game of cat and mouse to stay up to date. Last but not least, I hadn't blogged for years and when I decided to blog again, I discovered the Gutenberg Experience : this was the last straw to my Wordpress' adventure!
 
 ## What for?
 
@@ -35,7 +34,7 @@ Let's give it a go, dare I say!
 
 ## Converting Wordpress to markdown
 
-I did this step, pretty early : when I planned to use Jekyll. Converting any Wordpress website to markdown IS painful. It can be automated in some way (hello, regex!) but there is a lot of proofreading and manual fixing.
+I did this step, pretty early : when I planned to use Jekyll. Converting any Wordpress website to Markdown IS painful. It can be automated in some way (hello, regex!) but there is a lot of proofreading and manual fixing.
 
 ### Exporting Wordpress Data
 
@@ -49,7 +48,7 @@ For this part, I ran the following command :
 pelican-import -m markdown --wpfile -o posts ./masoopy.WordPress.2021-01-31.xml
 ```
 
-Before, that, I had to install a tons of programs in order to have `pelican`, and all the required components. It was ugly and painful.
+Before, that, I had to install a ton of programs in order to have `pelican`, and all the required components. It was ugly and painful.
 
 ### Manual fixing
 
