@@ -20,7 +20,7 @@ I will process simply by following the 5 stages of Ethical Hacking.
 
 ##  Recon
 
-Doing HTB boxes, there will be no proper reconnaissance phase; since Googling for the box will obviously leave to solution which we do not want... Let's just say we can use the name to have a guess. Here, a Windows machine called Blue probably means we'll have to deal with MS17-010.. So I'll pay close attention to anything related to SMB.
+Doing HTB boxes, there will be no proper reconnaissance phase; since Googling for the box will obviously leave to solution which we do not want... Let's just say we can use the name to have a guess. Here, a Windows machine called Blue probably means we'll have to deal with MS17-010. So I'll pay close attention to anything related to SMB.
 
 ##  Enum
 

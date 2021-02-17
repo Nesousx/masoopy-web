@@ -26,9 +26,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
     identifier = "cheatsheets"
-    # you can add extra information before the name (HTML format is supported), such as icons
     pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
     name = "Cheatsheets"
     url = "/cheatsheets/"
@@ -55,10 +53,13 @@ enableRobotsTXT = true
     weight = 4
 
   [[menu.main]]
-    identifier = "twitter"
-    name = "React on Twitter!"
-    pre = "<i class='fab fa-twitter'></i>"
-    url = "https://twitter.com/nesousx"
+    identifier = "About"
+    pre = ""
+    post = ""
+    name = "About"
+    url = "/about/"
+    # title will be shown when you hover on this menu link
+    title = ""
     weight = 5
 
 # Markup related configuration in Hugo
