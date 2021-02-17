@@ -128,5 +128,5 @@ By looking inside the users.xml file we can suppose that `admin` is the login. N
 
 ## Exploitation
 
-## Conclusion
+## Outro
 

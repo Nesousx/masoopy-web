@@ -198,6 +198,6 @@ cat "c:\Windows\System32\config\root.txt"
 ![Jenkins Root Flag](/images/2021/02/jenkins_root_flag.png)
 
 
-## Conclusion
+## Outro
 
 This was a fun box, pretty straight forward, where a simple misconfiguration, led to a fully remote access... again!

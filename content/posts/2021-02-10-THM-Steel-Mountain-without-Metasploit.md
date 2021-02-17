@@ -18,4 +18,4 @@ featuredImage: "/images/2021/02/Steel_Mountain_Logo.png"
 
 ## Exploitation
 
-## Conclusion
+## Outro

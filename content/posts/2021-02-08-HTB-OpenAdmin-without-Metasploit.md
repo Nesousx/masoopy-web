@@ -201,6 +201,6 @@ Accessing root password which is always located in `/root/root.txt` is a simple 
 
 We now got `root.txt`!
 
-## Conclusion
+## Outro
 
 As we have just seen, one can obtain root access to a machine via "third party" application while the rest of the system is up to date. So, make sure to keep everything updated!

@@ -184,7 +184,7 @@ One we are in as `SYSTEM`, we simply browse to the flag dir and display it :
 
 ![NetMon Root Flag](/images/2021/02/NetMon_root_flag.png)
 
-## Conclusion
+## Outro
 
 While everything seemed pretty straightforward I spent way more time than I care to admit for stupid mistakes on my side. Which in the end made it a very exhausting box for me. Once again, we saw how nasty a few misconfiguration + CVE can be!
 

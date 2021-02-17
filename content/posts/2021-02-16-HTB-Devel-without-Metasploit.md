@@ -140,6 +140,6 @@ Now getting `user` and `root` flags was just a matter of browsing to the correct
 
 ![Devel Root Flag](/images/2021/02/Devel_Root_Flag.png)
 
-## Conclusion
+## Outro
 
 After my [debacle](https://www.masoopy.com/htb-netmon/) from the last box, it felt awesome to be able to pwn this one easily. I feel my efforts are starting to pay off and that I begin to get the "hang of it". Hacker's mind in coming, and it is good!
