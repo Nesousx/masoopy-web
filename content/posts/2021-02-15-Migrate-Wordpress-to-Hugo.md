@@ -10,7 +10,13 @@ I finally did it! After years thinking about it, I finally migrated my Wordpress
 
 ## Why change?
 
-I got fed up with Wordpress being full of "stuff", loading a webpage took ages (well, seconds..., but still too much) while my content is mostly text and a few small images. Moreover, I wanted to be able to write my posts using Markdown. Also, Wordpress and all its plugin have a lot of vuln, and it is a constant game of cat and mouse to stay up to date. Last but not least, I hadn't blogged for years and when I decided to blog again, I discovered the Gutenberg Experience : this was the last straw to my Wordpress' adventure!
+I got fed up with Wordpress being full of "stuff", loading a webpage took ages (well, seconds..., but still too much) while my content is mostly text and a few small images. 
+
+Moreover, I wanted to be able to write my posts using Markdown. 
+
+Also, Wordpress and all its plugin have a lot of vuln, and it is a constant game of cat and mouse to stay up to date. 
+
+Last but not least, I hadn't blogged for years and when I decided to blog again, I discovered the Gutenberg Experience : this was the last straw to my Wordpress' adventure!
 
 ## What for?
 
