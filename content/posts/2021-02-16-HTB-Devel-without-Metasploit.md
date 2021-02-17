@@ -9,6 +9,11 @@ aliases:
    - /htb-devel-without-metasploit/
    - /htb-devel/
 ---
+## Box
+
+[HTB - Devel](https://app.hackthebox.eu/machines/3)
+
+## Intro
 Pretty fast and obvious box. Let me guide through my pwn:
 
 ## Recon

@@ -5,6 +5,11 @@ categories: ["hacking", "write-ups"]
 tags: [$platform]
 featuredImage: "/$box.png"
 ---
+## Box
+
+[$platform - $box]($url)
+
+## Intro
 
 ## Recon
 

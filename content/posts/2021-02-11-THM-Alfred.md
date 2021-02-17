@@ -5,6 +5,12 @@ categories: ["hacking", "write-ups"]
 tags: [THM]
 featuredImage: "/images/2021/02/Alfred_Logo.png"
 ---
+## Box
+
+[THM - Alfred](https://tryhackme.com/room/alfred)
+
+## Intro
+
 Without further ado, let's get started and see what this box is made of!
 
 ## Recon

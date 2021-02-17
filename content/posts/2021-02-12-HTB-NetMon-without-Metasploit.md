@@ -8,6 +8,11 @@ aliases:
     - /htb-netmon-without-metasploit/
     - /htb-netmon/
 ---
+## Box
+
+[HTB - NetMon](https://app.hackthebox.eu/machines/177)
+
+## Intro
 An easy box according to HTB ranking and a not so easy one according to [this site](https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview#). For me, it was really painful. Let me overshare!
 
 ## Recon

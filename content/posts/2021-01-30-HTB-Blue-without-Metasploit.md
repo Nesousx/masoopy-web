@@ -8,6 +8,11 @@ aliases:
     - /htb-blue-without-metasploit/
     - /htb-blue/
 ---
+## Box
+
+[HTB - Blue](https://app.hackthebox.eu/machines/51)
+
+## Intro
 A good ol' vuln to get starting!
 
 This will be my first real tutorial, so I'll try to explain the basics of what I am doing. Please bear in mind that I am very new to hacking, probably like you are. I am merely sharing my knowledge and by doing so I am making sure I understood what I did. Please correct me if you find anything wrong, or ask question if you need to! I'll be happy to engage a discussion.
