@@ -1,9 +1,12 @@
 ---
-title: "HTB - OpenAdmin"
+title: "HTB - OpenAdmin without MetaSploit"
 date: 2021-02-08T12:42:29+01:00
 categories: ["hacking","write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/OpenAdmin.png"
+aliases:
+  - /htb-openadmin-without-metasploit/
+  - /htb-openadmin/
 ---
 The importance to also patch your "applications", and not just your services.
 

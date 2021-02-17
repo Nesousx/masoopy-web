@@ -1,9 +1,12 @@
 ---
-title: "HTB - Blue"
+title: "HTB - Blue without MetaSploit"
 date: 2021-01-30T16:37:44+01:00
 categories: ["hacking","write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/Blue.png"
+aliases:
+    - /htb-blue-without-metasploit/
+    - /htb-blue/
 ---
 A good ol' vuln to get starting!
 

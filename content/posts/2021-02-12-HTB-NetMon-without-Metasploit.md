@@ -1,9 +1,12 @@
 ---
-title: "HTB - NetMon"
+title: "HTB - NetMon without MetaSploit"
 date: 2021-02-12T14:56:25+01:00
 categories: ["hacking", "write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/NetMon_Logo.png"
+aliases:
+    - /htb-netmon-without-metasploit/
+    - /htb-netmon/
 ---
 An easy box according to HTB ranking and a not so easy one according to [this site](https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview#). For me, it was really painful. Let me overshare!
 

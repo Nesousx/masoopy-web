@@ -1,10 +1,13 @@
 ---
-title: "HTB - Devel"
+title: "HTB - Devel without MetaSploit"
 date: 2021-02-16T15:26:14+01:00
 draft: true
 categories: ["hacking", "write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/Devel_Logo.png"
+aliases:
+   - /htb-devel-without-metasploit/
+   - /htb-devel/
 ---
 Pretty fast and obvious box. Let me guide through my pwn:
 
