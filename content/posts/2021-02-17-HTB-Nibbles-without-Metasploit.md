@@ -6,6 +6,10 @@ categories: ["hacking", "write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/Nibbles_Logo.png"
 ---
+## Intro
+
+## Target
+[HTB - Nibbles](https://app.hackthebox.eu/machines/121)
 
 ## Recon
 Quick recon according to logo and info :

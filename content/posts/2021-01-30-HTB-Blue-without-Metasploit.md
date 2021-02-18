@@ -8,10 +8,6 @@ aliases:
     - /htb-blue-without-metasploit/
     - /htb-blue/
 ---
-## Target
-
-[HTB - Blue](https://app.hackthebox.eu/machines/51)
-
 ## Intro
 A good ol' vuln to get starting!
 
@@ -22,6 +18,9 @@ NB : The following notes use $target_ip = IP of the target machine. This is more
 A note about “sudo”. I am a firm believer in the “least privileges” methodology, like never use your admin account on AD domain for day to day use, and never use sudo if you don't need to. For example, search a package with “apt search X” and install it wish "sudo apt install X". However, in case of Kali and nmap, I noticed that in quite often requires root depending of the flag you use. Since, I am no expert (yet), I will l run nmap (and many other Kali tools) with sudo! I do not log in as root, but as a regular user I created but I almost always use “sudo”.
 
 I will process simply by following the 5 stages of Ethical Hacking.
+
+## Target
+[HTB - Blue](https://app.hackthebox.eu/machines/51)
 
 ##  Recon
 

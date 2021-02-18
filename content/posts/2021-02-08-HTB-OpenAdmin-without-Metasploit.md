@@ -8,12 +8,11 @@ aliases:
   - /htb-openadmin-without-metasploit/
   - /htb-openadmin/
 ---
-## Target
-
-[HTB - OpenAdmin](https://app.hackthebox.eu/machines/222)
-
 ## Intro
 The importance to also patch your "applications", and not just your services.
+
+## Target
+[HTB - OpenAdmin](https://app.hackthebox.eu/machines/222)
 
 ## Recon
 

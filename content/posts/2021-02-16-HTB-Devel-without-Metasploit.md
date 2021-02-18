@@ -9,12 +9,12 @@ aliases:
    - /htb-devel-without-metasploit/
    - /htb-devel/
 ---
-## Target
-
-[HTB - Devel](https://app.hackthebox.eu/machines/3)
 
 ## Intro
 Pretty fast and obvious box. Let me guide through my pwn:
+
+## Target
+[HTB - Devel](https://app.hackthebox.eu/machines/3)
 
 ## Recon
 Usual recon here, based on logo and info :

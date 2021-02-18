@@ -22,11 +22,10 @@ categories: ["hacking", "write-ups"]
 tags: [$platform]
 featuredImage: "/images/$year/$month/$box_Logo.png"
 ---
-## Target
-
-[$platform - $box](URL)
-
 ## Intro
+
+## Target
+[$platform - $box](URL)
 
 ## Recon
 
