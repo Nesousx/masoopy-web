@@ -8,7 +8,7 @@ aliases:
     - /htb-blue-without-metasploit/
     - /htb-blue/
 ---
-## Box
+## Target
 
 [HTB - Blue](https://app.hackthebox.eu/machines/51)
 

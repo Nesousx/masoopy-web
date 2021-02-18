@@ -5,7 +5,7 @@ categories: ["hacking", "write-ups"]
 tags: [THM]
 featuredImage: "/images/2021/02/Alfred_Logo.png"
 ---
-## Box
+## Target
 
 [THM - Alfred](https://tryhackme.com/room/alfred)
 

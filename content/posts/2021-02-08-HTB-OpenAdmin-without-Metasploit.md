@@ -8,7 +8,7 @@ aliases:
   - /htb-openadmin-without-metasploit/
   - /htb-openadmin/
 ---
-## Box
+## Target
 
 [HTB - OpenAdmin](https://app.hackthebox.eu/machines/222)
 

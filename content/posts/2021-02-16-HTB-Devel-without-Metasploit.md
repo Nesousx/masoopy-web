@@ -9,7 +9,7 @@ aliases:
    - /htb-devel-without-metasploit/
    - /htb-devel/
 ---
-## Box
+## Target
 
 [HTB - Devel](https://app.hackthebox.eu/machines/3)
 

@@ -1,6 +1,6 @@
 ---
 title: "HTB - Nibbles without MetaSploit"
-date: 2021-02-17T16:36:52+01:00
+date: 2021-02-17
 draft: true
 categories: ["hacking", "write-ups"]
 tags: [HTB]
@@ -105,7 +105,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 2021/02/17 16:55:21 Finished
 ===============================================================p
 ```
-## Box
+## Target
 
 [HTB - Nibbles](https://app.hackthebox.eu/machines/121)
 

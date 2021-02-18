@@ -14,8 +14,6 @@ sed -i "/dsq_thread_id:/d" $1
 sed -i "/_edit_last:/d" $1
 sed -i "/tie_views:/d" $1
 sed -i "/_vc_post_settings:/d" $1
-sed -i "/_yoast_wpseo_content_score:/d" $1
-sed -i "/_yoast_wpseo_primary_category:/d" $1
 sed -i "/ampforwp_custom_content_editor:/d" $1
 sed -i "/ampforwp_custom_content_editor_checkbox:/d" $1
 sed -i "/ampforwp-amp-on-off:/d" $1
@@ -37,19 +35,15 @@ sed -i "/email:/d" $1
 sed -i "/display_name:/d" $1
 sed -i "/first_name:/d" $1
 sed -i "/last_name:/d" $1
-sed -i "/_yoast_wpseo_metadesc:/d" $1
-sed -i "/_yoast_wpseo_title:/d" $1
 sed -i "/_thumbnail_id:/d" $1
-sed -i "/_yoast_wpseo_focuskw:/d" $1
-sed -i "/._yoast_wpseo_linkdex:/d" $1
-sed -i "/_yoast_wpseo_linkdex:/d" $1
-sed -i "/_yoast_wpseo_focuskw:/d" $1
 sed -i "/_thumbnail_id:/d" $1
 sed -i "/_oembed_/d" $1
 sed -i "/{{unknown}}/d" $1
 sed -i "/_yoast/d" $1
 
-#sed -i "/permalink:/d" $1
-# sed ";https://www.masoopy.com/wp-content/uploads;/images;g" 
+### Adapt posts
+
+# sed -i "/permalink:/d" $1
+# sed "/https:\/\/www.masoopy.com\/wp-content\/uploads:\/images/g" 
 # sed "[!/![/g"
 # sed "/permalink:/a FeaturedImage:"

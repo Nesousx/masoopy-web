@@ -8,7 +8,7 @@ aliases:
     - /htb-netmon-without-metasploit/
     - /htb-netmon/
 ---
-## Box
+## Target
 
 [HTB - NetMon](https://app.hackthebox.eu/machines/177)
 
