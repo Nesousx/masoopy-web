@@ -1,17 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>HTB - Tag - Masoopy</title><link>https://www.masoopy.com/tags/htb/</link><description>HTB - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 12 Feb 2021 14:56:25 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/htb/" rel="self" type="application/rss+xml"/><item><title>HTB - NetMon without MetaSploit</title><link>https://www.masoopy.com/htb-netmon-without-metasploit/</link><pubDate>Fri, 12 Feb 2021 14:56:25 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-netmon-without-metasploit/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/2021/02/NetMon_Logo.png" referrerpolicy="no-referrer">
-&lt;/div>Box HTB - NetMon
+&lt;/div>Target HTB - NetMon
 Intro An easy box according to HTB ranking and a not so easy one according to this site. For me, it was really painful. Let me overshare!
 Recon Quick recon based on HTB logo and info :
 Windows box ; Misc info : web, PowerShell, file misconfiguration ; Probably runs PRTG NetWork Monitor tool. Enum sudo nmap -T4 -A -p- -oA nmap $target_ip Starting Nmap 7.</description></item><item><title>HTB - OpenAdmin without MetaSploit</title><link>https://www.masoopy.com/htb-openadmin-without-metasploit/</link><pubDate>Mon, 08 Feb 2021 12:42:29 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-openadmin-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/OpenAdmin.png" referrerpolicy="no-referrer">
-            </div>Box HTB - OpenAdmin
+            </div>Target HTB - OpenAdmin
 Intro The importance to also patch your &ldquo;applications&rdquo;, and not just your services.
 Recon Again, this is an HTB box, so recon is mainly active, and I feel like active recon == enum.
 Still, we can check :
  Name of the box : OpenAdmin ; OS &ldquo;type&rdquo;, : Linux : Hints given on HTB website, information section :   
 Enum As always, we start with an nmap scan :]]></description></item><item><title>HTB - Blue without MetaSploit</title><link>https://www.masoopy.com/htb-blue-without-metasploit/</link><pubDate>Sat, 30 Jan 2021 16:37:44 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-blue-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/Blue.png" referrerpolicy="no-referrer">
-            </div>Box HTB - Blue
+            </div>Target HTB - Blue
 Intro A good ol' vuln to get starting!
 This will be my first real tutorial, so I&rsquo;ll try to explain the basics of what I am doing. Please bear in mind that I am very new to hacking, probably like you are. I am merely sharing my knowledge and by doing so I am making sure I understood what I did. Please correct me if you find anything wrong, or ask question if you need to!]]></description></item></channel></rss>
