@@ -23,7 +23,7 @@ Let's go!
 
 ## Enum
 
-Let's start a basic nmap scan :
+Let's start a basic `nmap` scan :
 
 ```text
 sudo nmap -T4 -A -p- -oA nmap $target_ip

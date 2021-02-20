@@ -1,7 +1,6 @@
 ---
 title: "HTB - Devel without MetaSploit"
 date: 2021-02-16T15:26:14+01:00
-draft: true
 categories: ["hacking", "write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/Devel_Logo.png"
@@ -23,7 +22,7 @@ Usual recon here, based on logo and info :
 * Misc : FTP, [Arbitrary file upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload).
 
 ## Enum
-We run our classic `nmap` scan:
+We run our classic `nmap` scan :
 
 ```text
 sudo nmap -T4 -A -p- -oA nmap $target_ip

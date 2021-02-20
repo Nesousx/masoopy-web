@@ -26,7 +26,11 @@ What to do when you have a shell?
 
 `ls -lhtrR /etc/cron*`
 
+`ls -lhtrR /etc/sudo*`
+
 `ls -lhtrR /home`
+
+[LinPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS) / [LSE](https://github.com/diego-treitos/linux-smart-enumeration)
 
 ## Windows
 
@@ -41,3 +45,5 @@ What to do when you have a shell?
 `netstat -ano`
 
 `dir C:\`
+
+[WinPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)
