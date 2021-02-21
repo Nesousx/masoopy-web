@@ -15,9 +15,13 @@ day="`date +%d`"
 
 ### Write it for me!
 
-blabla_enum_1="Usual \`nmap\` scan :"
-blabla_enum_2="We run our classic \`nmap\` scan :"
-blabla_enum_3="Let's start a full \`nmap\` scan :"
+enum=( \
+    "Usual \`nmap\` scan :" \ 
+    "We run our classic \`nmap\` scan :" \
+    "Let's start a full \`nmap\` scan :" \
+    )
+random=$$$(date +%s)
+blabla_enum=${enum[$random % ${#enum[@]}]}
 
 ### Create dir for pics
 
@@ -32,7 +36,7 @@ date: $year-$month-$day
 draft: true
 categories: ["hacking", "write-ups"]
 tags: [$platform]
-featuredImage: "/images/$year/$month/$box_Logo.png"
+featuredImage: "/images/$year/$month/${box}_Logo.png"
 ---
 ## Intro
 
@@ -42,7 +46,7 @@ featuredImage: "/images/$year/$month/$box_Logo.png"
 ## Recon
 
 ## Enum
-${blabla_enum_}`shuf -i 1-3 -n1`
+$blabla_enum
 
 \`\`\`text
 sudo nmap -T4 -A -p- -oA scan \$target_ip
