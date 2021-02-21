@@ -73,6 +73,7 @@ Let's start exploiting directly!
 ## Exploitation
 The server is running IIS, so let's try to upload an `aspx` shell. 
 
+### Getting initial shell
 A quick search brought me to [this one](https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd.aspx), I uploaded it inside the root of the web dir, and it worked !
 
 ![Initial Web Shell](/images/2021/02/Devel_Initial_Shell.png)

@@ -64,6 +64,7 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 47.45 seconds
 ```
 
+### Web scanning
 Let's enumerate web folders in CLI, for a change :
 
 ```text
@@ -143,6 +144,7 @@ We know the password is `admin`, and the password is `nibbles`, like the box's n
 
 Now that we have our credentials, we can finally start playing with the CVE we found earlier! Since, we are trying to solve this without MetaSploit, we need to find a [manual way](https://curesec.com/blog/article/blog/NibbleBlog-403-Code-Execution-47.html) to exploit our target.
 
+### Getting initial shell
 Let's create a [php shell(https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php)], thanks to Pentest Monkey and upload it via the Image plugin located at `http://10.129.99.80/nibbleblog/admin.php?controller=plugins&action=config&plugin=my_image`, then we will run shell my going to this URL : `http://10.129.99.80/nibbleblog/content/private/plugins/my_image/image.php`. The filename will always be `image.ext` with `ext` being the "real" extension.
 
 NB : do not forget to start your listener : `nc -nlvp 1234`.

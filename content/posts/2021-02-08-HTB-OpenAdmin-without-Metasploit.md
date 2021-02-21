@@ -76,6 +76,8 @@ OS and Service detection performed. Please report any incorrect results at https
 
 We find 2 services : ssh and Apache, both on standard ports. I like to check `searchsploit` for every service + version I find, in order to see if there any big vulnerability. In general, SSH isn't something that I"ll try to attack right away. It is more of a "last chance" path, with brute force.
 
+### Web scanning
+
 In our case, we found a web server running Apache, but th version doesn't seem vulnerable. So, let's fire `nikto` and `dirbuster` :
 
 ```text
@@ -93,7 +95,7 @@ Dirbuster, will find an interesting dir "ona", browsing to this resource we disc
 Indeed, after a quick search, we discover that it is vulnerable to Remote Code Execution (RCE), one of the most dangerous vuln we could find. Awesome!
 
 ## Exploitation
-
+### Getting initial shell
 The vuln in question can be found here : [https://www.exploit-db.com/exploits/47691](https://www.exploit-db.com/exploits/47691) it is a simple Python script that will grant you a shell access on the remote machine.
 
 Unfortunately, this shell only runs as `www-data`, the default `Apache` user and with `/sbin/nologin` shell. Still, we can still look around. I usually check what files I have access to :
