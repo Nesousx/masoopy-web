@@ -562,7 +562,7 @@ WinPEAS will reveal some `Administrator credentials` :
 
 ![HackPark Admin Pass](/images/2021/02/HackPark_Admin_Pass.png)
 
-We try them in RDP, and boom! We are in :
+We try them in RDP, and boom! We are in as `SYSTEM` :
 
 ![HackPark Admin RDP](/images/2021/02/HackPark_Admin_RDP.png)
 

@@ -57,5 +57,9 @@ sudo nmap -T4 -A -p- -oA scan \$target_ip
 
 ## Exploitation
 
+### Getting Initial Shell
+
+### PrivEsc
+
 ## Outro
 EOF
