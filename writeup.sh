@@ -15,6 +15,14 @@ day="`date +%d`"
 
 ### Write it for me!
 
+recon=( \
+    "Quick recon according to logo and info :" \ 
+    "A quick look to the box info reveals :" \
+    "From logo and box' info we learn that :" \
+    )
+random=$$$(date +%s)
+blabla_recon=${enum[$random % ${#recon[@]}]}
+
 enum=( \
     "Usual \`nmap\` scan :" \ 
     "We run our classic \`nmap\` scan :" \
@@ -44,6 +52,7 @@ featuredImage: "/images/$year/$month/${box}_Logo.png"
 [$platform - $box](URL)
 
 ## Recon
+$blabla_recon
 
 ## Enum
 $blabla_enum
