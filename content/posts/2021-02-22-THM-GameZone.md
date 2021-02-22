@@ -7,6 +7,7 @@ tags: [THM]
 featuredImage: "/images/2021/02/GameZone_Logo.png"
 ---
 ## Intro
+Trying to get a change from [HTB](https://www.masoopy.com/tags/htb/), today I'll write about a [THM](https://www.masoopy.com/tags/thm/) box! And this time, we'll also have a look at SQLi!
 
 ## Target
 [THM - GameZone](https://tryhackme.com/room/gamezone)
@@ -205,3 +206,4 @@ And we harvest our root flag :
 ![GameZone Root Flag](/images/2021/02/GameZone_Root_Flag.png)
 
 ## Outro
+Another fun box, and the first to have some "real" web vuln! One could argue that misconfiguration is also totally a "real" vuln, it was refreshing to see a more generic way to break in.
