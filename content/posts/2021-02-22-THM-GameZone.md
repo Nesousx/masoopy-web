@@ -1,5 +1,5 @@
 ---
-title: "THM - GameZone without MetaSploit"
+title: "THM - GameZone"
 date: 2021-02-22
 draft: true
 categories: ["hacking", "write-ups"]

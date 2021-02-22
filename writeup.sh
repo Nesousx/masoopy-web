@@ -37,7 +37,7 @@ mkdir -p ./static/images/$year/$month
 
 ### Populate template
 
-cat <<EOF > ./content/posts/$year-$month-$day-$platform-$box.md
+cat <<EOF > ./content/posts/$year-$month-$day-$platform-${box}-without-MetaSploit..md
 ---
 title: "$platform - $box without MetaSploit"
 date: $year-$month-$day
