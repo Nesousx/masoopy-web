@@ -21,7 +21,7 @@ recon=( \
     "From logo and box' info we learn that :" \
     )
 random=$$$(date +%s)
-blabla_recon=${enum[$random % ${#recon[@]}]}
+blabla_recon=${recon[$random % ${#recon[@]}]}
 
 enum=( \
     "Usual \`nmap\` scan :" \ 

@@ -26,7 +26,7 @@ sudo nmap -T4 -A -p- -oA scan $target_ip
 ```text
 Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
 Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-22 11:38 CET
-Nmap scan report for 10.10.116.116
+Nmap scan report for $target_ip
 Host is up (0.033s latency).
 Not shown: 65533 closed ports
 PORT   STATE SERVICE VERSION
@@ -61,7 +61,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 TRACEROUTE (using port 21/tcp)
 HOP RTT      ADDRESS
 1   33.34 ms 10.11.0.1
-2   33.56 ms 10.10.116.116
+2   33.56 ms $target_ip
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 41.63 seconds
@@ -71,13 +71,13 @@ Not much to see here : `Apache/2.4.18`, and `ssh`. Not much in `searchsploit` ei
 ### Web scanning
 First `nikto` :
 ```text
-nikto -h http://10.10.116.116
+nikto -h http://$target_ip
 ```
 ```text
 - Nikto v2.1.6
 ---------------------------------------------------------------------------
-+ Target IP:          10.10.116.116
-+ Target Hostname:    10.10.116.116
++ Target IP:          $target_ip
++ Target Hostname:    $target_ip
 + Target Port:        80
 + Start Time:         2021-02-22 11:52:39 (GMT1)
 ---------------------------------------------------------------------------
@@ -100,14 +100,14 @@ nikto -h http://10.10.116.116
 ```
 Then `gobuster`:
 ```text
-gobuster dir -u http://10.10.116.116 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 200 -x .php
+gobuster dir -u http://$target_ip -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 200 -x .php
 ```
 ```text
 ===============================================================
 Gobuster v3.0.1
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 ===============================================================
-[+] Url:            http://10.10.116.116
+[+] Url:            http://$target_ip
 [+] Threads:        200
 [+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt
 [+] Status codes:   200,204,301,302,307,401,403
@@ -187,7 +187,7 @@ NB : `webmin` being a tool for system administration via a website, it might be 
 First, we will set up an SSH tunnel in order to access `Webmin` from our attacking box :
 
 ```text
-ssh -L 10000:127.0.0.1:10000 username@10.10.163.71
+ssh -L 10000:127.0.0.1:10000 username@$target_ip
 ```
 
 Then, we can check it worked with `curl -I 127.0.0.1:10000` which should returns a `200` status code.
