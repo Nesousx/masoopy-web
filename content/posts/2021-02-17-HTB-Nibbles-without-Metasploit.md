@@ -1,7 +1,6 @@
 ---
 title: "HTB - Nibbles without MetaSploit"
 date: 2021-02-17
-draft: true
 categories: ["hacking", "write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/02/Nibbles_Logo.png"
@@ -111,11 +110,6 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 2021/02/17 16:55:21 Finished
 ===============================================================p
 ```
-## Target
-
-[HTB - Nibbles](https://app.hackthebox.eu/machines/121)
-
-## Intro
 It will reveal juicier info, such as `admin.php`, `install.php`, `sitemap`, etc.
 
 Going to `install.php` will tell us the site is already installed and propose to upgrade it which will eventually leak `NibbleBlog version 4.0.3` :
@@ -145,13 +139,13 @@ We know the password is `admin`, and the password is `nibbles`, like the box's n
 Now that we have our credentials, we can finally start playing with the CVE we found earlier! Since, we are trying to solve this without MetaSploit, we need to find a [manual way](https://curesec.com/blog/article/blog/NibbleBlog-403-Code-Execution-47.html) to exploit our target.
 
 ### Getting initial shell
-Let's create a [php shell(https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php)], thanks to Pentest Monkey and upload it via the Image plugin located at `http://10.129.99.80/nibbleblog/admin.php?controller=plugins&action=config&plugin=my_image`, then we will run shell my going to this URL : `http://10.129.99.80/nibbleblog/content/private/plugins/my_image/image.php`. The filename will always be `image.ext` with `ext` being the "real" extension.
+Let's create a [php shell(https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php)], thanks to Pentest Monkey and upload it via the Image plugin located at `http://$target_ip/nibbleblog/admin.php?controller=plugins&action=config&plugin=my_image`, then we will run shell my going to this URL : `http://$target_ip/nibbleblog/content/private/plugins/my_image/image.php`. The filename will always be `image.ext` with `ext` being the "real" extension.
 
 NB : do not forget to start your listener : `nc -nlvp 1234`.
 
 And we are in, unfortunately as `nibbler` and not `root` :
 
-![Nibbles Initial Shell](/images/2021/02/Nibbles_Initial Shell.png)
+![Nibbles Initial Shell](/images/2021/02/Nibbles_Initial_Shell.png)
 
 Let's still grab the user flag :
 
