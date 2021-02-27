@@ -1,7 +1,6 @@
 ---
 title: "Blogging With VSCode"
 date: 2021-02-22T20:49:23+01:00
-draft: true
 categories: ["web"]
 tags: [hugo]
 FeaturedImage: "/images/2021/02/VSCode.png"

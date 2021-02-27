@@ -140,7 +140,7 @@ Set your `CNAME` inside that file, create a `CNAME` for `your-username.github.io
 
 ## Now what?
 
-Now, we write! We can write our posts inside VSCode, and commit our changes to our repo. Once we push the changes, Github Actions will do it's magic, and will publish the new content :
+Now, we write! We can [write our posts inside VSCode](https://www.masoopy.com/blogging-with-vscode), and commit our changes to our repo. Once we push the changes, Github Actions will do it's magic, and will publish the new content :
 
 ![Github in Actions](/images/2021/02/hugo_github_actions.png)
 
