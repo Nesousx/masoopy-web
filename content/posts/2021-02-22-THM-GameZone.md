@@ -1,7 +1,6 @@
 ---
 title: "THM - GameZone"
 date: 2021-02-22
-draft: true
 categories: ["hacking", "write-ups"]
 tags: [THM]
 featuredImage: "/images/2021/02/GameZone_Logo.png"
