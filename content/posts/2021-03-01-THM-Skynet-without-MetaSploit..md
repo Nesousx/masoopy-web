@@ -1,12 +1,12 @@
 ---
 title: "THM - Skynet without MetaSploit"
-date: 2021-02-27
-draft: true
+date: 2021-03-01
 categories: ["hacking", "write-ups"]
 tags: [THM]
 featuredImage: "/images/2021/02/Skynet_Logo.png"
 ---
 ## Intro
+A new, mysterious box. It is Terminator themed, but I have no idea what it will reveal Let's dive in!
 
 ## Target
 [THM - Skynet](https://tryhackme.com/room/skynet)
@@ -66,7 +66,7 @@ In the intruder's tab set up a `sniper` attack, using `milesdyson` as user and t
 
 ![Burp Payload](/images/2021/02/Skynet_Burp_Intruder_1.png)
 
-Now, load the password list found during SMB enumeration :
+We, now, load the password list found during SMB enumeration :
 
 ![Burp Password](/images/2021/02/Skynet_Burp_Intruder_2.png)
 
@@ -84,11 +84,11 @@ Now, reading Miles' email, we'll find a password for Samba :
 
 ![Samba Pass](/images/2021/02/Skynet_SMB_Pass.png)
 
-We can now use is in order to connect to the Samba share, like so : `smbclient \\\\skynet.thm\\milesdyson -U milesdyson`
+We can now use it in order to connect to the Samba share, like so : `smbclient \\\\$target_ip\\milesdyson -U milesdyson`
 
 ![Samba Miles List](/images/2021/02/Skynet_SMB_Miles.png)
 
-Exploring the share will reveal an odd file called `important.txt`. Inside this file, we learn the existence of new `CMS` located at : `http://skynet.thm/45kra24zxs28v3yd/`.
+Exploring the share will reveal an odd file called `important.txt`. Inside this file, we learn the existence of new `CMS` located at : `http://$target_ip/45kra24zxs28v3yd/`.
 
 Further scanning reveals admin page :
 
@@ -109,14 +109,15 @@ We harvest `user's flag` in `milesdyson`'s home folder :
 
 We download our classic tools to the box and launch them. Unfortunately here, I didn't find anything obvious. I tried a few probable exploits, such as `dirtyc0w`, and a few others, but nothing worked.
 
-Finally, I paid closer attention to kernel version, and notice that `4.8.0-58-generic` might be [vulnerable](https://www.exploit-db.com/exploits/43418).
+Finally, I paid closer attention to kernel version, and noticed that `4.8.0-58-generic` might be [vulnerable](https://www.exploit-db.com/exploits/43418).
 
-After a few quick step of download, compile, "send" to target, I was ready to run it, and BOOM! it worked:
+After a few quick steps of download, compile, "send" to target, I was ready to run it, and BOOM! it worked:
 
 ![Skynet Root Shell](/images/2021/02/Skynet_Root_Shell.png)
 
-Now, we collect `root's flag` :
+Finally, we collect `root's flag` :
 
 ![Skynet Root Flag](/images/2021/02/Skynet_Root_Flag.png)
 
 ## Outro
+Another box rooted, it seems that even the inventor of [neural-net processor](https://terminator.fandom.com/wiki/Neural_Net_CPU) can't resist us! :)
