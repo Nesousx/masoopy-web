@@ -1,4 +1,11 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Masoopy</title><link>https://www.masoopy.com/</link><description>Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.masoopy.com/index.xml" rel="self" type="application/rss+xml"/><item><title>THM - Skynet without MetaSploit</title><link>https://www.masoopy.com/thm-skynet-without-metasploit/</link><pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/thm-skynet-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Masoopy</title><link>https://www.masoopy.com/</link><description>Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 03 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.masoopy.com/index.xml" rel="self" type="application/rss+xml"/><item><title>HTB - Bastard without MetaSploit</title><link>https://www.masoopy.com/htb-bastard-without-metasploit/</link><pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-bastard-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/03/Bastard_Logo.png" referrerpolicy="no-referrer">
+            </div>Intro Let&rsquo;s up the game a little bit and attack a medium rated box for the very first time!
+Target HTB - Bastard
+Recon A quick look to the box info reveals :
+ Windows box ; Misc : php, web, patch management.  I assume this will be about an outdated PHP application running under Windows.
+Enum We run our classic nmap scan :
+sudo nmap -T4 -A -p- -oA scan $target_ip Host discovery disabled (-Pn).]]></description></item><item><title>THM - Skynet without MetaSploit</title><link>https://www.masoopy.com/thm-skynet-without-metasploit/</link><pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/thm-skynet-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/Skynet_Logo.png" referrerpolicy="no-referrer">
             </div>Intro A new, mysterious box. It is Terminator themed, but I have no idea what it will reveal Let&rsquo;s dive in!
 Target THM - Skynet
@@ -46,11 +53,4 @@ Target THM - Alfred
 Recon From the box logo and description we can discover that :
  Target runs Windows ; Target runs Jenkins.  Let&rsquo;s go!
 Enum Let&rsquo;s start a basic nmap scan :
-sudo nmap -T4 -A -p- -oA nmap $target_ip Unfortunately, nmap will complain that Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn.]]></description></item><item><title>HTB - OpenAdmin without MetaSploit</title><link>https://www.masoopy.com/htb-openadmin-without-metasploit/</link><pubDate>Mon, 08 Feb 2021 12:42:29 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-openadmin-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/2021/02/OpenAdmin.png" referrerpolicy="no-referrer">
-            </div>Intro The importance to also patch your &ldquo;applications&rdquo;, and not just your services.
-Target HTB - OpenAdmin
-Recon Again, this is an HTB box, so recon is mainly active, and I feel like active recon == enum.
-Still, we can check :
- Name of the box : OpenAdmin ; OS &ldquo;type&rdquo;, : Linux : Hints given on HTB website, information section :   
-Enum As always, we start with an nmap scan :]]></description></item></channel></rss>
+sudo nmap -T4 -A -p- -oA nmap $target_ip Unfortunately, nmap will complain that Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn.]]></description></item></channel></rss>
