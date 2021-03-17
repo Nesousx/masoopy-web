@@ -58,7 +58,7 @@ $blabla_recon
 $blabla_enum
 
 \`\`\`text
-sudo nmap -T4 -A -p- -oA scan \$target_ip
+sudo nmap -sC -sV -oA scans\$target_ip
 \`\`\`
 \`\`\`text
 
