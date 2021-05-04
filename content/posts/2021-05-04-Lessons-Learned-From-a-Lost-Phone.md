@@ -2,7 +2,6 @@
 title: "Lessons learned from a lost phone"
 date: 2021-05-04T08:26:09+02:00
 featuredImage: "/images/2021/05/lost-phone.jpg"
-draft: true
 ---
 For the first time in my life, a few days ago, I lost my phone and it was most probably stolen a few minutes later... So what went wrong, and what went right and how is a life without a phone in 2020?
 
