@@ -4,15 +4,18 @@ date: 2021-05-21T11:13:05+01:00
 categories: []
 tags: []
 ---
-Upgrading shells
+Here are a few ways to upgrade a basic shell to a better interactive one !
 
-## python method
+## Use a method depending on what is installed on the remote system
+
+### Python
 `python -c 'import pty; pty.spawn("/bin/bash")'`
 
-## script method
+
+### Script
 `SHELL=/bin/bash script -q /dev/null`
 
-## common stuff
+## Common stuff
 * Then type CTRL+Z ;
 * Type `stty raw -echo;fg` then `reset`.
 
