@@ -1,7 +1,6 @@
 ---
 title: "HTB - ScriptKiddie"
 date: 2021-06-10
-draft: true
 categories: ["hacking", "write-ups"]
 tags: [HTB]
 featuredImage: "/images/2021/06/SK_Logo.png"
