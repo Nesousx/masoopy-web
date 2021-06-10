@@ -1,4 +1,9 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>hacking - Category - Masoopy</title><link>https://www.masoopy.com/categories/hacking/</link><description>hacking - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.masoopy.com/categories/hacking/" rel="self" type="application/rss+xml"/><item><title>THM - DailyBugle without MetaSploit</title><link>https://www.masoopy.com/thm-dailybugle-without-metasploit/</link><pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/thm-dailybugle-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>hacking - Category - Masoopy</title><link>https://www.masoopy.com/categories/hacking/</link><description>hacking - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.masoopy.com/categories/hacking/" rel="self" type="application/rss+xml"/><item><title>HTB - ScriptKiddie</title><link>https://www.masoopy.com/htb-scriptkiddie/</link><pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-scriptkiddie/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/06/SK_Logo.png" referrerpolicy="no-referrer">
+            </div>Intro Target HTB - ScriptKiddie
+Recon Initial recon tells us the box is running Linux, and that&rsquo;s about it!
+Enum During the enum phase
+sudo nmap -sC -sV -oA scans/fast $target_ip # Nmap 7.91 scan initiated Mon May 17 15:00:50 2021 as: nmap -sC -sV -oA scans/fast $target_ip Nmap scan report for $target_ip Host is up (0.037s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.]]></description></item><item><title>THM - DailyBugle without MetaSploit</title><link>https://www.masoopy.com/thm-dailybugle-without-metasploit/</link><pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/thm-dailybugle-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/03/DailyBugle_Logo.png" referrerpolicy="no-referrer">
             </div>Intro This box looks promising, featuring a real life CMS, Joomla, and one that is quite often in the wild too! It is even a CMS I used several years ago, for one of my blog!
 Let&rsquo;s see right now, if we can get in!
@@ -52,11 +57,4 @@ Target THM - Alfred
 Recon From the box logo and description we can discover that :
  Target runs Windows ; Target runs Jenkins.  Let&rsquo;s go!
 Enum Let&rsquo;s start a basic nmap scan :
-sudo nmap -T4 -A -p- -oA nmap $target_ip Unfortunately, nmap will complain that Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn.]]></description></item><item><title>HTB - OpenAdmin without MetaSploit</title><link>https://www.masoopy.com/htb-openadmin-without-metasploit/</link><pubDate>Mon, 08 Feb 2021 12:42:29 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-openadmin-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/2021/02/OpenAdmin.png" referrerpolicy="no-referrer">
-            </div>Intro The importance to also patch your &ldquo;applications&rdquo;, and not just your services.
-Target HTB - OpenAdmin
-Recon Again, this is an HTB box, so recon is mainly active, and I feel like active recon == enum.
-Still, we can check :
- Name of the box : OpenAdmin ; OS &ldquo;type&rdquo;, : Linux : Hints given on HTB website, information section :   
-Enum As always, we start with an nmap scan :]]></description></item></channel></rss>
+sudo nmap -T4 -A -p- -oA nmap $target_ip Unfortunately, nmap will complain that Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn.]]></description></item></channel></rss>
