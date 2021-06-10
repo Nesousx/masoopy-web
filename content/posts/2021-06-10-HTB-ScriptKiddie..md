@@ -12,7 +12,7 @@ featuredImage: "/images/2021/06/SK_Logo.png"
 [HTB - ScriptKiddie](https://app.hackthebox.eu/machines/314)
 
 ## Recon
- Initial recon tells us the box is running linux, and that's about it!
+ Initial recon tells us the box is running Linux, and that's about it!
 
 ## Enum
  During the enum phase
