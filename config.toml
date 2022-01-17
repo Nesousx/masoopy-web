@@ -5,7 +5,6 @@ theme = "LoveIt"
 enableRobotsTXT = true
 rssLimit = 20
 copyright = "2022 Masoopy.com"
-rssFullText = true
 
 [author]
 	name = "Denis"
@@ -16,6 +15,17 @@ rssFullText = true
 
 [params]
   version = "0.2.X"
+
+[params.social]
+  Twitter = nesousx
+  RSS = true
+
+[params.page]
+  rssFullText = true
+
+[params.page.share]
+  enable = true
+  Twitter = true
 
 [menu]
   [[menu.main]]
