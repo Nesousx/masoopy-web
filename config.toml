@@ -63,6 +63,16 @@ rssFullText = true
     title = ""
     weight = 5
 
+  [[menu.main]]
+    identifier = "RSS"
+    pre = ""
+    post = ""
+    name = "RSS"
+    url = "/index.xml"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 6
+
 # Markup related configuration in Hugo
 [markup]
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
