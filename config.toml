@@ -3,7 +3,16 @@ languageCode = "en-us"
 title = "Masoopy"
 theme = "uBlogger"
 enableRobotsTXT = true
+
+rssLimit = 20
+copyright = "2022 Masoopy.com"
+languageCode = "en-us"
+
+[author]
+	name = "Denis G"
+	email = "denis@nesomail.com"
 rssFullText = true
+
 
 [permalinks]
   posts = "/:title/"
@@ -61,7 +70,7 @@ rssFullText = true
     url = "/about/"
     # title will be shown when you hover on this menu link
     title = ""
-    weight = 5
+    weight = 6
 
   [[menu.main]]
     identifier = "RSS"
@@ -71,7 +80,7 @@ rssFullText = true
     url = "/index.xml"
     # title will be shown when you hover on this menu link
     title = ""
-    weight = 6
+    weight = 5
 
 # Markup related configuration in Hugo
 [markup]
