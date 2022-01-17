@@ -17,7 +17,7 @@ copyright = "2022 Masoopy.com"
   version = "0.2.X"
 
 [params.social]
-  Twitter = nesousx
+  Twitter = "nesousx"
   RSS = true
 
 [params.page]
