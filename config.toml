@@ -5,11 +5,10 @@ theme = "uBlogger"
 enableRobotsTXT = true
 rssLimit = 20
 copyright = "2022 Masoopy.com"
+rssFullText = true
 
 [author]
-	name = "Denis G"
-	email = "denis@nesomail.com"
-rssFullText = true
+	name = "Denis"
 
 
 [permalinks]
