@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Masoopy"
 theme = "uBlogger"
 enableRobotsTXT = true
+rssFullText = true
 
 [permalinks]
   posts = "/:title/"
