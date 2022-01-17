@@ -3,10 +3,8 @@ languageCode = "en-us"
 title = "Masoopy"
 theme = "uBlogger"
 enableRobotsTXT = true
-
 rssLimit = 20
 copyright = "2022 Masoopy.com"
-languageCode = "en-us"
 
 [author]
 	name = "Denis G"
