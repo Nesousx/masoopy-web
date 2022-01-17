@@ -1,7 +1,7 @@
 baseURL = "https://www.masoopy.com/"
 languageCode = "en-us"
 title = "Masoopy"
-theme = "uBlogger"
+theme = "LoveIt"
 enableRobotsTXT = true
 rssLimit = 20
 copyright = "2022 Masoopy.com"
