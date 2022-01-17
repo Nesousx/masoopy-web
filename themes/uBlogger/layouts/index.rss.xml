@@ -7,7 +7,7 @@
             {{- .Permalink -}}
         </link>
         <description>
-            {{- .Content -}}
+            {{- .Content | html -}}
         </description>
         <generator>Hugo -- gohugo.io</generator>
         {{- with .Site.LanguageCode -}}
