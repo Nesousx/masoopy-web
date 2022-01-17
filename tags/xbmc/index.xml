@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>xbmc - Tag - Masoopy</title><link>https://www.masoopy.com/tags/xbmc/</link><description>xbmc - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 08 Dec 2015 11:05:22 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/xbmc/" rel="self" type="application/rss+xml"/><item><title>Why Nvidia Shield sucks?</title><link>https://www.masoopy.com/why-nvidia-shield-sucks/</link><pubDate>Tue, 08 Dec 2015 11:05:22 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/why-nvidia-shield-sucks/</guid><description>&lt;div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>xbmc - Tag - Masoopy</title><link>https://www.masoopy.com/tags/xbmc/</link><description>xbmc - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>2022 Masoopy.com</copyright><lastBuildDate>Tue, 08 Dec 2015 11:05:22 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/xbmc/" rel="self" type="application/rss+xml"/><item><title>Why Nvidia Shield sucks?</title><link>https://www.masoopy.com/why-nvidia-shield-sucks/</link><pubDate>Tue, 08 Dec 2015 11:05:22 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/why-nvidia-shield-sucks/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/2021/02/Nvidia-Shield-TV.jpg" referrerpolicy="no-referrer">
 &lt;/div>Yes, it is true. I think the Nvidia Shield sucks!
 To be 4K or not to be First of, resolution ! I have plugged the shield on 3 different TV :
@@ -16,11 +16,11 @@ Genesis Subtitles Did you know that you could enable automatic subtitles in Gene
                 <img src="/images/2021/02/kodi_superrepo.png" referrerpolicy="no-referrer">
             </div>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.
 How to install SuperRepo on Kodi Go to Kodi Settings &gt; File manager :
- Select Add source :
- Enter the following URL, “http://SRP.nu” (without quotes) :
- Once done, it should look like this (notice SRP as name of media source) :
- Now go to Settings &gt; Add-ons :
- Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :]]></description></item><item><title>The original XBMC</title><link>https://www.masoopy.com/the-original-xbmc/</link><pubDate>Wed, 18 Nov 2015 15:07:32 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/the-original-xbmc/</guid><description>&lt;div class="featured-image">
+Select Add source :
+Enter the following URL, “http://SRP.nu” (without quotes) :
+Once done, it should look like this (notice SRP as name of media source) :
+Now go to Settings &gt; Add-ons :
+Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :]]></description></item><item><title>The original XBMC</title><link>https://www.masoopy.com/the-original-xbmc/</link><pubDate>Wed, 18 Nov 2015 15:07:32 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/the-original-xbmc/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/2015/11/xbmc_xbox-300x200.png" referrerpolicy="no-referrer">
 &lt;/div>This entry is part 1 of 1 in the series Retrogaming
 Years ago, there was the original XBMC. Some of you might remember it, some others will discover it today.
@@ -40,7 +40,6 @@ Kodi streams its data directly from “established” websites, this is what we 
                 <img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
             </div>This entry is part 4 of 4 in the series Raspberry Pi
 Last but not least, we’ll explain you how to install #OpenElec on your Pi!
- 
 Prepare before install Mandatory  Raspberry #Pi 2 Micro SD Card (&gt;512MB) Power Adapter (&gt;=1A) Micro USB Cable  Optional  Keyboard Mouse Remote WLAN Dongle Ethernet Cable Case  Steps  Download the ARMv7 Stable build from official site ; Extract it and navigate to extracted files and folder ; If using Linux or Mac Os, just run “create_sdcard” file, follow instructions and go to “Install OpenElec” part ; If using Windows, download win32diskimager and run it ; Select image file you just downloaded and point it to your SD card.]]></description></item><item><title>Raspberry Pi 2 - Part 3 : media center</title><link>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</link><pubDate>Wed, 01 Jul 2015 07:34:41 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
 &lt;/div>This entry is part 3 of 4 in the series Raspberry Pi
