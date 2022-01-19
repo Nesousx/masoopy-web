@@ -1,13 +1,21 @@
 baseURL = "https://www.masoopy.com/"
-languageCode = "en-us"
+defaultContentLanguage = "fr"
+languageCode = "en"
 title = "Masoopy"
 theme = "LoveIt"
 enableRobotsTXT = true
 rssLimit = 20
-copyright = "2022 Masoopy.com"
+
 
 [author]
-	name = "Denis"
+  name = "Denis G."
+  link = "/about"
+
+[privacy]
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
 
 
 [permalinks]
@@ -20,12 +28,15 @@ copyright = "2022 Masoopy.com"
   Twitter = "nesousx"
   RSS = true
 
-[params.page]
-  rssFullText = true
+#[params.page]
+#  rssFullText = true
 
 [params.page.share]
   enable = true
   Twitter = true
+  HackerNews = true
+  Reddit = true
+  Linkedin = true
 
 [menu]
   [[menu.main]]
@@ -78,12 +89,33 @@ copyright = "2022 Masoopy.com"
     title = ""
     weight = 5
 
-# Markup related configuration in Hugo
 [markup]
-  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  # Syntax Highlighting
   [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
     # false is a necessary configuration
+    # (https://github.com/dillonzq/LoveIt/issues/158)
     noClasses = false
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      unsafe = true
+  # Table Of Contents settings
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
