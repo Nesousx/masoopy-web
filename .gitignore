@@ -5,6 +5,7 @@
 # Hugo
 debug.log
 /public/
+/resources/_gen/
 hugo_stats.json
 
 # vscode
