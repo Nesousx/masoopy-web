@@ -1,10 +1,111 @@
 baseURL = "https://www.masoopy.com/"
-defaultContentLanguage = "fr"
-languageCode = "en"
-title = "Masoopy"
+defaultContentLanguage = 'en'
 theme = "LoveIt"
 enableRobotsTXT = true
-rssLimit = 20
+rssLimit = 10
+
+[languages]
+  [languages.en]
+    weight = 1
+    title = "Masoopy"
+    languageCode = "en"
+    languageName = "English"
+
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      # title will be shown when you hover on this menu link
+      title = ""
+      weight = 1
+
+    [[languages.en.menu.main]]
+      identifier = "cheatsheets"
+      pre = ""
+      post = ""
+      name = "Cheatsheets"
+      url = "/cheatsheets/"
+      # title will be shown when you hover on this menu link
+      title = ""
+      weight = 2
+
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 3
+    
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 4
+
+    [[languages.en.menu.main]]
+      identifier = "About"
+      pre = ""
+      post = ""
+      name = "About"
+      url = "/about/"
+      # title will be shown when you hover on this menu link
+      title = ""
+      weight = 5
+
+    [languages.fr]
+    weight = 2
+    title = "Masoopy"
+    languageCode = "fr"
+    languageName = "Français"
+
+    [[languages.fr.menu.main]]
+      identifier = "posts"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      name = "Articles"
+      url = "/posts/"
+      # title will be shown when you hover on this menu link
+      title = ""
+      weight = 1
+
+    [[languages.fr.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Balises"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    
+    [[languages.fr.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Catégories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+    [[languages.fr.menu.main]]
+      identifier = "About"
+      pre = ""
+      post = ""
+      name = "A propos"
+      url = "/a-propos/"
+      # title will be shown when you hover on this menu link
+      title = ""
+      weight = 4
 
 
 [author]
@@ -38,56 +139,6 @@ rssLimit = 20
   Reddit = true
   Linkedin = true
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = "Posts"
-    url = "/posts/"
-    # title will be shown when you hover on this menu link
-    title = ""
-    weight = 1
-
-  [[menu.main]]
-    identifier = "cheatsheets"
-    pre = ""
-    post = ""
-    name = "Cheatsheets"
-    url = "/cheatsheets/"
-    # title will be shown when you hover on this menu link
-    title = ""
-    weight = 2
-
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-    weight = 3
-    
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
-    weight = 4
-
-  [[menu.main]]
-    identifier = "About"
-    pre = ""
-    post = ""
-    name = "About"
-    url = "/about/"
-    # title will be shown when you hover on this menu link
-    title = ""
-    weight = 5
 
 [markup]
   # Syntax Highlighting
