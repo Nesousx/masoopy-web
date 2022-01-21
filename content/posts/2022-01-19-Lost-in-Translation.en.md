@@ -4,7 +4,6 @@ translationKey: "lost-in-translation"
 categories: [site management]
 date: 2022-01-19T22:27:57+01:00
 FeaturedImage: "/images/2022/01/Lost_in_translation.png"
-draft: true
 ---
 
 I have been blogging on and off for a while now. Most of the time I did it in English, which is, as you may have guessed, not my mother tongue.

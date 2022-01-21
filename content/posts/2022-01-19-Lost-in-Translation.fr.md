@@ -4,7 +4,6 @@ translationKey: "lost-in-translation"
 categories: [Gestion du site]
 date: 2022-01-19T22:28:01+01:00
 FeaturedImage: "/images/2022/01/Lost_in_translation.png"
-draft: true
 ---
 
 J'ai longtemps écrit sur internet sur différents projets personnels ou [plus publics](https://connect.ed-diamond.com/auteur/gourmel-denis). La plupart du temps en anglais. À l'époque, cela me semblait évident. Je voulais parler de nouvelles technologies, et c'est la langue qui s'imposait. Mes lectures quotidiennes se faisaient (et se font toujours) en anglais. Les termes techniques des technologies dont je parle n'ayant même pas de traduction...
