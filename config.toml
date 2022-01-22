@@ -110,7 +110,6 @@ rssLimit = 10
 
 [author]
   name = "Denis G."
-  link = "/about"
 
 [privacy]
   [privacy.twitter]
