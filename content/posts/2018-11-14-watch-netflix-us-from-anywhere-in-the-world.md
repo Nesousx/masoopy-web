@@ -29,8 +29,6 @@ You can also have up to 5 connections at the same time, which means if you have 
 
 By the way, when I say "US catalog", it could also be Japanese Netflix, UK Netflix, French Netflix, etc. Torguard is offering several different IP locations. However, you can't just change them on the fly. Since they allocate you a "private" IP, you have to pay for each and every location you want to use.
 
-[caption id="attachment_369" align="aligncenter" width="300"]![[Get 50% off TorGuard anonymous VPN](/images/2018/11/torguard-logo-300x77.png)](https://torguard.net/aff.php?aff=4760) Get 50% off TorGuard anonymous VPN[/caption]
-
 ## A question of speed
 
 EDIT : new information from November 18th 2018.
@@ -69,20 +67,4 @@ There is several ways to use it.
 - If you feel adventurous, the most advanced and most powerful way being to install the VPN client on your router : that way and depending on your router, you can have all or some devices from your home to use the VPN. For example, it means that ONLY your TV can use the VPN while your computer use your "regular" internet access.
 - and more...
 
-Make sure to check [their guides](https://torguard.net/knowledgebase.php?action=displaycat&catid=2), and see if your use case is covered. If not, do not hesitate to ask me in the comments and I'll try to help.
-
-## How to order
-
-[Simply go to their website](https://torguard.net/aff.php?aff=4760) and make sure to chose the right product :
-
-- it's called **Anonymous VPN** ;
-- and you must add as a configurable option the " **Streaming IP**".
-
-For example, Streaming IP USA, if you want to access the Netflix US catalog.
-
-![[TorGuard Anonymous VPN](/images/2018/11/TG_order-300x255.png)](/images/2018/11/TG_order.png)
-
-About the price, the longer you subscribe "at once", the cheaper it will be... and last but no least&nbsp; if you [register via this link](https://torguard.net/aff.php?aff=4760) and use the code " **TGISGOOD**", then you'll get a 50% lifetime discount, and I'll get a bonus as well!
-
-Let's say you pay annually, it would cost you a bit less than 60$ a year, which is very correct for a VPN. Moreover, for anything else than Netflix (and streaming in general) you can use any of their VPN servers located in 50+ countries. All that for 5$ a month, not so bad!
-
+NB : Please note that using such service might violate Netflix's ToS !

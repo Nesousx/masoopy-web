@@ -105,7 +105,5 @@ This tutorial applies to any Chrome OS laptop and the beauty of having Linux on 
 
 I was afraid that Chrome OS would be pretty much locked down but actually once you activated that scary developer mode, you can do almost anything with ChromeOS, from installing Android apps, to Windows OS, and of course Linux.
 
-You could even use a VPN with your Chromebook in order to add an extra layer of anonymity and security, and even (in some case) bypass geographical content locking. This is can be done really easily with [IPVanish](https://www.ipvanish.com/?a_aid=streamee&a_bid=48f95966) for example (a tutorial will be written soon).
-
 NB : you can switch from/to ChromeOS and from/to Linux by hitting CTRL + ALT + SHIFT + Forward (or Backward). Forward and Backward are the keys on the right of the Esc key. You might have to press it a couple of times, for it to work.
 

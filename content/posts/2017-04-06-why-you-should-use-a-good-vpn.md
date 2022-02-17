@@ -30,9 +30,13 @@ When using a VPN, what happens is that you connect your computer to that said VP
 
 However, keep in mind that, even if the “end” website do not log you real IP, the VPN server will often do. At least, the VPN company knows what is your real IP and what is the one they provide you. Depending on their terms, and country law, they will have to log more or less information about you, and what you do. This is a very important point when trying to find a good VPN provide. You want to have the less log possible.
 
+Keep also in mind, that you are still tracked via cookies, and your browser, your OS, etc. VPN will hide what you from your ISP, but that's it !
+
 ### Fake location
 
 Since only the VPN’s IP is seen by websites (or any other Internet service) on the internet, this IP can belong to a VPN in any country. This is where it gets interesting to “fake” your location. A good VPN, would be one to offers several locations to choose from.
+
+Please note that doing so, will most often violate the ToS of the service you are using.
 
 ## VPN drawbacks
 

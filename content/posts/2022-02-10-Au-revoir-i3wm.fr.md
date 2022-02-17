@@ -71,4 +71,3 @@ Le launcher intégré de Pop! OS permet de remplacer allégrement [Rofi](https:/
 Au final, pas de changements fondamentaux. Je trouve que c'est un bon compromis entre la gestion rapide au clavier et la facilité d'usage de l'interface graphique. Je n'ai pas non plus perdu en praticité, mettre une clef USB ne me fait pas perdre le focus et les nouvelles fenêtres que j'ouvre ne viennent pas cacher les fenêtres actuelles.
 
 Bref, un nouveau "DE" adopté... Jusqu'au prochain !
-
