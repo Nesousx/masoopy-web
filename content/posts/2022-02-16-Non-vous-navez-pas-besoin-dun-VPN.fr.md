@@ -7,7 +7,7 @@ tags: ["VPN", "monétisation"]
 FeaturedImage: "/images/2022/02/pas_de_VPN.png"
 ---
 
-Depuis plusieurs années les VPN (Virtual Private Network) ont le vent en poupe. Ils sont recommandés à tour de bras par sur Youtube et par beaucoup d'autres médias.À les écouter, un VPN est indispensable, mais je ne suis pas d'accord. Non, vous n'avez pas besoin d'un VPN ! Nous sommes assez peu à le dire, mais je ne suis [pas](https://www.canardpc.com/hardware/la-page-de-la-rage/vous-navez-pas-besoin-dun-vpn) [seul](https://www.youtube.com/watch?v=ckZGQ5cLIfs).
+Depuis plusieurs années les VPN (Virtual Private Network) ont le vent en poupe. Ils sont recommandés à tour de bras sur Youtube et par beaucoup d'autres médias.À les écouter, un VPN est indispensable, mais je ne suis pas d'accord. Non, vous n'avez pas besoin d'un VPN ! Peu d'entre nous ont osé s'élever contre le diktat du VPN Panaméen, mais je ne suis [pas](https://www.canardpc.com/hardware/la-page-de-la-rage/vous-navez-pas-besoin-dun-vpn) le [seul](https://www.youtube.com/watch?v=ckZGQ5cLIfs).
 
 ## Les promesses vs la réalité
 
@@ -39,7 +39,7 @@ Promesse : Vous pouvez accéder à du contenu provenant d'autres pays.
 
 Réalité : C'est probablement vrai, mais en le faisant, il y a de fortes chances que vous enfreignez les conditions d'utilisation du service. Contourner HADOPI ? C'est également illégal... À noter qu'il existe d'autres solutions "plus propres" pour ces usages.
 
-## Pour conclure
+## Le mot de la fin
 
 Dans la très grande majorité des cas, vous n'avez pas besoin de VPN ! EN tous cas, pas d'un VPN "Youtube". Si vous utilisez un VPN, il s'agit probablement du VPN fourni par votre employeur ou d'un VPN perso que vous utilisez pour accéder à vos serveurs @home ou équivalent.
 

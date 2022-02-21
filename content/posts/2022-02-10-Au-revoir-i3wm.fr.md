@@ -38,7 +38,7 @@ Depuis, [Enlightement avec les penguins](http://xpenguins.seul.org/images/epengu
 
 Lorsque j'ai entendu parler de Pop! OS avec un Gnome "modifié" utilisant un système de tiling, j'ai eu très envie de l'essayer.
 
-Le système de tiling, [Pop Shell](https://github.com/pop-os/shell) peut être installé sur n'importe quel distro en tant qu'extension Gnome. 
+Le système de tiling, [Pop Shell](https://github.com/pop-os/shell) peut être installé sur n'importe quelle distro en tant qu'extension Gnome. 
 
 Les premières heures demandent tout de même un peu configuration afin d'obtenir un comportement très proche d'i3 :
 * il faut [remettre les mêmes raccourcis clavier](https://github.com/pop-os/shell/issues/142#issuecomment-663079699) ;
@@ -70,4 +70,4 @@ Le launcher intégré de Pop! OS permet de remplacer allégrement [Rofi](https:/
 
 Au final, pas de changements fondamentaux. Je trouve que c'est un bon compromis entre la gestion rapide au clavier et la facilité d'usage de l'interface graphique. Je n'ai pas non plus perdu en praticité, mettre une clef USB ne me fait pas perdre le focus et les nouvelles fenêtres que j'ouvre ne viennent pas cacher les fenêtres actuelles.
 
-Bref, un nouveau "DE" adopté... Jusqu'au prochain !
+Bref, un nouveau "DE" adopté... Jusqu'au prochain !%  
