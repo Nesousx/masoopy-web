@@ -1,45 +1,288 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>kodi - Tag - Masoopy</title><link>https://www.masoopy.com/tags/kodi/</link><description>kodi - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 31 Dec 2017 16:04:57 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/kodi/" rel="self" type="application/rss+xml"/><item><title>Back to the sources : Kodi on Xbox One</title><link>https://www.masoopy.com/back-to-the-sources-kodi-on-xbox-one/</link><pubDate>Sun, 31 Dec 2017 16:04:57 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/back-to-the-sources-kodi-on-xbox-one/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/xbone.png" referrerpolicy="no-referrer">
-&lt;/div>Almost 15 years ago, XBMC was created. Like today, it was a media center allowing you to watch your media, listen to your music and even playing old school games and Xbox games. All of this on place, and all of this on one specific hardware : the first generation Microsoft Xbox.
-A new era Then the Xbox 360 has been released but Kodi was never part of it. In 2013, the latest and curren gen Xbox, the One was released.</description></item><item><title>Install Kodi on your Chromebook with Android</title><link>https://www.masoopy.com/install-kodi-on-your-chromebook-with-android/</link><pubDate>Fri, 29 Sep 2017 12:15:26 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/install-kodi-on-your-chromebook-with-android/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>kodi - Tag - Masoopy</title><link>https://www.masoopy.com/tags/kodi/</link><description>kodi - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 31 Dec 2017 16:04:57 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/kodi/" rel="self" type="application/rss+xml"/><item><title>Back to the sources : Kodi on Xbox One</title><link>https://www.masoopy.com/back-to-the-sources-kodi-on-xbox-one/</link><pubDate>Sun, 31 Dec 2017 16:04:57 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/back-to-the-sources-kodi-on-xbox-one/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/xbone.png" referrerpolicy="no-referrer">
+            </div><p>Almost 15 years ago, <a href="https://www.masoopy.com/the-original-xbmc/" target="_blank" rel="noopener noreferrer">XBMC was created</a>. Like today, it was a media center allowing you to watch your media, listen to your music and even playing old school games and Xbox games. All of this on place, and all of this on one specific hardware : the first generation Microsoft Xbox.</p>
+<h2 id="a-new-era">A new era</h2>
+<p>Then the Xbox 360 has been released but Kodi was never part of it. In 2013, the latest and curren gen Xbox, the One was released.</p>
+<p>However, it is just now, very close to 2018, that the very first version of <a href="https://kodi.tv/article/kodi-xbox-one" target="_blank" rel="noopener noreferrer">Kodi has been released on the Xbox One</a>.</p>
+<h2 id="still-in-early-stages">Still in early stages</h2>
+<p>While being a working version, it is still pretty basic and lacks many features compared to other versions. Nonetheless, you can enjoy a well known interface (the same interface is shared between all platforms), and basic music / video playing functionalities with network share (NFS only, as of yet). Which is actually everything I am using on a daily basis !</p>
+<h2 id="get-it-now">Get it now</h2>
+<p>What was then an unofficial hack, has become a very official app, and you can grab it from the Windows Store under the name Kodi 18 alpha (the name will change overtime as developpement progresses).</p>
+<p>I hope you enjoy it, and wish you happy holidays watching movies from your couch.</p>
+]]></description></item><item><title>Install Kodi on your Chromebook with Android</title><link>https://www.masoopy.com/install-kodi-on-your-chromebook-with-android/</link><pubDate>Fri, 29 Sep 2017 12:15:26 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-kodi-on-your-chromebook-with-android/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2016/04/Chromebook.jpg" referrerpolicy="no-referrer">
-            </div>A few days ago, I wrote a new guide in order to show you a new, easier and more reliable method to install Kodi on any Chromebook using crouton. Now, if you are lucky, your Chromebook might be elligible to install the Android Play Store&hellip; Let&rsquo;s see if that&rsquo;s is the case and if it is, we will see how to install Kodi using the Android Play Store on your Chromebook.]]></description></item><item><title>Directly Install Kodi on your Chromebook</title><link>https://www.masoopy.com/directly-install-kodi-on-your-chromebook/</link><pubDate>Tue, 26 Sep 2017 13:56:38 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/directly-install-kodi-on-your-chromebook/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>A few days ago, I wrote a new guide in order to show you a <a href="https://www.masoopy.com/directly-install-kodi-on-your-chromebook/" target="_blank" rel="noopener noreferrer">new, easier and more reliable method to install Kodi on any Chromebook</a> using crouton. Now, if you are lucky, your Chromebook might be elligible to install the Android Play Store&hellip; Let&rsquo;s see if that&rsquo;s is the case and if it is, we will see how to install Kodi using the Android Play Store on your Chromebook.</p>
+<h2 id="is-my-chromebook-elligible-to-instal-android-play-store">Is my Chromebook elligible to instal Android Play Store?</h2>
+<p>First, of, check this <a href="https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps" target="_blank" rel="noopener noreferrer">(official) link</a>. If is says &ldquo;Stable channel&rdquo; for you model, then you are all good, go to the next step.</p>
+<p>If not, all hope ain&rsquo;t lost. For example, I own an Asus C200, and official status is set to &ldquo;Planned&rdquo;. However, by turning using the &ldquo;dev&rdquo; channel, I can now use Android apps on my Chromebook.</p>
+<p>In order to make sure if your Chromebook is elligible or not, we will now <a href="https://support.google.com/chromebook/answer/1086915?hl=en" target="_blank" rel="noopener noreferrer">turn on the dev channel</a>.</p>
+<p>Once the update is done, your computer will reboot. If the Android PLay Store is available, then you&rsquo;ll notice a new icon for the Android Play Store in the bar at the bottom of the screen.</p>
+<h2 id="install-android-apps-on-your-chromebook">Install Android Apps on your Chromebook</h2>
+<p>So, you have the Play Store icon in the icon bar at the bottom of the screen? Great, click on it, and let the computer make the first set-up. I&rsquo;ll take a few minutes.</p>
+<p>Once the update is over, simply click on Play Store icon one more time, and search for Kodi :</p>
+<p></p>
+<p>Now, simply install it :</p>
+<p></p>
+<p>That&rsquo;s it! You now have the latest Kodi version installed with no pain.</p>
+]]></description></item><item><title>Directly Install Kodi on your Chromebook</title><link>https://www.masoopy.com/directly-install-kodi-on-your-chromebook/</link><pubDate>Tue, 26 Sep 2017 13:56:38 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/directly-install-kodi-on-your-chromebook/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2016/04/Chromebook.jpg" referrerpolicy="no-referrer">
-            </div>Thanks to Zach, we now have a great way to install Kodi on our Chromebook.
-Switch your Chromebook to developper&rsquo;s mode In order to install Kodi on Chrome OS, we’ll need to install a proper Linux system. Don’t worry, this is done easily thanks to the crouton script.
-NB : be aware that turning developer’s mode ON, will delete ALL your data on the device!
-First of all you have to turn on the developer’s mode on your device.]]></description></item><item><title>Automatically run Kodi at boot</title><link>https://www.masoopy.com/automatically-run-kodi-at-boot/</link><pubDate>Tue, 29 Aug 2017 09:49:06 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/automatically-run-kodi-at-boot/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/kodi.png" referrerpolicy="no-referrer">
-&lt;/div>You have some hardware dedicated to Kodi and wish to create a “clean” media center solution hooked to your TV? Great idea! Find out how to automatically run Kodi at boot on any platform.
-Automatically run Kodi at boot with Windows This method is similar to the Steam Shell mode.. but with Kodi.
-First of all, make sure you can can log into the Windows desktop automatically. In order to do so:</description></item><item><title>Why Nvidia Shield sucks?</title><link>https://www.masoopy.com/why-nvidia-shield-sucks/</link><pubDate>Tue, 08 Dec 2015 11:05:22 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/why-nvidia-shield-sucks/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/Nvidia-Shield-TV.jpg" referrerpolicy="no-referrer">
-&lt;/div>Yes, it is true. I think the Nvidia Shield sucks!
-To be 4K or not to be First of, resolution ! I have plugged the shield on 3 different TV :
-a 720p one ; a 1080p TV; a 4K TV. On the 720p TV, the Shield can only work at 1080p which means non native resolution and big visible pixels.
-On the 1080p TV, the Shield will only work a 4K resolution with reduced refresh rate (24Hz)… which sucks cause you can spot the big pixels from your couch and refresh rate make it looks “slow” or laggy.</description></item><item><title>Kodi beginner's guide</title><link>https://www.masoopy.com/kodi-beginners-guide/</link><pubDate>Mon, 07 Dec 2015 10:58:20 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-beginners-guide/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/kodi_beginner_guide.png" referrerpolicy="no-referrer">
-&lt;/div>As a great alternative to popcorn time, I am going to share with you a nice Kodi beginner’s guide.
-How to install Kodi Browse to official Kodi website, and download the version of your liking (ie. Windows or Mac OS). Click here in order to get directly there!
-Here is a little video to help you :
-Once Kodi is installed, it is time to set up the “appropriate” addons.</description></item><item><title>Kodi Genesis tips and tricks</title><link>https://www.masoopy.com/kodi-genesis-tips-and-tricks/</link><pubDate>Sat, 05 Dec 2015 10:00:52 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-genesis-tips-and-tricks/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>Thanks to <a href="https://www.masoopy.com/install-latest-kodi-chromeos/#comment-3496118744" target="_blank" rel="noopener noreferrer">Zach</a>, we now have a great way to install Kodi on our Chromebook.</p>
+<h2 id="switch-your-chromebook-to-developpers-mode">Switch your Chromebook to developper&rsquo;s mode</h2>
+<p>In order to install Kodi on Chrome OS, we’ll need to install a proper Linux system. Don’t worry, this is done easily thanks to the <a href="https://github.com/dnschneid/crouton" target="_blank" rel="noopener noreferrer">crouton</a> script.</p>
+<p><strong>NB : be aware that turning developer’s mode ON, will delete ALL your data on the device!</strong></p>
+<p>First of all you have to turn on the developer’s mode on your device. Let’s do it!</p>
+<ol>
+<li>While the computer is powered on. Press Esc + Refesh + Power ;</li>
+<li>Device will reboot with a warning message, hit CTRL + D to continue;</li>
+<li>Then hit Enter to confirm the Developer’s mode;</li>
+<li>Device will reboot again, hit again CTRL + D to proceed.</li>
+</ol>
+<p>NB : every time you see that bugging screen at boot, you can pass it with CTRL+D</p>
+<p>What really bugs me with developers mode, is that you have to press CTRL+D on each cold boot or it’ll emits a double bip, and takes more time to boot (so that you can read and re read, and re re read, the warning screen).</p>
+<h2 id="install-kodi-on-your-chromebook">Install Kodi on your Chromebook</h2>
+<p>Now that you are in developer’s mode, you are ready to install Linux with crouton. But what is Crouton? Crouton is a tool that will enable to create “chroot” installation a various Linux distribution. Basically, a “chroot” is a bit like a virtual machine, or box that sits inside your computer and allows you to run another (or several) “virtual” computer inside your physical one.</p>
+<p>In our case, it will allow us to install a “real” Linux inside the ChromeOS. Which means we will have a full standard working computer inside the limited ChromeOS computer. We will call this, our Kodi instance.</p>
+<p>Your computer should be “brand new”, with no data at all in it. Set ip up as usual with your Google account and Wi-Fi settings. Then, the fun starts.</p>
+<ul>
+<li>Open Chrome browser;</li>
+<li>Download the latest version of crouton, <a href="http://goo.gl/fd3zc" target="_blank" rel="noopener noreferrer">right here</a>;</li>
+<li>Hit CTRL + ALT + T (it will open a new scary tab in Chrome), this is called a terminal emulator;</li>
+<li>Enter</li>
+</ul>
+<p><code>shell</code></p>
+<p>The “shell” appearance should slightly change;</p>
+<ul>
+<li>Enter the following command to create the “chroot”.</li>
+</ul>
+<p><code>sudo sh ~/Downloads/crouton -t kodi -n kodi</code></p>
+<p>NB : with -t being the &ldquo;target&rdquo; and -n the name of the instance.</p>
+<p>Wait for the process to complete, it will take a few minutes and text will scroll on your screen. Don’t close the tab, but you can keep you using your computer / navigating on other tabs.</p>
+<p>At some point, inside the tab we ran the previous command, <strong>it will ask you for a login and password</strong>. Enter anything you like, it doesn’t have to be your Google credentials. Actually, it is even better if you use any other credentials. You’ll then use them to log in Linux. The way it works, when you are prompted for your password, nothing will seem to happen. This is expected. Just enter you password once, hit Enter and confirm it.</p>
+<p>Wait for the process to finish.</p>
+<h2 id="and-thats-it-">And… that’s it !</h2>
+<p>Now every time you want to run Kodi, open a Shell in Chrome by hitting <strong>CTRL+ALT+T</strong> and just type :</p>
+<p><code>sudo startkodi</code></p>
+<p>That&rsquo;s it! Kodi should start up, and run with the sound and everything working as expected!</p>
+<p><strong>NB</strong> : please note that in order to have sound, your sound must be turned on both on the &ldquo;ChromeOS&rdquo; side, and the Kodi instance.</p>
+<p>NB : you can switch from/to ChromeOS and from/to Kodi instance by hitting CTRL + ALT + SHIFT + Forward (or Backward). Forward and Backward are the keys on the right of the Esc key. You might have to press it a couple of times, for it to work.</p>
+]]></description></item><item><title>Automatically run Kodi at boot</title><link>https://www.masoopy.com/automatically-run-kodi-at-boot/</link><pubDate>Tue, 29 Aug 2017 09:49:06 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/automatically-run-kodi-at-boot/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi.png" referrerpolicy="no-referrer">
+            </div><p>You have some hardware dedicated to Kodi and wish to create a “clean” media center solution hooked to your TV? Great idea! Find out how to automatically run Kodi at boot on any platform.</p>
+<h2 id="automatically-run-kodi-at-boot-with-windows">Automatically run Kodi at boot with Windows</h2>
+<p>This method is similar to the Steam Shell mode.. but with Kodi.</p>
+<p>First of all, make sure you can can log into the Windows desktop automatically. In order to do so:</p>
+<ul>
+<li>Click Start button (from the Windows desktop) &gt; Run and enter the following command:</li>
+</ul>
+<p><code>control userpasswords2</code></p>
+<p></p>
+<ul>
+<li>Make sure “Users must enter a username and password to use this computer” is unchecked. If not, do it.</li>
+</ul>
+<p></p>
+<ul>
+<li>If prompted, enter the username / password you want to automatically log in with.</li>
+</ul>
+<p>Now, that autologin is set-up, we will do what’s necessary in order to automatically run Kodi at boot.</p>
+<ul>
+<li>Again, Click Start Button &gt; Run and enter the following command:</li>
+</ul>
+<p><code>regedit</code></p>
+<p></p>
+<ul>
+<li>From here, browse to :</li>
+</ul>
+<p><code>HKEY_LOCAL_MACHINESOFTWAREMicrosoftWindows NTCurrentVersionWinlogon</code></p>
+<ul>
+<li>Right click on the right pane and select “Create a new string”.</li>
+<li>Name it “Shell”, and in the value field enter the full path to your Kodi executable, for example: “C:Program FilesKodiKodi.exe”</li>
+<li>You are done, reboot and check everything is working as expected!</li>
+</ul>
+<p>NB: Do not remove the quotes when entering the path to Kodi executable in the Shell variable.</p>
+<p>NB2 : In order to find the full path to Kodi executable, just launch the explorer and browse to the folder where it is installed, then clic on the “top bar”. The paths will appear, you can copy / paste from there. Don’t forget to append the application name (kodi.exe) to the path you just copied.</p>
+<h2 id="automatically-run-kodi-at-boot-with-linux--rpi">Automatically run Kodi at boot with Linux / RPI</h2>
+<p>In order automatically run Kodi at boot we will have to first add a new user to your system.</p>
+<ul>
+<li>Open a terminal prompt and type the following command:</li>
+</ul>
+<p><code>sudo adduser --disabled-password --disabled-login --gecos &quot;&quot; kodi &amp;&amp; sudo usermod -a -G cdrom,audio,video,plugdev,netdev,users,dialout,dip,input kodi</code></p>
+<p>Now, the easiest way to autostart Kodi is to use a light session manager that’ll start Kodi itselfs.</p>
+<ul>
+<li>Again, in a command prompt, enter the following, depending on your Linux version:</li>
+</ul>
+<h3 id="ubuntu--debian--lxde--mint">Ubuntu / Debian / LXDE / Mint:</h3>
+<p><code>sudo apt-get install -y lightdm</code></p>
+<h3 id="fedora--rhel--centos">Fedora / RHEL / CentOS:</h3>
+<p><code>sudo dnf -y install lightdm</code></p>
+<p>Now, edit the following file <strong>/etc/lightdm/lightdm.conf</strong> with your favorite text editor (as root / by running sudo), and make sure the [Seat:*] section looks like below:</p>
+<p><code>[Seat:*] autologin-user=kodi autologin-session=kodi</code></p>
+<p>Reboot your computer and make sure it works.</p>
+<h2 id="voilà-enjoy">Voilà, enjoy!</h2>
+<p>That&rsquo;s it, you should now have a computer automagically starting Kodi at boot. Make this your entertainement station and enjoy binge watching frm the couch.</p>
+]]></description></item><item><title>Why Nvidia Shield sucks?</title><link>https://www.masoopy.com/why-nvidia-shield-sucks/</link><pubDate>Tue, 08 Dec 2015 11:05:22 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/why-nvidia-shield-sucks/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/Nvidia-Shield-TV.jpg" referrerpolicy="no-referrer">
+            </div><p>Yes, it is true. I think the <a href="http://www.amazon.com/gp/product/B00U33Q940?ie=UTF8&amp;linkCode=as2&amp;camp=1634&amp;creative=6738&amp;tag=kodi-xbmc-20&amp;creativeASIN=B00U33Q940" target="_blank" rel="noopener noreferrer">Nvidia Shield</a> sucks!</p>
+<h2 id="to-be-4k-or-not-to-be">To be 4K or not to be</h2>
+<p>First of, resolution ! I have plugged the shield on 3 different TV :</p>
+<ul>
+<li>a 720p one ;</li>
+<li>a 1080p TV;</li>
+<li>a 4K TV.</li>
+</ul>
+<p>On the 720p TV, the Shield can only work at 1080p which means non native resolution and big visible pixels.</p>
+<p>On the 1080p TV, the Shield will only work a 4K resolution with reduced refresh rate (24Hz)… which sucks cause you can spot the big pixels from your couch and refresh rate make it looks “slow” or laggy.</p>
+<p>Here is a picture of a 1080p TV with 4K resolution at 60Hz, not definitely not usable :</p>
+<p></p>
+<p>Now, same 1080p TV but 4K @ 24hz :</p>
+<p></p>
+<p>On the 4K, it works as it is supposed to. But honestly, sitting on your couch a few meters away, it is hard to tell the difference between a 4K Shield TV vs a Raspberry Pi 2 1080p setup.</p>
+<p>Without a 4K display, you will get worse graphics for 5 times the price of a rpi2. So, yes the Nvidia Shield sucks with non native 4K displays.</p>
+<h2 id="the-gamepad-is-well-not-for-gamers">The gamepad is… well not for gamers</h2>
+<p>Gamepad is pretty big, fat an heavier than any other gamepad. Holding it in your hands for a long time will be exhausting.</p>
+<p>Let’s compare sizes on a picture :</p>
+<p></p>
+<p>Now about the weight :</p>
+<ul>
+<li>Shield gamepad : 315g</li>
+<li>Xbox 360 PC pad : 250g (310g with the whole cable)</li>
+<li>PS4 : 220g</li>
+<li>PS3: 195g</li>
+</ul>
+<p>Please note that weights have been rounded to the next upper value. The gamepad alone is heavier than the old gen Xbox 360 pad with its cable… and lot fatter to as the picture attests.</p>
+<p>Once again again, the Nvidia Shield sucks as it makes you lift weights while you should be playing.</p>
+<h2 id="gaming-platform-not-so-much">Gaming platform… not so much</h2>
+<p>I am not sure what people are supposed to do with a Shield. Media Center ? Not really when you have Android TV stick and/or ChromeCast devices that are way cheaper, plug and play and run Kodi.</p>
+<p>I believe the Shield should be good gaming platform, but no the Nvidia shield sucks at gaming too.</p>
+<p>Android games ? No thanks, they work OK, but again if you want to play Android game buy a stick or an Ouya console. A part from a very short list of titles, you’ll be able to play the same games.</p>
+<p><a href="http://shield.nvidia.com/game-stream" target="_blank" rel="noopener noreferrer">Geforce Game-Stream</a> ? Well, maybe, but not today. This point could be pretty interesting. It allows you to stream almost any game from your running PC to your TV / couch setup. After playing with a it a little, I have to say that it is far from perfect. Some games don’t play along, and it lags quite often, I used wired networking only. Actually, this point is not that bad, it kinda works. However, for the tech knowhow there is a free implementation called <a href="http://moonlight-stream.com/" target="_blank" rel="noopener noreferrer">Moonlight</a> and it happens to work OK on a $40 RPI2. Moonlight is not as good as Geforce Game-Stream, but is playable most of the time.</p>
+<p><a href="http://shield.nvidia.com/games/geforce-now" target="_blank" rel="noopener noreferrer">Nvidia Geforce Now</a>, for about ten bucks a month, you can rent games and play them on your shield without having to use a computer. Everything from the game is “calculated” on Nvidia cloud servers and you just stream it to your couch. However, you’ll need the very HIGH bandwith (we are talking about 50Mbit/s for 1080p @ 60Hz as per <a href="http://shield.nvidia.com/support/geforce-now/system-requirements/1" target="_blank" rel="noopener noreferrer">official requirements</a>) in order to be able to play any game. Moreover, most recent games can’t really be rented but have to be completely bought.. and you’ll sometimes get a key for your regular PC but not always. If you have a gaming computer, it is still better to buy the regular game and stream it thanks to Geforce Game-Stream.</p>
+<p>Last but not least, playing old console games. I have already started a serie about <a href="https://www.masoopy.com/the-original-xbmc/" target="_blank" rel="noopener noreferrer">retrogaming</a>. The Shield can allow you to run emulators, however the good emulators (<a href="https://play.google.com/store/search?q=.emu&amp;c=apps&amp;docType=1&amp;sp=CAFiBgoELmVtdXoFGADAAQKKAQIIAQ%3D%3D:S:ANO1ljJz6Ik" target="_blank" rel="noopener noreferrer">.emu from Robert Broglia</a>) are not free. They are around $5 each… and there is not many frontend, or they are not very nice looking. A “frontend” allows you to have a nice looking and consistent experience : all emulator are accessible from the same menu with a nice GUI. This is far more entertaining than the Android’s way offered by the Shield.</p>
+<p>A nice emulation frontend, <a href="http://www.recalbox.com/" target="_blank" rel="noopener noreferrer">Recalbox</a> :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/q5UYxuzKEec?feature=oembed" width="640"></iframe>
+<p>Android emulators :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/IJEwiHBwKoM?feature=oembed" width="640"></iframe>
+<h2 id="yeah-nvidia-shield-sucksreally">Yeah, Nvidia shield sucks…really</h2>
+<p>And I am really disappointed to say so. I bought it during a the black Friday and I was really hoping to find a great device, since I read many great reviews, but I am actually really disappointed. I am sending it back to Amazon. I’ll keep using the RPI2 with Recalbox. As for a media center solution, you could still use a regular Kodi installation with the right add-ons for streaming, as per our <a href="https://www.masoopy.com/kodi-beginners-guide/" target="_blank" rel="noopener noreferrer">Kodi Beginner’s Guide</a>.</p>
+]]></description></item><item><title>Kodi beginner's guide</title><link>https://www.masoopy.com/kodi-beginners-guide/</link><pubDate>Mon, 07 Dec 2015 10:58:20 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-beginners-guide/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi_beginner_guide.png" referrerpolicy="no-referrer">
+            </div><p>As a great alternative to <a href="https://www.masoopy.com/popcorn-time-is-dead-time-to-switch-to-kodi/" target="_blank" rel="noopener noreferrer">popcorn time</a>, I am going to share with you a nice Kodi beginner’s guide.</p>
+<h2 id="how-to-install-kodi">How to install Kodi</h2>
+<p>Browse to official Kodi website, and download the version of your liking (ie. Windows or Mac OS). <a href="http://kodi.tv/download/" target="_blank" rel="noopener noreferrer">Click here in order to get directly there!</a></p>
+<p>Here is a little video to help you :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/vKzOYtXu7L4?feature=oembed" width="640"></iframe>
+<p>Once Kodi is installed, it is time to set up the “appropriate” addons.</p>
+<h2 id="popcorn-time-alternative--the-kodi-streaming-add-ons">Popcorn time alternative – the Kodi streaming add-ons</h2>
+<p><em>Disclaimer : please remember that streaming movies and TV shows might be against your local laws.</em></p>
+<p>In order to install the SuperRepo, follow the steps below :</p>
+<ul>
+<li>Go to Settings &gt; File manager and add a source. In the source name enter “<a href="http://srp.nu" target="_blank" rel="noopener noreferrer">http://srp.nu</a>” (without the quote) and name it SRP.</li>
+<li>Go to Settings &gt; Add-ons &gt; Add from zip file</li>
+<li>Select the SRP you just added, browse to the current Kodi version (Isengard at the time of writing), and All add-ons and install the SuperRepo Isengard Repository</li>
+<li>Once you have installed the SuperRepo Isengard Repository, go back to Add-on manager.</li>
+<li>Select Add from repository &gt; Select the SuperRepo one and browse to Video add-ons</li>
+<li>In this HUGE list, select Genesis and click Install.</li>
+</ul>
+<p><a href="https://www.masoopy.com/kodi-superrepo-enhance-kodi/" target="_blank" rel="noopener noreferrer">A more detailed guide can be found here</a>.</p>
+<h2 id="configure-genesis-to-enjoy-a-great-streaming-experience">Configure Genesis to enjoy a great streaming experience</h2>
+<p>Genesis is a great add-on! You can configure it so that you can share your “watch list” across multiple devices, you can automatically download subtitles, and populate your videos library with you favourite shows, and much more.</p>
+<p><a href="https://www.masoopy.com/kodi-genesis-tips-tricks/" target="_blank" rel="noopener noreferrer">Here are some great tips to enhance your Genesis experience</a>, and find out even more in our free PDF guide.</p>
+<h2 id="get-the-full-kodi-beginners-guide-for-free-right-now">Get the full Kodi Beginner’s guide for free, right now!</h2>
+<p>In order to make it easy and portable for anyone, we have written a full 24 pages PDF guide, explaining with many details, pictures and step by step how to setup the perfect Kodi streaming experience.</p>
+<p>Please help us, by sharing this content and get the full uncensored guide for free, right here :</p>
+<p><a href="/images/2015/11/Kodi_Beginners_Guide.pdf" rel="">Kodi_Beginners_Guide</a></p>
+]]></description></item><item><title>Kodi Genesis tips and tricks</title><link>https://www.masoopy.com/kodi-genesis-tips-and-tricks/</link><pubDate>Sat, 05 Dec 2015 10:00:52 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-genesis-tips-and-tricks/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_genesis_tips.png" referrerpolicy="no-referrer">
-            </div>Genesis is a great add-on that let’s you stream movies and TV Shows under Kodi, let me share with you some great Genesis tips and tricks.
-Disclaimer : streaming movies and TV shows might be illegal in your country, be sure to comply with local laws.
-Genesis Subtitles Did you know that you could enable automatic subtitles in Genesis? Yup! In order to do so, just navigate to the Video Add-ons &gt; Genesis &gt; Tools, this is the where Genesis is configured, and tweaked.]]></description></item><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>Genesis is a great add-on that let’s you stream movies and TV Shows under Kodi, let me share with you some great Genesis tips and tricks.</p>
+<p><em>Disclaimer : streaming movies and TV shows might be illegal in your country, be sure to comply with local laws.</em></p>
+<h2 id="genesis-subtitles">Genesis Subtitles</h2>
+<p>Did you know that you could enable automatic subtitles in Genesis? Yup! In order to do so, just navigate to the Video Add-ons &gt; Genesis &gt; Tools, this is the where Genesis is configured, and tweaked.</p>
+<p></p>
+<p>When I talk about Genesis settings, this is the right place, and it looks like the picture below.</p>
+<p></p>
+<p>Now select the Settings : subtitles line, and configure it to suit your likings.</p>
+<p></p>
+<h2 id="share-genesis-library-across-devices">Share Genesis library across devices</h2>
+<p>If you are using Kodi on several devices, then you might consider sharing your Genesis library across several devices. This is really easy, let’s do it!</p>
+<p>Go to Genesis settings, as explained above.</p>
+<p>Then, Library Settings,</p>
+<p></p>
+<p>and edit the Movies and TV Shows paths in order to use a network location (eg. your NAS), as shown below with before / after picture.</p>
+<p>Before change (please note the default path: special://…) :</p>
+<p></p>
+<p>After change (please note that I am using NFS share on my NAS) :</p>
+<p></p>
+<p>Highlight Movies folder, hit C on your keyboard (or right click), select “Set content”, and choose the Movies scraper you want to use.</p>
+<p>Repeat for the TV Shows folder with the wanted TV Shows scraper.</p>
+<p>Now hit the Update folders button, that’s it!</p>
+<h2 id="more-genesis-tips-and-tricks">More Genesis tips and tricks</h2>
+<p>There is even more Genesis tips and tricks, here is a quick list.</p>
+<p>Notify trakt.tv of your watching by adding your trakt.tv credentials in Gensis settings as shown below.</p>
+<p></p>
+<p>Edit source priority in order to use the Auto play feature. Once you have used Genesis a little, you’ll notice that some source are more reliable than some others. Write down the sources that works well for you and increase their priority in the menu shown below.</p>
+<p></p>
+<p>Feel free to share you own Genesis tips and tricks with us in the comment section of this post.</p>
+]]></description></item><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_superrepo.png" referrerpolicy="no-referrer">
-            </div>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.
-How to install SuperRepo on Kodi Go to Kodi Settings &gt; File manager :
-Select Add source :
-Enter the following URL, “http://SRP.nu” (without quotes) :
-Once done, it should look like this (notice SRP as name of media source) :
-Now go to Settings &gt; Add-ons :
-Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :]]></description></item><item><title>Install Kodi on Windows 10</title><link>https://www.masoopy.com/install-kodi-on-windows-10/</link><pubDate>Fri, 20 Nov 2015 08:41:01 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/install-kodi-on-windows-10/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/install_kodi_win_10.png" referrerpolicy="no-referrer">
-&lt;/div>The new Windows is here, please follow our latest video in order to install Kodi on Windows 10.
-Install Kodi on Windows 10 This is pretty easy, as usual follow these few steps:
-Go to kodi.tv Downloads page; Download the required version; Install it by clicking “Next”; Run and enjoy! Or else… You could also check our Kodi Beginner’s Guide for more detailed and advanced setup.</description></item><item><title>Is Kodi 4K ready?</title><link>https://www.masoopy.com/is-kodi-4k-ready/</link><pubDate>Sun, 08 Nov 2015 12:21:10 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/is-kodi-4k-ready/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/kodi_4k_rdy.png" referrerpolicy="no-referrer">
-&lt;/div>This entry is part 1 of 1 in the series 4K
-#4K display are becoming more and more affordable, but are they worth it? More importantly, what is really 4K and what are their pros and cons? And finally is #Kodi 4K ready? Let’s find out.
-What is 4K? 4K is the “new resolution in town”. In order to understand 4K resolution, we have to understand what resolution is. According to Wikipedia, display resolution is “is the number of distinct pixels in each dimension that can be displayed”.</description></item></channel></rss>
+            </div><p>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.</p>
+<h2 id="how-to-install-superrepo-on-kodi">How to install SuperRepo on Kodi</h2>
+<p>Go to Kodi Settings &gt; File manager :</p>
+<p>Select Add source :</p>
+<p>Enter the following URL, “<a href="http://SRP.nu" target="_blank" rel="noopener noreferrer">http://SRP.nu</a>” (without quotes) :</p>
+<p>Once done, it should look like this (notice SRP as name of media source) :</p>
+<p>Now go to Settings &gt; Add-ons :</p>
+<p>Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :</p>
+<p>Allow it some time to install the Add-on, once it is done, you should see it under Add-ons &gt; Install from repository, as shown in the picture below :</p>
+<p>That’s it, SuperRepo is installed!</p>
+<h2 id="how-to-install-add-ons-from-superrepo--enhance-kodi">How to install Add-ons from SuperRepo – enhance Kodi!</h2>
+<p>Now that SuperRepo is installed, you can start installing “real” add-ons to Kodi. In order to do that, browse to Add-ons &gt; Install from Repository and select SuperRepo [All] .</p>
+<p>From here, all the add-ons are sorted by categories, like video, music, subtitles, etc. You browse the list and install add-on you like. For example, if you are looking for a good add-on to download subtitles, I highly advise you to get the Addic7ed and OpenSubtitles’ ones from the Subtitles category.</p>
+<p>A great streaming add-on, is Genesis from the Video add-ons category.</p>
+<p>In order to install an add-on, just browse until you find it’s name (they are alphabetically ordered) in the right category, highlight it, press Enter and select Install.</p>
+<p></p>
+<p>Those are the add-ons I use the most. What’s about you, what add-ons do you use to enhance Kodi?</p>
+]]></description></item><item><title>Install Kodi on Windows 10</title><link>https://www.masoopy.com/install-kodi-on-windows-10/</link><pubDate>Fri, 20 Nov 2015 08:41:01 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-kodi-on-windows-10/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/install_kodi_win_10.png" referrerpolicy="no-referrer">
+            </div><p>The new Windows is here, please follow our latest video in order to install Kodi on Windows 10.</p>
+<iframe allowfullscreen="" frameborder="0" height="113" src="https://www.youtube.com/embed/vKzOYtXu7L4?feature=oembed" width="200"></iframe>
+<h2 id="install-kodi-on-windows-10">Install Kodi on Windows 10</h2>
+<p>This is pretty easy, as usual follow these few steps:</p>
+<ol>
+<li>Go to <a href="http://kodi.tv/download/" target="_blank" rel="noopener noreferrer">kodi.tv Downloads page</a>;</li>
+<li>Download the required version;</li>
+<li>Install it by clicking “Next”;</li>
+<li>Run and enjoy!</li>
+</ol>
+<h2 id="or-else">Or else…</h2>
+<p>You could also check our <a href="https://www.masoopy.com/kodi-beginners-guide/" target="_blank" rel="noopener noreferrer">Kodi Beginner’s Guide</a> for more detailed and advanced setup.</p>
+]]></description></item><item><title>Is Kodi 4K ready?</title><link>https://www.masoopy.com/is-kodi-4k-ready/</link><pubDate>Sun, 08 Nov 2015 12:21:10 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/is-kodi-4k-ready/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi_4k_rdy.png" referrerpolicy="no-referrer">
+            </div><p>This entry is part 1 of 1 in the series <a href="https://www.masoopy.com/series/4k/" title="4K" target="_blank" rel="noopener noreferrer">4K</a></p>
+<p><a href="https://www.masoopy.com/tag/4k/" target="_blank" rel="noopener noreferrer">#4K</a> display are becoming more and more affordable, but are they worth it? More importantly, what is really 4K and what are their pros and cons? And finally is <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> 4K ready? Let’s find out.</p>
+<h2 id="what-is-4k">What is 4K?</h2>
+<p>4K  is the “new resolution in town”. In order to understand 4K resolution, we have to understand what resolution is. According to <a href="https://en.wikipedia.org/wiki/Display_resolution" target="_blank" rel="noopener noreferrer">Wikipedia</a>, display resolution is “is the number of distinct pixels in each dimension that can be displayed”. A very common resolution nowadays is Full HD (also referred as 1080p). It means that an image using this resolution is 1920 pixels in width by 1080 pixels in height.</p>
+<p></p>
+<p>Now, the latest 4K resolution, is 4 times this size, which is 3840 pixels in width by 2160 pixels in height. Let’s do some simple maths :</p>
+<p>FHD –&gt; 1920*1080 = 2,073,600</p>
+<p>4K    –&gt; 3840*2160 = 8,294,400</p>
+<p>then 4K / FHD —&gt; 8,294,400 / 2,073,600 = 4</p>
+<p>Basically, it means it 4K times “superior” to Full HD resolution.</p>
+<h2 id="pros-and-cons-of-4k">Pros and cons of 4K</h2>
+<p>Now that we know what is 4K, let’s focus on the main advantages and disadvantages of the 4K resolution.</p>
+<h3 id="advantage-of-4k">Advantage of 4K</h3>
+<ul>
+<li>Higher resolution means bigger level of details. 4K images / movies will look more “smooth” with less visible “pixellated areas”.</li>
+<li>True 4K content, really looks awesome, it is, subjectively, clearer, sharper and nicer.</li>
+</ul>
+<h3 id="disadvantages-of-4k">Disadvantages of 4K</h3>
+<ul>
+<li>Lack of content: most content is not yet 4K ready. However, some providers such as Netflix are adding more and more 4K content to their library.</li>
+<li>Bigger file size. As we said, 4K is 4 times “superior” in quality, it is also way bigger to download.</li>
+</ul>
+<p>Now that we’ve seen the main advantages and disadvantages of 4K, let’s answer our initial question.</p>
+<h2 id="is-kodi-4k-ready">Is Kodi 4K ready?</h2>
+<p>Well, actually… sorry for the answer but it’ll be a yes and a no at the same time.</p>
+<p>Yes, Kodi is 4K ready (as long as your hardware is, more on that coming in a dedicated post). Skins will “auto resize” to the 4K resolution from 1080p which is as easy as doubling height and width (which in the end results in a 4 times factor) of every images from the skins.</p>
+<p>Moreover, Kodi will upscale lower resolution’s content to 4K, and with the proper settings (more on that coming in another post as well) you could, subjectively again, notice a better overall quality from your content.</p>
+<p>And no, Kodi is not 4K ready. Indeed, the skins are “just” 1080p yet, and are not natively drawn with the 4K resolution (whereas PS4 and Xbox One skins are). In practice, it works really fine. In theory, it shows a lack of interest for the format. Last but not least, 4K content is awfully missing (not Kodi’s fault here), and in order to really enjoy Kodi in 4K, we really need quality 4K content.</p>
+<p>Now that we have shown you a brief tour of 4K, it’s up to you to decide whether or not you want to go down that road. If you choose to go, keep reading us as this article is the first of a series about Kodi and 4K.</p>
+]]></description></item></channel></rss>

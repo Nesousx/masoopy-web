@@ -1,11 +1,80 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>nvidia shield - Tag - Masoopy</title><link>https://www.masoopy.com/tags/nvidia-shield/</link><description>nvidia shield - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 15 Mar 2018 08:25:14 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/nvidia-shield/" rel="self" type="application/rss+xml"/><item><title>Shield TV 2017, let's take a fresh start</title><link>https://www.masoopy.com/shield-tv-2017-lets-take-a-fresh-start/</link><pubDate>Thu, 15 Mar 2018 08:25:14 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/shield-tv-2017-lets-take-a-fresh-start/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>nvidia shield - Tag - Masoopy</title><link>https://www.masoopy.com/tags/nvidia-shield/</link><description>nvidia shield - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 15 Mar 2018 08:25:14 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/nvidia-shield/" rel="self" type="application/rss+xml"/><item><title>Shield TV 2017, let's take a fresh start</title><link>https://www.masoopy.com/shield-tv-2017-lets-take-a-fresh-start/</link><pubDate>Thu, 15 Mar 2018 08:25:14 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/shield-tv-2017-lets-take-a-fresh-start/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/shield_2017.png" referrerpolicy="no-referrer">
-            </div>After criticizing like crazy the first Shield TV, I decided to buy the Shield 2017 and give it a try.
-Only morons never change their minds Let&rsquo;s say it straight away, I have now adopted the Shield TV 2017!
-I also have the feeling that Nvidia also decided to slightly change their product. They are now offering 2 &ldquo;versions&rdquo; of the box :
- a multimedia version, sold only with the remote ; a gamer version, sold with an additional controller.]]></description></item><item><title>Why Nvidia Shield sucks?</title><link>https://www.masoopy.com/why-nvidia-shield-sucks/</link><pubDate>Tue, 08 Dec 2015 11:05:22 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/why-nvidia-shield-sucks/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/Nvidia-Shield-TV.jpg" referrerpolicy="no-referrer">
-&lt;/div>Yes, it is true. I think the Nvidia Shield sucks!
-To be 4K or not to be First of, resolution ! I have plugged the shield on 3 different TV :
-a 720p one ; a 1080p TV; a 4K TV. On the 720p TV, the Shield can only work at 1080p which means non native resolution and big visible pixels.
-On the 1080p TV, the Shield will only work a 4K resolution with reduced refresh rate (24Hz)… which sucks cause you can spot the big pixels from your couch and refresh rate make it looks “slow” or laggy.</description></item></channel></rss>
+            </div><p>After <a href="https://www.masoopy.com/why-nvidia-shield-sucks/" target="_blank" rel="noopener noreferrer">criticizing like crazy the first Shield TV</a>, I decided to buy the Shield 2017 and give it a try.</p>
+<h2 id="only-morons-never-change-their-minds">Only morons never change their minds</h2>
+<p>Let&rsquo;s say it straight away, I have now adopted the Shield TV 2017!</p>
+<p>I also have the feeling that Nvidia also decided to slightly change their product. They are now offering 2 &ldquo;versions&rdquo; of the box :</p>
+<ul>
+<li>a multimedia version, sold only with the remote ;</li>
+<li>a gamer version, sold with an additional controller.</li>
+</ul>
+<p>I really think this is a smart move. It will allow Nvidia to target more users. For example, I have everything I need on the console / gaming side, and I am not interested in playing games on the Shield. Moreover, for occasional gaming, I can still pair my Xbox One (Bluetooth) controllers or any PS3 / PS4 controllers on the Shield. I bought this box to use purely as a 4K media center (I now have a 4K TV and the RPI3 doesn&rsquo;t really handle 4K).</p>
+<p>However, for the people wanting using the Shield as a gaming console, they now have a totally redesigned controller and more importantly a regular sized / weighted controller! And if you don&rsquo;t like it, just pair almost any Bluetooth controller.</p>
+<p>That&rsquo;s an improvement!</p>
+<h2 id="shield-2017-as-a-media-center">Shield 2017 as a media center</h2>
+<p>Unfortunately, I couldn&rsquo;t reproduce the issue I had with the Shield TV plugged to a 1080p (only) TV since I no longer have it. So plugging the Shield to the 4K TV works flawlessly and 4K resolution and refresh rate are automagically detected, which is <a href="https://www.reddit.com/r/AndroidTV/comments/60tooi/mibox_70_update_rolling_out/" target="_blank" rel="noopener noreferrer">not the case with a Xiaomi Mi Box 3</a>.</p>
+<p>Back then, I was also bugged with the fact that Kodi (for example) will stop after a while and that some of the software I use could not notify it when new media were added to my libraries. I was probably dumb, or the option didn&rsquo;t exists (which I doubt). If you want to have your Shield always &ldquo;on&rdquo; (like my good old RPI3), then you simply have enable Developer Settings and activate the always on feature. This way, as long as my Shield is plugged and Kodi is running it will stay up, allowing third party apps to update Kodi library as soon as new media are available.</p>
+<p>Another aspect of the Shield that appealed to me was the Plex Media Server part. I used to run a Docker container with Plex Media Center, how my computer wasn&rsquo;t able to transcode 4K to something &ldquo;smaller&rdquo;. Now thanks to the Shield, my 4K media are transcoded correctly. This also allows me to have one less computer running 24/7.</p>
+<p>In order to sum up, maybe the original Shield wasn&rsquo;t that bad on the media aspect but I was just being stupid.</p>
+<h2 id="shield-2017-as-a-gaming-console">Shield 2017 as a gaming console</h2>
+<p>I used to be a player, a PC player. I even worked for a fews years in the video game industry.<br>
+Nowadays, not so much a player. I am getting bored pretty fast with video games and every few years I find a game I love and spend a few hours a day on it for some months, but that&rsquo;s about it.</p>
+<p>In order to write this article, I did try a few Android / Shield games, and I have to say that they are quite fine. They are a tons of them, and a lot are free (if you can endure the ads). This is definitely not a console I will play regularly or alone but if you have a few friends at home you&rsquo;ll probably find a game or two to play.</p>
+<p>If you are into &ldquo;bigger&rdquo; games, like AAA, there are two possibilities :</p>
+<ul>
+<li>Geforce Now ;</li>
+<li>Game-Stream.</li>
+</ul>
+<p>I still think that Geforce Now is still not interesting. It requires a lot of bandwidth and recent titles are not available.</p>
+<p>Now there is the local streaming alternative. It is called Gefore Game-Stream and it allows you to stream games from your gaming computer (with an Nvidia graphic cards) to your Shield + TV. While I feel it works better than before : less latency, more games working &ldquo;out of the box&rdquo;, etc.<br>
+I am still not into it. I think Windows doesn&rsquo;t play well along it. This remains a regular PC, not a console and many actions have to be done with a keyboard / mouse. The Shield provide a pretty well done overlay so that you can &ldquo;emulate&rdquo; mouse / keyboard usage with the controller, but still&hellip;<br>
+it is no fun to use. I really wish Windows would release some kind of real &ldquo;game mode&rdquo; / big picture interface. Then we would be talking!</p>
+<p>Last but not least, the retrogaming part. I am not changing my statement by an inch on this. Reetrogaming still suck on the Shield 2017. You&rsquo;ll need good emulators and they are not free. And there is no nice GUI / frontend to serve you all your games at the same place. If you want retrogaming, use a Raspberry Pi with Retropie / Recalbox and some 8 Bitdo controllers. Way to go!</p>
+<h2 id="we-started-on-the-wrong-foot-now-lets-be-friend">We started on the wrong foot, now let&rsquo;s be friend</h2>
+<p>I have come to realize that maybe the Nvidia Shield doesn&rsquo;t suck as much as I thought. However, I also think that in order to enjoy it, you need a 4K TV. I also think Nvidia made a good job with its 2017 version by redesigning the controller and by offering the customer the possibility to use the Shield solely as a media center.</p>
+<p>It is not perfect (what/who is?), but it looks like we are going to spend a few years of our lives together.</p>
+]]></description></item><item><title>Why Nvidia Shield sucks?</title><link>https://www.masoopy.com/why-nvidia-shield-sucks/</link><pubDate>Tue, 08 Dec 2015 11:05:22 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/why-nvidia-shield-sucks/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/Nvidia-Shield-TV.jpg" referrerpolicy="no-referrer">
+            </div><p>Yes, it is true. I think the <a href="http://www.amazon.com/gp/product/B00U33Q940?ie=UTF8&amp;linkCode=as2&amp;camp=1634&amp;creative=6738&amp;tag=kodi-xbmc-20&amp;creativeASIN=B00U33Q940" target="_blank" rel="noopener noreferrer">Nvidia Shield</a> sucks!</p>
+<h2 id="to-be-4k-or-not-to-be">To be 4K or not to be</h2>
+<p>First of, resolution ! I have plugged the shield on 3 different TV :</p>
+<ul>
+<li>a 720p one ;</li>
+<li>a 1080p TV;</li>
+<li>a 4K TV.</li>
+</ul>
+<p>On the 720p TV, the Shield can only work at 1080p which means non native resolution and big visible pixels.</p>
+<p>On the 1080p TV, the Shield will only work a 4K resolution with reduced refresh rate (24Hz)… which sucks cause you can spot the big pixels from your couch and refresh rate make it looks “slow” or laggy.</p>
+<p>Here is a picture of a 1080p TV with 4K resolution at 60Hz, not definitely not usable :</p>
+<p></p>
+<p>Now, same 1080p TV but 4K @ 24hz :</p>
+<p></p>
+<p>On the 4K, it works as it is supposed to. But honestly, sitting on your couch a few meters away, it is hard to tell the difference between a 4K Shield TV vs a Raspberry Pi 2 1080p setup.</p>
+<p>Without a 4K display, you will get worse graphics for 5 times the price of a rpi2. So, yes the Nvidia Shield sucks with non native 4K displays.</p>
+<h2 id="the-gamepad-is-well-not-for-gamers">The gamepad is… well not for gamers</h2>
+<p>Gamepad is pretty big, fat an heavier than any other gamepad. Holding it in your hands for a long time will be exhausting.</p>
+<p>Let’s compare sizes on a picture :</p>
+<p></p>
+<p>Now about the weight :</p>
+<ul>
+<li>Shield gamepad : 315g</li>
+<li>Xbox 360 PC pad : 250g (310g with the whole cable)</li>
+<li>PS4 : 220g</li>
+<li>PS3: 195g</li>
+</ul>
+<p>Please note that weights have been rounded to the next upper value. The gamepad alone is heavier than the old gen Xbox 360 pad with its cable… and lot fatter to as the picture attests.</p>
+<p>Once again again, the Nvidia Shield sucks as it makes you lift weights while you should be playing.</p>
+<h2 id="gaming-platform-not-so-much">Gaming platform… not so much</h2>
+<p>I am not sure what people are supposed to do with a Shield. Media Center ? Not really when you have Android TV stick and/or ChromeCast devices that are way cheaper, plug and play and run Kodi.</p>
+<p>I believe the Shield should be good gaming platform, but no the Nvidia shield sucks at gaming too.</p>
+<p>Android games ? No thanks, they work OK, but again if you want to play Android game buy a stick or an Ouya console. A part from a very short list of titles, you’ll be able to play the same games.</p>
+<p><a href="http://shield.nvidia.com/game-stream" target="_blank" rel="noopener noreferrer">Geforce Game-Stream</a> ? Well, maybe, but not today. This point could be pretty interesting. It allows you to stream almost any game from your running PC to your TV / couch setup. After playing with a it a little, I have to say that it is far from perfect. Some games don’t play along, and it lags quite often, I used wired networking only. Actually, this point is not that bad, it kinda works. However, for the tech knowhow there is a free implementation called <a href="http://moonlight-stream.com/" target="_blank" rel="noopener noreferrer">Moonlight</a> and it happens to work OK on a $40 RPI2. Moonlight is not as good as Geforce Game-Stream, but is playable most of the time.</p>
+<p><a href="http://shield.nvidia.com/games/geforce-now" target="_blank" rel="noopener noreferrer">Nvidia Geforce Now</a>, for about ten bucks a month, you can rent games and play them on your shield without having to use a computer. Everything from the game is “calculated” on Nvidia cloud servers and you just stream it to your couch. However, you’ll need the very HIGH bandwith (we are talking about 50Mbit/s for 1080p @ 60Hz as per <a href="http://shield.nvidia.com/support/geforce-now/system-requirements/1" target="_blank" rel="noopener noreferrer">official requirements</a>) in order to be able to play any game. Moreover, most recent games can’t really be rented but have to be completely bought.. and you’ll sometimes get a key for your regular PC but not always. If you have a gaming computer, it is still better to buy the regular game and stream it thanks to Geforce Game-Stream.</p>
+<p>Last but not least, playing old console games. I have already started a serie about <a href="https://www.masoopy.com/the-original-xbmc/" target="_blank" rel="noopener noreferrer">retrogaming</a>. The Shield can allow you to run emulators, however the good emulators (<a href="https://play.google.com/store/search?q=.emu&amp;c=apps&amp;docType=1&amp;sp=CAFiBgoELmVtdXoFGADAAQKKAQIIAQ%3D%3D:S:ANO1ljJz6Ik" target="_blank" rel="noopener noreferrer">.emu from Robert Broglia</a>) are not free. They are around $5 each… and there is not many frontend, or they are not very nice looking. A “frontend” allows you to have a nice looking and consistent experience : all emulator are accessible from the same menu with a nice GUI. This is far more entertaining than the Android’s way offered by the Shield.</p>
+<p>A nice emulation frontend, <a href="http://www.recalbox.com/" target="_blank" rel="noopener noreferrer">Recalbox</a> :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/q5UYxuzKEec?feature=oembed" width="640"></iframe>
+<p>Android emulators :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/IJEwiHBwKoM?feature=oembed" width="640"></iframe>
+<h2 id="yeah-nvidia-shield-sucksreally">Yeah, Nvidia shield sucks…really</h2>
+<p>And I am really disappointed to say so. I bought it during a the black Friday and I was really hoping to find a great device, since I read many great reviews, but I am actually really disappointed. I am sending it back to Amazon. I’ll keep using the RPI2 with Recalbox. As for a media center solution, you could still use a regular Kodi installation with the right add-ons for streaming, as per our <a href="https://www.masoopy.com/kodi-beginners-guide/" target="_blank" rel="noopener noreferrer">Kodi Beginner’s Guide</a>.</p>
+]]></description></item></channel></rss>

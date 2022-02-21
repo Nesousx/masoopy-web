@@ -1,6 +1,229 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>asset management - Tag - Masoopy</title><link>https://www.masoopy.com/tags/asset-management/</link><description>asset management - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 04 Dec 2018 08:18:42 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/asset-management/" rel="self" type="application/rss+xml"/><item><title>Install GLPI on Ubuntu 18.04 with MariaDB and NGinX</title><link>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</link><pubDate>Tue, 04 Dec 2018 08:18:42 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>asset management - Tag - Masoopy</title><link>https://www.masoopy.com/tags/asset-management/</link><description>asset management - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 04 Dec 2018 08:18:42 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/asset-management/" rel="self" type="application/rss+xml"/><item><title>Install GLPI on Ubuntu 18.04 with MariaDB and NGinX</title><link>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</link><pubDate>Tue, 04 Dec 2018 08:18:42 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2018/12/Install-GLPI-on-Ubuntu-18-04-with-MariaDB-and-NGinX.png" referrerpolicy="no-referrer">
-            </div>GLPI is an asset management software. It can handle automatic inventory of your assets (workstations, servers, printers, etc.) ticketing, and much more. Let&rsquo;s see how to install it under Ubuntu with MariaDB and NGinX.
-Prepare your system Simply install the requirements :
-1  sudo apt install nginx php7.0-fpm mariadb-server php7.0-curl php7.0-gd php7.0-mysql php7.0-cli php7.0-imap php7.0-ldap php7.0-apcu php7.0-xmlrpc php7.0-mbstring php7.0-xml php7.0-xmlrpc   Create the self signed certificates :
-1  cd /etc/ssl/certs sudo openssl req -x509 -newkey rsa:4096 -keyout private/gpli.]]></description></item></channel></rss>
+            </div><p><a href="https://glpi-project.org/" target="_blank" rel="noopener noreferrer">GLPI</a> is an asset management software. It can handle automatic inventory of your assets (workstations, servers, printers, etc.) ticketing, and much more. Let&rsquo;s see how to install it under Ubuntu with MariaDB and NGinX.</p>
+<h2 id="prepare-your-system">Prepare your system</h2>
+<p>Simply install the requirements :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo apt install nginx php7.0-fpm mariadb-server php7.0-curl php7.0-gd php7.0-mysql php7.0-cli php7.0-imap php7.0-ldap php7.0-apcu php7.0-xmlrpc php7.0-mbstring php7.0-xml php7.0-xmlrpc
+</code></pre></td></tr></table>
+</div>
+</div><p>Create the self signed certificates :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">cd /etc/ssl/certs sudo openssl req -x509 -newkey rsa:4096 -keyout private/gpli.domain.com.key -out glpi.domain.com.cert -days 3650 -nodes -subj &#39;/CN=glpi.domain.com&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>NB :</p>
+<ul>
+<li>Replace &quot; <strong>glpi.domain.com</strong>&quot; with your desired domain name (3 times!).</li>
+<li>The certificate is valid for 10 years ( <strong>3650 days</strong> ).</li>
+<li>The certificate will be located in <strong>/etc/ssl/certs</strong> and the key in <strong>/etc/ssl/certs/private</strong>.</li>
+</ul>
+<p>Create the dhparam file for NGINX :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">cd /etc/ssl/certs
+sudo openssl dhparam -out dhparam.pem 4096
+</code></pre></td></tr></table>
+</div>
+</div><p>Your system is now &ldquo;well prepared&rdquo;, let&rsquo;s move on to the the setup of the various services.</p>
+<h2 id="prepare-mysql--mariadb">Prepare MySQL / MariaDB</h2>
+<p>Let&rsquo;s secure our database : MySQL / MariaDB installation :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo mysql_secure_installation
+</code></pre></td></tr></table>
+</div>
+</div><p>Answer &ldquo;yes&rdquo; to all questions, and define a secure root password!</p>
+<p>NB : you&rsquo;ll probably run into an error, where mysql / mariadb won&rsquo;t start. If you check journalctl, it will say something about apparmor denying the execution of mariadb. Run the following command and reboot (yes, reboot)!</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo aa-disable /usr/sbin/mysqld
+</code></pre></td></tr></table>
+</div>
+</div><p>Now, connect to mysql with &ldquo;root&rdquo; user and create the database + user for your GLPI installation :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo mysql -u root -p
+</code></pre></td></tr></table>
+</div>
+</div><p>NB : make sure to connect to MySQL using &ldquo;root&rdquo;, otherwise, you might run into issues.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">CREATE USER &#39;glpi&#39;@&#39;%&#39; IDENTIFIED BY &#39;My-Aw3s0mE-P@SSW0rD&#39;; CREATE DATABASE glpi; GRANT ALL PRIVILEGES ON glpi.* TO &#39;glpi&#39;@&#39;%&#39;;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="prepare-nginx">Prepare NGiNX</h2>
+<p>NGiNX is the web server, let&rsquo;s prepare it.</p>
+<p>Remove the default website :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo unlink /etc/nginx/sites-enabled/default
+</code></pre></td></tr></table>
+</div>
+</div><p>Now, we are going to create the &ldquo;virtual-host&rdquo; for NGiNX, in order to serve the GLPI website :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nano /etc/nginx/sites-available/glpi
+</code></pre></td></tr></table>
+</div>
+</div><p>Then paste the following :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">server { listen 80; 
+server_name glpi.domain.com; 
+return 301 https://$server_name$request_uri; } 
+
+server { listen 443 ssl; server_name glpi.domain.com; 
+
+ssl_certificate /etc/ssl/glpi.domain.com.cert; 
+ssl_certificate_key /etc/ssl/private/glpi.domain.com.key; 
+ssl_dhparam /etc/ssl/dhparam.pem; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; 
+ssl_prefer_server_ciphers on; ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS; 
+
+root /var/www/glpi; index index.php; 
+location / {try_files $uri $uri/ index.php;} 
+
+location ~ .php$ { fastcgi_pass 127.0.0.1:9000; 
+fastcgi_index index.php; 
+include /etc/nginx/fastcgi_params; 
+fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; 
+include fastcgi_params; fastcgi_param SERVER_NAME $host; } }
+</code></pre></td></tr></table>
+</div>
+</div><p>Then we create a symlink from the &ldquo;available&rdquo; directory to the &ldquo;enabled&rdquo; directory.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo ln -s /etc/nginx/sites-available/glpi /etc/nginx/sites-enabled/glpi.conf
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="install-the-application">Install the application</h2>
+<p>We&rsquo;ll prepare the required folders :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">mkdir -p /etc/glpimkdir -p /var/lib/glpimkdir -p /var/log/glpimkdir -p /var/www/glpi
+</code></pre></td></tr></table>
+</div>
+</div><p>Browse to <a href="https://github.com/glpi-project/glpi/releases" target="_blank" rel="noopener noreferrer">GLPI Github release page</a>, and copy link from latest version, then download it directly on your server in your home directory :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">cd wget https://github.com/glpi-project/glpi/releases/download/9.3.3/glpi-9.3.3.tgz
+</code></pre></td></tr></table>
+</div>
+</div><p>NB : use the .tgz file and replace version number with the latest one.</p>
+<p>Extract the files :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">tar xzvf glpi-*.tgz
+</code></pre></td></tr></table>
+</div>
+</div><p>This should extract all the files into the glpi folder.</p>
+<p>We are now going to the move the files to the appropriate folders so that our installation doesn&rsquo;t contain everything in the web directory (which is not secure).</p>
+<p>Go to the glpi folder :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">cd ~/glpi
+</code></pre></td></tr></table>
+</div>
+</div><p>Then execute the following commands :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">mv config /etc/glpi/ mv files/ /var/lib/glpimv * /var/www/glpi
+</code></pre></td></tr></table>
+</div>
+</div><p>Now, gives the necessary rights :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">chown -R www-data: /etc/glpichown -R www-data: /var/lib/glpi chown -R www-data: /var/www/glpi
+</code></pre></td></tr></table>
+</div>
+</div><p>Everything should be ready, let&rsquo;s move on the next part!</p>
+<h2 id="glpi-follow-the-wizard">GLPI, follow the wizard</h2>
+<p>From now, on simply open a web browser and go to the IP address of your server, simply specifying the HTTPS protocol, this should be something like :</p>
+<p><a href="https://glpi.domain.com">https://glpi.domain.com</a></p>
+<p>NB : make sure to declare glpi.domain.com in some DNS server.</p>
+<p>From now, on, simply follow the instruction on your screen&hellip;</p>
+<p>Enter the database information :</p>
+<ul>
+<li>Server : localhost</li>
+<li>User : glpi</li>
+<li>Password : My-Aw3s0mE-P@SSW0rD</li>
+</ul>
+<p>Select (or create) the database called &ldquo;GLPI&rdquo; ;</p>
+<p>Windows like install, hit the &ldquo;next&rdquo; button until it is completed.</p>
+<p>NB : your install might crash at some point with a timeout. Fear not, it is not blocking. Wait about 2 minutes, then keep on following the guide.</p>
+<p>When it is done, browse to the main URL, and you should be brought to a brand new login page.</p>
+<p>Log in with the default &ldquo;admin&rdquo; account which is &quot; <strong>glpi/glpi</strong>&quot;. Once logged, in remember to change password for all the default accounts (and/or disable some of them), and remove the file install.php from your <strong>/var/www/glpi/install</strong> directory.</p>
+<p>You are now all set, enjoy GPLI!</p>
+]]></description></item></channel></rss>

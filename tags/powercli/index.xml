@@ -1,4 +1,43 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>powercli - Tag - Masoopy</title><link>https://www.masoopy.com/tags/powercli/</link><description>powercli - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Dec 2018 08:48:46 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/powercli/" rel="self" type="application/rss+xml"/><item><title>Manage VMware snapshots with PowerCLI</title><link>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</link><pubDate>Tue, 11 Dec 2018 08:48:46 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>powercli - Tag - Masoopy</title><link>https://www.masoopy.com/tags/powercli/</link><description>powercli - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Dec 2018 08:48:46 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/powercli/" rel="self" type="application/rss+xml"/><item><title>Manage VMware snapshots with PowerCLI</title><link>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</link><pubDate>Tue, 11 Dec 2018 08:48:46 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2018/12/Manage-VMware-snapshots-with-PowerCLI.png" referrerpolicy="no-referrer">
-            </div>Manually taking a snapshot under VMware is easy : connect to the HTML5 Web UI, find the server from the list, right click, select Snapshot, Name it&hellip; However, when you have to do it several times in a row, it becomes really frustrating. Let&rsquo;s see how to improve that.
-Here comes PowerCLI VMware released an awesome (and I am Linux guy) tool to manage your virtual machines from the command line.]]></description></item></channel></rss>
+            </div><p>Manually taking a snapshot under VMware is easy : connect to the HTML5 Web UI, find the server from the list, right click, select Snapshot, Name it&hellip; However, when you have to do it several times in a row, it becomes really frustrating. Let&rsquo;s see how to improve that.</p>
+<h2 id="here-comes-powercli">Here comes PowerCLI</h2>
+<p>VMware released an awesome (and I am Linux guy) tool to manage your virtual machines from the command line. It is called <a href="https://communities.vmware.com/community/vmtn/automationtools/powercli" target="_blank" rel="noopener noreferrer">PowerCLI</a>, is based on PowerShell and honestly it really works like a charm.</p>
+<p>it can be installed on <a href="https://www.virtuallyghetto.com/2016/09/vmware-powercli-for-mac-os-x-linux-more-yes-please.html" target="_blank" rel="noopener noreferrer">Windows, Linux, Macos</a> and of course <a href="https://hub.docker.com/r/vmware/powerclicore/" target="_blank" rel="noopener noreferrer">inside a Docker container</a>. I&rsquo;ll let the installation part up to you, there is plenty of guides available on internet, but I&rsquo;ll share my scripts.</p>
+<h2 id="my-current-workflow">My current workflow</h2>
+<p>I often change / refine / try to improve my workflow. However, for current workflow for managing updates on our Linux servers is like below :</p>
+<ul>
+<li>Make a snapshot of every server with PowerCLI, and give them a relevant name ;</li>
+<li>Apply update with Ansible (and reboot them if required) ;</li>
+<li>Delete snapshots after 2 days if everything is OK.</li>
+</ul>
+<p>With no further ado, here are my scripts :</p>
+<p>Create snapshots :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Connect-VIServer -server vcenter.domain.com $vmlist = &#34;srv-1&#34;, &#34;srv-2&#34;, &#34;srv-3&#34; foreach($VM in $VMlist) { New-Snapshot -VM $vm -Name Before_Update -confirm:$false -runasync:$true } Disconnect-VIServer -Confirm:$false
+</code></pre></td></tr></table>
+</div>
+</div><p>Delete snapshots :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Connect-VIServer -server vcenter.domain.com $vmlist = &#34;srv-1&#34;, &#34;srv-2&#34;, &#34;srv-3&#34; foreach($VM in $VMlist) { Get-Snapshot -VM $vm | where {$_.Name -match &#34;Before_Update&#34;} | Remove-Snapshot -RunAsync -Confirm:$False } Disconnect-VIServer -Confirm:$false
+</code></pre></td></tr></table>
+</div>
+</div><p>Let me walk you through what it does.</p>
+<ul>
+<li>First line, connects to the VMware server and will pompt for credentials.</li>
+<li>Then I declare an array or server, simply replace and add as many servers as you like.</li>
+<li>Simple foreach loop, goes through every server of the above defined array and does its job. Make sure to check official docs for more info about extra flags.</li>
+<li>NB : I use a relevant name, here &ldquo;Before_Update&rdquo; for my snapshots. It makes it easier to manage them since I know their name.</li>
+<li>Finally, we disconnect from the server.</li>
+</ul>
+<p>I hope those little scripts will make you life a little easier, and hopefully your job a little less boring. Automating is the way to go!</p>
+<p> </p>
+]]></description></item></channel></rss>

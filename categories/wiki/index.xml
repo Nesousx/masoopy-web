@@ -1,25 +1,234 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>wiki - Category - Masoopy</title><link>https://www.masoopy.com/categories/wiki/</link><description>wiki - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Dec 2018 08:48:46 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/wiki/" rel="self" type="application/rss+xml"/><item><title>Manage VMware snapshots with PowerCLI</title><link>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</link><pubDate>Tue, 11 Dec 2018 08:48:46 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>wiki - Category - Masoopy</title><link>https://www.masoopy.com/categories/wiki/</link><description>wiki - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Dec 2018 08:48:46 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/wiki/" rel="self" type="application/rss+xml"/><item><title>Manage VMware snapshots with PowerCLI</title><link>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</link><pubDate>Tue, 11 Dec 2018 08:48:46 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2018/12/Manage-VMware-snapshots-with-PowerCLI.png" referrerpolicy="no-referrer">
-            </div>Manually taking a snapshot under VMware is easy : connect to the HTML5 Web UI, find the server from the list, right click, select Snapshot, Name it&hellip; However, when you have to do it several times in a row, it becomes really frustrating. Let&rsquo;s see how to improve that.
-Here comes PowerCLI VMware released an awesome (and I am Linux guy) tool to manage your virtual machines from the command line.]]></description></item><item><title>Sending text messages from your computer</title><link>https://www.masoopy.com/sending-text-messages-from-your-computer/</link><pubDate>Thu, 21 Sep 2017 11:12:57 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/sending-text-messages-from-your-computer/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>Manually taking a snapshot under VMware is easy : connect to the HTML5 Web UI, find the server from the list, right click, select Snapshot, Name it&hellip; However, when you have to do it several times in a row, it becomes really frustrating. Let&rsquo;s see how to improve that.</p>
+<h2 id="here-comes-powercli">Here comes PowerCLI</h2>
+<p>VMware released an awesome (and I am Linux guy) tool to manage your virtual machines from the command line. It is called <a href="https://communities.vmware.com/community/vmtn/automationtools/powercli" target="_blank" rel="noopener noreferrer">PowerCLI</a>, is based on PowerShell and honestly it really works like a charm.</p>
+<p>it can be installed on <a href="https://www.virtuallyghetto.com/2016/09/vmware-powercli-for-mac-os-x-linux-more-yes-please.html" target="_blank" rel="noopener noreferrer">Windows, Linux, Macos</a> and of course <a href="https://hub.docker.com/r/vmware/powerclicore/" target="_blank" rel="noopener noreferrer">inside a Docker container</a>. I&rsquo;ll let the installation part up to you, there is plenty of guides available on internet, but I&rsquo;ll share my scripts.</p>
+<h2 id="my-current-workflow">My current workflow</h2>
+<p>I often change / refine / try to improve my workflow. However, for current workflow for managing updates on our Linux servers is like below :</p>
+<ul>
+<li>Make a snapshot of every server with PowerCLI, and give them a relevant name ;</li>
+<li>Apply update with Ansible (and reboot them if required) ;</li>
+<li>Delete snapshots after 2 days if everything is OK.</li>
+</ul>
+<p>With no further ado, here are my scripts :</p>
+<p>Create snapshots :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Connect-VIServer -server vcenter.domain.com $vmlist = &#34;srv-1&#34;, &#34;srv-2&#34;, &#34;srv-3&#34; foreach($VM in $VMlist) { New-Snapshot -VM $vm -Name Before_Update -confirm:$false -runasync:$true } Disconnect-VIServer -Confirm:$false
+</code></pre></td></tr></table>
+</div>
+</div><p>Delete snapshots :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Connect-VIServer -server vcenter.domain.com $vmlist = &#34;srv-1&#34;, &#34;srv-2&#34;, &#34;srv-3&#34; foreach($VM in $VMlist) { Get-Snapshot -VM $vm | where {$_.Name -match &#34;Before_Update&#34;} | Remove-Snapshot -RunAsync -Confirm:$False } Disconnect-VIServer -Confirm:$false
+</code></pre></td></tr></table>
+</div>
+</div><p>Let me walk you through what it does.</p>
+<ul>
+<li>First line, connects to the VMware server and will pompt for credentials.</li>
+<li>Then I declare an array or server, simply replace and add as many servers as you like.</li>
+<li>Simple foreach loop, goes through every server of the above defined array and does its job. Make sure to check official docs for more info about extra flags.</li>
+<li>NB : I use a relevant name, here &ldquo;Before_Update&rdquo; for my snapshots. It makes it easier to manage them since I know their name.</li>
+<li>Finally, we disconnect from the server.</li>
+</ul>
+<p>I hope those little scripts will make you life a little easier, and hopefully your job a little less boring. Automating is the way to go!</p>
+<p> </p>
+]]></description></item><item><title>Sending text messages from your computer</title><link>https://www.masoopy.com/sending-text-messages-from-your-computer/</link><pubDate>Thu, 21 Sep 2017 11:12:57 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/sending-text-messages-from-your-computer/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/send_text_from_pc.png" referrerpolicy="no-referrer">
-            </div>Do you hate touchscreen? I sure do! More than touchscreen, I hate when I have to write something using a touch screen. This is why, I have been trying and using different solutions that allows me to send text messages from my computer with a real (mechanical) keyboard!
-Foreword Please note that this guide is based on Android phones and is desktop &ldquo;OS&rdquo; agnostic.
-If you are using Apple phones and computers, then have a look here.]]></description></item><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>Do you hate touchscreen? I sure do! More than touchscreen, I hate when I have to write something using a touch screen. This is why, I have been trying and using different solutions that allows me to send text messages from my computer with a real (mechanical) keyboard!</p>
+<h2 id="foreword">Foreword</h2>
+<p>Please note that this guide is based on Android phones and is desktop &ldquo;OS&rdquo; agnostic.</p>
+<p>If you are using Apple phones and computers, then <a href="https://support.apple.com/en-us/HT202549" target="_blank" rel="noopener noreferrer">have a look here</a>.</p>
+<p>Under Windows Phone, check what <a href="https://pureinfotech.com/how-send-sms-texts-using-cortana-windows-10-pc/" target="_blank" rel="noopener noreferrer">Cortana can do for you</a>.</p>
+<p>However, some apps I am talking about are also probably working on Apple and/or Windows phones. Be sure to check your app store!</p>
+<h2 id="mightytext">MightyText</h2>
+<p><a href="https://mightytext.net/install" target="_blank" rel="noopener noreferrer">MightyText</a> is a free app that can be downloaded via the Play Store. The setup is straightforward: it will &ldquo;only&rdquo; ask you to give access to your Google account from the phone, and the same thing on your computer. So that both your devices all linked together thanks to this common account.</p>
+<p>On your computer, MightyText can be accessed from various ways :</p>
+<ul>
+<li>From a webpage : meaning it will run on any computer that can run a web browser ;</li>
+<li>There is also a desktop client for Macos and Windows, but not for Linux ;</li>
+<li>You can also use an extension for the Chrome browser, but not from Firefox.</li>
+</ul>
+<p>Now, in my opinion it is best to have the MightyText app always running on your desktop, so that you don&rsquo;t miss any text / notification and can reply asap. Which means, depending on your OS and browser of choice, you might have limited options. Let&rsquo;s say for example, you are running Linux and using Firefox, then your only choice will be to leave a Firefox tab always open&hellip; This might not be a problem for most people, but I personally hate to have too many tabs open&hellip; This, and only this, is a no go for me.</p>
+<p>As you might have noticed, I also talked about receiving notifications on your computer. Indeed, with this kind of apps, you can also do that. Again, it can be very useful if like me you are only using webmail and don&rsquo;t want to leave an extra tab and/or app open in the background to receive new email notifications.</p>
+<p>Thanks to MightyText, you&rsquo;ll receive a destop notification when you receive an email on your phone, then you just have to browse to your webmail, and take action.</p>
+<p>Supposedly, you are able to filter which apps from your phone are allowed to send notifications all the way up to your desktop. However I couldn&rsquo;t find how to do that, and it means a lot of spam on my desktop. Especially when I was using Telegram on the desktop to chat, I was receiving notifications from both the Desktop client and the mobile client through the MightText app! Another no go&hellip;</p>
+<p>EDIT 22/09/2017: Thanks to their support on Twitter, this is how we filter apps notifications:<br>
+Yes, you can customize this by visiting the MightyText web app &ndash; Phone tab &ndash; Apps section. Let us know if that works for you.</p>
+<p>This led me to check another well known player: Pushbullet.</p>
+<h2 id="pushbullet">Pushbullet</h2>
+<p><a href="https://www.pushbullet.com/" target="_blank" rel="noopener noreferrer">Pushbullet</a> configuration works almost the same way than MightyText does. You need to give access to your Google account to all devices that you want to be linked together. However, it supports both Google and Facebook accounts, while MightyText only supports Google accounts.</p>
+<p>Once again, when the app is installed on your mobile phone, you can access it from your desktop as follows:</p>
+<ul>
+<li>From a webpage : meaning it will run on any computer that can run a web browser ;</li>
+<li>There is also a desktop client for Windows.. and just Windows ;</li>
+<li>You can also use an extension for the main browsers: Chrome, Firefox, Opera, Safari.</li>
+</ul>
+<p>In my opinion, this is much better than the other app mentioned before as it gives you a lot more possibilities. Like I said before, thanks to the browser extensions, you now have the app running and listening to incoming messages and notifications all the time your browser is open and without having to waste a tab. It is even foolproof, you won&rsquo;t forget to open the tab!</p>
+<p>Here again, we can choose to filter notifications, and this time, I found it pretty straightforward to set it up. Which means no spamming on my desktop, and only receiving the desired notifications. I&rsquo;ll get notifications for emails, appointments and of course text messages, which of course I can reply to with my keyboard.</p>
+<h2 id="but-what-about-sending-messages">But what about sending messages?</h2>
+<p>This is the main usage for these two apps, and it works well&hellip; most of the time!</p>
+<p>About 95% of the time, it &ldquo;just works&rdquo;. You receive a desktop notification about a new text. Just click on it, it will open the message and you can directly reply to it. Contact names appears the same way they would on your phone. If you want to create a new message, just select your contact&rsquo;s name inside the browser extension (for example) to write your text. Send, it! Done.</p>
+<p>Then, 5% of the time&hellip; the message will stay &ldquo;stuck&rdquo; on your computer and won&rsquo;t be relayed to you phone, hence they won&rsquo;t be sent. At the time of writing, it only happened to me when I killed the app on phone (beware with the &ldquo;kill all&rdquo; function of Android phones). In those case, I just started the app again on the phone, and it fixed it.<br>
+There could also be issues with battery management where the phone puts the app to sleep in order to reduce battery usage. If you have issues about not being able to send SMS after some time, then <a href="http://www.techrepublic.com/article/how-to-remove-android-apps-from-the-battery-optimization-list/" target="_blank" rel="noopener noreferrer">make sure that Android no longer optimize the battery</a> for this app.</p>
+<p>Last but not least, all the messages sent / received from the computer will continue to appear in your default messages app, just like if you sent them from the phone.</p>
+<h2 id="closing-words-and-a-few-other-alternatives">Closing words and a few other alternatives</h2>
+<p>As we have seen those apps can be very handy, especially if you hate using touchscreen. It is also a good way to synchronize your phone and computer and remove extra app on the desktop, close a few browser tabs, etc.</p>
+<p>In my opinion, the fact that Pushbullet offers browser extensions for all the major browsers is a great plus! Moreover, I feel it easier to navigate in the app, find what you are looking for, and tweak it (ie. the notification thingy). In a few words, we could say that Pushbullet is more basic, maybe even less &ldquo;bloated&rdquo;. Like I didn&rsquo;t see any ads in Pushbullet, while I see some using MightyText webpage.</p>
+<p>Now, if you want to follow that road but feel to restricted by those 2 apps, you can also have a look a few other alternatives such as <a href="https://joaoapps.com/join-sms-from-anything-with-a-browser/" target="_blank" rel="noopener noreferrer">Join</a> or <a href="https://play.google.com/store/apps/details?id=xyz.klinker.messenger&amp;hl=en" target="_blank" rel="noopener noreferrer">Pulse</a>. They look like pretty strong competitors as well.</p>
+<p>I hope you enjoyed this article and that it might have helped you. Better yet, given you faith again in your texting business!</p>
+<p>Do not hesitate to let me know if you use any other similar app, most especially if you love it.</p>
+]]></description></item><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/bios.png" referrerpolicy="no-referrer">
-            </div>In this quick guide, let&rsquo;s see how to access the BIOS of any system.
-What is the BIOS? Basically, the BIOS is the place where you can configure how the hardware works (like speed of the FAN), and how you computer boots (such as booting an external USB disk instead of the internal disk).
-It is pretty common to access the BIOS (or better, the boot menu, which is related to the BIOS) when you can to install a new OS, or reinstall your system.]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>In this quick guide, let&rsquo;s see how to access the BIOS of any system.</p>
+<h2 id="what-is-the-bios">What is the BIOS?</h2>
+<p>Basically, the BIOS is the place where you can configure how the hardware works (like speed of the FAN), and how you computer boots (such as booting an external USB disk instead of the internal disk).</p>
+<p>It is pretty common to access the BIOS (or better, the boot menu, which is related to the BIOS) when you can to install a new OS, or reinstall your system.</p>
+<p>Let&rsquo;s see how to do it</p>
+<h2 id="accessing-the-bios">Accessing the BIOS</h2>
+<p>Unfortunately, accessing the BIOS depends on your motherboard manufacturer. This is why there is universal method do do so. However, manufacturers tend to standardize this.</p>
+<p>While you computer is starting (and before the Windows loading screen), you need to &ldquo;mash&rdquo; a keyboard key.</p>
+<p>Depending on your computer, the key to be pressed can be:</p>
+<ul>
+<li><code>DEL</code></li>
+<li><code>F2</code></li>
+</ul>
+<p>For the most common ones.</p>
+<p>If you only need to access the BIOS in order to <a href="https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/" target="_blank" rel="noopener noreferrer">boot of an USB disk</a> (for example), give a try to the &ldquo;boot menu&rdquo; by mashing one of the following keys:</p>
+<ul>
+<li><code>F11</code></li>
+<li><code>F22</code></li>
+</ul>
+<p>I hope this quick guide helped you, and if you know other tricks, to access the BIOS, please share them in the comments.</p>
+]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/burn_iso_2_usb.png" referrerpolicy="no-referrer">
-            </div>Let&rsquo;s see how to &ldquo;burn&rdquo; an image file (or .iso file) to an USB stick and make it bootable.
-NB: please note that in every case, all the data on your USB stick will be erased!!
-Windows Under Windows, simply download, install and run Rufus. Then follow the on-screen instructions.
-Macos Much like Windows, on Macos, you can use a tool called Etcher and follow the on-screen instructions.
-Linux Now, it becomes a little harder / funnier.]]></description></item><item><title>How to create a bootable Windows 10 USB stick</title><link>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</link><pubDate>Fri, 08 Sep 2017 16:05:45 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>Let&rsquo;s see how to &ldquo;burn&rdquo; an image file (or .iso file) to an USB stick and make it bootable.</p>
+<p><strong>NB: please note that in every case, all the data on your USB stick will be erased!!</strong></p>
+<h2 id="windows">Windows</h2>
+<p>Under Windows, simply download, install and run <a href="https://rufus.akeo.ie/" target="_blank" rel="noopener noreferrer">Rufus</a>. Then follow the on-screen instructions.</p>
+<h2 id="macos">Macos</h2>
+<p>Much like Windows, on Macos, you can use a tool called <a href="https://etcher.io/" target="_blank" rel="noopener noreferrer">Etcher</a> and follow the on-screen instructions.</p>
+<h2 id="linux">Linux</h2>
+<p>Now, it becomes a little harder / funnier. You have two main solutions:</p>
+<ul>
+<li>command-line (aka cli) ;</li>
+<li>visually.</li>
+</ul>
+<h3 id="visually">Visually</h3>
+<p>From, you need to install (again, visually, or via cli). Try to click on the following link: <a href="apt:unetbootin" rel="">install unetbootin</a>, or browse the menu of your operating system to &ldquo;Software center&rdquo; or &ldquo;Add/remove program&rdquo; place. Once there, search for a software called &ldquo;unetbootin&rdquo; and install it.</p>
+<p>Once it is installed, run it and follow the on-screen insctructions.</p>
+<p>You can also install the tool via the command-like, like below.</p>
+<p>Open a terminal window, and enter the following command:</p>
+<p>With Ubuntu (or Ubuntu related distribution, such as Mint):</p>
+<p><code>sudo apt-get install -y unetbootin</code></p>
+<p>With Fedora (or Fedora related distribution, such as CentOS):</p>
+<p><code>sudo dnf install -y unetbootin</code></p>
+<p>Once it is installed, run it from the menu, and again, follow on-screen instructions.</p>
+<h3 id="via-cli">Via CLI</h3>
+<p>It might sound scary, but it is actually quite easy and very efficient.</p>
+<p>Now, we will see how to completely burn your iso file to the USB stick, doing everything in command line and with no additional tool.</p>
+<ol>
+<li>Fire up new terminal window ;</li>
+<li>Plug-in your USB stick ;</li>
+<li>Find out the name of your USB stick with the command:</li>
+</ol>
+<p><code>lsblk</code></p>
+<p>It should like this:</p>
+<p></p>
+<p>Now, check the size, and make sure it matches the one from your USB stick. Double check it is the right one (for example you can try to run the previous command with and without the USB stick, and see what &ldquo;disk&rdquo; appears/disappears).</p>
+<p>In my case, it is sda (use the one without the number at the end), and we we see that it is 7.5G (which is sold as a 8GB disk). Since it is a device, you want to add /dev/ in front of it in order to have the real location.</p>
+<p><strong>Which means the USB stick is located at /dev/sda</strong>.</p>
+<p>Once you have figured out the name, write it down (or memorize it).</p>
+<ol>
+<li>Now enter the following command (make sure to replace what needs to be replaced according to your needs). This command will erase the USB disk. If you write the wrong disk name, it will wipe the wrong disk. be EXTRA careful.</li>
+</ol>
+<p><code>sudo dd if=/path/to/your/file.iso of=/path/of/usb bs=2M</code></p>
+<p>Now, what you need to replace is:</p>
+<ul>
+<li>&ldquo;/path/to/your/file.iso&rdquo;, by the actual location of the image file;</li>
+<li>&ldquo;/path/of/usb&rdquo;, by the USB stick location (without the number). This disk will be erased. Again, be careful.</li>
+</ul>
+<p>It should take from a few minutes (like 5 to 10min), depending the speed of USB disk, port, etc.</p>
+<p>Once it is finish, enter one last command:</p>
+<p><code>sudo umount /path/of/usb</code></p>
+<p>and again, replace it with the correct value.</p>
+<p>Once, you have access to command line again, that&rsquo;s done. You can remove your USB stick.</p>
+]]></description></item><item><title>How to create a bootable Windows 10 USB stick</title><link>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</link><pubDate>Fri, 08 Sep 2017 16:05:45 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/boot_usb_win_10.png" referrerpolicy="no-referrer">
-            </div>Maybe you bought a new computer and reinstall it from scratch, or maybe you plan to sell your current computer, or maybe you just want to install Windows 10 as a new OS. In Any case, creating a bootable Windows USB stick will allow you to do so.
-It could be harder This might sound scary, but it as actually very easy. However, please note that, for this method to work you&rsquo;ll need to proceed from a Windows 10 computer.]]></description></item><item><title>Automatically run Kodi at boot</title><link>https://www.masoopy.com/automatically-run-kodi-at-boot/</link><pubDate>Tue, 29 Aug 2017 09:49:06 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/automatically-run-kodi-at-boot/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/kodi.png" referrerpolicy="no-referrer">
-&lt;/div>You have some hardware dedicated to Kodi and wish to create a “clean” media center solution hooked to your TV? Great idea! Find out how to automatically run Kodi at boot on any platform.
-Automatically run Kodi at boot with Windows This method is similar to the Steam Shell mode.. but with Kodi.
-First of all, make sure you can can log into the Windows desktop automatically. In order to do so:</description></item></channel></rss>
+            </div><p>Maybe you bought a new computer and reinstall it from scratch, or maybe you plan to sell your current computer, or maybe you just want to install Windows 10 as a new OS. In Any case, creating a bootable Windows USB stick will allow you to do so.</p>
+<h2 id="it-could-be-harder">It could be harder</h2>
+<p>This might sound scary, but it as actually very easy. However, please note that, for this method to work you&rsquo;ll need to proceed from a Windows 10 computer.</p>
+<ol>
+<li>From you Windows 10 computer, grab the <a href="https://go.microsoft.com/fwlink/p/?LinkId=616447" target="_blank" rel="noopener noreferrer">Windows Media Creation tool</a> at Microsoft&rsquo;s website (should be the second link on the page) ;</li>
+<li>Plug-in the USB stick ;</li>
+<li>Run the Media Creation Tool ;</li>
+<li>When prompted, select the USB stick you inserted ;</li>
+<li>Wait for operation to complete.</li>
+</ol>
+<p>And voilà!</p>
+<h2 id="using-it">Using it</h2>
+<p>Now, in order to use it, just plug-in the USB stick into your turned off computer, and turn it on.</p>
+<p>You&rsquo;ll probably have to go into the &ldquo;boot menu&rdquo;, generally by pressing F11 or F12 during the boot. If this doesn&rsquo;t work, have a look at your Bios settings (Boot section), by pressing DEL or F2 while the computer boots (before Windows lading logo).</p>
+<p>Don&rsquo;t hesitate to share your thoughts!</p>
+]]></description></item><item><title>Automatically run Kodi at boot</title><link>https://www.masoopy.com/automatically-run-kodi-at-boot/</link><pubDate>Tue, 29 Aug 2017 09:49:06 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/automatically-run-kodi-at-boot/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi.png" referrerpolicy="no-referrer">
+            </div><p>You have some hardware dedicated to Kodi and wish to create a “clean” media center solution hooked to your TV? Great idea! Find out how to automatically run Kodi at boot on any platform.</p>
+<h2 id="automatically-run-kodi-at-boot-with-windows">Automatically run Kodi at boot with Windows</h2>
+<p>This method is similar to the Steam Shell mode.. but with Kodi.</p>
+<p>First of all, make sure you can can log into the Windows desktop automatically. In order to do so:</p>
+<ul>
+<li>Click Start button (from the Windows desktop) &gt; Run and enter the following command:</li>
+</ul>
+<p><code>control userpasswords2</code></p>
+<p></p>
+<ul>
+<li>Make sure “Users must enter a username and password to use this computer” is unchecked. If not, do it.</li>
+</ul>
+<p></p>
+<ul>
+<li>If prompted, enter the username / password you want to automatically log in with.</li>
+</ul>
+<p>Now, that autologin is set-up, we will do what’s necessary in order to automatically run Kodi at boot.</p>
+<ul>
+<li>Again, Click Start Button &gt; Run and enter the following command:</li>
+</ul>
+<p><code>regedit</code></p>
+<p></p>
+<ul>
+<li>From here, browse to :</li>
+</ul>
+<p><code>HKEY_LOCAL_MACHINESOFTWAREMicrosoftWindows NTCurrentVersionWinlogon</code></p>
+<ul>
+<li>Right click on the right pane and select “Create a new string”.</li>
+<li>Name it “Shell”, and in the value field enter the full path to your Kodi executable, for example: “C:Program FilesKodiKodi.exe”</li>
+<li>You are done, reboot and check everything is working as expected!</li>
+</ul>
+<p>NB: Do not remove the quotes when entering the path to Kodi executable in the Shell variable.</p>
+<p>NB2 : In order to find the full path to Kodi executable, just launch the explorer and browse to the folder where it is installed, then clic on the “top bar”. The paths will appear, you can copy / paste from there. Don’t forget to append the application name (kodi.exe) to the path you just copied.</p>
+<h2 id="automatically-run-kodi-at-boot-with-linux--rpi">Automatically run Kodi at boot with Linux / RPI</h2>
+<p>In order automatically run Kodi at boot we will have to first add a new user to your system.</p>
+<ul>
+<li>Open a terminal prompt and type the following command:</li>
+</ul>
+<p><code>sudo adduser --disabled-password --disabled-login --gecos &quot;&quot; kodi &amp;&amp; sudo usermod -a -G cdrom,audio,video,plugdev,netdev,users,dialout,dip,input kodi</code></p>
+<p>Now, the easiest way to autostart Kodi is to use a light session manager that’ll start Kodi itselfs.</p>
+<ul>
+<li>Again, in a command prompt, enter the following, depending on your Linux version:</li>
+</ul>
+<h3 id="ubuntu--debian--lxde--mint">Ubuntu / Debian / LXDE / Mint:</h3>
+<p><code>sudo apt-get install -y lightdm</code></p>
+<h3 id="fedora--rhel--centos">Fedora / RHEL / CentOS:</h3>
+<p><code>sudo dnf -y install lightdm</code></p>
+<p>Now, edit the following file <strong>/etc/lightdm/lightdm.conf</strong> with your favorite text editor (as root / by running sudo), and make sure the [Seat:*] section looks like below:</p>
+<p><code>[Seat:*] autologin-user=kodi autologin-session=kodi</code></p>
+<p>Reboot your computer and make sure it works.</p>
+<h2 id="voilà-enjoy">Voilà, enjoy!</h2>
+<p>That&rsquo;s it, you should now have a computer automagically starting Kodi at boot. Make this your entertainement station and enjoy binge watching frm the couch.</p>
+]]></description></item></channel></rss>

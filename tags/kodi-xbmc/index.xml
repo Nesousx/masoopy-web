@@ -1,49 +1,243 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>kodi xbmc - Tag - Masoopy</title><link>https://www.masoopy.com/tags/kodi-xbmc/</link><description>kodi xbmc - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 08 Dec 2015 11:05:22 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/kodi-xbmc/" rel="self" type="application/rss+xml"/><item><title>Why Nvidia Shield sucks?</title><link>https://www.masoopy.com/why-nvidia-shield-sucks/</link><pubDate>Tue, 08 Dec 2015 11:05:22 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/why-nvidia-shield-sucks/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/Nvidia-Shield-TV.jpg" referrerpolicy="no-referrer">
-&lt;/div>Yes, it is true. I think the Nvidia Shield sucks!
-To be 4K or not to be First of, resolution ! I have plugged the shield on 3 different TV :
-a 720p one ; a 1080p TV; a 4K TV. On the 720p TV, the Shield can only work at 1080p which means non native resolution and big visible pixels.
-On the 1080p TV, the Shield will only work a 4K resolution with reduced refresh rate (24Hz)… which sucks cause you can spot the big pixels from your couch and refresh rate make it looks “slow” or laggy.</description></item><item><title>Kodi beginner's guide</title><link>https://www.masoopy.com/kodi-beginners-guide/</link><pubDate>Mon, 07 Dec 2015 10:58:20 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-beginners-guide/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/kodi_beginner_guide.png" referrerpolicy="no-referrer">
-&lt;/div>As a great alternative to popcorn time, I am going to share with you a nice Kodi beginner’s guide.
-How to install Kodi Browse to official Kodi website, and download the version of your liking (ie. Windows or Mac OS). Click here in order to get directly there!
-Here is a little video to help you :
-Once Kodi is installed, it is time to set up the “appropriate” addons.</description></item><item><title>Kodi Genesis tips and tricks</title><link>https://www.masoopy.com/kodi-genesis-tips-and-tricks/</link><pubDate>Sat, 05 Dec 2015 10:00:52 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-genesis-tips-and-tricks/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>kodi xbmc - Tag - Masoopy</title><link>https://www.masoopy.com/tags/kodi-xbmc/</link><description>kodi xbmc - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 08 Dec 2015 11:05:22 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/kodi-xbmc/" rel="self" type="application/rss+xml"/><item><title>Why Nvidia Shield sucks?</title><link>https://www.masoopy.com/why-nvidia-shield-sucks/</link><pubDate>Tue, 08 Dec 2015 11:05:22 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/why-nvidia-shield-sucks/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/Nvidia-Shield-TV.jpg" referrerpolicy="no-referrer">
+            </div><p>Yes, it is true. I think the <a href="http://www.amazon.com/gp/product/B00U33Q940?ie=UTF8&amp;linkCode=as2&amp;camp=1634&amp;creative=6738&amp;tag=kodi-xbmc-20&amp;creativeASIN=B00U33Q940" target="_blank" rel="noopener noreferrer">Nvidia Shield</a> sucks!</p>
+<h2 id="to-be-4k-or-not-to-be">To be 4K or not to be</h2>
+<p>First of, resolution ! I have plugged the shield on 3 different TV :</p>
+<ul>
+<li>a 720p one ;</li>
+<li>a 1080p TV;</li>
+<li>a 4K TV.</li>
+</ul>
+<p>On the 720p TV, the Shield can only work at 1080p which means non native resolution and big visible pixels.</p>
+<p>On the 1080p TV, the Shield will only work a 4K resolution with reduced refresh rate (24Hz)… which sucks cause you can spot the big pixels from your couch and refresh rate make it looks “slow” or laggy.</p>
+<p>Here is a picture of a 1080p TV with 4K resolution at 60Hz, not definitely not usable :</p>
+<p></p>
+<p>Now, same 1080p TV but 4K @ 24hz :</p>
+<p></p>
+<p>On the 4K, it works as it is supposed to. But honestly, sitting on your couch a few meters away, it is hard to tell the difference between a 4K Shield TV vs a Raspberry Pi 2 1080p setup.</p>
+<p>Without a 4K display, you will get worse graphics for 5 times the price of a rpi2. So, yes the Nvidia Shield sucks with non native 4K displays.</p>
+<h2 id="the-gamepad-is-well-not-for-gamers">The gamepad is… well not for gamers</h2>
+<p>Gamepad is pretty big, fat an heavier than any other gamepad. Holding it in your hands for a long time will be exhausting.</p>
+<p>Let’s compare sizes on a picture :</p>
+<p></p>
+<p>Now about the weight :</p>
+<ul>
+<li>Shield gamepad : 315g</li>
+<li>Xbox 360 PC pad : 250g (310g with the whole cable)</li>
+<li>PS4 : 220g</li>
+<li>PS3: 195g</li>
+</ul>
+<p>Please note that weights have been rounded to the next upper value. The gamepad alone is heavier than the old gen Xbox 360 pad with its cable… and lot fatter to as the picture attests.</p>
+<p>Once again again, the Nvidia Shield sucks as it makes you lift weights while you should be playing.</p>
+<h2 id="gaming-platform-not-so-much">Gaming platform… not so much</h2>
+<p>I am not sure what people are supposed to do with a Shield. Media Center ? Not really when you have Android TV stick and/or ChromeCast devices that are way cheaper, plug and play and run Kodi.</p>
+<p>I believe the Shield should be good gaming platform, but no the Nvidia shield sucks at gaming too.</p>
+<p>Android games ? No thanks, they work OK, but again if you want to play Android game buy a stick or an Ouya console. A part from a very short list of titles, you’ll be able to play the same games.</p>
+<p><a href="http://shield.nvidia.com/game-stream" target="_blank" rel="noopener noreferrer">Geforce Game-Stream</a> ? Well, maybe, but not today. This point could be pretty interesting. It allows you to stream almost any game from your running PC to your TV / couch setup. After playing with a it a little, I have to say that it is far from perfect. Some games don’t play along, and it lags quite often, I used wired networking only. Actually, this point is not that bad, it kinda works. However, for the tech knowhow there is a free implementation called <a href="http://moonlight-stream.com/" target="_blank" rel="noopener noreferrer">Moonlight</a> and it happens to work OK on a $40 RPI2. Moonlight is not as good as Geforce Game-Stream, but is playable most of the time.</p>
+<p><a href="http://shield.nvidia.com/games/geforce-now" target="_blank" rel="noopener noreferrer">Nvidia Geforce Now</a>, for about ten bucks a month, you can rent games and play them on your shield without having to use a computer. Everything from the game is “calculated” on Nvidia cloud servers and you just stream it to your couch. However, you’ll need the very HIGH bandwith (we are talking about 50Mbit/s for 1080p @ 60Hz as per <a href="http://shield.nvidia.com/support/geforce-now/system-requirements/1" target="_blank" rel="noopener noreferrer">official requirements</a>) in order to be able to play any game. Moreover, most recent games can’t really be rented but have to be completely bought.. and you’ll sometimes get a key for your regular PC but not always. If you have a gaming computer, it is still better to buy the regular game and stream it thanks to Geforce Game-Stream.</p>
+<p>Last but not least, playing old console games. I have already started a serie about <a href="https://www.masoopy.com/the-original-xbmc/" target="_blank" rel="noopener noreferrer">retrogaming</a>. The Shield can allow you to run emulators, however the good emulators (<a href="https://play.google.com/store/search?q=.emu&amp;c=apps&amp;docType=1&amp;sp=CAFiBgoELmVtdXoFGADAAQKKAQIIAQ%3D%3D:S:ANO1ljJz6Ik" target="_blank" rel="noopener noreferrer">.emu from Robert Broglia</a>) are not free. They are around $5 each… and there is not many frontend, or they are not very nice looking. A “frontend” allows you to have a nice looking and consistent experience : all emulator are accessible from the same menu with a nice GUI. This is far more entertaining than the Android’s way offered by the Shield.</p>
+<p>A nice emulation frontend, <a href="http://www.recalbox.com/" target="_blank" rel="noopener noreferrer">Recalbox</a> :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/q5UYxuzKEec?feature=oembed" width="640"></iframe>
+<p>Android emulators :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/IJEwiHBwKoM?feature=oembed" width="640"></iframe>
+<h2 id="yeah-nvidia-shield-sucksreally">Yeah, Nvidia shield sucks…really</h2>
+<p>And I am really disappointed to say so. I bought it during a the black Friday and I was really hoping to find a great device, since I read many great reviews, but I am actually really disappointed. I am sending it back to Amazon. I’ll keep using the RPI2 with Recalbox. As for a media center solution, you could still use a regular Kodi installation with the right add-ons for streaming, as per our <a href="https://www.masoopy.com/kodi-beginners-guide/" target="_blank" rel="noopener noreferrer">Kodi Beginner’s Guide</a>.</p>
+]]></description></item><item><title>Kodi beginner's guide</title><link>https://www.masoopy.com/kodi-beginners-guide/</link><pubDate>Mon, 07 Dec 2015 10:58:20 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-beginners-guide/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi_beginner_guide.png" referrerpolicy="no-referrer">
+            </div><p>As a great alternative to <a href="https://www.masoopy.com/popcorn-time-is-dead-time-to-switch-to-kodi/" target="_blank" rel="noopener noreferrer">popcorn time</a>, I am going to share with you a nice Kodi beginner’s guide.</p>
+<h2 id="how-to-install-kodi">How to install Kodi</h2>
+<p>Browse to official Kodi website, and download the version of your liking (ie. Windows or Mac OS). <a href="http://kodi.tv/download/" target="_blank" rel="noopener noreferrer">Click here in order to get directly there!</a></p>
+<p>Here is a little video to help you :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/vKzOYtXu7L4?feature=oembed" width="640"></iframe>
+<p>Once Kodi is installed, it is time to set up the “appropriate” addons.</p>
+<h2 id="popcorn-time-alternative--the-kodi-streaming-add-ons">Popcorn time alternative – the Kodi streaming add-ons</h2>
+<p><em>Disclaimer : please remember that streaming movies and TV shows might be against your local laws.</em></p>
+<p>In order to install the SuperRepo, follow the steps below :</p>
+<ul>
+<li>Go to Settings &gt; File manager and add a source. In the source name enter “<a href="http://srp.nu" target="_blank" rel="noopener noreferrer">http://srp.nu</a>” (without the quote) and name it SRP.</li>
+<li>Go to Settings &gt; Add-ons &gt; Add from zip file</li>
+<li>Select the SRP you just added, browse to the current Kodi version (Isengard at the time of writing), and All add-ons and install the SuperRepo Isengard Repository</li>
+<li>Once you have installed the SuperRepo Isengard Repository, go back to Add-on manager.</li>
+<li>Select Add from repository &gt; Select the SuperRepo one and browse to Video add-ons</li>
+<li>In this HUGE list, select Genesis and click Install.</li>
+</ul>
+<p><a href="https://www.masoopy.com/kodi-superrepo-enhance-kodi/" target="_blank" rel="noopener noreferrer">A more detailed guide can be found here</a>.</p>
+<h2 id="configure-genesis-to-enjoy-a-great-streaming-experience">Configure Genesis to enjoy a great streaming experience</h2>
+<p>Genesis is a great add-on! You can configure it so that you can share your “watch list” across multiple devices, you can automatically download subtitles, and populate your videos library with you favourite shows, and much more.</p>
+<p><a href="https://www.masoopy.com/kodi-genesis-tips-tricks/" target="_blank" rel="noopener noreferrer">Here are some great tips to enhance your Genesis experience</a>, and find out even more in our free PDF guide.</p>
+<h2 id="get-the-full-kodi-beginners-guide-for-free-right-now">Get the full Kodi Beginner’s guide for free, right now!</h2>
+<p>In order to make it easy and portable for anyone, we have written a full 24 pages PDF guide, explaining with many details, pictures and step by step how to setup the perfect Kodi streaming experience.</p>
+<p>Please help us, by sharing this content and get the full uncensored guide for free, right here :</p>
+<p><a href="/images/2015/11/Kodi_Beginners_Guide.pdf" rel="">Kodi_Beginners_Guide</a></p>
+]]></description></item><item><title>Kodi Genesis tips and tricks</title><link>https://www.masoopy.com/kodi-genesis-tips-and-tricks/</link><pubDate>Sat, 05 Dec 2015 10:00:52 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-genesis-tips-and-tricks/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_genesis_tips.png" referrerpolicy="no-referrer">
-            </div>Genesis is a great add-on that let’s you stream movies and TV Shows under Kodi, let me share with you some great Genesis tips and tricks.
-Disclaimer : streaming movies and TV shows might be illegal in your country, be sure to comply with local laws.
-Genesis Subtitles Did you know that you could enable automatic subtitles in Genesis? Yup! In order to do so, just navigate to the Video Add-ons &gt; Genesis &gt; Tools, this is the where Genesis is configured, and tweaked.]]></description></item><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>Genesis is a great add-on that let’s you stream movies and TV Shows under Kodi, let me share with you some great Genesis tips and tricks.</p>
+<p><em>Disclaimer : streaming movies and TV shows might be illegal in your country, be sure to comply with local laws.</em></p>
+<h2 id="genesis-subtitles">Genesis Subtitles</h2>
+<p>Did you know that you could enable automatic subtitles in Genesis? Yup! In order to do so, just navigate to the Video Add-ons &gt; Genesis &gt; Tools, this is the where Genesis is configured, and tweaked.</p>
+<p></p>
+<p>When I talk about Genesis settings, this is the right place, and it looks like the picture below.</p>
+<p></p>
+<p>Now select the Settings : subtitles line, and configure it to suit your likings.</p>
+<p></p>
+<h2 id="share-genesis-library-across-devices">Share Genesis library across devices</h2>
+<p>If you are using Kodi on several devices, then you might consider sharing your Genesis library across several devices. This is really easy, let’s do it!</p>
+<p>Go to Genesis settings, as explained above.</p>
+<p>Then, Library Settings,</p>
+<p></p>
+<p>and edit the Movies and TV Shows paths in order to use a network location (eg. your NAS), as shown below with before / after picture.</p>
+<p>Before change (please note the default path: special://…) :</p>
+<p></p>
+<p>After change (please note that I am using NFS share on my NAS) :</p>
+<p></p>
+<p>Highlight Movies folder, hit C on your keyboard (or right click), select “Set content”, and choose the Movies scraper you want to use.</p>
+<p>Repeat for the TV Shows folder with the wanted TV Shows scraper.</p>
+<p>Now hit the Update folders button, that’s it!</p>
+<h2 id="more-genesis-tips-and-tricks">More Genesis tips and tricks</h2>
+<p>There is even more Genesis tips and tricks, here is a quick list.</p>
+<p>Notify trakt.tv of your watching by adding your trakt.tv credentials in Gensis settings as shown below.</p>
+<p></p>
+<p>Edit source priority in order to use the Auto play feature. Once you have used Genesis a little, you’ll notice that some source are more reliable than some others. Write down the sources that works well for you and increase their priority in the menu shown below.</p>
+<p></p>
+<p>Feel free to share you own Genesis tips and tricks with us in the comment section of this post.</p>
+]]></description></item><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_superrepo.png" referrerpolicy="no-referrer">
-            </div>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.
-How to install SuperRepo on Kodi Go to Kodi Settings &gt; File manager :
-Select Add source :
-Enter the following URL, “http://SRP.nu” (without quotes) :
-Once done, it should look like this (notice SRP as name of media source) :
-Now go to Settings &gt; Add-ons :
-Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :]]></description></item><item><title>Is Kodi 4K ready?</title><link>https://www.masoopy.com/is-kodi-4k-ready/</link><pubDate>Sun, 08 Nov 2015 12:21:10 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/is-kodi-4k-ready/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/kodi_4k_rdy.png" referrerpolicy="no-referrer">
-&lt;/div>This entry is part 1 of 1 in the series 4K
-#4K display are becoming more and more affordable, but are they worth it? More importantly, what is really 4K and what are their pros and cons? And finally is #Kodi 4K ready? Let’s find out.
-What is 4K? 4K is the “new resolution in town”. In order to understand 4K resolution, we have to understand what resolution is. According to Wikipedia, display resolution is “is the number of distinct pixels in each dimension that can be displayed”.</description></item><item><title>Popcorn time is dead... time to switch to Kodi</title><link>https://www.masoopy.com/popcorn-time-is-dead...-time-to-switch-to-kodi/</link><pubDate>Tue, 27 Oct 2015 10:27:24 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/popcorn-time-is-dead...-time-to-switch-to-kodi/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2015/10/rip.jpg" referrerpolicy="no-referrer">
-&lt;/div>Dear all,
-#Popcorn Time has closed Sad news, Popcorn Time is dead. Popcorn Time was a great software, however due its P2P nature, it was not safe as I explained a few weeks ago which probably lead to its death. Fear not, there are alternatives, and the best one is right here on this site.
-The Popcorn time alternative The alternative is #Kodi along with a good streaming plugin such as Genesis.</description></item><item><title>Popcorn Time is not safe, use Kodi as an alternative</title><link>https://www.masoopy.com/popcorn-time-is-not-safe-use-kodi-as-an-alternative/</link><pubDate>Wed, 02 Sep 2015 14:38:12 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/popcorn-time-is-not-safe-use-kodi-as-an-alternative/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2015/09/popcorn.png" referrerpolicy="no-referrer">
-&lt;/div>You have probably heard of Popcorn time. It is a great piece of software allowing you to stream Movies and TV Shows. However, #Popcorn Time is not safe, you should use #Kodi as an alternative. Here is why.
-Kodi, thanks to some nifty plugins can allow you to stream movies and TV shows, just like Popcorn time. There is however one big difference.
-Kodi streams its data directly from “established” websites, this is what we call “direct download” or direct streaming.</description></item><item><title>Raspberry Pi 2 - Part 4 : OpenElec</title><link>https://www.masoopy.com/raspberry-pi-2-part-4-openelec/</link><pubDate>Fri, 03 Jul 2015 07:34:47 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/raspberry-pi-2-part-4-openelec/</guid><description><![CDATA[<div class="featured-image">
+            </div><p>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.</p>
+<h2 id="how-to-install-superrepo-on-kodi">How to install SuperRepo on Kodi</h2>
+<p>Go to Kodi Settings &gt; File manager :</p>
+<p>Select Add source :</p>
+<p>Enter the following URL, “<a href="http://SRP.nu" target="_blank" rel="noopener noreferrer">http://SRP.nu</a>” (without quotes) :</p>
+<p>Once done, it should look like this (notice SRP as name of media source) :</p>
+<p>Now go to Settings &gt; Add-ons :</p>
+<p>Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :</p>
+<p>Allow it some time to install the Add-on, once it is done, you should see it under Add-ons &gt; Install from repository, as shown in the picture below :</p>
+<p>That’s it, SuperRepo is installed!</p>
+<h2 id="how-to-install-add-ons-from-superrepo--enhance-kodi">How to install Add-ons from SuperRepo – enhance Kodi!</h2>
+<p>Now that SuperRepo is installed, you can start installing “real” add-ons to Kodi. In order to do that, browse to Add-ons &gt; Install from Repository and select SuperRepo [All] .</p>
+<p>From here, all the add-ons are sorted by categories, like video, music, subtitles, etc. You browse the list and install add-on you like. For example, if you are looking for a good add-on to download subtitles, I highly advise you to get the Addic7ed and OpenSubtitles’ ones from the Subtitles category.</p>
+<p>A great streaming add-on, is Genesis from the Video add-ons category.</p>
+<p>In order to install an add-on, just browse until you find it’s name (they are alphabetically ordered) in the right category, highlight it, press Enter and select Install.</p>
+<p></p>
+<p>Those are the add-ons I use the most. What’s about you, what add-ons do you use to enhance Kodi?</p>
+]]></description></item><item><title>Is Kodi 4K ready?</title><link>https://www.masoopy.com/is-kodi-4k-ready/</link><pubDate>Sun, 08 Nov 2015 12:21:10 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/is-kodi-4k-ready/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi_4k_rdy.png" referrerpolicy="no-referrer">
+            </div><p>This entry is part 1 of 1 in the series <a href="https://www.masoopy.com/series/4k/" title="4K" target="_blank" rel="noopener noreferrer">4K</a></p>
+<p><a href="https://www.masoopy.com/tag/4k/" target="_blank" rel="noopener noreferrer">#4K</a> display are becoming more and more affordable, but are they worth it? More importantly, what is really 4K and what are their pros and cons? And finally is <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> 4K ready? Let’s find out.</p>
+<h2 id="what-is-4k">What is 4K?</h2>
+<p>4K  is the “new resolution in town”. In order to understand 4K resolution, we have to understand what resolution is. According to <a href="https://en.wikipedia.org/wiki/Display_resolution" target="_blank" rel="noopener noreferrer">Wikipedia</a>, display resolution is “is the number of distinct pixels in each dimension that can be displayed”. A very common resolution nowadays is Full HD (also referred as 1080p). It means that an image using this resolution is 1920 pixels in width by 1080 pixels in height.</p>
+<p></p>
+<p>Now, the latest 4K resolution, is 4 times this size, which is 3840 pixels in width by 2160 pixels in height. Let’s do some simple maths :</p>
+<p>FHD –&gt; 1920*1080 = 2,073,600</p>
+<p>4K    –&gt; 3840*2160 = 8,294,400</p>
+<p>then 4K / FHD —&gt; 8,294,400 / 2,073,600 = 4</p>
+<p>Basically, it means it 4K times “superior” to Full HD resolution.</p>
+<h2 id="pros-and-cons-of-4k">Pros and cons of 4K</h2>
+<p>Now that we know what is 4K, let’s focus on the main advantages and disadvantages of the 4K resolution.</p>
+<h3 id="advantage-of-4k">Advantage of 4K</h3>
+<ul>
+<li>Higher resolution means bigger level of details. 4K images / movies will look more “smooth” with less visible “pixellated areas”.</li>
+<li>True 4K content, really looks awesome, it is, subjectively, clearer, sharper and nicer.</li>
+</ul>
+<h3 id="disadvantages-of-4k">Disadvantages of 4K</h3>
+<ul>
+<li>Lack of content: most content is not yet 4K ready. However, some providers such as Netflix are adding more and more 4K content to their library.</li>
+<li>Bigger file size. As we said, 4K is 4 times “superior” in quality, it is also way bigger to download.</li>
+</ul>
+<p>Now that we’ve seen the main advantages and disadvantages of 4K, let’s answer our initial question.</p>
+<h2 id="is-kodi-4k-ready">Is Kodi 4K ready?</h2>
+<p>Well, actually… sorry for the answer but it’ll be a yes and a no at the same time.</p>
+<p>Yes, Kodi is 4K ready (as long as your hardware is, more on that coming in a dedicated post). Skins will “auto resize” to the 4K resolution from 1080p which is as easy as doubling height and width (which in the end results in a 4 times factor) of every images from the skins.</p>
+<p>Moreover, Kodi will upscale lower resolution’s content to 4K, and with the proper settings (more on that coming in another post as well) you could, subjectively again, notice a better overall quality from your content.</p>
+<p>And no, Kodi is not 4K ready. Indeed, the skins are “just” 1080p yet, and are not natively drawn with the 4K resolution (whereas PS4 and Xbox One skins are). In practice, it works really fine. In theory, it shows a lack of interest for the format. Last but not least, 4K content is awfully missing (not Kodi’s fault here), and in order to really enjoy Kodi in 4K, we really need quality 4K content.</p>
+<p>Now that we have shown you a brief tour of 4K, it’s up to you to decide whether or not you want to go down that road. If you choose to go, keep reading us as this article is the first of a series about Kodi and 4K.</p>
+]]></description></item><item><title>Popcorn time is dead... time to switch to Kodi</title><link>https://www.masoopy.com/popcorn-time-is-dead...-time-to-switch-to-kodi/</link><pubDate>Tue, 27 Oct 2015 10:27:24 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/popcorn-time-is-dead...-time-to-switch-to-kodi/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2015/10/rip.jpg" referrerpolicy="no-referrer">
+            </div><p>Dear all,</p>
+<h2 id="popcorn-timehttpswwwmasoopycomtagpopcorn-time-has-closed"><a href="https://www.masoopy.com/tag/popcorn-time/" target="_blank" rel="noopener noreferrer">#Popcorn Time</a> has closed</h2>
+<p>Sad news, <a href="https://torrentfreak.com/popcorn-time-chaos-triggers-more-downtime-151023/" target="_blank" rel="noopener noreferrer">Popcorn Time is dead</a>. Popcorn Time was a great software, however due its P2P nature, it was not safe <a href="https://www.masoopy.com/why-you-should-use-kodi-instead-of-popcorn-time/" target="_blank" rel="noopener noreferrer">as I explained</a> a few weeks ago which probably lead to its death. Fear not, there are alternatives, and the best one is right here on this site.</p>
+<h2 id="the-popcorn-time-alternative">The Popcorn time alternative</h2>
+<p>The alternative is <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> along with a good streaming plugin such as Genesis. Is is really easy to set up and can be done in a few steps that are already covered on this website on the following 2 articles.</p>
+<ol>
+<li><a href="https://www.masoopy.com/how-to-install-kodi-in-windows/" target="_blank" rel="noopener noreferrer">Install Kodi</a></li>
+<li><a href="https://www.masoopy.com/kodi-genesis-stream-tv-shows-and-movies/" target="_blank" rel="noopener noreferrer">Install Genesis</a></li>
+</ol>
+<p>Just follow through the first and then proceed to the second article and you will be set.</p>
+<p>This method will allow you to stream movies and TV Shows exactly like Popcorn Time (minus the interface which will be different) and very important, it’ll be a lot safer.</p>
+<p>It’s time to keep up your couch’s potatoes skill.</p>
+]]></description></item><item><title>Popcorn Time is not safe, use Kodi as an alternative</title><link>https://www.masoopy.com/popcorn-time-is-not-safe-use-kodi-as-an-alternative/</link><pubDate>Wed, 02 Sep 2015 14:38:12 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/popcorn-time-is-not-safe-use-kodi-as-an-alternative/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2015/09/popcorn.png" referrerpolicy="no-referrer">
+            </div><p>You have probably heard of <a href="https://popcorntime.io/" target="_blank" rel="noopener noreferrer">Popcorn time</a>. It is a great piece of software allowing you to stream Movies and TV Shows. However, <a href="https://www.masoopy.com/tag/popcorn-time/" target="_blank" rel="noopener noreferrer">#Popcorn Time</a> is not safe, you should use <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> as an alternative. Here is why.</p>
+<p>Kodi, thanks to some <a href="https://www.masoopy.com/kodi-genesis-stream-tv-shows-and-movies/" target="_blank" rel="noopener noreferrer">nifty plugins</a> can allow you to stream movies and TV shows, just like Popcorn time. There is however one big difference.</p>
+<p>Kodi streams its data directly from “established” websites, this is what we call “direct download” or direct streaming. When you watch a movies, only you, the website owner and your ISP know what you are doing. If streaming such data is illegal in your country, then you want the least people to know what you are doing.</p>
+<p>Popcorn time on the other hand, is a P2P system based on torrent’s files. It means the data you are streaming is shared by many people (can be up to several hundreds people, even more technically). In the end, you, your ISP, and everyone “sharing” the file know what you are doing. Among those people, some will be because they want to watch it like, some others just want to help and keep “offering” movies to everyone, and some others might be here only to “spy on you”.</p>
+<p>To sum this up, Popcorn Time is not the safe to stream movies, and I’d avoid using it. Also please remember that streaming movies you don’t own the rights for is probably illegal wherever you live.</p>
+]]></description></item><item><title>Raspberry Pi 2 - Part 4 : OpenElec</title><link>https://www.masoopy.com/raspberry-pi-2-part-4-openelec/</link><pubDate>Fri, 03 Jul 2015 07:34:47 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/raspberry-pi-2-part-4-openelec/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
-            </div>This entry is part 4 of 4 in the series Raspberry Pi
-Last but not least, we’ll explain you how to install #OpenElec on your Pi!
-Prepare before install Mandatory  Raspberry #Pi 2 Micro SD Card (&gt;512MB) Power Adapter (&gt;=1A) Micro USB Cable  Optional  Keyboard Mouse Remote WLAN Dongle Ethernet Cable Case  Steps  Download the ARMv7 Stable build from official site ; Extract it and navigate to extracted files and folder ; If using Linux or Mac Os, just run “create_sdcard” file, follow instructions and go to “Install OpenElec” part ; If using Windows, download win32diskimager and run it ; Select image file you just downloaded and point it to your SD card.]]></description></item><item><title>Raspberry Pi 2 - Part 3 : media center</title><link>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</link><pubDate>Wed, 01 Jul 2015 07:34:41 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
-&lt;/div>This entry is part 3 of 4 in the series Raspberry Pi
-Today we’ll talk about media center solutions for the Pis. Let’s go!
-Media Center Distribution One of the most common use of the Raspberry #Pi 2 is to build a media center out of it. In order to so, one have access to several different “tools”. Let’s do a quick presentation.
-#Raspbian This is a Linux, Debian based OS (aka distribution).</description></item><item><title>Raspberry Pi 2 - Part 2 : different uses</title><link>https://www.masoopy.com/raspberry-pi-2-part-2-different-uses/</link><pubDate>Sun, 28 Jun 2015 06:04:51 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/raspberry-pi-2-part-2-different-uses/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
-&lt;/div>This entry is part 2 of 4 in the series Raspberry Pi
-In the first part, we saw a brief presentation of the #Pi 2 hardware with some pictures. Now, in the sequel, we’ll see what you can do with a #Raspberry Pi 2.
-Hardware applications You could build a Temperature and Humidity Sensor, in order to monitor room temperature or help you grow vegetables thanks to the readings.
-If you are the gaming type, you could always build an Arcade Pi.</description></item></channel></rss>
+            </div><p>This entry is part 4 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreferrer">Raspberry Pi</a></p>
+<p>Last but not least, we’ll explain you how to install <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreferrer">#OpenElec</a> on your Pi!</p>
+<p></p>
+<h2 id="prepare-before-install">Prepare before install</h2>
+<h3 id="mandatory">Mandatory</h3>
+<ul>
+<li>Raspberry <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreferrer">#Pi 2</a></li>
+<li>Micro SD Card (&gt;512MB)</li>
+<li>Power Adapter (&gt;=1A)</li>
+<li>Micro USB Cable</li>
+</ul>
+<h3 id="optional">Optional</h3>
+<ul>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Remote</li>
+<li>WLAN Dongle</li>
+<li>Ethernet Cable</li>
+<li>Case</li>
+</ul>
+<h3 id="steps">Steps</h3>
+<ol>
+<li>Download the ARMv7 Stable build from <a href="http://openelec.tv/get-openelec" target="_blank" rel="noopener noreferrer">official site</a> ;</li>
+<li>Extract it and navigate to extracted files and folder ;</li>
+<li>If using Linux or Mac Os, just run “create_sdcard” file, follow instructions and go to “Install OpenElec” part ;</li>
+<li>If using Windows, download <a href="http://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener noreferrer">win32diskimager</a> and run it ;</li>
+<li>Select image file you just downloaded and point it to your SD card.</li>
+</ol>
+<h2 id="install-openelec">Install OpenElec</h2>
+<h3 id="steps-1">Steps</h3>
+<ol>
+<li>Insert micro SD into Pi ;</li>
+<li>Follow on screen instructions ;</li>
+<li>Enjoy!</li>
+</ol>
+<p>If you need any help, don’t forget to check <a href="http://wiki.openelec.tv/index.php/HOW-TO:Installing_OpenELEC/Creating_The_Install_Key#tab=DiskImage" target="_blank" rel="noopener noreferrer">official installation instructions here</a>, and/or do not hesitate to comment on this post.</p>
+]]></description></item><item><title>Raspberry Pi 2 - Part 3 : media center</title><link>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</link><pubDate>Wed, 01 Jul 2015 07:34:41 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
+            </div><p>This entry is part 3 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreferrer">Raspberry Pi</a></p>
+<p>Today we’ll talk about media center solutions for the Pis. Let’s go!</p>
+<p></p>
+<h2 id="media-center-distribution">Media Center Distribution</h2>
+<p>One of the most common use of the Raspberry <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreferrer">#Pi 2</a> is to build a media center out of it. In order to so, one have access to several different “tools”. Let’s do a quick presentation.</p>
+<h3 id="raspbianhttpswwwmasoopycomtagraspbian"><a href="https://www.masoopy.com/tag/raspbian/" target="_blank" rel="noopener noreferrer">#Raspbian</a></h3>
+<p>This is a Linux, Debian based OS (aka <a href="https://en.wikipedia.org/wiki/Linux_distribution" target="_blank" rel="noopener noreferrer">distribution</a>). Compared to more specific distro this one is a “full” OS, which means you have access to a web browser, office suite, media player, etc. If you know your way around Linux, you might want to install <a href="http://www.raspbian.org/" target="_blank" rel="noopener noreferrer">Raspbian</a> and even add the <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> software to it order to have a hybrid media center + regular portable PC.</p>
+<h3 id="osmchttpswwwmasoopycomtagosmc"><a href="https://www.masoopy.com/tag/osmc/" target="_blank" rel="noopener noreferrer">#OSMC</a></h3>
+<p>This <a href="https://osmc.tv/about/" target="_blank" rel="noopener noreferrer">distribution based on Debian and Kodi</a> is a pure media center, like <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreferrer">#OpenElec</a>. To be honest, I have never played with it yet. It looks good on paper, and I’ll probably test it soon and report on this site.</p>
+<h3 id="openelec">OpenElec</h3>
+<p>This is the well known <a href="http://openelec.tv/" target="_blank" rel="noopener noreferrer">Kodi distribution for the Pis</a>. It is a great, stable and easy to use media center. If you only want a media center, then this the way to go (until I have tested OSMC and share with you my feelings).</p>
+<h3 id="pidorahttpswwwmasoopycomtagpidora"><a href="https://www.masoopy.com/tag/pidora/" target="_blank" rel="noopener noreferrer">#Pidora</a></h3>
+<p><a href="http://www.pidora.ca/" target="_blank" rel="noopener noreferrer">Pidora</a>, is similar to Raspbian since it is a full OS, but it is based on Fedora (a different flavor of Debian Linux). Like Raspbian, you’ll have access to everything you need for a daily use : web browsing, photo / video / music watching, etc. And you can also manually add Kodi.</p>
+<p>That’s it! Stay tuned for the next article explaining you how to install OpenElec on your Pi.</p>
+]]></description></item><item><title>Raspberry Pi 2 - Part 2 : different uses</title><link>https://www.masoopy.com/raspberry-pi-2-part-2-different-uses/</link><pubDate>Sun, 28 Jun 2015 06:04:51 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/raspberry-pi-2-part-2-different-uses/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
+            </div><p>This entry is part 2 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreferrer">Raspberry Pi</a></p>
+<p>In the <a href="https://www.masoopy.com/raspberry-pi-2-part-1/" target="_blank" rel="noopener noreferrer">first part</a>, we saw a brief presentation of the <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreferrer">#Pi 2</a> hardware with some pictures. Now, in the sequel, we’ll see what you can do with a <a href="https://www.masoopy.com/tag/raspberry/" target="_blank" rel="noopener noreferrer">#Raspberry</a> Pi 2.</p>
+<p></p>
+<h2 id="hardware-applications">Hardware applications</h2>
+<p>You could build a <a href="http://www.instructables.com/id/Raspberry-Pi-Temperature-Humidity-Network-Monitor/?ALLSTEPS" target="_blank" rel="noopener noreferrer">Temperature and Humidity Sensor</a>, in order to monitor room temperature or help you grow vegetables thanks to the readings.</p>
+<p>If you are the gaming type, you could always build an <a href="https://arcadepi.wordpress.com/" target="_blank" rel="noopener noreferrer">Arcade Pi</a>.</p>
+<p>What about a <a href="http://hackaday.com/2012/12/01/raspberry-pi-quadcopter/" target="_blank" rel="noopener noreferrer">Pi Drone</a>?</p>
+<h2 id="software-applications">Software applications</h2>
+<p>Of course the Pi, could also be used to <a href="http://elinux.org/Raspberry_Pi_Programming" target="_blank" rel="noopener noreferrer">learn how to program</a>.</p>
+<p>Thanks to its very small form factor, it makes a great <a href="https://github.com/pwnieexpress/raspberry_pwn" target="_blank" rel="noopener noreferrer">pentest device to carry on site</a>.</p>
+<p>Techy people could also use it as a <a href="http://blog.petrockblock.com/2012/08/15/your-own-cloud-server-with-owncloud-on-the-raspberry-pi/" target="_blank" rel="noopener noreferrer">Pi OwnCloud server</a> in order to share files, manage calendar/contacts and much more !</p>
+<p>Eventually, you could use your Pi 2 in order to install a media center such as <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreferrer">#OpenElec</a> (based on <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a>).</p>
+<p>As you can see, many things can be done with a $35 Pi 2. In a coming article, we will detail this usage, so stay tuned!</p>
+]]></description></item></channel></rss>

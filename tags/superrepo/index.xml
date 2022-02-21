@@ -1,14 +1,47 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>superrepo - Tag - Masoopy</title><link>https://www.masoopy.com/tags/superrepo/</link><description>superrepo - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 07 Dec 2015 10:58:20 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/superrepo/" rel="self" type="application/rss+xml"/><item><title>Kodi beginner's guide</title><link>https://www.masoopy.com/kodi-beginners-guide/</link><pubDate>Mon, 07 Dec 2015 10:58:20 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-beginners-guide/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2021/02/kodi_beginner_guide.png" referrerpolicy="no-referrer">
-&lt;/div>As a great alternative to popcorn time, I am going to share with you a nice Kodi beginner’s guide.
-How to install Kodi Browse to official Kodi website, and download the version of your liking (ie. Windows or Mac OS). Click here in order to get directly there!
-Here is a little video to help you :
-Once Kodi is installed, it is time to set up the “appropriate” addons.</description></item><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>superrepo - Tag - Masoopy</title><link>https://www.masoopy.com/tags/superrepo/</link><description>superrepo - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 07 Dec 2015 10:58:20 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/superrepo/" rel="self" type="application/rss+xml"/><item><title>Kodi beginner's guide</title><link>https://www.masoopy.com/kodi-beginners-guide/</link><pubDate>Mon, 07 Dec 2015 10:58:20 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-beginners-guide/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2021/02/kodi_beginner_guide.png" referrerpolicy="no-referrer">
+            </div><p>As a great alternative to <a href="https://www.masoopy.com/popcorn-time-is-dead-time-to-switch-to-kodi/" target="_blank" rel="noopener noreferrer">popcorn time</a>, I am going to share with you a nice Kodi beginner’s guide.</p>
+<h2 id="how-to-install-kodi">How to install Kodi</h2>
+<p>Browse to official Kodi website, and download the version of your liking (ie. Windows or Mac OS). <a href="http://kodi.tv/download/" target="_blank" rel="noopener noreferrer">Click here in order to get directly there!</a></p>
+<p>Here is a little video to help you :</p>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/vKzOYtXu7L4?feature=oembed" width="640"></iframe>
+<p>Once Kodi is installed, it is time to set up the “appropriate” addons.</p>
+<h2 id="popcorn-time-alternative--the-kodi-streaming-add-ons">Popcorn time alternative – the Kodi streaming add-ons</h2>
+<p><em>Disclaimer : please remember that streaming movies and TV shows might be against your local laws.</em></p>
+<p>In order to install the SuperRepo, follow the steps below :</p>
+<ul>
+<li>Go to Settings &gt; File manager and add a source. In the source name enter “<a href="http://srp.nu" target="_blank" rel="noopener noreferrer">http://srp.nu</a>” (without the quote) and name it SRP.</li>
+<li>Go to Settings &gt; Add-ons &gt; Add from zip file</li>
+<li>Select the SRP you just added, browse to the current Kodi version (Isengard at the time of writing), and All add-ons and install the SuperRepo Isengard Repository</li>
+<li>Once you have installed the SuperRepo Isengard Repository, go back to Add-on manager.</li>
+<li>Select Add from repository &gt; Select the SuperRepo one and browse to Video add-ons</li>
+<li>In this HUGE list, select Genesis and click Install.</li>
+</ul>
+<p><a href="https://www.masoopy.com/kodi-superrepo-enhance-kodi/" target="_blank" rel="noopener noreferrer">A more detailed guide can be found here</a>.</p>
+<h2 id="configure-genesis-to-enjoy-a-great-streaming-experience">Configure Genesis to enjoy a great streaming experience</h2>
+<p>Genesis is a great add-on! You can configure it so that you can share your “watch list” across multiple devices, you can automatically download subtitles, and populate your videos library with you favourite shows, and much more.</p>
+<p><a href="https://www.masoopy.com/kodi-genesis-tips-tricks/" target="_blank" rel="noopener noreferrer">Here are some great tips to enhance your Genesis experience</a>, and find out even more in our free PDF guide.</p>
+<h2 id="get-the-full-kodi-beginners-guide-for-free-right-now">Get the full Kodi Beginner’s guide for free, right now!</h2>
+<p>In order to make it easy and portable for anyone, we have written a full 24 pages PDF guide, explaining with many details, pictures and step by step how to setup the perfect Kodi streaming experience.</p>
+<p>Please help us, by sharing this content and get the full uncensored guide for free, right here :</p>
+<p><a href="/images/2015/11/Kodi_Beginners_Guide.pdf" rel="">Kodi_Beginners_Guide</a></p>
+]]></description></item><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_superrepo.png" referrerpolicy="no-referrer">
-            </div>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.
-How to install SuperRepo on Kodi Go to Kodi Settings &gt; File manager :
-Select Add source :
-Enter the following URL, “http://SRP.nu” (without quotes) :
-Once done, it should look like this (notice SRP as name of media source) :
-Now go to Settings &gt; Add-ons :
-Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :]]></description></item></channel></rss>
+            </div><p>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.</p>
+<h2 id="how-to-install-superrepo-on-kodi">How to install SuperRepo on Kodi</h2>
+<p>Go to Kodi Settings &gt; File manager :</p>
+<p>Select Add source :</p>
+<p>Enter the following URL, “<a href="http://SRP.nu" target="_blank" rel="noopener noreferrer">http://SRP.nu</a>” (without quotes) :</p>
+<p>Once done, it should look like this (notice SRP as name of media source) :</p>
+<p>Now go to Settings &gt; Add-ons :</p>
+<p>Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :</p>
+<p>Allow it some time to install the Add-on, once it is done, you should see it under Add-ons &gt; Install from repository, as shown in the picture below :</p>
+<p>That’s it, SuperRepo is installed!</p>
+<h2 id="how-to-install-add-ons-from-superrepo--enhance-kodi">How to install Add-ons from SuperRepo – enhance Kodi!</h2>
+<p>Now that SuperRepo is installed, you can start installing “real” add-ons to Kodi. In order to do that, browse to Add-ons &gt; Install from Repository and select SuperRepo [All] .</p>
+<p>From here, all the add-ons are sorted by categories, like video, music, subtitles, etc. You browse the list and install add-on you like. For example, if you are looking for a good add-on to download subtitles, I highly advise you to get the Addic7ed and OpenSubtitles’ ones from the Subtitles category.</p>
+<p>A great streaming add-on, is Genesis from the Video add-ons category.</p>
+<p>In order to install an add-on, just browse until you find it’s name (they are alphabetically ordered) in the right category, highlight it, press Enter and select Install.</p>
+<p></p>
+<p>Those are the add-ons I use the most. What’s about you, what add-ons do you use to enhance Kodi?</p>
+]]></description></item></channel></rss>

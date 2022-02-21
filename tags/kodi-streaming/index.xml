@@ -1,13 +1,34 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>kodi streaming - Tag - Masoopy</title><link>https://www.masoopy.com/tags/kodi-streaming/</link><description>kodi streaming - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 26 Nov 2015 20:44:36 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/kodi-streaming/" rel="self" type="application/rss+xml"/><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>kodi streaming - Tag - Masoopy</title><link>https://www.masoopy.com/tags/kodi-streaming/</link><description>kodi streaming - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 26 Nov 2015 20:44:36 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/kodi-streaming/" rel="self" type="application/rss+xml"/><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_superrepo.png" referrerpolicy="no-referrer">
-            </div>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.
-How to install SuperRepo on Kodi Go to Kodi Settings &gt; File manager :
-Select Add source :
-Enter the following URL, “http://SRP.nu” (without quotes) :
-Once done, it should look like this (notice SRP as name of media source) :
-Now go to Settings &gt; Add-ons :
-Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :]]></description></item><item><title>Popcorn time is dead... time to switch to Kodi</title><link>https://www.masoopy.com/popcorn-time-is-dead...-time-to-switch-to-kodi/</link><pubDate>Tue, 27 Oct 2015 10:27:24 +0100</pubDate><author>Author</author><guid>https://www.masoopy.com/popcorn-time-is-dead...-time-to-switch-to-kodi/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/2015/10/rip.jpg" referrerpolicy="no-referrer">
-&lt;/div>Dear all,
-#Popcorn Time has closed Sad news, Popcorn Time is dead. Popcorn Time was a great software, however due its P2P nature, it was not safe as I explained a few weeks ago which probably lead to its death. Fear not, there are alternatives, and the best one is right here on this site.
-The Popcorn time alternative The alternative is #Kodi along with a good streaming plugin such as Genesis.</description></item></channel></rss>
+            </div><p>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.</p>
+<h2 id="how-to-install-superrepo-on-kodi">How to install SuperRepo on Kodi</h2>
+<p>Go to Kodi Settings &gt; File manager :</p>
+<p>Select Add source :</p>
+<p>Enter the following URL, “<a href="http://SRP.nu" target="_blank" rel="noopener noreferrer">http://SRP.nu</a>” (without quotes) :</p>
+<p>Once done, it should look like this (notice SRP as name of media source) :</p>
+<p>Now go to Settings &gt; Add-ons :</p>
+<p>Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :</p>
+<p>Allow it some time to install the Add-on, once it is done, you should see it under Add-ons &gt; Install from repository, as shown in the picture below :</p>
+<p>That’s it, SuperRepo is installed!</p>
+<h2 id="how-to-install-add-ons-from-superrepo--enhance-kodi">How to install Add-ons from SuperRepo – enhance Kodi!</h2>
+<p>Now that SuperRepo is installed, you can start installing “real” add-ons to Kodi. In order to do that, browse to Add-ons &gt; Install from Repository and select SuperRepo [All] .</p>
+<p>From here, all the add-ons are sorted by categories, like video, music, subtitles, etc. You browse the list and install add-on you like. For example, if you are looking for a good add-on to download subtitles, I highly advise you to get the Addic7ed and OpenSubtitles’ ones from the Subtitles category.</p>
+<p>A great streaming add-on, is Genesis from the Video add-ons category.</p>
+<p>In order to install an add-on, just browse until you find it’s name (they are alphabetically ordered) in the right category, highlight it, press Enter and select Install.</p>
+<p></p>
+<p>Those are the add-ons I use the most. What’s about you, what add-ons do you use to enhance Kodi?</p>
+]]></description></item><item><title>Popcorn time is dead... time to switch to Kodi</title><link>https://www.masoopy.com/popcorn-time-is-dead...-time-to-switch-to-kodi/</link><pubDate>Tue, 27 Oct 2015 10:27:24 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/popcorn-time-is-dead...-time-to-switch-to-kodi/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2015/10/rip.jpg" referrerpolicy="no-referrer">
+            </div><p>Dear all,</p>
+<h2 id="popcorn-timehttpswwwmasoopycomtagpopcorn-time-has-closed"><a href="https://www.masoopy.com/tag/popcorn-time/" target="_blank" rel="noopener noreferrer">#Popcorn Time</a> has closed</h2>
+<p>Sad news, <a href="https://torrentfreak.com/popcorn-time-chaos-triggers-more-downtime-151023/" target="_blank" rel="noopener noreferrer">Popcorn Time is dead</a>. Popcorn Time was a great software, however due its P2P nature, it was not safe <a href="https://www.masoopy.com/why-you-should-use-kodi-instead-of-popcorn-time/" target="_blank" rel="noopener noreferrer">as I explained</a> a few weeks ago which probably lead to its death. Fear not, there are alternatives, and the best one is right here on this site.</p>
+<h2 id="the-popcorn-time-alternative">The Popcorn time alternative</h2>
+<p>The alternative is <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> along with a good streaming plugin such as Genesis. Is is really easy to set up and can be done in a few steps that are already covered on this website on the following 2 articles.</p>
+<ol>
+<li><a href="https://www.masoopy.com/how-to-install-kodi-in-windows/" target="_blank" rel="noopener noreferrer">Install Kodi</a></li>
+<li><a href="https://www.masoopy.com/kodi-genesis-stream-tv-shows-and-movies/" target="_blank" rel="noopener noreferrer">Install Genesis</a></li>
+</ol>
+<p>Just follow through the first and then proceed to the second article and you will be set.</p>
+<p>This method will allow you to stream movies and TV Shows exactly like Popcorn Time (minus the interface which will be different) and very important, it’ll be a lot safer.</p>
+<p>It’s time to keep up your couch’s potatoes skill.</p>
+]]></description></item></channel></rss>

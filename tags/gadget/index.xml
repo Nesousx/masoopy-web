@@ -1,4 +1,42 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>gadget - Tag - Masoopy</title><link>https://www.masoopy.com/tags/gadget/</link><description>gadget - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 13 Sep 2017 09:37:34 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/gadget/" rel="self" type="application/rss+xml"/><item><title>GPD Pocket, a very small but yet powerful laptop</title><link>https://www.masoopy.com/gpd-pocket-a-very-small-but-yet-powerful-laptop/</link><pubDate>Wed, 13 Sep 2017 09:37:34 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/gpd-pocket-a-very-small-but-yet-powerful-laptop/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>gadget - Tag - Masoopy</title><link>https://www.masoopy.com/tags/gadget/</link><description>gadget - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 13 Sep 2017 09:37:34 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/gadget/" rel="self" type="application/rss+xml"/><item><title>GPD Pocket, a very small but yet powerful laptop</title><link>https://www.masoopy.com/gpd-pocket-a-very-small-but-yet-powerful-laptop/</link><pubDate>Wed, 13 Sep 2017 09:37:34 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/gpd-pocket-a-very-small-but-yet-powerful-laptop/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/gpd.png" referrerpolicy="no-referrer">
-            </div>Let me present you my latest gadget, the GPD Pocket a full HD 7&quot; quad core laptop, with 8GB RAM and 128GB storage. It runs Windows 10 and more importantly (to me), it also runs Linux!
-Quick specs  Intel Atom® x7-Z8750 Processor (quad core) 8GB RAM 128 GB storage (eeprom based) 7000 mAh battery (12 hours announced battery life) FHD 7&quot; touch screen (1920x1200)  Look and usage I love the look!]]></description></item></channel></rss>
+            </div><p>Let me present you my latest gadget, the GPD Pocket a full HD 7&quot; quad core laptop, with 8GB RAM and 128GB storage. It runs Windows 10 and more importantly (to me), it also runs Linux!</p>
+<h2 id="quick-specs">Quick specs</h2>
+<ul>
+<li>Intel Atom® <a href="http://ark.intel.com/products/93362/Intel-Atom-x7-Z8750-Processor-2M-Cache-up-to-2_56-GHz" target="_blank" rel="noopener noreferrer">x7-Z8750</a> Processor (quad core)</li>
+<li>8GB RAM</li>
+<li>128 GB storage (eeprom based)</li>
+<li>7000 mAh battery (12 hours announced battery life)</li>
+<li>FHD 7&quot; touch screen (1920x1200)</li>
+</ul>
+<h2 id="look-and-usage">Look and usage</h2>
+<p>I love the look! It is small, lightweight, and seems sturdy.</p>
+<p>I just feel like carrying it around all the time. Just throw it in my backpack and forget it until I need it.</p>
+<p>However, while it can be handy to have a &ldquo;real&rdquo; computer (as opposed to a phone or tablet) always with you, it is still a gadget.</p>
+<p>Still if you only browse internet and do light computer usage, you could use this computer as your main computer, plugged to an external display, keyboard and mouse. Then, as soon as you leave home, unplug the beast and carry it around.</p>
+<p>You could also use <a href="https://www.evilsocket.net/2017/08/15/gpd-pocket-7-impressions-gnulinux-installation-and-offensive-setup/" target="_blank" rel="noopener noreferrer">the GPD as a mobile &ldquo;pentest&rdquo; station</a>, for war driving, and that kind of stuff. This is what Simone is doing, and it is pretty cool!</p>
+<h2 id="install-ubuntu-on-gpd-pocket">Install Ubuntu on GPD Pocket</h2>
+<p>In order to use it, I totally removed Windows and installed Ubuntu &ldquo;custom&rdquo; images from <a href="http://apt.nexus511.net/" target="_blank" rel="noopener noreferrer">here</a>. Let&rsquo;s see how to do it.</p>
+<ol>
+<li>From your &ldquo;regular&rdquo; computer, grab the desired image from their <a href="https://gpd-iso.dandinoo.com/" target="_blank" rel="noopener noreferrer">repo</a> ;</li>
+<li><a href="https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/" target="_blank" rel="noopener noreferrer">&ldquo;Burn&rdquo; iso to USB stick</a>;</li>
+<li>Plug-in the USB Stick into the GPD and hit Del while powering it on in order to access the BIOS ;</li>
+<li>Follow the steps on screen, when asked something about using UEFI only, say yes.</li>
+<li>Wait for installation to complete, when asked removed USB stick and reboot computer.</li>
+</ol>
+<p>The installation is over and you should now be able to login with the user you created during the installation.</p>
+<p>Now, any time you want to update your machine, simple open a terminal and issue the following command:</p>
+<p><code>sudo apt update &amp;&amp; sudo apt install gpdpocket</code></p>
+<p>While updating packages, pay attention to messages from your operating system. It might tell you that some packages were held back (especially kernel packages), if it does, &ldquo;force install&rdquo;. For example it says package kernel-plop and kernel-bob were held back, then issue the following command:</p>
+<p><code>sudo apt-get install kernel-plop kernel-bob</code></p>
+<p>At the time of writing, the latest version seems to have fixed the issue with USB-C data, <a href="https://twitter.com/Nexus511/status/906534190669332480" target="_blank" rel="noopener noreferrer">making it now usable</a>. However, I havn&rsquo;t teste it yet, due to lack of hardware.</p>
+<p>So far, we have a pretty cool tool running GNU/Linux, but unfortunately it is not perfect.</p>
+<h2 id="why-you-actually-shouldnt-buy-it">Why you actually shouldn&rsquo;t buy it</h2>
+<p>The keyboard is really small, and the layout kinda sucks. It is is a non standard layout and it&rsquo;ll drive you crazy some (many?) times. I keep hitting the letter Q instead of TAB while in the terminal and it pisses me off&hellip;</p>
+<p>The trackpoint looks like a thinkpad trackpoint but it is far less accurate&hellip; and you will do everything you can to avoid it. Some people will use the touchscreen, but I prefer to avoid mouses anyway and I daily use <a href="https://github.com/Airblader/i3" target="_blank" rel="noopener noreferrer">tiling window managers</a>.</p>
+<p>If you start running some apps, it will be noisy&hellip; Of course you could <a href="https://www.reddit.com/r/GPDPocket/comments/6q74en/unlocked_gpd_pocket_bios/" target="_blank" rel="noopener noreferrer">flash the BIOS</a>&hellip; but this might not be a good idea.</p>
+<p>Indeed, GPD people seem to offer pretty poor support on BIOS, and unsupported BIOSes are&hellip; unsupported and NOT reliable from what I&rsquo;ve read.</p>
+<p>Moreover, when it breaks, or if you have hardware issue, support once again is less than average, <a href="https://www.reddit.com/r/GPDPocket/comments/6sk56m/warning_gpd_kicking_support_back_to_dealer/" target="_blank" rel="noopener noreferrer">it seems</a>&hellip;</p>
+<p>For all those reasons, you&rsquo;d better to think twice, especially if you compulsive shopping disorder with this kind of devices like I do.</p>
+<p>However, if you still wanna buy it, <a href="https://www.indiegogo.com/projects/gpd-pocket-7-0-umpc-laptop-ubuntu-or-win-10-os-laptop--2#/" target="_blank" rel="noopener noreferrer">go there</a>!</p>
+]]></description></item></channel></rss>

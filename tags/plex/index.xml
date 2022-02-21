@@ -1,4 +1,44 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>plex - Tag - Masoopy</title><link>https://www.masoopy.com/tags/plex/</link><description>plex - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 19 Apr 2018 07:15:33 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/plex/" rel="self" type="application/rss+xml"/><item><title>Automatically download subtitles with Plex</title><link>https://www.masoopy.com/automatically-download-subtitles-with-plex/</link><pubDate>Thu, 19 Apr 2018 07:15:33 +0200</pubDate><author>Author</author><guid>https://www.masoopy.com/automatically-download-subtitles-with-plex/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>plex - Tag - Masoopy</title><link>https://www.masoopy.com/tags/plex/</link><description>plex - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 19 Apr 2018 07:15:33 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/plex/" rel="self" type="application/rss+xml"/><item><title>Automatically download subtitles with Plex</title><link>https://www.masoopy.com/automatically-download-subtitles-with-plex/</link><pubDate>Thu, 19 Apr 2018 07:15:33 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/automatically-download-subtitles-with-plex/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/auto_dl_sub_plex.png" referrerpolicy="no-referrer">
-            </div>Today, there is hundreds (if not thousands) of TV shows and movies. I enjoy a lot of them, and I enjoy them in their original version. Unfortunately, I am not fluent in every languages. Fortunately enough, we have autmomatic subtitles for Kodi and a similar system of automatic subtitles for Plex. Let&rsquo;s see how to use it.
-In plugins, we trust  Open your web browser and go to your Plex server, most probably here.]]></description></item></channel></rss>
+            </div><p>Today, there is hundreds (if not thousands) of TV shows and movies. I enjoy a lot of them, and I enjoy them in their original version. Unfortunately, I am not fluent in every languages. Fortunately enough, we have <a href="https://www.masoopy.com/automatically-download-subtiles/" target="_blank" rel="noopener noreferrer">autmomatic subtitles for Kodi</a> and a similar system of automatic subtitles for Plex. Let&rsquo;s see how to use it.</p>
+<h3 id="in-plugins-we-trust">In plugins, we trust</h3>
+<ol>
+<li>Open your web browser and go to your Plex server, <a href="https://app.plex.tv/desktop#" target="_blank" rel="noopener noreferrer">most probably here</a>.</li>
+<li>Browse to the plugins section (left sidebar) :</li>
+</ol>
+<p></p>
+<ol>
+<li>Now, click &ldquo;Install plugins&rdquo; :</li>
+</ol>
+<p></p>
+<ol>
+<li>Then, go to &ldquo;More&rdquo;, then &ldquo;All Available Plugins&rdquo;, wait for the page to load (it might take a few moments) :</li>
+</ol>
+<p></p>
+<ol>
+<li>Once the page has finished loading, search for &ldquo;Sub-zero&rdquo;. Click on the thumbnail and install the plugin.</li>
+</ol>
+<p></p>
+<p>NB : on my picture, you can see, that the plugin is already installed, but it should be pretty obvious which button to press on a new install. ;)</p>
+<p>That&rsquo;s it, the plugin is now installed, it is time to set it up!</p>
+<h3 id="configure-sub-zero-to-automatically-download-subtitles">Configure Sub-zero to automatically download subtitles</h3>
+<ol>
+<li>Go to Settings &gt; Server &gt; Agents, an overwhelmning 3 clicks process :</li>
+</ol>
+<p></p>
+<ol>
+<li>Now, in &ldquo;Movies&rdquo; : &ldquo;Plex Movie&rdquo; and &ldquo;The Movie Database&rdquo;, check the &ldquo;Sub-zero&rdquo; boxes.</li>
+<li>Repeat the same operation for &ldquo;Shows&rdquo; : &ldquo;TheTVDB&rdquo; and &ldquo;The Movie Database&rdquo;.</li>
+</ol>
+<p>Now, as long as your media libraries are using those standard agents, you&rsquo;ll be fine. Sub-zero will be executed.</p>
+<p>Finally, we should tweak Sub-zero settings in order to make sure it finds the best subtitles. Let&rsquo;s do it!</p>
+<ol>
+<li>Another 3 clicks process, go back to Home screen &gt; Plugins &gt; Mouse over the the Sub-zero thumbnail and click the &ldquo;Gear icon&rdquo;.</li>
+</ol>
+<p></p>
+<ol>
+<li>From here, just fill in the fields according to your needs. I highly advise you to create and use accounts from <a href="https://www.opensubtitles.org" target="_blank" rel="noopener noreferrer">OpenSubtitles</a> and <a href="http://www.addic7ed.com/" target="_blank" rel="noopener noreferrer">Addic7ed</a>.</li>
+</ol>
+<p>Moreover, if you are automating your media binge watching, then you really should configure the Sonarr and Radarr section. It will greatly improve the way subtitles are matched to your media.</p>
+<p>From now on you can force a full sub-zero sync from the plugin page, of simply forget it and it will automatically scan the library in the background (every night, by default).</p>
+]]></description></item></channel></rss>
