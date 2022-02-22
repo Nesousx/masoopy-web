@@ -123,7 +123,6 @@ rssLimit = 10
 
 [params]
   version = "0.2.X"
-  defaultTheme = "auto"
 #  images = ["/static/images/logo.png"]
 
   [params.search]

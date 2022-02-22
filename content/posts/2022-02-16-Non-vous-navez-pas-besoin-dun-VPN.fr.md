@@ -2,7 +2,6 @@
 title: "Non, vous n'avez pas besoin d'un VPN !"
 date: 2022-02-16T00:48:07+01:00
 categories: [polémique]
-draft: true
 tags: ["VPN", "monétisation"]
 FeaturedImage: "/images/2022/02/pas_de_VPN.png"
 ---
