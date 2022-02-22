@@ -13,3 +13,12 @@
 [submodule "themes/DoIt"]
 	path = themes/DoIt
 	url = https://github.com/HEIGE-PCloud/DoIt.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/HelloFriend"]
+	path = themes/HelloFriend
+	url = https://github.com/panr/hugo-theme-hello-friend.git
+[submodule "themes/Introduction"]
+	path = themes/Introduction
+	url = https://github.com/victoriadrake/hugo-theme-introduction.git
