@@ -1,6 +1,6 @@
 baseURL = "https://www.masoopy.com/"
 defaultContentLanguage = 'en'
-theme = "CodeIT"
+theme = "LoveIt"
 enableRobotsTXT = true
 rssLimit = 10
 
@@ -28,7 +28,7 @@ rssLimit = 10
       pre = ""
       post = ""
       name = "Cheatsheets"
-      url = "/cheatsheets/"
+      url = "https://cheatsheets.masoopy.com/"
       # title will be shown when you hover on this menu link
       title = ""
       weight = 2
@@ -98,6 +98,17 @@ rssLimit = 10
       weight = 3
 
     [[languages.fr.menu.main]]
+      identifier = "cheatsheets"
+      pre = ""
+      post = ""
+      name = "Cheatsheets"
+      url = "https://cheatsheets.masoopy.com/"
+      # title will be shown when you hover on this menu link
+      title = ""
+      weight = 4
+
+
+    [[languages.fr.menu.main]]
       identifier = "About"
       pre = ""
       post = ""
@@ -105,7 +116,7 @@ rssLimit = 10
       url = "/a-propos/"
       # title will be shown when you hover on this menu link
       title = ""
-      weight = 4
+      weight = 5
 
 
 [author]
