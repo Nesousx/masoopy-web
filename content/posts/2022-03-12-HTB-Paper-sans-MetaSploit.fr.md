@@ -1,7 +1,6 @@
 ---
 title: "HTB - Paper sans MetaSploit"
 date: 2022-03-12
-draft: true
 categories: ["hacking", "Guides"]
 tags: [HTB]
 featuredImage: "/images/2022/03/Paper_Logo.png"

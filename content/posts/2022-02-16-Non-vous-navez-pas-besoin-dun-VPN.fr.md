@@ -12,7 +12,7 @@ Depuis plusieurs années les VPN (Virtual Private Network) ont le vent en poupe.
 
 ### Anonymat
   
-Promesse : Les VPN vous promettent de de protéger votre confidentialité, vos achats en ligne, vous rendre anonyme, etc.
+Promesse : Les VPN vous promettent de protéger votre confidentialité, vos achats en ligne, vous rendre anonyme, etc.
 
 Réalité : Les données sont chiffrées entre la société fournissant le VPN et vous-même. Cela veut dire que votre FAI ne verra effectivement plus du tout ce que vous faites sur Internet. Par contre, le vendeur de VPN, lui, aura la possibilité de tout voir. En général, ces sociétés se trouvent dans des paradis fiscaux et ont des lois beaucoup moins strictes que nos FAI Français (par exemple, pas de RGPD). Du coup, si quelqu'un doit avoir accès aux données de navigation, ne vaut-il pas mieux que ce soit votre FAI ?
 

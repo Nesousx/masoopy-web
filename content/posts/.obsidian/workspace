@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "7b737e0de67079c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1a7f57d77fcbf88",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2022-02-16-Non-vous-navez-pas-besoin-dun-VPN.fr.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b0550065ca34e52c",
+    "type": "split",
+    "children": [
+      {
+        "id": "e86a5c9db10196ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "151bece4c110e15d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "726336dfe82a24d0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "57a4d9281c85f9cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce875772bbf9c392",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2da740723bf992c4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2022-02-16-Non-vous-navez-pas-besoin-dun-VPN.fr.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "d1a7f57d77fcbf88",
+  "lastOpenFiles": [
+    "2022-02-16-Non-vous-navez-pas-besoin-dun-VPN.fr.md",
+    "2015-04-02-turn-kodi-subtitles-off-or-on.md",
+    "2014-08-11-nzbget-as-a-replacement-of-sabnzbdplus.md"
+  ]
+}
