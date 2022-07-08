@@ -1,12 +1,12 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>openelec - Tag - Masoopy</title><link>https://www.masoopy.com/tags/openelec/</link><description>openelec - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 03 Jul 2015 07:34:47 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/openelec/" rel="self" type="application/rss+xml"/><item><title>Raspberry Pi 2 - Part 4 : OpenElec</title><link>https://www.masoopy.com/raspberry-pi-2-part-4-openelec/</link><pubDate>Fri, 03 Jul 2015 07:34:47 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/raspberry-pi-2-part-4-openelec/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>openelec - Tag - Masoopy</title><link>https://www.masoopy.com/tags/openelec/</link><description>openelec - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 03 Jul 2015 07:34:47 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/openelec/" rel="self" type="application/rss+xml"/><item><title>Raspberry Pi 2 - Part 4 : OpenElec</title><link>https://www.masoopy.com/raspberry-pi-2-part-4-openelec/</link><pubDate>Fri, 03 Jul 2015 07:34:47 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/raspberry-pi-2-part-4-openelec/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
-            </div><p>This entry is part 4 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreferrer">Raspberry Pi</a></p>
-<p>Last but not least, we’ll explain you how to install <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreferrer">#OpenElec</a> on your Pi!</p>
+            </div><p>This entry is part 4 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreffer ">Raspberry Pi</a></p>
+<p>Last but not least, we’ll explain you how to install <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreffer ">#OpenElec</a> on your Pi!</p>
 <p></p>
 <h2 id="prepare-before-install">Prepare before install</h2>
 <h3 id="mandatory">Mandatory</h3>
 <ul>
-<li>Raspberry <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreferrer">#Pi 2</a></li>
+<li>Raspberry <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreffer ">#Pi 2</a></li>
 <li>Micro SD Card (&gt;512MB)</li>
 <li>Power Adapter (&gt;=1A)</li>
 <li>Micro USB Cable</li>
@@ -22,10 +22,10 @@
 </ul>
 <h3 id="steps">Steps</h3>
 <ol>
-<li>Download the ARMv7 Stable build from <a href="http://openelec.tv/get-openelec" target="_blank" rel="noopener noreferrer">official site</a> ;</li>
+<li>Download the ARMv7 Stable build from <a href="http://openelec.tv/get-openelec" target="_blank" rel="noopener noreffer ">official site</a> ;</li>
 <li>Extract it and navigate to extracted files and folder ;</li>
 <li>If using Linux or Mac Os, just run “create_sdcard” file, follow instructions and go to “Install OpenElec” part ;</li>
-<li>If using Windows, download <a href="http://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener noreferrer">win32diskimager</a> and run it ;</li>
+<li>If using Windows, download <a href="http://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener noreffer ">win32diskimager</a> and run it ;</li>
 <li>Select image file you just downloaded and point it to your SD card.</li>
 </ol>
 <h2 id="install-openelec">Install OpenElec</h2>
@@ -35,36 +35,36 @@
 <li>Follow on screen instructions ;</li>
 <li>Enjoy!</li>
 </ol>
-<p>If you need any help, don’t forget to check <a href="http://wiki.openelec.tv/index.php/HOW-TO:Installing_OpenELEC/Creating_The_Install_Key#tab=DiskImage" target="_blank" rel="noopener noreferrer">official installation instructions here</a>, and/or do not hesitate to comment on this post.</p>
-]]></description></item><item><title>Raspberry Pi 2 - Part 3 : media center</title><link>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</link><pubDate>Wed, 01 Jul 2015 07:34:41 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</guid><description><![CDATA[<div class="featured-image">
+<p>If you need any help, don’t forget to check <a href="http://wiki.openelec.tv/index.php/HOW-TO:Installing_OpenELEC/Creating_The_Install_Key#tab=DiskImage" target="_blank" rel="noopener noreffer ">official installation instructions here</a>, and/or do not hesitate to comment on this post.</p>
+]]></description></item><item><title>Raspberry Pi 2 - Part 3 : media center</title><link>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</link><pubDate>Wed, 01 Jul 2015 07:34:41 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/raspberry-pi-2-part-3-media-center/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
-            </div><p>This entry is part 3 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreferrer">Raspberry Pi</a></p>
+            </div><p>This entry is part 3 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreffer ">Raspberry Pi</a></p>
 <p>Today we’ll talk about media center solutions for the Pis. Let’s go!</p>
 <p></p>
 <h2 id="media-center-distribution">Media Center Distribution</h2>
-<p>One of the most common use of the Raspberry <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreferrer">#Pi 2</a> is to build a media center out of it. In order to so, one have access to several different “tools”. Let’s do a quick presentation.</p>
-<h3 id="raspbianhttpswwwmasoopycomtagraspbian"><a href="https://www.masoopy.com/tag/raspbian/" target="_blank" rel="noopener noreferrer">#Raspbian</a></h3>
-<p>This is a Linux, Debian based OS (aka <a href="https://en.wikipedia.org/wiki/Linux_distribution" target="_blank" rel="noopener noreferrer">distribution</a>). Compared to more specific distro this one is a “full” OS, which means you have access to a web browser, office suite, media player, etc. If you know your way around Linux, you might want to install <a href="http://www.raspbian.org/" target="_blank" rel="noopener noreferrer">Raspbian</a> and even add the <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> software to it order to have a hybrid media center + regular portable PC.</p>
-<h3 id="osmchttpswwwmasoopycomtagosmc"><a href="https://www.masoopy.com/tag/osmc/" target="_blank" rel="noopener noreferrer">#OSMC</a></h3>
-<p>This <a href="https://osmc.tv/about/" target="_blank" rel="noopener noreferrer">distribution based on Debian and Kodi</a> is a pure media center, like <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreferrer">#OpenElec</a>. To be honest, I have never played with it yet. It looks good on paper, and I’ll probably test it soon and report on this site.</p>
+<p>One of the most common use of the Raspberry <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreffer ">#Pi 2</a> is to build a media center out of it. In order to so, one have access to several different “tools”. Let’s do a quick presentation.</p>
+<h3 id="raspbianhttpswwwmasoopycomtagraspbian"><a href="https://www.masoopy.com/tag/raspbian/" target="_blank" rel="noopener noreffer ">#Raspbian</a></h3>
+<p>This is a Linux, Debian based OS (aka <a href="https://en.wikipedia.org/wiki/Linux_distribution" target="_blank" rel="noopener noreffer ">distribution</a>). Compared to more specific distro this one is a “full” OS, which means you have access to a web browser, office suite, media player, etc. If you know your way around Linux, you might want to install <a href="http://www.raspbian.org/" target="_blank" rel="noopener noreffer ">Raspbian</a> and even add the <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreffer ">#Kodi</a> software to it order to have a hybrid media center + regular portable PC.</p>
+<h3 id="osmchttpswwwmasoopycomtagosmc"><a href="https://www.masoopy.com/tag/osmc/" target="_blank" rel="noopener noreffer ">#OSMC</a></h3>
+<p>This <a href="https://osmc.tv/about/" target="_blank" rel="noopener noreffer ">distribution based on Debian and Kodi</a> is a pure media center, like <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreffer ">#OpenElec</a>. To be honest, I have never played with it yet. It looks good on paper, and I’ll probably test it soon and report on this site.</p>
 <h3 id="openelec">OpenElec</h3>
-<p>This is the well known <a href="http://openelec.tv/" target="_blank" rel="noopener noreferrer">Kodi distribution for the Pis</a>. It is a great, stable and easy to use media center. If you only want a media center, then this the way to go (until I have tested OSMC and share with you my feelings).</p>
-<h3 id="pidorahttpswwwmasoopycomtagpidora"><a href="https://www.masoopy.com/tag/pidora/" target="_blank" rel="noopener noreferrer">#Pidora</a></h3>
-<p><a href="http://www.pidora.ca/" target="_blank" rel="noopener noreferrer">Pidora</a>, is similar to Raspbian since it is a full OS, but it is based on Fedora (a different flavor of Debian Linux). Like Raspbian, you’ll have access to everything you need for a daily use : web browsing, photo / video / music watching, etc. And you can also manually add Kodi.</p>
+<p>This is the well known <a href="http://openelec.tv/" target="_blank" rel="noopener noreffer ">Kodi distribution for the Pis</a>. It is a great, stable and easy to use media center. If you only want a media center, then this the way to go (until I have tested OSMC and share with you my feelings).</p>
+<h3 id="pidorahttpswwwmasoopycomtagpidora"><a href="https://www.masoopy.com/tag/pidora/" target="_blank" rel="noopener noreffer ">#Pidora</a></h3>
+<p><a href="http://www.pidora.ca/" target="_blank" rel="noopener noreffer ">Pidora</a>, is similar to Raspbian since it is a full OS, but it is based on Fedora (a different flavor of Debian Linux). Like Raspbian, you’ll have access to everything you need for a daily use : web browsing, photo / video / music watching, etc. And you can also manually add Kodi.</p>
 <p>That’s it! Stay tuned for the next article explaining you how to install OpenElec on your Pi.</p>
-]]></description></item><item><title>Raspberry Pi 2 - Part 2 : different uses</title><link>https://www.masoopy.com/raspberry-pi-2-part-2-different-uses/</link><pubDate>Sun, 28 Jun 2015 06:04:51 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/raspberry-pi-2-part-2-different-uses/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Raspberry Pi 2 - Part 2 : different uses</title><link>https://www.masoopy.com/raspberry-pi-2-part-2-different-uses/</link><pubDate>Sun, 28 Jun 2015 06:04:51 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/raspberry-pi-2-part-2-different-uses/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2015/06/raspberry.jpeg" referrerpolicy="no-referrer">
-            </div><p>This entry is part 2 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreferrer">Raspberry Pi</a></p>
-<p>In the <a href="https://www.masoopy.com/raspberry-pi-2-part-1/" target="_blank" rel="noopener noreferrer">first part</a>, we saw a brief presentation of the <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreferrer">#Pi 2</a> hardware with some pictures. Now, in the sequel, we’ll see what you can do with a <a href="https://www.masoopy.com/tag/raspberry/" target="_blank" rel="noopener noreferrer">#Raspberry</a> Pi 2.</p>
+            </div><p>This entry is part 2 of 4 in the series <a href="https://www.masoopy.com/series/raspberry-pi/" title="Raspberry Pi" target="_blank" rel="noopener noreffer ">Raspberry Pi</a></p>
+<p>In the <a href="https://www.masoopy.com/raspberry-pi-2-part-1/" target="_blank" rel="noopener noreffer ">first part</a>, we saw a brief presentation of the <a href="https://www.masoopy.com/tag/pi-2/" target="_blank" rel="noopener noreffer ">#Pi 2</a> hardware with some pictures. Now, in the sequel, we’ll see what you can do with a <a href="https://www.masoopy.com/tag/raspberry/" target="_blank" rel="noopener noreffer ">#Raspberry</a> Pi 2.</p>
 <p></p>
 <h2 id="hardware-applications">Hardware applications</h2>
-<p>You could build a <a href="http://www.instructables.com/id/Raspberry-Pi-Temperature-Humidity-Network-Monitor/?ALLSTEPS" target="_blank" rel="noopener noreferrer">Temperature and Humidity Sensor</a>, in order to monitor room temperature or help you grow vegetables thanks to the readings.</p>
-<p>If you are the gaming type, you could always build an <a href="https://arcadepi.wordpress.com/" target="_blank" rel="noopener noreferrer">Arcade Pi</a>.</p>
-<p>What about a <a href="http://hackaday.com/2012/12/01/raspberry-pi-quadcopter/" target="_blank" rel="noopener noreferrer">Pi Drone</a>?</p>
+<p>You could build a <a href="http://www.instructables.com/id/Raspberry-Pi-Temperature-Humidity-Network-Monitor/?ALLSTEPS" target="_blank" rel="noopener noreffer ">Temperature and Humidity Sensor</a>, in order to monitor room temperature or help you grow vegetables thanks to the readings.</p>
+<p>If you are the gaming type, you could always build an <a href="https://arcadepi.wordpress.com/" target="_blank" rel="noopener noreffer ">Arcade Pi</a>.</p>
+<p>What about a <a href="http://hackaday.com/2012/12/01/raspberry-pi-quadcopter/" target="_blank" rel="noopener noreffer ">Pi Drone</a>?</p>
 <h2 id="software-applications">Software applications</h2>
-<p>Of course the Pi, could also be used to <a href="http://elinux.org/Raspberry_Pi_Programming" target="_blank" rel="noopener noreferrer">learn how to program</a>.</p>
-<p>Thanks to its very small form factor, it makes a great <a href="https://github.com/pwnieexpress/raspberry_pwn" target="_blank" rel="noopener noreferrer">pentest device to carry on site</a>.</p>
-<p>Techy people could also use it as a <a href="http://blog.petrockblock.com/2012/08/15/your-own-cloud-server-with-owncloud-on-the-raspberry-pi/" target="_blank" rel="noopener noreferrer">Pi OwnCloud server</a> in order to share files, manage calendar/contacts and much more !</p>
-<p>Eventually, you could use your Pi 2 in order to install a media center such as <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreferrer">#OpenElec</a> (based on <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a>).</p>
+<p>Of course the Pi, could also be used to <a href="http://elinux.org/Raspberry_Pi_Programming" target="_blank" rel="noopener noreffer ">learn how to program</a>.</p>
+<p>Thanks to its very small form factor, it makes a great <a href="https://github.com/pwnieexpress/raspberry_pwn" target="_blank" rel="noopener noreffer ">pentest device to carry on site</a>.</p>
+<p>Techy people could also use it as a <a href="http://blog.petrockblock.com/2012/08/15/your-own-cloud-server-with-owncloud-on-the-raspberry-pi/" target="_blank" rel="noopener noreffer ">Pi OwnCloud server</a> in order to share files, manage calendar/contacts and much more !</p>
+<p>Eventually, you could use your Pi 2 in order to install a media center such as <a href="https://www.masoopy.com/tag/openelec/" target="_blank" rel="noopener noreffer ">#OpenElec</a> (based on <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreffer ">#Kodi</a>).</p>
 <p>As you can see, many things can be done with a $35 Pi 2. In a coming article, we will detail this usage, so stay tuned!</p>
 ]]></description></item></channel></rss>

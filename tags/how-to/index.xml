@@ -1,10 +1,10 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>how to - Tag - Masoopy</title><link>https://www.masoopy.com/tags/how-to/</link><description>how to - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Sep 2017 16:05:45 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/how-to/" rel="self" type="application/rss+xml"/><item><title>How to create a bootable Windows 10 USB stick</title><link>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</link><pubDate>Fri, 08 Sep 2017 16:05:45 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>how to - Tag - Masoopy</title><link>https://www.masoopy.com/tags/how-to/</link><description>how to - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Sep 2017 16:05:45 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/how-to/" rel="self" type="application/rss+xml"/><item><title>How to create a bootable Windows 10 USB stick</title><link>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</link><pubDate>Fri, 08 Sep 2017 16:05:45 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/boot_usb_win_10.png" referrerpolicy="no-referrer">
             </div><p>Maybe you bought a new computer and reinstall it from scratch, or maybe you plan to sell your current computer, or maybe you just want to install Windows 10 as a new OS. In Any case, creating a bootable Windows USB stick will allow you to do so.</p>
 <h2 id="it-could-be-harder">It could be harder</h2>
 <p>This might sound scary, but it as actually very easy. However, please note that, for this method to work you&rsquo;ll need to proceed from a Windows 10 computer.</p>
 <ol>
-<li>From you Windows 10 computer, grab the <a href="https://go.microsoft.com/fwlink/p/?LinkId=616447" target="_blank" rel="noopener noreferrer">Windows Media Creation tool</a> at Microsoft&rsquo;s website (should be the second link on the page) ;</li>
+<li>From you Windows 10 computer, grab the <a href="https://go.microsoft.com/fwlink/p/?LinkId=616447" target="_blank" rel="noopener noreffer ">Windows Media Creation tool</a> at Microsoft&rsquo;s website (should be the second link on the page) ;</li>
 <li>Plug-in the USB stick ;</li>
 <li>Run the Media Creation Tool ;</li>
 <li>When prompted, select the USB stick you inserted ;</li>
@@ -15,16 +15,16 @@
 <p>Now, in order to use it, just plug-in the USB stick into your turned off computer, and turn it on.</p>
 <p>You&rsquo;ll probably have to go into the &ldquo;boot menu&rdquo;, generally by pressing F11 or F12 during the boot. If this doesn&rsquo;t work, have a look at your Bios settings (Boot section), by pressing DEL or F2 while the computer boots (before Windows lading logo).</p>
 <p>Don&rsquo;t hesitate to share your thoughts!</p>
-]]></description></item><item><title>How to Install Kodi in Windows</title><link>https://www.masoopy.com/how-to-install-kodi-in-windows/</link><pubDate>Mon, 20 Apr 2015 15:53:20 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-install-kodi-in-windows/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>How to Install Kodi in Windows</title><link>https://www.masoopy.com/how-to-install-kodi-in-windows/</link><pubDate>Mon, 20 Apr 2015 15:53:20 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/how-to-install-kodi-in-windows/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/install_kodi_windows.png" referrerpolicy="no-referrer">
-            </div><p>During this short video, I’ll show you <a href="https://www.masoopy.com/tag/how-to/" target="_blank" rel="noopener noreferrer">#how to</a> install <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#kodi</a> (formerly know as <a href="https://www.masoopy.com/tag/xbmc/" target="_blank" rel="noopener noreferrer">#xbmc</a>).</p>
+            </div><p>During this short video, I’ll show you <a href="https://www.masoopy.com/tag/how-to/" target="_blank" rel="noopener noreffer ">#how to</a> install <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreffer ">#kodi</a> (formerly know as <a href="https://www.masoopy.com/tag/xbmc/" target="_blank" rel="noopener noreffer ">#xbmc</a>).</p>
 <iframe allowfullscreen="" frameborder="0" height="150" src="https://www.youtube.com/embed/rcbHV9ErRzk?feature=oembed" width="200"></iframe>
 <p>It is a simple 2 steps process :</p>
 <ol>
 <li>downloading the software ;</li>
 <li>installing it.</li>
 </ol>
-<p>First, fire up your favorite browser and naivgate to <a href="http://kodi.tv" target="_blank" rel="noopener noreferrer">kodi.tv</a>, click on the Downloads link and select the Windows version.</p>
+<p>First, fire up your favorite browser and naivgate to <a href="http://kodi.tv" target="_blank" rel="noopener noreffer ">kodi.tv</a>, click on the Downloads link and select the Windows version.</p>
 <p>Wait for download to finish.</p>
 <p>Then, run the installer and just click “Next” until the installation is complete.</p>
 ]]></description></item></channel></rss>

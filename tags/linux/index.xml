@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>linux - Tag - Masoopy</title><link>https://www.masoopy.com/tags/linux/</link><description>linux - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 05 Feb 2018 12:01:12 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/linux/" rel="self" type="application/rss+xml"/><item><title>Scan to PDF with command line under GNU/Linux</title><link>https://www.masoopy.com/scan-to-pdf-with-command-line-under-gnu/linux/</link><pubDate>Mon, 05 Feb 2018 12:01:12 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/scan-to-pdf-with-command-line-under-gnu/linux/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>linux - Tag - Masoopy</title><link>https://www.masoopy.com/tags/linux/</link><description>linux - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 05 Feb 2018 12:01:12 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/linux/" rel="self" type="application/rss+xml"/><item><title>Scan to PDF with command line under GNU/Linux</title><link>https://www.masoopy.com/scan-to-pdf-with-command-line-under-gnu/linux/</link><pubDate>Mon, 05 Feb 2018 12:01:12 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/scan-to-pdf-with-command-line-under-gnu/linux/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/scan_pdf_cli.png" referrerpolicy="no-referrer">
             </div><p>After years of not-so-good services, I deciced to replace my old Canon MG5550 printer/scanner combo. Instead, I bought a simple black and white laser printer/scanner, and I have never been so happy with a &ldquo;printer&rdquo;.</p>
 <h2 id="more-info-about-the-printer">More info about the printer</h2>
@@ -35,7 +35,7 @@
 <p>The script has be used has follow :<br>
 <code>scan2pdf.sh path/to/save/your_file.pdf</code></p>
 <h3 id="tips">Tips</h3>
-<p>In order to make things lazier, I am using an alias in my <a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank" rel="noopener noreferrer">ZSH</a> config:</p>
+<p>In order to make things lazier, I am using an alias in my <a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank" rel="noopener noreffer ">ZSH</a> config:</p>
 <p>Add the following line, to your .zshrc:</p>
 <p><code>alias scan2pdf=&quot;bash ~/path/to/scripts/scan2pdf.sh&quot;</code></p>
 <p><strong>NB</strong> : in case your are using bash, add the above line to yout .bashrc file, and source the .bashrc file.</p>

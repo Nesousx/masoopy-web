@@ -1,10 +1,10 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>kodi superrepo - Tag - Masoopy</title><link>https://www.masoopy.com/tags/kodi-superrepo/</link><description>kodi superrepo - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 26 Nov 2015 20:44:36 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/kodi-superrepo/" rel="self" type="application/rss+xml"/><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>kodi superrepo - Tag - Masoopy</title><link>https://www.masoopy.com/tags/kodi-superrepo/</link><description>kodi superrepo - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 26 Nov 2015 20:44:36 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/kodi-superrepo/" rel="self" type="application/rss+xml"/><item><title>Kodi SuperRepo, enhance Kodi!</title><link>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</link><pubDate>Thu, 26 Nov 2015 20:44:36 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/kodi-superrepo-enhance-kodi/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_superrepo.png" referrerpolicy="no-referrer">
             </div><p>The SuperRepo will enhance Kodi, allowing you to add and keep up-to-date thousands of add-ons.</p>
 <h2 id="how-to-install-superrepo-on-kodi">How to install SuperRepo on Kodi</h2>
 <p>Go to Kodi Settings &gt; File manager :</p>
 <p>Select Add source :</p>
-<p>Enter the following URL, “<a href="http://SRP.nu" target="_blank" rel="noopener noreferrer">http://SRP.nu</a>” (without quotes) :</p>
+<p>Enter the following URL, “<a href="http://SRP.nu" target="_blank" rel="noopener noreffer ">http://SRP.nu</a>” (without quotes) :</p>
 <p>Once done, it should look like this (notice SRP as name of media source) :</p>
 <p>Now go to Settings &gt; Add-ons :</p>
 <p>Then choose Install from zip, browse to the SRP repo you just added until, you see something like below :</p>

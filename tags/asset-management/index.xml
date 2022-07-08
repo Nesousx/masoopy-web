@@ -1,6 +1,6 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>asset management - Tag - Masoopy</title><link>https://www.masoopy.com/tags/asset-management/</link><description>asset management - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 04 Dec 2018 08:18:42 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/asset-management/" rel="self" type="application/rss+xml"/><item><title>Install GLPI on Ubuntu 18.04 with MariaDB and NGinX</title><link>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</link><pubDate>Tue, 04 Dec 2018 08:18:42 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>asset management - Tag - Masoopy</title><link>https://www.masoopy.com/tags/asset-management/</link><description>asset management - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 04 Dec 2018 08:18:42 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/asset-management/" rel="self" type="application/rss+xml"/><item><title>Install GLPI on Ubuntu 18.04 with MariaDB and NGinX</title><link>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</link><pubDate>Tue, 04 Dec 2018 08:18:42 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2018/12/Install-GLPI-on-Ubuntu-18-04-with-MariaDB-and-NGinX.png" referrerpolicy="no-referrer">
-            </div><p><a href="https://glpi-project.org/" target="_blank" rel="noopener noreferrer">GLPI</a> is an asset management software. It can handle automatic inventory of your assets (workstations, servers, printers, etc.) ticketing, and much more. Let&rsquo;s see how to install it under Ubuntu with MariaDB and NGinX.</p>
+            </div><p><a href="https://glpi-project.org/" target="_blank" rel="noopener noreffer ">GLPI</a> is an asset management software. It can handle automatic inventory of your assets (workstations, servers, printers, etc.) ticketing, and much more. Let&rsquo;s see how to install it under Ubuntu with MariaDB and NGinX.</p>
 <h2 id="prepare-your-system">Prepare your system</h2>
 <p>Simply install the requirements :</p>
 <div class="highlight"><div class="chroma">
@@ -160,7 +160,7 @@ include fastcgi_params; fastcgi_param SERVER_NAME $host; } }
 <pre class="chroma"><code class="language-text" data-lang="text">mkdir -p /etc/glpimkdir -p /var/lib/glpimkdir -p /var/log/glpimkdir -p /var/www/glpi
 </code></pre></td></tr></table>
 </div>
-</div><p>Browse to <a href="https://github.com/glpi-project/glpi/releases" target="_blank" rel="noopener noreferrer">GLPI Github release page</a>, and copy link from latest version, then download it directly on your server in your home directory :</p>
+</div><p>Browse to <a href="https://github.com/glpi-project/glpi/releases" target="_blank" rel="noopener noreffer ">GLPI Github release page</a>, and copy link from latest version, then download it directly on your server in your home directory :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1

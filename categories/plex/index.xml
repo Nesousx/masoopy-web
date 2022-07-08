@@ -1,9 +1,9 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>plex - Category - Masoopy</title><link>https://www.masoopy.com/categories/plex/</link><description>plex - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 19 Apr 2018 07:15:33 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/categories/plex/" rel="self" type="application/rss+xml"/><item><title>Automatically download subtitles with Plex</title><link>https://www.masoopy.com/automatically-download-subtitles-with-plex/</link><pubDate>Thu, 19 Apr 2018 07:15:33 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/automatically-download-subtitles-with-plex/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>plex - Category - Masoopy</title><link>https://www.masoopy.com/categories/plex/</link><description>plex - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 19 Apr 2018 07:15:33 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/categories/plex/" rel="self" type="application/rss+xml"/><item><title>Automatically download subtitles with Plex</title><link>https://www.masoopy.com/automatically-download-subtitles-with-plex/</link><pubDate>Thu, 19 Apr 2018 07:15:33 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/automatically-download-subtitles-with-plex/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/auto_dl_sub_plex.png" referrerpolicy="no-referrer">
-            </div><p>Today, there is hundreds (if not thousands) of TV shows and movies. I enjoy a lot of them, and I enjoy them in their original version. Unfortunately, I am not fluent in every languages. Fortunately enough, we have <a href="https://www.masoopy.com/automatically-download-subtiles/" target="_blank" rel="noopener noreferrer">autmomatic subtitles for Kodi</a> and a similar system of automatic subtitles for Plex. Let&rsquo;s see how to use it.</p>
+            </div><p>Today, there is hundreds (if not thousands) of TV shows and movies. I enjoy a lot of them, and I enjoy them in their original version. Unfortunately, I am not fluent in every languages. Fortunately enough, we have <a href="https://www.masoopy.com/automatically-download-subtiles/" target="_blank" rel="noopener noreffer ">autmomatic subtitles for Kodi</a> and a similar system of automatic subtitles for Plex. Let&rsquo;s see how to use it.</p>
 <h3 id="in-plugins-we-trust">In plugins, we trust</h3>
 <ol>
-<li>Open your web browser and go to your Plex server, <a href="https://app.plex.tv/desktop#" target="_blank" rel="noopener noreferrer">most probably here</a>.</li>
+<li>Open your web browser and go to your Plex server, <a href="https://app.plex.tv/desktop#" target="_blank" rel="noopener noreffer ">most probably here</a>.</li>
 <li>Browse to the plugins section (left sidebar) :</li>
 </ol>
 <p></p>
@@ -37,17 +37,17 @@
 </ol>
 <p></p>
 <ol>
-<li>From here, just fill in the fields according to your needs. I highly advise you to create and use accounts from <a href="https://www.opensubtitles.org" target="_blank" rel="noopener noreferrer">OpenSubtitles</a> and <a href="http://www.addic7ed.com/" target="_blank" rel="noopener noreferrer">Addic7ed</a>.</li>
+<li>From here, just fill in the fields according to your needs. I highly advise you to create and use accounts from <a href="https://www.opensubtitles.org" target="_blank" rel="noopener noreffer ">OpenSubtitles</a> and <a href="http://www.addic7ed.com/" target="_blank" rel="noopener noreffer ">Addic7ed</a>.</li>
 </ol>
 <p>Moreover, if you are automating your media binge watching, then you really should configure the Sonarr and Radarr section. It will greatly improve the way subtitles are matched to your media.</p>
 <p>From now on you can force a full sub-zero sync from the plugin page, of simply forget it and it will automatically scan the library in the background (every night, by default).</p>
-]]></description></item><item><title>Synchronize your media with Plex Trakt plugin</title><link>https://www.masoopy.com/synchronize-your-media-with-plex-trakt-plugin/</link><pubDate>Mon, 14 Aug 2017 00:08:08 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/synchronize-your-media-with-plex-trakt-plugin/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Synchronize your media with Plex Trakt plugin</title><link>https://www.masoopy.com/synchronize-your-media-with-plex-trakt-plugin/</link><pubDate>Mon, 14 Aug 2017 00:08:08 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/synchronize-your-media-with-plex-trakt-plugin/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/trakt.png" referrerpolicy="no-referrer">
-            </div><p>Remember a few days ago when we decided to <a href="https://www.masoopy.com/synchronize-media-kodi-trakt-plugin/" target="_blank" rel="noopener noreferrer">synchronize our watched media between Kodi and Trakt</a>? Well, today, we’ll do the same with Plex Media Center!</p>
+            </div><p>Remember a few days ago when we decided to <a href="https://www.masoopy.com/synchronize-media-kodi-trakt-plugin/" target="_blank" rel="noopener noreffer ">synchronize our watched media between Kodi and Trakt</a>? Well, today, we’ll do the same with Plex Media Center!</p>
 <h2 id="synchronize-plex-and-trakttv">Synchronize Plex and Trakt.tv</h2>
 <p>Basically, all you need to do is:</p>
 <ul>
-<li>download the latest version of the plugin, <a href="https://github.com/trakt/Plex-Trakt-Scrobbler/archive/master.zip" target="_blank" rel="noopener noreferrer">from here</a>.</li>
+<li>download the latest version of the plugin, <a href="https://github.com/trakt/Plex-Trakt-Scrobbler/archive/master.zip" target="_blank" rel="noopener noreffer ">from here</a>.</li>
 <li>Place it in the Plex Plug-ins directory</li>
 <li>Restart Plex</li>
 <li>Inside Plex (from a web browser), go to Channel, and click on the little gear on the Trakt image:</li>
@@ -59,26 +59,26 @@
 <p></p>
 <p>Now run a first sync (it will probably throws an error about channel beinig not available, just ignore it, and allow some time for the first syn to run. You can close your browser, it will just run in the background.</p>
 <h2 id="alternative-methods">Alternative methods</h2>
-<p>Since Plex can run on several platforms, installation steps may vary. If the above quick steps are not enough, then have a look at the <a href="https://github.com/trakt/Plex-Trakt-Scrobbler/wiki/Installation" target="_blank" rel="noopener noreferrer">original website</a>.</p>
+<p>Since Plex can run on several platforms, installation steps may vary. If the above quick steps are not enough, then have a look at the <a href="https://github.com/trakt/Plex-Trakt-Scrobbler/wiki/Installation" target="_blank" rel="noopener noreffer ">original website</a>.</p>
 <p>And if you are lost, just post a comment on this post. 🙂</p>
-]]></description></item><item><title>What are good Kodi alternatives?</title><link>https://www.masoopy.com/what-are-good-kodi-alternatives/</link><pubDate>Mon, 24 Jul 2017 01:56:46 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/what-are-good-kodi-alternatives/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>What are good Kodi alternatives?</title><link>https://www.masoopy.com/what-are-good-kodi-alternatives/</link><pubDate>Mon, 24 Jul 2017 01:56:46 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/what-are-good-kodi-alternatives/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_alternatives.png" referrerpolicy="no-referrer">
             </div><p>We, at Streaming Generation, love Kodi and talk a lot about it. However, there are good Kodi alternatives out there. Let us guide you through three of our favourites options.</p>
 <h2 id="plex">Plex</h2>
-<p><a href="https://www.plex.tv/" target="_blank" rel="noopener noreferrer">Plex</a> works differently than Kodi. It is composed of two parts. One server and one client.</p>
+<p><a href="https://www.plex.tv/" target="_blank" rel="noopener noreffer ">Plex</a> works differently than Kodi. It is composed of two parts. One server and one client.</p>
 <p>Basically, it means you’ll install the Plex Server on the computer (or even better, on the NAS) where you media files are located.</p>
 <p>Then, you can install has many clients as you need: on your phone, on your TV, on any (really, any: Linux, Windows, Mac, BSD, etc.) computer, etc.</p>
 <p>Those clients, will then be able to access your media thanks to a previoulsy created account that links the server and the clients. What’s cool with this system is that you can easily share your media with friends, and so can they!</p>
 <h3 id="what-do-we-think-about-it">What do we think about it?</h3>
-<p>It is a very good Kodi alternative! It works well, has a great community, and a lot of <a href="https://www.masoopy.com/top-4-streaming-add-ons-kodi/" target="_blank" rel="noopener noreferrer">plugins</a> (similarly to Kodi). Installation is pretty straightforward and use very easy. If you want a robust do-it-all media center but hate Kodi, definately give Plex a try!</p>
+<p>It is a very good Kodi alternative! It works well, has a great community, and a lot of <a href="https://www.masoopy.com/top-4-streaming-add-ons-kodi/" target="_blank" rel="noopener noreffer ">plugins</a> (similarly to Kodi). Installation is pretty straightforward and use very easy. If you want a robust do-it-all media center but hate Kodi, definately give Plex a try!</p>
 <h2 id="mediaportal">Mediaportal</h2>
-<p>Next in the list, <a href="https://www.team-mediaportal.com/" target="_blank" rel="noopener noreferrer">Mediaportal</a>. That one is a bit different, and a it more limited to our test. Indeed, and it is its biggest drawback: it only works under Windows! This might not a be problem for many people, but for us it is disappointing.</p>
+<p>Next in the list, <a href="https://www.team-mediaportal.com/" target="_blank" rel="noopener noreffer ">Mediaportal</a>. That one is a bit different, and a it more limited to our test. Indeed, and it is its biggest drawback: it only works under Windows! This might not a be problem for many people, but for us it is disappointing.</p>
 <p>Apart from that, you’ll find every feature you can ask from a media center: watch your media, listen to your music, stream media to your smartphone / tablet or other devices, etc.</p>
 <p>Tons of plugins and skins are also available and a dedicated community.</p>
 <h3 id="what-do-we-think-about-it-1">What do we think about it?</h3>
 <p>If you have never heard about Linux or Macos and are a hardcore Windows user, then you should really try it! It works well, it ain’t shy of any feature compared to other Kodi alternatives and works like any regular Windows software.</p>
 <h2 id="emby">Emby</h2>
-<p>Last but not least, <a href="https://emby.media/" target="_blank" rel="noopener noreferrer">Emby</a>. This is one is closer to Plex. It is also composed of a server and a separated client. It has an account system as well, giving you extra features if you pay, but still offering everything you really need for free.</p>
+<p>Last but not least, <a href="https://emby.media/" target="_blank" rel="noopener noreffer ">Emby</a>. This is one is closer to Plex. It is also composed of a server and a separated client. It has an account system as well, giving you extra features if you pay, but still offering everything you really need for free.</p>
 <p>Compared to other solutions, Emby may have less add-ons available, but more ready-to-use features… which can make the GUI a feel overwhelming at first (whre Plex’s one is very clean and “slick”).</p>
 <h3 id="what-do-we-think-about-it-2">What do we think about it?</h3>
 <p>We feel that Emby lags a bit behind the rest of the crowd. The GUI looks good but feels less intuitive. However, it is still a strong Kodi alternatives. If you never tried it and were disappointed with the rest, just try it!</p>

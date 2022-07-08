@@ -1,6 +1,6 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>subtitles - Tag - Masoopy</title><link>https://www.masoopy.com/tags/subtitles/</link><description>subtitles - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 07 Apr 2015 12:26:22 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/subtitles/" rel="self" type="application/rss+xml"/><item><title>Automatically download subtitles</title><link>https://www.masoopy.com/automatically-download-subtitles/</link><pubDate>Tue, 07 Apr 2015 12:26:22 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/automatically-download-subtitles/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>subtitles - Tag - Masoopy</title><link>https://www.masoopy.com/tags/subtitles/</link><description>subtitles - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 07 Apr 2015 12:26:22 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/subtitles/" rel="self" type="application/rss+xml"/><item><title>Automatically download subtitles</title><link>https://www.masoopy.com/automatically-download-subtitles/</link><pubDate>Tue, 07 Apr 2015 12:26:22 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/automatically-download-subtitles/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/auto_down_sub.png" referrerpolicy="no-referrer">
-            </div><p><a href="https://www.masoopy.com/tag/xbmc/" target="_blank" rel="noopener noreferrer">#XBMC</a> / <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> has a great feature : it can automatically download <a href="https://www.masoopy.com/tag/subtitles/" target="_blank" rel="noopener noreferrer">#subtitles</a> for you. This is a pretty easy thing to set up. Let’s do it together now.</p>
+            </div><p><a href="https://www.masoopy.com/tag/xbmc/" target="_blank" rel="noopener noreffer ">#XBMC</a> / <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreffer ">#Kodi</a> has a great feature : it can automatically download <a href="https://www.masoopy.com/tag/subtitles/" target="_blank" rel="noopener noreffer ">#subtitles</a> for you. This is a pretty easy thing to set up. Let’s do it together now.</p>
 <h2 id="first-method-to-automatically-download-subtitles">First method to automatically download subtitles</h2>
 <p>The recent builds of Kodi allow you to directly manage this feature natively. This first method is the preferred one. However, it will only work in recent builds of Kodi. By recent, I mean around the name change from XBMC to Kodi. Which means it is not that recent. If you are using Kodi and not XBMC, then it should work. If not, then you really should update to Kodi.</p>
 <p>That being said, let’s do it!</p>
@@ -8,16 +8,16 @@
 <p></p>
 <p>Then, scroll down the page and make sure Auto download first subtitle is ticked :</p>
 <p></p>
-<p>NB: you have to<a href="https://www.masoopy.com/enable-expert-settings/" target="_blank" rel="noopener noreferrer">enable Expert Settings</a> in Kodi.</p>
+<p>NB: you have to<a href="https://www.masoopy.com/enable-expert-settings/" target="_blank" rel="noopener noreffer ">enable Expert Settings</a> in Kodi.</p>
 <h2 id="alternative-method-to-automatically-download-subtitles">Alternative method to automatically download subtitles</h2>
 <p>In case your version is a bit a old, or if the first option doesn’t work as intended, you can use a small add-on in order to do the trick. I have personally used this method for years and it works flawlessly.</p>
 <p>Navigate to <em>Settings</em> &gt; <em>System</em> &gt; <em>Add-ons</em> &gt; <em>Get Add-ons</em> and navitage to the <em>Service</em> category.</p>
 <p></p>
-<p>Select <a href="http://forum.kodi.tv/showthread.php?tid=198973" target="_blank" rel="noopener noreferrer">AutoSubs</a> in the list and activate it / configure it according to your needs.</p>
+<p>Select <a href="http://forum.kodi.tv/showthread.php?tid=198973" target="_blank" rel="noopener noreffer ">AutoSubs</a> in the list and activate it / configure it according to your needs.</p>
 <p>That’s it! Do not hesitate to contact us if you need help.</p>
-]]></description></item><item><title>Kodi subtitles out of sync</title><link>https://www.masoopy.com/kodi-subtitles-out-of-sync/</link><pubDate>Thu, 02 Apr 2015 15:09:26 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/kodi-subtitles-out-of-sync/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Kodi subtitles out of sync</title><link>https://www.masoopy.com/kodi-subtitles-out-of-sync/</link><pubDate>Thu, 02 Apr 2015 15:09:26 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/kodi-subtitles-out-of-sync/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi_sub_out_sync.png" referrerpolicy="no-referrer">
-            </div><p><a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a> <a href="https://www.masoopy.com/tag/subtitles/" target="_blank" rel="noopener noreferrer">#subtitles</a> out of sync?! Yes it happens! Most of the time it can be fixed thanks to the GUI, but sometimes you want to be able to resync them for more or less than 10 seconds, here is what you need to do.</p>
+            </div><p><a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreffer ">#Kodi</a> <a href="https://www.masoopy.com/tag/subtitles/" target="_blank" rel="noopener noreffer ">#subtitles</a> out of sync?! Yes it happens! Most of the time it can be fixed thanks to the GUI, but sometimes you want to be able to resync them for more or less than 10 seconds, here is what you need to do.</p>
 <ul>
 <li>Locate advancedsettings.xml. Based on your OS, it will be in the following locations:</li>
 </ul>
@@ -40,11 +40,11 @@
 <ul>
 <li>Restart Kodi.</li>
 </ul>
-]]></description></item><item><title>Turn Kodi subtitles off or on</title><link>https://www.masoopy.com/turn-kodi-subtitles-off-or-on/</link><pubDate>Thu, 02 Apr 2015 14:55:19 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/turn-kodi-subtitles-off-or-on/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Turn Kodi subtitles off or on</title><link>https://www.masoopy.com/turn-kodi-subtitles-off-or-on/</link><pubDate>Thu, 02 Apr 2015 14:55:19 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/turn-kodi-subtitles-off-or-on/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2015/04/kodi-subtitles-off.jpeg" referrerpolicy="no-referrer">
-            </div><p>I have seen this question several time around internet: “How do I turn <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#kodi</a> <a href="https://www.masoopy.com/tag/subtitles/" target="_blank" rel="noopener noreferrer">#subtitles</a> off or back on?”</p>
+            </div><p>I have seen this question several time around internet: “How do I turn <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreffer ">#kodi</a> <a href="https://www.masoopy.com/tag/subtitles/" target="_blank" rel="noopener noreffer ">#subtitles</a> off or back on?”</p>
 <p>In case you want to turn kodi subtitles off or on (if they are already off) is a really simple process.</p>
 <p>Actually, <strong>all you have to do is press the “l” key</strong> (L, as in “Leo”) while watching a movie in order to enable or disable subtitles.</p>
-<p>You can also use the Kodi / <a href="https://www.masoopy.com/tag/xbmc/" target="_blank" rel="noopener noreferrer">#XBMC</a> GUI to achieve the same operation, but I feel it be a little less convenient.</p>
+<p>You can also use the Kodi / <a href="https://www.masoopy.com/tag/xbmc/" target="_blank" rel="noopener noreffer ">#XBMC</a> GUI to achieve the same operation, but I feel it be a little less convenient.</p>
 <p>I hope this helps !</p>
 ]]></description></item></channel></rss>

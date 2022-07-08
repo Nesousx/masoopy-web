@@ -1,9 +1,9 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Guides - Catégorie - Masoopy</title><link>https://www.masoopy.com/fr/categories/guides/</link><description>Guides - Catégorie - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Tue, 03 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.masoopy.com/fr/categories/guides/" rel="self" type="application/rss+xml"/><item><title>HTB - Backdoor sans MetaSploit</title><link>https://www.masoopy.com/fr/htb-backdoor-sans-metasploit/</link><pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/fr/htb-backdoor-sans-metasploit/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Guides - Catégorie - Masoopy</title><link>https://www.masoopy.com/fr/categories/guides/</link><description>Guides - Catégorie - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Tue, 03 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.masoopy.com/fr/categories/guides/" rel="self" type="application/rss+xml"/><item><title>HTB - Backdoor sans MetaSploit</title><link>https://www.masoopy.com/fr/htb-backdoor-sans-metasploit/</link><pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/fr/htb-backdoor-sans-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2022/03/Backdoor_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
 <p>Pour ce premier article en Français, nous allons nous attaquer à Backdoor. Nous avons affaire à un Wordpress à jour mais avec un plugin vulnérable qui par le biais d&rsquo;une <code>LFI</code> et d&rsquo;un serveur distant <code>gdb</code> nous permettra d&rsquo;obtenir les droits &ldquo;root&rdquo;. Allons-y !</p>
 <h2 id="cible">Cible</h2>
-<p><a href="https://app.hackthebox.com/machines/Backdoor" target="_blank" rel="noopener noreferrer">HTB - Backdoor</a></p>
+<p><a href="https://app.hackthebox.com/machines/Backdoor" target="_blank" rel="noopener noreffer ">HTB - Backdoor</a></p>
 <h2 id="reconnaissance">Reconnaissance</h2>
 <p>Petite reconnaissance basique en fonction des logos et autres infos :</p>
 <ul>
@@ -410,7 +410,7 @@ Checking Config Backups - Time: 00:00:00 &lt;===================================
  |  - http://backdoor.htb/wp-content/plugins/ebook-download/readme.txt
 </code></pre></td></tr></table>
 </div>
-</div><p>Nous voyons donc ce plugin: <code>ebook-download</code> qui est <a href="https://www.exploit-db.com/exploits/39575" target="_blank" rel="noopener noreferrer">vulnérable</a>. Nous pouvons par exemple récupérer le fichier <code>wp-config.php</code> via cette URL : <code>http://backdoor.htb/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=../../../wp-config.php</code>.</p>
+</div><p>Nous voyons donc ce plugin: <code>ebook-download</code> qui est <a href="https://www.exploit-db.com/exploits/39575" target="_blank" rel="noopener noreffer ">vulnérable</a>. Nous pouvons par exemple récupérer le fichier <code>wp-config.php</code> via cette URL : <code>http://backdoor.htb/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=../../../wp-config.php</code>.</p>
 <p>Malheureusement, cela ne nous aide pas&hellip; le mot de passe utilisé par le compte <code>MySQL</code> n&rsquo;est pas le même que celui de <code>root</code>, ni même de l&rsquo;utilisateur qui s&rsquo;appelle d&rsquo;ailleurs <code>user</code> (d&rsquo;après le fichier <code>/etc/passwd</code> que nous pouvons aussi récupérer via cette LFI).</p>
 <h2 id="exploitation">Exploitation</h2>
 <p>Cependant, Linux maintient une liste de processus dans <code>/proc</code> et cela est accessible par n&rsquo;importe qui. Après avoir vérifié que cela fonctionne avec <code>Burp</code>,  nous pouvons écrire un petit bout de script pour automatiser la chose :</p>
@@ -426,7 +426,7 @@ Checking Config Backups - Time: 00:00:00 &lt;===================================
 <p>NB : a noter que le &ldquo;//&rdquo;, est une sorte d&rsquo;abréviation pour remplacer les moultes &ldquo;../../&rdquo; qui permettent de remonter du <code>webdir</code> jusqu&rsquo;à la racine du système.</p>
 <p>Ce script est très sommaire et mériterait quelques coups de <code>sed</code> / <code>awk</code> pour nettoyer l'<code>output</code>, cependant, il nous révèle la présence d&rsquo;un serveur <code>gdb</code> sur le port 1337 que nous avions raté lors de notre scan <code>nmap</code> initial.</p>
 <h3 id="obtenir-un-premier-shell">Obtenir un premier shell</h3>
-<p>Après quelques secondes de lectures sur <a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-remote-gdbserver" target="_blank" rel="noopener noreferrer">la bible du PenTest</a>, nous trouvons une méthode pour exploiter un serveur distant <code>gdb</code> :</p>
+<p>Après quelques secondes de lectures sur <a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-remote-gdbserver" target="_blank" rel="noopener noreffer ">la bible du PenTest</a>, nous trouvons une méthode pour exploiter un serveur distant <code>gdb</code> :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -498,12 +498,12 @@ run
 <h2 id="outro">Outro</h2>
 <p>Une nouvelle box plutôt fun, qui m&rsquo;a permis de jouer avec le contenu de <code>/proc</code> afin de retrouver les processus actifs du serveur. Mais aussi une box, qui m&rsquo;a rappelé que les scans <code>nmap</code> rapides, c&rsquo;est bien joli, mais ça ne voit pas tout.</p>
 <p>A l&rsquo;avenir, il pourrait aussi être opportun de lancer un <code>nmap -p-</code> en arrière-plan, histoire de&hellip;</p>
-]]></description></item><item><title>HTB - Paper sans MetaSploit</title><link>https://www.masoopy.com/fr/htb-paper-sans-metasploit/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/fr/htb-paper-sans-metasploit/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>HTB - Paper sans MetaSploit</title><link>https://www.masoopy.com/fr/htb-paper-sans-metasploit/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/fr/htb-paper-sans-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2022/03/Paper_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
 <p>Aujourd&rsquo;hui, nous allons nous attaquer à Paper, une box plutôt simple et aussi très fun. Si vous débutez dans le domaine, je vous recommande très fortement d&rsquo;essayer de vous creuser la tête avant de lire ce guide. Cette box est vraiment fun, et très sympa pour les débutants !</p>
 <h2 id="cible">Cible</h2>
-<p><a href="https://app.hackthebox.com/machines/Paper" target="_blank" rel="noopener noreferrer">HTB - Paper</a></p>
+<p><a href="https://app.hackthebox.com/machines/Paper" target="_blank" rel="noopener noreffer ">HTB - Paper</a></p>
 <h2 id="reconnaissance">Reconnaissance</h2>
 <p>Petite reconnaissance basique en fonction des logos et autres infos :</p>
 <ul>
@@ -878,7 +878,7 @@ Interesting Finding(s):
 [+] Elapsed time: 00:00:04
 </code></pre></td></tr></table>
 </div>
-</div><p>Il s&rsquo;agit d&rsquo;un vieux <code>Wordpress</code>, version 5.2.3 ! Un tour rapide sur <a href="https://www.exploit-db.com/exploits/47690" target="_blank" rel="noopener noreferrer">exploit-db</a> nous apprend qu&rsquo;il est vulnérable. La faille en question permet d&rsquo;accéder aux brouillons et autre contenu non publié&hellip; Sur le Wordpress que nous venons de découvrir, il y a justement des commentaires laissant penser que l&rsquo;admin du site à noté des infos dans les brouillons&hellip;</p>
+</div><p>Il s&rsquo;agit d&rsquo;un vieux <code>Wordpress</code>, version 5.2.3 ! Un tour rapide sur <a href="https://www.exploit-db.com/exploits/47690" target="_blank" rel="noopener noreffer ">exploit-db</a> nous apprend qu&rsquo;il est vulnérable. La faille en question permet d&rsquo;accéder aux brouillons et autre contenu non publié&hellip; Sur le Wordpress que nous venons de découvrir, il y a justement des commentaires laissant penser que l&rsquo;admin du site à noté des infos dans les brouillons&hellip;</p>
 <h2 id="exploitation">Exploitation</h2>
 <p>L&rsquo;exploit recommande d&rsquo;utiliser l&rsquo;URL suivante :</p>
 <p><code> http://office.paper/?static=1&amp;order=asc</code></p>
@@ -900,7 +900,7 @@ Interesting Finding(s):
 <p></p>
 <h3 id="privesc">PrivEsc</h3>
 <p>Désormais, le <code>PrivEsc</code> ! Nous avons un accès utilisateur, mais nous allons chercher à augmenter nos droits afin de devenir <code>root</code> et ainsi avoir le contrôle total de la machine.</p>
-<p>Pour ce faire, j&rsquo;aime lancer un scan via <a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS" target="_blank" rel="noopener noreferrer">LinPeas</a> (WinPeas sous Windows).</p>
+<p>Pour ce faire, j&rsquo;aime lancer un scan via <a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS" target="_blank" rel="noopener noreffer ">LinPeas</a> (WinPeas sous Windows).</p>
 <p>Sur toutes les machines <code>HTB</code>, l&rsquo;accès vers internet et coupé. Il faut donc télécharger la dernière version du script sur notre machine &ldquo;attaquante&rdquo; et ensuite l&rsquo;envoyer depuis notre machine vers notre cible. Puisque nous avons un accès <code>SSH</code>, nous pouvons simplement l&rsquo;envoyer via <code>SCP</code>, mais je préfère une méthode plus universelle via un module <code>Python</code>.</p>
 <p>Je vais donc vous montrer comment procéder :</p>
 <ol>
@@ -909,7 +909,7 @@ Interesting Finding(s):
 </ol>
 <p>Une fois le script téléchargé, nous l&rsquo;éxécutons. Rapidement, Linpeas détecte une vulnérabilité du côté de <code>sudo</code> :</p>
 <p></p>
-<p>Une recherche rapide sur <a href="https://duckduckgo.com/?q=CVE-2021-3560&#43;exploit&#43;github&amp;t=ffab&amp;ia=web" target="_blank" rel="noopener noreferrer">DDG</a>, nous amène vers un <a href="https://github.com/Almorabea/Polkit-exploit" target="_blank" rel="noopener noreferrer">dépôt Github prometteur</a>.</p>
+<p>Une recherche rapide sur <a href="https://duckduckgo.com/?q=CVE-2021-3560&#43;exploit&#43;github&amp;t=ffab&amp;ia=web" target="_blank" rel="noopener noreffer ">DDG</a>, nous amène vers un <a href="https://github.com/Almorabea/Polkit-exploit" target="_blank" rel="noopener noreffer ">dépôt Github prometteur</a>.</p>
 <p>Même procédure que pour le script <code>linpeas.sh</code>, nous allons récupérer le fichier <code>CVE-2021-3560.py</code> sur notre cible et l&rsquo;exécuter.</p>
 <p><strong>NB : avant d&rsquo;exécuter un script, quelque il soit, il est toujours très important de le lire et d&rsquo;essayer de le comprendre ! Vous ne voulez surtout pas exécuter un script qui compromettrait votre machine.</strong></p>
 <p>Après quelques secondes, le script nous donne un accès <code>root</code> :</p>

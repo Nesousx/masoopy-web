@@ -1,18 +1,18 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>hugo - Tag - Masoopy</title><link>https://www.masoopy.com/tags/hugo/</link><description>hugo - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Feb 2021 20:49:23 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>Blogging With VSCode</title><link>https://www.masoopy.com/blogging-with-vscode/</link><pubDate>Mon, 22 Feb 2021 20:49:23 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/blogging-with-vscode/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>hugo - Tag - Masoopy</title><link>https://www.masoopy.com/tags/hugo/</link><description>hugo - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Feb 2021 20:49:23 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>Blogging With VSCode</title><link>https://www.masoopy.com/blogging-with-vscode/</link><pubDate>Mon, 22 Feb 2021 20:49:23 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/blogging-with-vscode/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/VSCode.png" referrerpolicy="no-referrer">
-            </div><p>In a previous post, I explained <a href="https://www.masoopy.com/going-from-wordpress-to-hugo-and-github-actions/" target="_blank" rel="noopener noreferrer">why I left Wordpress and how I did the move to Hugo</a>. Now, let me explain how I write my articles.</p>
+            </div><p>In a previous post, I explained <a href="https://www.masoopy.com/going-from-wordpress-to-hugo-and-github-actions/" target="_blank" rel="noopener noreffer ">why I left Wordpress and how I did the move to Hugo</a>. Now, let me explain how I write my articles.</p>
 <h2 id="blogging-in-markdown">Blogging in Markdown</h2>
-<p>One of the main reason that me want to change what I used to do for several years was <a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener noreferrer">Markdown</a>. I love the simplicity of this format, and it gives me great flexibility! I can start writing an article at home in my IDE, and continue it on my mobile phone, or from any computer using an SSH access. The final articles are flat files, no DB, no fuss!</p>
+<p>One of the main reason that me want to change what I used to do for several years was <a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener noreffer ">Markdown</a>. I love the simplicity of this format, and it gives me great flexibility! I can start writing an article at home in my IDE, and continue it on my mobile phone, or from any computer using an SSH access. The final articles are flat files, no DB, no fuss!</p>
 <h2 id="why-vscode">Why VSCode?</h2>
 <p>I started doing it with <code>vim</code>, like the rest of my &ldquo;code&rdquo; (I don&rsquo;t code, just write some bash and <code>ansible</code>), but lately I wanted something a bit less CLI for this kind of tasks. While I still use <code>vim</code> when I need to play with pattern of text, I now prefer an IDE with a GUI for projects with multiple files.</p>
-<p>After trying a few of them, I decided to use <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">VSCode</a>. It is free, looks modern, has a <a href="https://www.nordtheme.com/" target="_blank" rel="noopener noreferrer">Nord theme</a>, and plenty of extensions!</p>
+<p>After trying a few of them, I decided to use <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreffer ">VSCode</a>. It is free, looks modern, has a <a href="https://www.nordtheme.com/" target="_blank" rel="noopener noreffer ">Nord theme</a>, and plenty of extensions!</p>
 <h2 id="extensions-for-blogging">Extensions for blogging</h2>
 <p>Since an IDE first role, isn&rsquo;t to write text, but code, this is where the vast amount of extensions that VSCode has to offer come useful!</p>
 <p>Here are the ones I use :</p>
 <ul>
-<li>Spell check extension, a must-have for grammar and syntax spellchecking : <a href="https://github.com/davidlday/vscode-languagetool-linter" target="_blank" rel="noopener noreferrer">LanguageTool Linter for Visual Studio Code</a> ;</li>
-<li>Since I am writing bits of code here and there, it avoids typo in those : <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" target="_blank" rel="noopener noreferrer">Code Spell Checker</a> ;</li>
-<li><a href="https://github.com/arcticicestudio/nord-visual-studio-code" target="_blank" rel="noopener noreferrer">Nord Theme</a>.</li>
+<li>Spell check extension, a must-have for grammar and syntax spellchecking : <a href="https://github.com/davidlday/vscode-languagetool-linter" target="_blank" rel="noopener noreffer ">LanguageTool Linter for Visual Studio Code</a> ;</li>
+<li>Since I am writing bits of code here and there, it avoids typo in those : <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" target="_blank" rel="noopener noreffer ">Code Spell Checker</a> ;</li>
+<li><a href="https://github.com/arcticicestudio/nord-visual-studio-code" target="_blank" rel="noopener noreffer ">Nord Theme</a>.</li>
 </ul>
 <p>And, that&rsquo;s it!</p>
 <h2 id="writing-pipeline">Writing pipeline</h2>
@@ -21,7 +21,7 @@
 <h2 id="just-write">Just write!</h2>
 <p>This whole new setup allow me to &ldquo;just write&rdquo;! I don&rsquo;t have to deal with online editor, or updates done to them, I do not depend on someone&rsquo;s logic for using a WYSIWYG editor.</p>
 <p>Last but not least, the day I want to change, I am pretty sure I&rsquo;ll find tons of way to convert Markdown to anything I like by that time!</p>
-]]></description></item><item><title>Going from WordPress to Hugo and GitHub Actions!</title><link>https://www.masoopy.com/going-from-wordpress-to-hugo-and-github-actions/</link><pubDate>Mon, 15 Feb 2021 15:48:01 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/going-from-wordpress-to-hugo-and-github-actions/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Going from WordPress to Hugo and GitHub Actions!</title><link>https://www.masoopy.com/going-from-wordpress-to-hugo-and-github-actions/</link><pubDate>Mon, 15 Feb 2021 15:48:01 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/going-from-wordpress-to-hugo-and-github-actions/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/hugo_gtmetrix.png" referrerpolicy="no-referrer">
             </div><p>I finally did it! After years thinking about it, I finally migrated my Wordpress website to a static website! It was painful, but I am really happy I did it.</p>
 <h2 id="why-change">Why change?</h2>
@@ -30,11 +30,11 @@
 <p>Also, Wordpress and all its plugin have a lot of vuln, and it is a constant game of cat and mouse to stay up to date.</p>
 <p>Last but not least, I hadn&rsquo;t blogged for years and when I decided to blog again, I discovered the Gutenberg Experience : this was the last straw to my Wordpress' adventure!</p>
 <h2 id="what-for">What for?</h2>
-<p>I could have used <a href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Ghost</a>, which I did at some point. I went from Wordpress to Ghost, to Wordpress again&hellip; but I really didn&rsquo;t want to host it myself. It is based on <code>node.js</code>, a technology I prefer to avoid like Java, Flash, or even Windows&hellip;</p>
-<p>Then, I remembered using <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> a while ago, I also know that Github now allows users to host their content with Jekyll. I am not a big fan of Ruby either (call me tech hater, or something). Too many dependencies, and gems, and stuff to install.</p>
+<p>I could have used <a href="https://ghost.org/" target="_blank" rel="noopener noreffer ">Ghost</a>, which I did at some point. I went from Wordpress to Ghost, to Wordpress again&hellip; but I really didn&rsquo;t want to host it myself. It is based on <code>node.js</code>, a technology I prefer to avoid like Java, Flash, or even Windows&hellip;</p>
+<p>Then, I remembered using <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreffer ">Jekyll</a> a while ago, I also know that Github now allows users to host their content with Jekyll. I am not a big fan of Ruby either (call me tech hater, or something). Too many dependencies, and gems, and stuff to install.</p>
 <p>Anyways, I was going for it, and I converted all my post to Markdown (back to that a bit later). After playing with it locally, I wasn&rsquo;t really happy with it&hellip; too many stuff to install on my host system, plus I felt that I was limited to only a handful of themes if I wanted use Github (which was my plan all along).</p>
-<p>So I looked for a Jekyll like, but in Python. A language I have been trying to learn for years. It would be great to blog again and learn Python at the same time. I found <a href="http://hyde.github.io/index.html" target="_blank" rel="noopener noreferrer">Hyde</a>. However, looking at it, it seemed that the project was not very live / current and bit too &ldquo;niche&rdquo;. I suspected I would face a lot of issues with my low level of Python. In the end, it would be counterproductive. I am trying to <a href="https://www.masoopy.com/starting-my-hacking-journey-hopefully/" target="_blank" rel="noopener noreferrer">learn hacking</a> and blog again. If I also need to learn Python in depth, I&rsquo;ll probably never succeed. I was back at the beginning!</p>
-<p>And I found <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>! Hugo, on the paper, it exactly what I am looking for :</p>
+<p>So I looked for a Jekyll like, but in Python. A language I have been trying to learn for years. It would be great to blog again and learn Python at the same time. I found <a href="http://hyde.github.io/index.html" target="_blank" rel="noopener noreffer ">Hyde</a>. However, looking at it, it seemed that the project was not very live / current and bit too &ldquo;niche&rdquo;. I suspected I would face a lot of issues with my low level of Python. In the end, it would be counterproductive. I am trying to <a href="https://www.masoopy.com/starting-my-hacking-journey-hopefully/" target="_blank" rel="noopener noreffer ">learn hacking</a> and blog again. If I also need to learn Python in depth, I&rsquo;ll probably never succeed. I was back at the beginning!</p>
+<p>And I found <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer ">Hugo</a>! Hugo, on the paper, it exactly what I am looking for :</p>
 <ul>
 <li>static web site generator ;</li>
 <li>allows me to write in markdown ;</li>
@@ -59,8 +59,8 @@
 </div>
 </div><p>Before, that, I had to install a ton of programs in order to have <code>pelican</code>, and all the required components. It was ugly and painful.</p>
 <h3 id="manual-fixing">Manual fixing</h3>
-<p>Now that, I had all my posts exported in Markdown, there was some manual fixing left such as removing several lines of unwanted data inside the <a href="https://gohugo.io/content-management/front-matter/" target="_blank" rel="noopener noreferrer">front matter</a>.</p>
-<p>You can find a <a href="https://raw.githubusercontent.com/Nesousx/masoopy-web/main/clean_post.sh" target="_blank" rel="noopener noreferrer">dirty script here</a>, and the command I used to run it :</p>
+<p>Now that, I had all my posts exported in Markdown, there was some manual fixing left such as removing several lines of unwanted data inside the <a href="https://gohugo.io/content-management/front-matter/" target="_blank" rel="noopener noreffer ">front matter</a>.</p>
+<p>You can find a <a href="https://raw.githubusercontent.com/Nesousx/masoopy-web/main/clean_post.sh" target="_blank" rel="noopener noreffer ">dirty script here</a>, and the command I used to run it :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -73,7 +73,7 @@
 <p>After a bunch of hours everything looked good, and I decided to go live!</p>
 <h2 id="host-and-forget">Host and forget!</h2>
 <p>Like I said, I planned to host this on Github, hence removing the need to pay for hosting. I have recently decided to stop paying for dedicated and host everything at home! However, I didn&rsquo;t want to open 80 and 443 to everyone, I didn&rsquo;t want to pay for hosting either. Github was the perfect solution : free hosting, and good hosting with free CDNs. Add to this CloudFlare and you have first class hosting for literally 0€ a month!</p>
-<p>What is even cooler, is that you can have Hugo working with <a href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener noreferrer">Github Actions</a>!</p>
+<p>What is even cooler, is that you can have Hugo working with <a href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener noreffer ">Github Actions</a>!</p>
 <h3 id="create-github-actions-script">Create GitHub Actions script</h3>
 <p>In order to do so, I created the following file inside my <code>Hugo folder</code> :</p>
 <div class="highlight"><div class="chroma">
@@ -145,7 +145,7 @@ jobs:
 </div><p><strong>Do not write the token itself</strong>, write <code>HUGO_TOKEN</code>!</p>
 <p>Which is located at : <code>.github/workflows/gh-pages.yml</code> and needs to be added and committed to your repo.</p>
 <h3 id="create-github-token">Create Github Token</h3>
-<p>You also need to <a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">create a token in your Github account</a> and call it whatever you want, mine is called <code>hugo_masoopy</code>.</p>
+<p>You also need to <a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreffer ">create a token in your Github account</a> and call it whatever you want, mine is called <code>hugo_masoopy</code>.</p>
 <p></p>
 <h3 id="add-token-to-your-websites-repo">Add token to your website&rsquo;s repo</h3>
 <p>Then, you have to go to your website&rsquo;s repo <code>Settings</code> and <code>Secrets</code> section, the URL looks like below :</p>
@@ -162,7 +162,7 @@ jobs:
 <h3 id="its-always-dns">It&rsquo;s always DNS!</h3>
 <p>Set your <code>CNAME</code> inside that file, create a <code>CNAME</code> for <code>your-username.github.io</code> on your DNS admin interface for your own domain.</p>
 <h2 id="now-what">Now what?</h2>
-<p>Now, we write! We can <a href="https://www.masoopy.com/blogging-with-vscode" target="_blank" rel="noopener noreferrer">write our posts inside VSCode</a>, and commit our changes to our repo. Once we push the changes, Github Actions will do it&rsquo;s magic, and will publish the new content :</p>
+<p>Now, we write! We can <a href="https://www.masoopy.com/blogging-with-vscode" target="_blank" rel="noopener noreffer ">write our posts inside VSCode</a>, and commit our changes to our repo. Once we push the changes, Github Actions will do it&rsquo;s magic, and will publish the new content :</p>
 <p></p>
 <p>Last but not least, we now have a pretty fast and clean website that Google, and hopefully you&rsquo;ll like too! It is static, has no ads, no analytics. Just content!</p>
 <p>Unfortunately, I do not have the &ldquo;before&rdquo; screenshots, but I love the &ldquo;after&rdquo; ones :</p>

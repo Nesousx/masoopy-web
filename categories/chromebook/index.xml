@@ -1,10 +1,10 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>chromebook - Category - Masoopy</title><link>https://www.masoopy.com/categories/chromebook/</link><description>chromebook - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 29 Sep 2017 12:15:26 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/categories/chromebook/" rel="self" type="application/rss+xml"/><item><title>Install Kodi on your Chromebook with Android</title><link>https://www.masoopy.com/install-kodi-on-your-chromebook-with-android/</link><pubDate>Fri, 29 Sep 2017 12:15:26 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-kodi-on-your-chromebook-with-android/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>chromebook - Category - Masoopy</title><link>https://www.masoopy.com/categories/chromebook/</link><description>chromebook - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 29 Sep 2017 12:15:26 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/categories/chromebook/" rel="self" type="application/rss+xml"/><item><title>Install Kodi on your Chromebook with Android</title><link>https://www.masoopy.com/install-kodi-on-your-chromebook-with-android/</link><pubDate>Fri, 29 Sep 2017 12:15:26 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/install-kodi-on-your-chromebook-with-android/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2016/04/Chromebook.jpg" referrerpolicy="no-referrer">
-            </div><p>A few days ago, I wrote a new guide in order to show you a <a href="https://www.masoopy.com/directly-install-kodi-on-your-chromebook/" target="_blank" rel="noopener noreferrer">new, easier and more reliable method to install Kodi on any Chromebook</a> using crouton. Now, if you are lucky, your Chromebook might be elligible to install the Android Play Store&hellip; Let&rsquo;s see if that&rsquo;s is the case and if it is, we will see how to install Kodi using the Android Play Store on your Chromebook.</p>
+            </div><p>A few days ago, I wrote a new guide in order to show you a <a href="https://www.masoopy.com/directly-install-kodi-on-your-chromebook/" target="_blank" rel="noopener noreffer ">new, easier and more reliable method to install Kodi on any Chromebook</a> using crouton. Now, if you are lucky, your Chromebook might be elligible to install the Android Play Store&hellip; Let&rsquo;s see if that&rsquo;s is the case and if it is, we will see how to install Kodi using the Android Play Store on your Chromebook.</p>
 <h2 id="is-my-chromebook-elligible-to-instal-android-play-store">Is my Chromebook elligible to instal Android Play Store?</h2>
-<p>First, of, check this <a href="https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps" target="_blank" rel="noopener noreferrer">(official) link</a>. If is says &ldquo;Stable channel&rdquo; for you model, then you are all good, go to the next step.</p>
+<p>First, of, check this <a href="https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps" target="_blank" rel="noopener noreffer ">(official) link</a>. If is says &ldquo;Stable channel&rdquo; for you model, then you are all good, go to the next step.</p>
 <p>If not, all hope ain&rsquo;t lost. For example, I own an Asus C200, and official status is set to &ldquo;Planned&rdquo;. However, by turning using the &ldquo;dev&rdquo; channel, I can now use Android apps on my Chromebook.</p>
-<p>In order to make sure if your Chromebook is elligible or not, we will now <a href="https://support.google.com/chromebook/answer/1086915?hl=en" target="_blank" rel="noopener noreferrer">turn on the dev channel</a>.</p>
+<p>In order to make sure if your Chromebook is elligible or not, we will now <a href="https://support.google.com/chromebook/answer/1086915?hl=en" target="_blank" rel="noopener noreffer ">turn on the dev channel</a>.</p>
 <p>Once the update is done, your computer will reboot. If the Android PLay Store is available, then you&rsquo;ll notice a new icon for the Android Play Store in the bar at the bottom of the screen.</p>
 <h2 id="install-android-apps-on-your-chromebook">Install Android Apps on your Chromebook</h2>
 <p>So, you have the Play Store icon in the icon bar at the bottom of the screen? Great, click on it, and let the computer make the first set-up. I&rsquo;ll take a few minutes.</p>
@@ -13,11 +13,11 @@
 <p>Now, simply install it :</p>
 <p></p>
 <p>That&rsquo;s it! You now have the latest Kodi version installed with no pain.</p>
-]]></description></item><item><title>Directly Install Kodi on your Chromebook</title><link>https://www.masoopy.com/directly-install-kodi-on-your-chromebook/</link><pubDate>Tue, 26 Sep 2017 13:56:38 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/directly-install-kodi-on-your-chromebook/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Directly Install Kodi on your Chromebook</title><link>https://www.masoopy.com/directly-install-kodi-on-your-chromebook/</link><pubDate>Tue, 26 Sep 2017 13:56:38 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/directly-install-kodi-on-your-chromebook/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2016/04/Chromebook.jpg" referrerpolicy="no-referrer">
-            </div><p>Thanks to <a href="https://www.masoopy.com/install-latest-kodi-chromeos/#comment-3496118744" target="_blank" rel="noopener noreferrer">Zach</a>, we now have a great way to install Kodi on our Chromebook.</p>
+            </div><p>Thanks to <a href="https://www.masoopy.com/install-latest-kodi-chromeos/#comment-3496118744" target="_blank" rel="noopener noreffer ">Zach</a>, we now have a great way to install Kodi on our Chromebook.</p>
 <h2 id="switch-your-chromebook-to-developpers-mode">Switch your Chromebook to developper&rsquo;s mode</h2>
-<p>In order to install Kodi on Chrome OS, we’ll need to install a proper Linux system. Don’t worry, this is done easily thanks to the <a href="https://github.com/dnschneid/crouton" target="_blank" rel="noopener noreferrer">crouton</a> script.</p>
+<p>In order to install Kodi on Chrome OS, we’ll need to install a proper Linux system. Don’t worry, this is done easily thanks to the <a href="https://github.com/dnschneid/crouton" target="_blank" rel="noopener noreffer ">crouton</a> script.</p>
 <p><strong>NB : be aware that turning developer’s mode ON, will delete ALL your data on the device!</strong></p>
 <p>First of all you have to turn on the developer’s mode on your device. Let’s do it!</p>
 <ol>
@@ -34,7 +34,7 @@
 <p>Your computer should be “brand new”, with no data at all in it. Set ip up as usual with your Google account and Wi-Fi settings. Then, the fun starts.</p>
 <ul>
 <li>Open Chrome browser;</li>
-<li>Download the latest version of crouton, <a href="http://goo.gl/fd3zc" target="_blank" rel="noopener noreferrer">right here</a>;</li>
+<li>Download the latest version of crouton, <a href="http://goo.gl/fd3zc" target="_blank" rel="noopener noreffer ">right here</a>;</li>
 <li>Hit CTRL + ALT + T (it will open a new scary tab in Chrome), this is called a terminal emulator;</li>
 <li>Enter</li>
 </ul>
@@ -54,12 +54,12 @@
 <p>That&rsquo;s it! Kodi should start up, and run with the sound and everything working as expected!</p>
 <p><strong>NB</strong> : please note that in order to have sound, your sound must be turned on both on the &ldquo;ChromeOS&rdquo; side, and the Kodi instance.</p>
 <p>NB : you can switch from/to ChromeOS and from/to Kodi instance by hitting CTRL + ALT + SHIFT + Forward (or Backward). Forward and Backward are the keys on the right of the Esc key. You might have to press it a couple of times, for it to work.</p>
-]]></description></item><item><title>Install the Latest Kodi on ChromeOS</title><link>https://www.masoopy.com/install-the-latest-kodi-on-chromeos/</link><pubDate>Sun, 29 Jan 2017 12:00:17 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-the-latest-kodi-on-chromeos/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Install the Latest Kodi on ChromeOS</title><link>https://www.masoopy.com/install-the-latest-kodi-on-chromeos/</link><pubDate>Sun, 29 Jan 2017 12:00:17 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/install-the-latest-kodi-on-chromeos/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2016/04/Chromebook.jpg" referrerpolicy="no-referrer">
-            </div><p>Android promised several months ago to add <a href="https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps?hl=en&amp;rd=1" target="_blank" rel="noopener noreferrer">Android support to ChromeOS devices</a>. However, this is taking ages… For now, if you want to use Kodi on ChromeOS, your only solution is to use Crouton in order to install the latest Kodi on ChromeOS.</p>
-<p>NB : you can find on older version of this tutorial in order to <a href="https://www.masoopy.com/install-kodi-chromebook/" target="_blank" rel="noopener noreferrer">install Kodi on a Chromebook</a>.</p>
+            </div><p>Android promised several months ago to add <a href="https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps?hl=en&amp;rd=1" target="_blank" rel="noopener noreffer ">Android support to ChromeOS devices</a>. However, this is taking ages… For now, if you want to use Kodi on ChromeOS, your only solution is to use Crouton in order to install the latest Kodi on ChromeOS.</p>
+<p>NB : you can find on older version of this tutorial in order to <a href="https://www.masoopy.com/install-kodi-chromebook/" target="_blank" rel="noopener noreffer ">install Kodi on a Chromebook</a>.</p>
 <h2 id="prepare-the-beast">Prepare the beast</h2>
-<p>In order to install Kodi on Chrome OS, we’ll need to install a proper Linux system. Don’t worry, this is done easily thanks to the <a href="https://github.com/dnschneid/crouton" target="_blank" rel="noopener noreferrer">crouton</a> script.</p>
+<p>In order to install Kodi on Chrome OS, we’ll need to install a proper Linux system. Don’t worry, this is done easily thanks to the <a href="https://github.com/dnschneid/crouton" target="_blank" rel="noopener noreffer ">crouton</a> script.</p>
 <p><strong>NB : be aware that turning developer’s mode ON, will delete ALL your data on the device!</strong></p>
 <p>First of all you have to turn on the developer’s mode on your device. Let’s do it!</p>
 <ol>
@@ -76,7 +76,7 @@
 <p>Your computer should be “brand new”, with no data at all in it. Set ip up as usual with your Google account and Wi-Fi settings. Then, the fun starts.</p>
 <ul>
 <li>Open Chrome browser;</li>
-<li>Download the latest version of crouton, <a href="http://goo.gl/fd3zc" target="_blank" rel="noopener noreferrer">right here</a>;</li>
+<li>Download the latest version of crouton, <a href="http://goo.gl/fd3zc" target="_blank" rel="noopener noreffer ">right here</a>;</li>
 <li>Hit CTRL + ALT + T (it will open a new scary tab in Chrome), this is called a terminal emulator;</li>
 <li>Enter</li>
 </ul>

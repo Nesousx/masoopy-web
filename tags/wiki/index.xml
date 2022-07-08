@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>wiki - Tag - Masoopy</title><link>https://www.masoopy.com/tags/wiki/</link><description>wiki - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 Sep 2017 10:44:13 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/wiki/" rel="self" type="application/rss+xml"/><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>wiki - Tag - Masoopy</title><link>https://www.masoopy.com/tags/wiki/</link><description>wiki - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 Sep 2017 10:44:13 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/wiki/" rel="self" type="application/rss+xml"/><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/bios.png" referrerpolicy="no-referrer">
             </div><p>In this quick guide, let&rsquo;s see how to access the BIOS of any system.</p>
 <h2 id="what-is-the-bios">What is the BIOS?</h2>
@@ -14,20 +14,20 @@
 <li><code>F2</code></li>
 </ul>
 <p>For the most common ones.</p>
-<p>If you only need to access the BIOS in order to <a href="https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/" target="_blank" rel="noopener noreferrer">boot of an USB disk</a> (for example), give a try to the &ldquo;boot menu&rdquo; by mashing one of the following keys:</p>
+<p>If you only need to access the BIOS in order to <a href="https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/" target="_blank" rel="noopener noreffer ">boot of an USB disk</a> (for example), give a try to the &ldquo;boot menu&rdquo; by mashing one of the following keys:</p>
 <ul>
 <li><code>F11</code></li>
 <li><code>F22</code></li>
 </ul>
 <p>I hope this quick guide helped you, and if you know other tricks, to access the BIOS, please share them in the comments.</p>
-]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/burn_iso_2_usb.png" referrerpolicy="no-referrer">
             </div><p>Let&rsquo;s see how to &ldquo;burn&rdquo; an image file (or .iso file) to an USB stick and make it bootable.</p>
 <p><strong>NB: please note that in every case, all the data on your USB stick will be erased!!</strong></p>
 <h2 id="windows">Windows</h2>
-<p>Under Windows, simply download, install and run <a href="https://rufus.akeo.ie/" target="_blank" rel="noopener noreferrer">Rufus</a>. Then follow the on-screen instructions.</p>
+<p>Under Windows, simply download, install and run <a href="https://rufus.akeo.ie/" target="_blank" rel="noopener noreffer ">Rufus</a>. Then follow the on-screen instructions.</p>
 <h2 id="macos">Macos</h2>
-<p>Much like Windows, on Macos, you can use a tool called <a href="https://etcher.io/" target="_blank" rel="noopener noreferrer">Etcher</a> and follow the on-screen instructions.</p>
+<p>Much like Windows, on Macos, you can use a tool called <a href="https://etcher.io/" target="_blank" rel="noopener noreffer ">Etcher</a> and follow the on-screen instructions.</p>
 <h2 id="linux">Linux</h2>
 <p>Now, it becomes a little harder / funnier. You have two main solutions:</p>
 <ul>

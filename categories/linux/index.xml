@@ -1,6 +1,6 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>linux - Category - Masoopy</title><link>https://www.masoopy.com/categories/linux/</link><description>linux - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 04 Dec 2018 08:18:42 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/linux/" rel="self" type="application/rss+xml"/><item><title>Install GLPI on Ubuntu 18.04 with MariaDB and NGinX</title><link>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</link><pubDate>Tue, 04 Dec 2018 08:18:42 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>linux - Category - Masoopy</title><link>https://www.masoopy.com/categories/linux/</link><description>linux - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 04 Dec 2018 08:18:42 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/linux/" rel="self" type="application/rss+xml"/><item><title>Install GLPI on Ubuntu 18.04 with MariaDB and NGinX</title><link>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</link><pubDate>Tue, 04 Dec 2018 08:18:42 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/install-glpi-on-ubuntu-18.04-with-mariadb-and-nginx/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2018/12/Install-GLPI-on-Ubuntu-18-04-with-MariaDB-and-NGinX.png" referrerpolicy="no-referrer">
-            </div><p><a href="https://glpi-project.org/" target="_blank" rel="noopener noreferrer">GLPI</a> is an asset management software. It can handle automatic inventory of your assets (workstations, servers, printers, etc.) ticketing, and much more. Let&rsquo;s see how to install it under Ubuntu with MariaDB and NGinX.</p>
+            </div><p><a href="https://glpi-project.org/" target="_blank" rel="noopener noreffer ">GLPI</a> is an asset management software. It can handle automatic inventory of your assets (workstations, servers, printers, etc.) ticketing, and much more. Let&rsquo;s see how to install it under Ubuntu with MariaDB and NGinX.</p>
 <h2 id="prepare-your-system">Prepare your system</h2>
 <p>Simply install the requirements :</p>
 <div class="highlight"><div class="chroma">
@@ -160,7 +160,7 @@ include fastcgi_params; fastcgi_param SERVER_NAME $host; } }
 <pre class="chroma"><code class="language-text" data-lang="text">mkdir -p /etc/glpimkdir -p /var/lib/glpimkdir -p /var/log/glpimkdir -p /var/www/glpi
 </code></pre></td></tr></table>
 </div>
-</div><p>Browse to <a href="https://github.com/glpi-project/glpi/releases" target="_blank" rel="noopener noreferrer">GLPI Github release page</a>, and copy link from latest version, then download it directly on your server in your home directory :</p>
+</div><p>Browse to <a href="https://github.com/glpi-project/glpi/releases" target="_blank" rel="noopener noreffer ">GLPI Github release page</a>, and copy link from latest version, then download it directly on your server in your home directory :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -226,10 +226,10 @@ include fastcgi_params; fastcgi_param SERVER_NAME $host; } }
 <p>When it is done, browse to the main URL, and you should be brought to a brand new login page.</p>
 <p>Log in with the default &ldquo;admin&rdquo; account which is &quot; <strong>glpi/glpi</strong>&quot;. Once logged, in remember to change password for all the default accounts (and/or disable some of them), and remove the file install.php from your <strong>/var/www/glpi/install</strong> directory.</p>
 <p>You are now all set, enjoy GPLI!</p>
-]]></description></item><item><title>Using Unifi controller on Docker</title><link>https://www.masoopy.com/using-unifi-controller-on-docker/</link><pubDate>Sat, 10 Nov 2018 18:04:27 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/using-unifi-controller-on-docker/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Using Unifi controller on Docker</title><link>https://www.masoopy.com/using-unifi-controller-on-docker/</link><pubDate>Sat, 10 Nov 2018 18:04:27 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/using-unifi-controller-on-docker/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/unifi.png" referrerpolicy="no-referrer">
-            </div><p>Following a post on <a href="https://www.reddit.com/r/Ubiquiti/comments/9umu34/controller_w_dockercompose_nginx_reverseproxy/" target="_blank" rel="noopener noreferrer">Reddit</a>, I decided to share my config used to run the Unifi controller. Doing so, you won&rsquo;t have to purchase a <a href="https://amzn.to/2T2mLnS" target="_blank" rel="noopener noreferrer">Unifi Cloud Controller</a>.</p>
-<p>Spoiler alert&hellip; <a href="https://www.masoopy.com/all-your-devices-are-belong-to-ubiquity/" target="_blank" rel="noopener noreferrer">I no longer use Unifi hardware</a>, and I&rsquo;ll share why in a future post.</p>
+            </div><p>Following a post on <a href="https://www.reddit.com/r/Ubiquiti/comments/9umu34/controller_w_dockercompose_nginx_reverseproxy/" target="_blank" rel="noopener noreffer ">Reddit</a>, I decided to share my config used to run the Unifi controller. Doing so, you won&rsquo;t have to purchase a <a href="https://amzn.to/2T2mLnS" target="_blank" rel="noopener noreffer ">Unifi Cloud Controller</a>.</p>
+<p>Spoiler alert&hellip; <a href="https://www.masoopy.com/all-your-devices-are-belong-to-ubiquity/" target="_blank" rel="noopener noreffer ">I no longer use Unifi hardware</a>, and I&rsquo;ll share why in a future post.</p>
 <h3 id="system-overview">System Overview</h3>
 <p>I have 2 servers :</p>
 <ul>
@@ -301,9 +301,9 @@ services:
 </div>
 </div><p>As you can see, I expose quite a lot of ports, however they are almost all available only from my local network.</p>
 <p>The only exception being the port 8443 that is open to my remote server (via PFSense firewall).</p>
-<p>For more information about the Docker image, please check <a href="https://hub.docker.com/r/linuxserver/unifi/" target="_blank" rel="noopener noreferrer">their official page</a>.</p>
+<p>For more information about the Docker image, please check <a href="https://hub.docker.com/r/linuxserver/unifi/" target="_blank" rel="noopener noreffer ">their official page</a>.</p>
 <h3 id="remote-server">Remote server</h3>
-<p>For the nginx part, I do not use the <a href="https://hub.docker.com/r/jwilder/nginx-proxy/" target="_blank" rel="noopener noreferrer">jwilder version</a>, because as far as I know, it requires ports to be exposed.</p>
+<p>For the nginx part, I do not use the <a href="https://hub.docker.com/r/jwilder/nginx-proxy/" target="_blank" rel="noopener noreffer ">jwilder version</a>, because as far as I know, it requires ports to be exposed.</p>
 <p>I&rsquo;ll start by showing my container config. This is a docker-compose.yml file :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -362,7 +362,7 @@ networks:
 </div><p>Let&rsquo;s explain a little bit what it does :</p>
 <ul>
 <li>I only expose ports 80 and 443 ;</li>
-<li><a href="https://hub.docker.com/_/nginx/" target="_blank" rel="noopener noreferrer">The nginx (official)</a> image mounts volumes /etc/letsencrypt directory + <a href="https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html" target="_blank" rel="noopener noreferrer">DH param</a> file from host as well, into my container and the conf.d directory (which holds my virtual hosts) ;</li>
+<li><a href="https://hub.docker.com/_/nginx/" target="_blank" rel="noopener noreffer ">The nginx (official)</a> image mounts volumes /etc/letsencrypt directory + <a href="https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html" target="_blank" rel="noopener noreffer ">DH param</a> file from host as well, into my container and the conf.d directory (which holds my virtual hosts) ;</li>
 <li>I create network aliases and separate networks for my &ldquo;group of apps&rdquo;.</li>
 </ul>
 <p>The network thing is very important. Remember, when I told you that I do not want to expose too many ports. Creating separate networks allow me to do so.</p>
@@ -451,7 +451,7 @@ server {
 </div>
 </div><p>Finally, unifi.domain.com points to my remote server and force redirects to the httpS URL, using wildcard certs from Let&rsquo;s Encrypt.</p>
 <h3 id="getting-it-all-https">Getting it all httpS!</h3>
-<p>I generated my wildard certificate thanks to <a href="https://hub.docker.com/r/certbot/dns-cloudflare/" target="_blank" rel="noopener noreferrer">Let&rsquo;s Encrypt Docker image</a>.</p>
+<p>I generated my wildard certificate thanks to <a href="https://hub.docker.com/r/certbot/dns-cloudflare/" target="_blank" rel="noopener noreffer ">Let&rsquo;s Encrypt Docker image</a>.</p>
 <p>Finally SSL certs are automagically renewed via a systemd &ldquo;job&rdquo; than runs the official letsencrypt container and renew my cert (wildcard), like below :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -461,7 +461,7 @@ server {
 <pre class="chroma"><code class="language-text" data-lang="text">docker run -v /etc/letsencrypt/:/etc/letsencrypt/ certbot/dns-cloudflare renew --dns-cloudflare --email my@email.com --agree-tos --dns-cloudflare-credentials /etc/letsencrypt/cloudflare.ini
 </code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>Nesatmo : beautiful graphs for Netatmo</title><link>https://www.masoopy.com/nesatmo-beautiful-graphs-for-netatmo/</link><pubDate>Tue, 27 Mar 2018 09:32:28 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/nesatmo-beautiful-graphs-for-netatmo/</guid><description><![CDATA[<div class="featured-image">
+</div>]]></description></item><item><title>Nesatmo : beautiful graphs for Netatmo</title><link>https://www.masoopy.com/nesatmo-beautiful-graphs-for-netatmo/</link><pubDate>Tue, 27 Mar 2018 09:32:28 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/nesatmo-beautiful-graphs-for-netatmo/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/netatmo.png" referrerpolicy="no-referrer">
             </div><p>Netatmo are little, funny, useless devices that monitor &ldquo;stuff&rdquo; in your home.</p>
 <h3 id="netatmo-weather">Netatmo weather</h3>
@@ -483,15 +483,15 @@ server {
 <script src="https://gist.github.com/Nesousx/fc6967ce7e3ff88e757a6152fd079bbf.js"></script>
 <p>You can now create your own Grafana dashboard that could look like this :</p>
 <p></p>
-<p>If you want to get mine, <a href="https://gist.github.com/Nesousx/3941d33ee6c2282c29fa70e69c54fb1f" target="_blank" rel="noopener noreferrer">here it is</a>.</p>
+<p>If you want to get mine, <a href="https://gist.github.com/Nesousx/3941d33ee6c2282c29fa70e69c54fb1f" target="_blank" rel="noopener noreffer ">here it is</a>.</p>
 <p>Search and replace the following elements :</p>
 <ul>
 <li>&ldquo;nesoweath&rdquo; by your station&rsquo;s name ;</li>
 <li>&ldquo;indoor&rdquo; by your indoor&rsquo;s sensor&rsquo;s name ;</li>
 <li>&ldquo;outdoor&rdquo; by your outdoor&rsquo;s sensor&rsquo;s name.</li>
 </ul>
-<p>I hope this quick guide will help you to get started. Do not hesitate to post a comment if you need additional help, you can also check my <a href="https://hub.docker.com/r/nesousx/nesatmo/" target="_blank" rel="noopener noreferrer">official Docker page</a>.</p>
-]]></description></item><item><title>Scan to PDF with command line under GNU/Linux</title><link>https://www.masoopy.com/scan-to-pdf-with-command-line-under-gnu/linux/</link><pubDate>Mon, 05 Feb 2018 12:01:12 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/scan-to-pdf-with-command-line-under-gnu/linux/</guid><description><![CDATA[<div class="featured-image">
+<p>I hope this quick guide will help you to get started. Do not hesitate to post a comment if you need additional help, you can also check my <a href="https://hub.docker.com/r/nesousx/nesatmo/" target="_blank" rel="noopener noreffer ">official Docker page</a>.</p>
+]]></description></item><item><title>Scan to PDF with command line under GNU/Linux</title><link>https://www.masoopy.com/scan-to-pdf-with-command-line-under-gnu/linux/</link><pubDate>Mon, 05 Feb 2018 12:01:12 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/scan-to-pdf-with-command-line-under-gnu/linux/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/scan_pdf_cli.png" referrerpolicy="no-referrer">
             </div><p>After years of not-so-good services, I deciced to replace my old Canon MG5550 printer/scanner combo. Instead, I bought a simple black and white laser printer/scanner, and I have never been so happy with a &ldquo;printer&rdquo;.</p>
 <h2 id="more-info-about-the-printer">More info about the printer</h2>
@@ -528,7 +528,7 @@ server {
 <p>The script has be used has follow :<br>
 <code>scan2pdf.sh path/to/save/your_file.pdf</code></p>
 <h3 id="tips">Tips</h3>
-<p>In order to make things lazier, I am using an alias in my <a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank" rel="noopener noreferrer">ZSH</a> config:</p>
+<p>In order to make things lazier, I am using an alias in my <a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank" rel="noopener noreffer ">ZSH</a> config:</p>
 <p>Add the following line, to your .zshrc:</p>
 <p><code>alias scan2pdf=&quot;bash ~/path/to/scripts/scan2pdf.sh&quot;</code></p>
 <p><strong>NB</strong> : in case your are using bash, add the above line to yout .bashrc file, and source the .bashrc file.</p>
@@ -536,16 +536,16 @@ server {
 <p><code>scan2pdf path/to/save/your_file.pdf</code></p>
 <p>That&rsquo;s it!</p>
 <p>Please bear in my mind that the script is pretty simple and stupid. It works very well for me, but it can be easily tweaked to your needs. If you do so, do not hesitate to share it with us.</p>
-]]></description></item><item><title>Sending text messages from your computer</title><link>https://www.masoopy.com/sending-text-messages-from-your-computer/</link><pubDate>Thu, 21 Sep 2017 11:12:57 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/sending-text-messages-from-your-computer/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Sending text messages from your computer</title><link>https://www.masoopy.com/sending-text-messages-from-your-computer/</link><pubDate>Thu, 21 Sep 2017 11:12:57 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/sending-text-messages-from-your-computer/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/send_text_from_pc.png" referrerpolicy="no-referrer">
             </div><p>Do you hate touchscreen? I sure do! More than touchscreen, I hate when I have to write something using a touch screen. This is why, I have been trying and using different solutions that allows me to send text messages from my computer with a real (mechanical) keyboard!</p>
 <h2 id="foreword">Foreword</h2>
 <p>Please note that this guide is based on Android phones and is desktop &ldquo;OS&rdquo; agnostic.</p>
-<p>If you are using Apple phones and computers, then <a href="https://support.apple.com/en-us/HT202549" target="_blank" rel="noopener noreferrer">have a look here</a>.</p>
-<p>Under Windows Phone, check what <a href="https://pureinfotech.com/how-send-sms-texts-using-cortana-windows-10-pc/" target="_blank" rel="noopener noreferrer">Cortana can do for you</a>.</p>
+<p>If you are using Apple phones and computers, then <a href="https://support.apple.com/en-us/HT202549" target="_blank" rel="noopener noreffer ">have a look here</a>.</p>
+<p>Under Windows Phone, check what <a href="https://pureinfotech.com/how-send-sms-texts-using-cortana-windows-10-pc/" target="_blank" rel="noopener noreffer ">Cortana can do for you</a>.</p>
 <p>However, some apps I am talking about are also probably working on Apple and/or Windows phones. Be sure to check your app store!</p>
 <h2 id="mightytext">MightyText</h2>
-<p><a href="https://mightytext.net/install" target="_blank" rel="noopener noreferrer">MightyText</a> is a free app that can be downloaded via the Play Store. The setup is straightforward: it will &ldquo;only&rdquo; ask you to give access to your Google account from the phone, and the same thing on your computer. So that both your devices all linked together thanks to this common account.</p>
+<p><a href="https://mightytext.net/install" target="_blank" rel="noopener noreffer ">MightyText</a> is a free app that can be downloaded via the Play Store. The setup is straightforward: it will &ldquo;only&rdquo; ask you to give access to your Google account from the phone, and the same thing on your computer. So that both your devices all linked together thanks to this common account.</p>
 <p>On your computer, MightyText can be accessed from various ways :</p>
 <ul>
 <li>From a webpage : meaning it will run on any computer that can run a web browser ;</li>
@@ -560,7 +560,7 @@ server {
 Yes, you can customize this by visiting the MightyText web app &ndash; Phone tab &ndash; Apps section. Let us know if that works for you.</p>
 <p>This led me to check another well known player: Pushbullet.</p>
 <h2 id="pushbullet">Pushbullet</h2>
-<p><a href="https://www.pushbullet.com/" target="_blank" rel="noopener noreferrer">Pushbullet</a> configuration works almost the same way than MightyText does. You need to give access to your Google account to all devices that you want to be linked together. However, it supports both Google and Facebook accounts, while MightyText only supports Google accounts.</p>
+<p><a href="https://www.pushbullet.com/" target="_blank" rel="noopener noreffer ">Pushbullet</a> configuration works almost the same way than MightyText does. You need to give access to your Google account to all devices that you want to be linked together. However, it supports both Google and Facebook accounts, while MightyText only supports Google accounts.</p>
 <p>Once again, when the app is installed on your mobile phone, you can access it from your desktop as follows:</p>
 <ul>
 <li>From a webpage : meaning it will run on any computer that can run a web browser ;</li>
@@ -573,27 +573,27 @@ Yes, you can customize this by visiting the MightyText web app &ndash; Phone tab
 <p>This is the main usage for these two apps, and it works well&hellip; most of the time!</p>
 <p>About 95% of the time, it &ldquo;just works&rdquo;. You receive a desktop notification about a new text. Just click on it, it will open the message and you can directly reply to it. Contact names appears the same way they would on your phone. If you want to create a new message, just select your contact&rsquo;s name inside the browser extension (for example) to write your text. Send, it! Done.</p>
 <p>Then, 5% of the time&hellip; the message will stay &ldquo;stuck&rdquo; on your computer and won&rsquo;t be relayed to you phone, hence they won&rsquo;t be sent. At the time of writing, it only happened to me when I killed the app on phone (beware with the &ldquo;kill all&rdquo; function of Android phones). In those case, I just started the app again on the phone, and it fixed it.<br>
-There could also be issues with battery management where the phone puts the app to sleep in order to reduce battery usage. If you have issues about not being able to send SMS after some time, then <a href="http://www.techrepublic.com/article/how-to-remove-android-apps-from-the-battery-optimization-list/" target="_blank" rel="noopener noreferrer">make sure that Android no longer optimize the battery</a> for this app.</p>
+There could also be issues with battery management where the phone puts the app to sleep in order to reduce battery usage. If you have issues about not being able to send SMS after some time, then <a href="http://www.techrepublic.com/article/how-to-remove-android-apps-from-the-battery-optimization-list/" target="_blank" rel="noopener noreffer ">make sure that Android no longer optimize the battery</a> for this app.</p>
 <p>Last but not least, all the messages sent / received from the computer will continue to appear in your default messages app, just like if you sent them from the phone.</p>
 <h2 id="closing-words-and-a-few-other-alternatives">Closing words and a few other alternatives</h2>
 <p>As we have seen those apps can be very handy, especially if you hate using touchscreen. It is also a good way to synchronize your phone and computer and remove extra app on the desktop, close a few browser tabs, etc.</p>
 <p>In my opinion, the fact that Pushbullet offers browser extensions for all the major browsers is a great plus! Moreover, I feel it easier to navigate in the app, find what you are looking for, and tweak it (ie. the notification thingy). In a few words, we could say that Pushbullet is more basic, maybe even less &ldquo;bloated&rdquo;. Like I didn&rsquo;t see any ads in Pushbullet, while I see some using MightyText webpage.</p>
-<p>Now, if you want to follow that road but feel to restricted by those 2 apps, you can also have a look a few other alternatives such as <a href="https://joaoapps.com/join-sms-from-anything-with-a-browser/" target="_blank" rel="noopener noreferrer">Join</a> or <a href="https://play.google.com/store/apps/details?id=xyz.klinker.messenger&amp;hl=en" target="_blank" rel="noopener noreferrer">Pulse</a>. They look like pretty strong competitors as well.</p>
+<p>Now, if you want to follow that road but feel to restricted by those 2 apps, you can also have a look a few other alternatives such as <a href="https://joaoapps.com/join-sms-from-anything-with-a-browser/" target="_blank" rel="noopener noreffer ">Join</a> or <a href="https://play.google.com/store/apps/details?id=xyz.klinker.messenger&amp;hl=en" target="_blank" rel="noopener noreffer ">Pulse</a>. They look like pretty strong competitors as well.</p>
 <p>I hope you enjoyed this article and that it might have helped you. Better yet, given you faith again in your texting business!</p>
 <p>Do not hesitate to let me know if you use any other similar app, most especially if you love it.</p>
-]]></description></item><item><title>How to set up correct Freenas jail permissions</title><link>https://www.masoopy.com/how-to-set-up-correct-freenas-jail-permissions/</link><pubDate>Sun, 30 Jul 2017 12:14:03 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-set-up-correct-freenas-jail-permissions/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>How to set up correct Freenas jail permissions</title><link>https://www.masoopy.com/how-to-set-up-correct-freenas-jail-permissions/</link><pubDate>Sun, 30 Jul 2017 12:14:03 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/how-to-set-up-correct-freenas-jail-permissions/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/freenas.png" referrerpolicy="no-referrer">
-            </div><p><a href="http://www.freenas.org/" target="_blank" rel="noopener noreferrer">Freenas</a> is a great software, allowing you to turn a PC into a NAS. Is it totally free and open source, which we really like.</p>
+            </div><p><a href="http://www.freenas.org/" target="_blank" rel="noopener noreffer ">Freenas</a> is a great software, allowing you to turn a PC into a NAS. Is it totally free and open source, which we really like.</p>
 <h2 id="freenas-overview">Freenas overview</h2>
 <p>Like any “market” NAS, Freenas allows you to install third party software such as bitorrent client, or newsgroups client. One of my favorite tools for downloading media (once again, make sure this is legal where you live) is actually a suite of tools based on newsgroups. The are called:</p>
 <ul>
-<li>sabnzbd : it will manage download of items, restart the download, if it fails, etc. We will call it the downloader, like <a href="https://www.masoopy.com/nzbget-as-a-replacement-of-sabnzbdplus/" target="_blank" rel="noopener noreferrer">nzbget</a>.</li>
+<li>sabnzbd : it will manage download of items, restart the download, if it fails, etc. We will call it the downloader, like <a href="https://www.masoopy.com/nzbget-as-a-replacement-of-sabnzbdplus/" target="_blank" rel="noopener noreffer ">nzbget</a>.</li>
 <li>couchpotato: tell him which movie you want, and it will automatically look for it and send it to the “downloader” as soon as the movie becomes available.</li>
 <li>sonarr : just like couchpotato, but for TV Shows.</li>
 </ul>
 <p>NB : I’ll try to write a more elaborate guide about those great pieces of software.</p>
 <h2 id="freenas-jail-permissions">Freenas jail permissions</h2>
-<p>First of all, <a href="https://forums.freenas.org/index.php?threads/how-to-giving-plugins-write-permissions-to-your-data.27273/" target="_blank" rel="noopener noreferrer">thanks to this guide</a> for the starting base. Now, let’s me show you my twist.</p>
+<p>First of all, <a href="https://forums.freenas.org/index.php?threads/how-to-giving-plugins-write-permissions-to-your-data.27273/" target="_blank" rel="noopener noreffer ">thanks to this guide</a> for the starting base. Now, let’s me show you my twist.</p>
 <p>Let’s assume you have one (or several jails) for the software mentioned above. It is a pain in the *** so set up Freenas jail permissions correctly, but I’ll help.</p>
 <p>First of all, ssh to your Freenas server and enter the desired jail with the following commands:</p>
 <p><code>jls sudo jexec X</code></p>
@@ -619,9 +619,9 @@ There could also be issues with battery management where the phone puts the app 
 <p>Now, if you want to fine tune this, I highly advise you to add you own user to the media group from the Freenas GUI. Also make sure to have adequate permissions for groups. Something like 775 works fine and is not too insecure.</p>
 <p>This way, you’ll still be able to browse and modify your files with your regular user.</p>
 <p>I hope this quick &amp; dirty guide will help you to fix Freenas jail permissions. This is quite and advanced guide, and I took many shortcut to describe the step I used to configure my server. Do not hesitate to post a comment if you need extra details.</p>
-]]></description></item><item><title>NZBGet as a replacement of Sabnzbdplus</title><link>https://www.masoopy.com/nzbget-as-a-replacement-of-sabnzbdplus/</link><pubDate>Mon, 11 Aug 2014 12:55:43 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/nzbget-as-a-replacement-of-sabnzbdplus/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>NZBGet as a replacement of Sabnzbdplus</title><link>https://www.masoopy.com/nzbget-as-a-replacement-of-sabnzbdplus/</link><pubDate>Mon, 11 Aug 2014 12:55:43 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/nzbget-as-a-replacement-of-sabnzbdplus/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/nzbget.png" referrerpolicy="no-referrer">
-            </div><p>After years of Sabnzbdplus’s reign, a new tool doing for the same purpose was born: <a href="http://nzbget.net/" target="_blank" rel="noopener noreferrer">NZBGet</a>. In a few words, NZBGet has a lighter footprint on your system. It is coded in C++ whereas Sab is coded in Python. This means that NZBGet will run better on smaller system (such as NAS).</p>
+            </div><p>After years of Sabnzbdplus’s reign, a new tool doing for the same purpose was born: <a href="http://nzbget.net/" target="_blank" rel="noopener noreffer ">NZBGet</a>. In a few words, NZBGet has a lighter footprint on your system. It is coded in C++ whereas Sab is coded in Python. This means that NZBGet will run better on smaller system (such as NAS).</p>
 <p>Configuring NZBGet can be pretty tricky for the first time, especially if you want to combine it with Couchpotato and Sickbeard and leave to them the post processing / renaming. I’ll write a little guide about this.</p>
-<p>Of course, NZBGet (thanks to user made post-processing scripts) can <a href="http://nzbget.net/forum/viewtopic.php?f=3&amp;t=777" target="_blank" rel="noopener noreferrer">notify</a> your media center <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreferrer">#Kodi</a>.</p>
+<p>Of course, NZBGet (thanks to user made post-processing scripts) can <a href="http://nzbget.net/forum/viewtopic.php?f=3&amp;t=777" target="_blank" rel="noopener noreffer ">notify</a> your media center <a href="https://www.masoopy.com/tag/kodi/" target="_blank" rel="noopener noreffer ">#Kodi</a>.</p>
 ]]></description></item></channel></rss>

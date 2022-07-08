@@ -1,9 +1,9 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>plex - Tag - Masoopy</title><link>https://www.masoopy.com/tags/plex/</link><description>plex - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 19 Apr 2018 07:15:33 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/plex/" rel="self" type="application/rss+xml"/><item><title>Automatically download subtitles with Plex</title><link>https://www.masoopy.com/automatically-download-subtitles-with-plex/</link><pubDate>Thu, 19 Apr 2018 07:15:33 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/automatically-download-subtitles-with-plex/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>plex - Tag - Masoopy</title><link>https://www.masoopy.com/tags/plex/</link><description>plex - Tag - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 19 Apr 2018 07:15:33 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/tags/plex/" rel="self" type="application/rss+xml"/><item><title>Automatically download subtitles with Plex</title><link>https://www.masoopy.com/automatically-download-subtitles-with-plex/</link><pubDate>Thu, 19 Apr 2018 07:15:33 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/automatically-download-subtitles-with-plex/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/auto_dl_sub_plex.png" referrerpolicy="no-referrer">
-            </div><p>Today, there is hundreds (if not thousands) of TV shows and movies. I enjoy a lot of them, and I enjoy them in their original version. Unfortunately, I am not fluent in every languages. Fortunately enough, we have <a href="https://www.masoopy.com/automatically-download-subtiles/" target="_blank" rel="noopener noreferrer">autmomatic subtitles for Kodi</a> and a similar system of automatic subtitles for Plex. Let&rsquo;s see how to use it.</p>
+            </div><p>Today, there is hundreds (if not thousands) of TV shows and movies. I enjoy a lot of them, and I enjoy them in their original version. Unfortunately, I am not fluent in every languages. Fortunately enough, we have <a href="https://www.masoopy.com/automatically-download-subtiles/" target="_blank" rel="noopener noreffer ">autmomatic subtitles for Kodi</a> and a similar system of automatic subtitles for Plex. Let&rsquo;s see how to use it.</p>
 <h3 id="in-plugins-we-trust">In plugins, we trust</h3>
 <ol>
-<li>Open your web browser and go to your Plex server, <a href="https://app.plex.tv/desktop#" target="_blank" rel="noopener noreferrer">most probably here</a>.</li>
+<li>Open your web browser and go to your Plex server, <a href="https://app.plex.tv/desktop#" target="_blank" rel="noopener noreffer ">most probably here</a>.</li>
 <li>Browse to the plugins section (left sidebar) :</li>
 </ol>
 <p></p>
@@ -37,7 +37,7 @@
 </ol>
 <p></p>
 <ol>
-<li>From here, just fill in the fields according to your needs. I highly advise you to create and use accounts from <a href="https://www.opensubtitles.org" target="_blank" rel="noopener noreferrer">OpenSubtitles</a> and <a href="http://www.addic7ed.com/" target="_blank" rel="noopener noreferrer">Addic7ed</a>.</li>
+<li>From here, just fill in the fields according to your needs. I highly advise you to create and use accounts from <a href="https://www.opensubtitles.org" target="_blank" rel="noopener noreffer ">OpenSubtitles</a> and <a href="http://www.addic7ed.com/" target="_blank" rel="noopener noreffer ">Addic7ed</a>.</li>
 </ol>
 <p>Moreover, if you are automating your media binge watching, then you really should configure the Sonarr and Radarr section. It will greatly improve the way subtitles are matched to your media.</p>
 <p>From now on you can force a full sub-zero sync from the plugin page, of simply forget it and it will automatically scan the library in the background (every night, by default).</p>

@@ -1,9 +1,9 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>wiki - Category - Masoopy</title><link>https://www.masoopy.com/categories/wiki/</link><description>wiki - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Dec 2018 08:48:46 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/wiki/" rel="self" type="application/rss+xml"/><item><title>Manage VMware snapshots with PowerCLI</title><link>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</link><pubDate>Tue, 11 Dec 2018 08:48:46 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>wiki - Category - Masoopy</title><link>https://www.masoopy.com/categories/wiki/</link><description>wiki - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Dec 2018 08:48:46 +0100</lastBuildDate><atom:link href="https://www.masoopy.com/categories/wiki/" rel="self" type="application/rss+xml"/><item><title>Manage VMware snapshots with PowerCLI</title><link>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</link><pubDate>Tue, 11 Dec 2018 08:48:46 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/manage-vmware-snapshots-with-powercli/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2018/12/Manage-VMware-snapshots-with-PowerCLI.png" referrerpolicy="no-referrer">
             </div><p>Manually taking a snapshot under VMware is easy : connect to the HTML5 Web UI, find the server from the list, right click, select Snapshot, Name it&hellip; However, when you have to do it several times in a row, it becomes really frustrating. Let&rsquo;s see how to improve that.</p>
 <h2 id="here-comes-powercli">Here comes PowerCLI</h2>
-<p>VMware released an awesome (and I am Linux guy) tool to manage your virtual machines from the command line. It is called <a href="https://communities.vmware.com/community/vmtn/automationtools/powercli" target="_blank" rel="noopener noreferrer">PowerCLI</a>, is based on PowerShell and honestly it really works like a charm.</p>
-<p>it can be installed on <a href="https://www.virtuallyghetto.com/2016/09/vmware-powercli-for-mac-os-x-linux-more-yes-please.html" target="_blank" rel="noopener noreferrer">Windows, Linux, Macos</a> and of course <a href="https://hub.docker.com/r/vmware/powerclicore/" target="_blank" rel="noopener noreferrer">inside a Docker container</a>. I&rsquo;ll let the installation part up to you, there is plenty of guides available on internet, but I&rsquo;ll share my scripts.</p>
+<p>VMware released an awesome (and I am Linux guy) tool to manage your virtual machines from the command line. It is called <a href="https://communities.vmware.com/community/vmtn/automationtools/powercli" target="_blank" rel="noopener noreffer ">PowerCLI</a>, is based on PowerShell and honestly it really works like a charm.</p>
+<p>it can be installed on <a href="https://www.virtuallyghetto.com/2016/09/vmware-powercli-for-mac-os-x-linux-more-yes-please.html" target="_blank" rel="noopener noreffer ">Windows, Linux, Macos</a> and of course <a href="https://hub.docker.com/r/vmware/powerclicore/" target="_blank" rel="noopener noreffer ">inside a Docker container</a>. I&rsquo;ll let the installation part up to you, there is plenty of guides available on internet, but I&rsquo;ll share my scripts.</p>
 <h2 id="my-current-workflow">My current workflow</h2>
 <p>I often change / refine / try to improve my workflow. However, for current workflow for managing updates on our Linux servers is like below :</p>
 <ul>
@@ -40,16 +40,16 @@
 </ul>
 <p>I hope those little scripts will make you life a little easier, and hopefully your job a little less boring. Automating is the way to go!</p>
 <p> </p>
-]]></description></item><item><title>Sending text messages from your computer</title><link>https://www.masoopy.com/sending-text-messages-from-your-computer/</link><pubDate>Thu, 21 Sep 2017 11:12:57 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/sending-text-messages-from-your-computer/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Sending text messages from your computer</title><link>https://www.masoopy.com/sending-text-messages-from-your-computer/</link><pubDate>Thu, 21 Sep 2017 11:12:57 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/sending-text-messages-from-your-computer/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/send_text_from_pc.png" referrerpolicy="no-referrer">
             </div><p>Do you hate touchscreen? I sure do! More than touchscreen, I hate when I have to write something using a touch screen. This is why, I have been trying and using different solutions that allows me to send text messages from my computer with a real (mechanical) keyboard!</p>
 <h2 id="foreword">Foreword</h2>
 <p>Please note that this guide is based on Android phones and is desktop &ldquo;OS&rdquo; agnostic.</p>
-<p>If you are using Apple phones and computers, then <a href="https://support.apple.com/en-us/HT202549" target="_blank" rel="noopener noreferrer">have a look here</a>.</p>
-<p>Under Windows Phone, check what <a href="https://pureinfotech.com/how-send-sms-texts-using-cortana-windows-10-pc/" target="_blank" rel="noopener noreferrer">Cortana can do for you</a>.</p>
+<p>If you are using Apple phones and computers, then <a href="https://support.apple.com/en-us/HT202549" target="_blank" rel="noopener noreffer ">have a look here</a>.</p>
+<p>Under Windows Phone, check what <a href="https://pureinfotech.com/how-send-sms-texts-using-cortana-windows-10-pc/" target="_blank" rel="noopener noreffer ">Cortana can do for you</a>.</p>
 <p>However, some apps I am talking about are also probably working on Apple and/or Windows phones. Be sure to check your app store!</p>
 <h2 id="mightytext">MightyText</h2>
-<p><a href="https://mightytext.net/install" target="_blank" rel="noopener noreferrer">MightyText</a> is a free app that can be downloaded via the Play Store. The setup is straightforward: it will &ldquo;only&rdquo; ask you to give access to your Google account from the phone, and the same thing on your computer. So that both your devices all linked together thanks to this common account.</p>
+<p><a href="https://mightytext.net/install" target="_blank" rel="noopener noreffer ">MightyText</a> is a free app that can be downloaded via the Play Store. The setup is straightforward: it will &ldquo;only&rdquo; ask you to give access to your Google account from the phone, and the same thing on your computer. So that both your devices all linked together thanks to this common account.</p>
 <p>On your computer, MightyText can be accessed from various ways :</p>
 <ul>
 <li>From a webpage : meaning it will run on any computer that can run a web browser ;</li>
@@ -64,7 +64,7 @@
 Yes, you can customize this by visiting the MightyText web app &ndash; Phone tab &ndash; Apps section. Let us know if that works for you.</p>
 <p>This led me to check another well known player: Pushbullet.</p>
 <h2 id="pushbullet">Pushbullet</h2>
-<p><a href="https://www.pushbullet.com/" target="_blank" rel="noopener noreferrer">Pushbullet</a> configuration works almost the same way than MightyText does. You need to give access to your Google account to all devices that you want to be linked together. However, it supports both Google and Facebook accounts, while MightyText only supports Google accounts.</p>
+<p><a href="https://www.pushbullet.com/" target="_blank" rel="noopener noreffer ">Pushbullet</a> configuration works almost the same way than MightyText does. You need to give access to your Google account to all devices that you want to be linked together. However, it supports both Google and Facebook accounts, while MightyText only supports Google accounts.</p>
 <p>Once again, when the app is installed on your mobile phone, you can access it from your desktop as follows:</p>
 <ul>
 <li>From a webpage : meaning it will run on any computer that can run a web browser ;</li>
@@ -77,15 +77,15 @@ Yes, you can customize this by visiting the MightyText web app &ndash; Phone tab
 <p>This is the main usage for these two apps, and it works well&hellip; most of the time!</p>
 <p>About 95% of the time, it &ldquo;just works&rdquo;. You receive a desktop notification about a new text. Just click on it, it will open the message and you can directly reply to it. Contact names appears the same way they would on your phone. If you want to create a new message, just select your contact&rsquo;s name inside the browser extension (for example) to write your text. Send, it! Done.</p>
 <p>Then, 5% of the time&hellip; the message will stay &ldquo;stuck&rdquo; on your computer and won&rsquo;t be relayed to you phone, hence they won&rsquo;t be sent. At the time of writing, it only happened to me when I killed the app on phone (beware with the &ldquo;kill all&rdquo; function of Android phones). In those case, I just started the app again on the phone, and it fixed it.<br>
-There could also be issues with battery management where the phone puts the app to sleep in order to reduce battery usage. If you have issues about not being able to send SMS after some time, then <a href="http://www.techrepublic.com/article/how-to-remove-android-apps-from-the-battery-optimization-list/" target="_blank" rel="noopener noreferrer">make sure that Android no longer optimize the battery</a> for this app.</p>
+There could also be issues with battery management where the phone puts the app to sleep in order to reduce battery usage. If you have issues about not being able to send SMS after some time, then <a href="http://www.techrepublic.com/article/how-to-remove-android-apps-from-the-battery-optimization-list/" target="_blank" rel="noopener noreffer ">make sure that Android no longer optimize the battery</a> for this app.</p>
 <p>Last but not least, all the messages sent / received from the computer will continue to appear in your default messages app, just like if you sent them from the phone.</p>
 <h2 id="closing-words-and-a-few-other-alternatives">Closing words and a few other alternatives</h2>
 <p>As we have seen those apps can be very handy, especially if you hate using touchscreen. It is also a good way to synchronize your phone and computer and remove extra app on the desktop, close a few browser tabs, etc.</p>
 <p>In my opinion, the fact that Pushbullet offers browser extensions for all the major browsers is a great plus! Moreover, I feel it easier to navigate in the app, find what you are looking for, and tweak it (ie. the notification thingy). In a few words, we could say that Pushbullet is more basic, maybe even less &ldquo;bloated&rdquo;. Like I didn&rsquo;t see any ads in Pushbullet, while I see some using MightyText webpage.</p>
-<p>Now, if you want to follow that road but feel to restricted by those 2 apps, you can also have a look a few other alternatives such as <a href="https://joaoapps.com/join-sms-from-anything-with-a-browser/" target="_blank" rel="noopener noreferrer">Join</a> or <a href="https://play.google.com/store/apps/details?id=xyz.klinker.messenger&amp;hl=en" target="_blank" rel="noopener noreferrer">Pulse</a>. They look like pretty strong competitors as well.</p>
+<p>Now, if you want to follow that road but feel to restricted by those 2 apps, you can also have a look a few other alternatives such as <a href="https://joaoapps.com/join-sms-from-anything-with-a-browser/" target="_blank" rel="noopener noreffer ">Join</a> or <a href="https://play.google.com/store/apps/details?id=xyz.klinker.messenger&amp;hl=en" target="_blank" rel="noopener noreffer ">Pulse</a>. They look like pretty strong competitors as well.</p>
 <p>I hope you enjoyed this article and that it might have helped you. Better yet, given you faith again in your texting business!</p>
 <p>Do not hesitate to let me know if you use any other similar app, most especially if you love it.</p>
-]]></description></item><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Accessing the BIOS</title><link>https://www.masoopy.com/accessing-the-bios/</link><pubDate>Sat, 16 Sep 2017 10:44:13 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/accessing-the-bios/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/bios.png" referrerpolicy="no-referrer">
             </div><p>In this quick guide, let&rsquo;s see how to access the BIOS of any system.</p>
 <h2 id="what-is-the-bios">What is the BIOS?</h2>
@@ -101,20 +101,20 @@ There could also be issues with battery management where the phone puts the app 
 <li><code>F2</code></li>
 </ul>
 <p>For the most common ones.</p>
-<p>If you only need to access the BIOS in order to <a href="https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/" target="_blank" rel="noopener noreferrer">boot of an USB disk</a> (for example), give a try to the &ldquo;boot menu&rdquo; by mashing one of the following keys:</p>
+<p>If you only need to access the BIOS in order to <a href="https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/" target="_blank" rel="noopener noreffer ">boot of an USB disk</a> (for example), give a try to the &ldquo;boot menu&rdquo; by mashing one of the following keys:</p>
 <ul>
 <li><code>F11</code></li>
 <li><code>F22</code></li>
 </ul>
 <p>I hope this quick guide helped you, and if you know other tricks, to access the BIOS, please share them in the comments.</p>
-]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>How to burn an iso file to USB stick</title><link>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</link><pubDate>Thu, 14 Sep 2017 06:52:00 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/how-to-burn-an-iso-file-to-usb-stick/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/burn_iso_2_usb.png" referrerpolicy="no-referrer">
             </div><p>Let&rsquo;s see how to &ldquo;burn&rdquo; an image file (or .iso file) to an USB stick and make it bootable.</p>
 <p><strong>NB: please note that in every case, all the data on your USB stick will be erased!!</strong></p>
 <h2 id="windows">Windows</h2>
-<p>Under Windows, simply download, install and run <a href="https://rufus.akeo.ie/" target="_blank" rel="noopener noreferrer">Rufus</a>. Then follow the on-screen instructions.</p>
+<p>Under Windows, simply download, install and run <a href="https://rufus.akeo.ie/" target="_blank" rel="noopener noreffer ">Rufus</a>. Then follow the on-screen instructions.</p>
 <h2 id="macos">Macos</h2>
-<p>Much like Windows, on Macos, you can use a tool called <a href="https://etcher.io/" target="_blank" rel="noopener noreferrer">Etcher</a> and follow the on-screen instructions.</p>
+<p>Much like Windows, on Macos, you can use a tool called <a href="https://etcher.io/" target="_blank" rel="noopener noreffer ">Etcher</a> and follow the on-screen instructions.</p>
 <h2 id="linux">Linux</h2>
 <p>Now, it becomes a little harder / funnier. You have two main solutions:</p>
 <ul>
@@ -160,13 +160,13 @@ There could also be issues with battery management where the phone puts the app 
 <p><code>sudo umount /path/of/usb</code></p>
 <p>and again, replace it with the correct value.</p>
 <p>Once, you have access to command line again, that&rsquo;s done. You can remove your USB stick.</p>
-]]></description></item><item><title>How to create a bootable Windows 10 USB stick</title><link>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</link><pubDate>Fri, 08 Sep 2017 16:05:45 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>How to create a bootable Windows 10 USB stick</title><link>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</link><pubDate>Fri, 08 Sep 2017 16:05:45 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/how-to-create-a-bootable-windows-10-usb-stick/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/boot_usb_win_10.png" referrerpolicy="no-referrer">
             </div><p>Maybe you bought a new computer and reinstall it from scratch, or maybe you plan to sell your current computer, or maybe you just want to install Windows 10 as a new OS. In Any case, creating a bootable Windows USB stick will allow you to do so.</p>
 <h2 id="it-could-be-harder">It could be harder</h2>
 <p>This might sound scary, but it as actually very easy. However, please note that, for this method to work you&rsquo;ll need to proceed from a Windows 10 computer.</p>
 <ol>
-<li>From you Windows 10 computer, grab the <a href="https://go.microsoft.com/fwlink/p/?LinkId=616447" target="_blank" rel="noopener noreferrer">Windows Media Creation tool</a> at Microsoft&rsquo;s website (should be the second link on the page) ;</li>
+<li>From you Windows 10 computer, grab the <a href="https://go.microsoft.com/fwlink/p/?LinkId=616447" target="_blank" rel="noopener noreffer ">Windows Media Creation tool</a> at Microsoft&rsquo;s website (should be the second link on the page) ;</li>
 <li>Plug-in the USB stick ;</li>
 <li>Run the Media Creation Tool ;</li>
 <li>When prompted, select the USB stick you inserted ;</li>
@@ -177,7 +177,7 @@ There could also be issues with battery management where the phone puts the app 
 <p>Now, in order to use it, just plug-in the USB stick into your turned off computer, and turn it on.</p>
 <p>You&rsquo;ll probably have to go into the &ldquo;boot menu&rdquo;, generally by pressing F11 or F12 during the boot. If this doesn&rsquo;t work, have a look at your Bios settings (Boot section), by pressing DEL or F2 while the computer boots (before Windows lading logo).</p>
 <p>Don&rsquo;t hesitate to share your thoughts!</p>
-]]></description></item><item><title>Automatically run Kodi at boot</title><link>https://www.masoopy.com/automatically-run-kodi-at-boot/</link><pubDate>Tue, 29 Aug 2017 09:49:06 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/automatically-run-kodi-at-boot/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Automatically run Kodi at boot</title><link>https://www.masoopy.com/automatically-run-kodi-at-boot/</link><pubDate>Tue, 29 Aug 2017 09:49:06 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/automatically-run-kodi-at-boot/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/kodi.png" referrerpolicy="no-referrer">
             </div><p>You have some hardware dedicated to Kodi and wish to create a “clean” media center solution hooked to your TV? Great idea! Find out how to automatically run Kodi at boot on any platform.</p>
 <h2 id="automatically-run-kodi-at-boot-with-windows">Automatically run Kodi at boot with Windows</h2>

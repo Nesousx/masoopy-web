@@ -1,13 +1,13 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>macos - Category - Masoopy</title><link>https://www.masoopy.com/categories/macos/</link><description>macos - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 21 Sep 2017 11:12:57 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/categories/macos/" rel="self" type="application/rss+xml"/><item><title>Sending text messages from your computer</title><link>https://www.masoopy.com/sending-text-messages-from-your-computer/</link><pubDate>Thu, 21 Sep 2017 11:12:57 +0200</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/sending-text-messages-from-your-computer/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>macos - Category - Masoopy</title><link>https://www.masoopy.com/categories/macos/</link><description>macos - Category - Masoopy</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 21 Sep 2017 11:12:57 +0200</lastBuildDate><atom:link href="https://www.masoopy.com/categories/macos/" rel="self" type="application/rss+xml"/><item><title>Sending text messages from your computer</title><link>https://www.masoopy.com/sending-text-messages-from-your-computer/</link><pubDate>Thu, 21 Sep 2017 11:12:57 +0200</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/sending-text-messages-from-your-computer/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/send_text_from_pc.png" referrerpolicy="no-referrer">
             </div><p>Do you hate touchscreen? I sure do! More than touchscreen, I hate when I have to write something using a touch screen. This is why, I have been trying and using different solutions that allows me to send text messages from my computer with a real (mechanical) keyboard!</p>
 <h2 id="foreword">Foreword</h2>
 <p>Please note that this guide is based on Android phones and is desktop &ldquo;OS&rdquo; agnostic.</p>
-<p>If you are using Apple phones and computers, then <a href="https://support.apple.com/en-us/HT202549" target="_blank" rel="noopener noreferrer">have a look here</a>.</p>
-<p>Under Windows Phone, check what <a href="https://pureinfotech.com/how-send-sms-texts-using-cortana-windows-10-pc/" target="_blank" rel="noopener noreferrer">Cortana can do for you</a>.</p>
+<p>If you are using Apple phones and computers, then <a href="https://support.apple.com/en-us/HT202549" target="_blank" rel="noopener noreffer ">have a look here</a>.</p>
+<p>Under Windows Phone, check what <a href="https://pureinfotech.com/how-send-sms-texts-using-cortana-windows-10-pc/" target="_blank" rel="noopener noreffer ">Cortana can do for you</a>.</p>
 <p>However, some apps I am talking about are also probably working on Apple and/or Windows phones. Be sure to check your app store!</p>
 <h2 id="mightytext">MightyText</h2>
-<p><a href="https://mightytext.net/install" target="_blank" rel="noopener noreferrer">MightyText</a> is a free app that can be downloaded via the Play Store. The setup is straightforward: it will &ldquo;only&rdquo; ask you to give access to your Google account from the phone, and the same thing on your computer. So that both your devices all linked together thanks to this common account.</p>
+<p><a href="https://mightytext.net/install" target="_blank" rel="noopener noreffer ">MightyText</a> is a free app that can be downloaded via the Play Store. The setup is straightforward: it will &ldquo;only&rdquo; ask you to give access to your Google account from the phone, and the same thing on your computer. So that both your devices all linked together thanks to this common account.</p>
 <p>On your computer, MightyText can be accessed from various ways :</p>
 <ul>
 <li>From a webpage : meaning it will run on any computer that can run a web browser ;</li>
@@ -22,7 +22,7 @@
 Yes, you can customize this by visiting the MightyText web app &ndash; Phone tab &ndash; Apps section. Let us know if that works for you.</p>
 <p>This led me to check another well known player: Pushbullet.</p>
 <h2 id="pushbullet">Pushbullet</h2>
-<p><a href="https://www.pushbullet.com/" target="_blank" rel="noopener noreferrer">Pushbullet</a> configuration works almost the same way than MightyText does. You need to give access to your Google account to all devices that you want to be linked together. However, it supports both Google and Facebook accounts, while MightyText only supports Google accounts.</p>
+<p><a href="https://www.pushbullet.com/" target="_blank" rel="noopener noreffer ">Pushbullet</a> configuration works almost the same way than MightyText does. You need to give access to your Google account to all devices that you want to be linked together. However, it supports both Google and Facebook accounts, while MightyText only supports Google accounts.</p>
 <p>Once again, when the app is installed on your mobile phone, you can access it from your desktop as follows:</p>
 <ul>
 <li>From a webpage : meaning it will run on any computer that can run a web browser ;</li>
@@ -35,21 +35,21 @@ Yes, you can customize this by visiting the MightyText web app &ndash; Phone tab
 <p>This is the main usage for these two apps, and it works well&hellip; most of the time!</p>
 <p>About 95% of the time, it &ldquo;just works&rdquo;. You receive a desktop notification about a new text. Just click on it, it will open the message and you can directly reply to it. Contact names appears the same way they would on your phone. If you want to create a new message, just select your contact&rsquo;s name inside the browser extension (for example) to write your text. Send, it! Done.</p>
 <p>Then, 5% of the time&hellip; the message will stay &ldquo;stuck&rdquo; on your computer and won&rsquo;t be relayed to you phone, hence they won&rsquo;t be sent. At the time of writing, it only happened to me when I killed the app on phone (beware with the &ldquo;kill all&rdquo; function of Android phones). In those case, I just started the app again on the phone, and it fixed it.<br>
-There could also be issues with battery management where the phone puts the app to sleep in order to reduce battery usage. If you have issues about not being able to send SMS after some time, then <a href="http://www.techrepublic.com/article/how-to-remove-android-apps-from-the-battery-optimization-list/" target="_blank" rel="noopener noreferrer">make sure that Android no longer optimize the battery</a> for this app.</p>
+There could also be issues with battery management where the phone puts the app to sleep in order to reduce battery usage. If you have issues about not being able to send SMS after some time, then <a href="http://www.techrepublic.com/article/how-to-remove-android-apps-from-the-battery-optimization-list/" target="_blank" rel="noopener noreffer ">make sure that Android no longer optimize the battery</a> for this app.</p>
 <p>Last but not least, all the messages sent / received from the computer will continue to appear in your default messages app, just like if you sent them from the phone.</p>
 <h2 id="closing-words-and-a-few-other-alternatives">Closing words and a few other alternatives</h2>
 <p>As we have seen those apps can be very handy, especially if you hate using touchscreen. It is also a good way to synchronize your phone and computer and remove extra app on the desktop, close a few browser tabs, etc.</p>
 <p>In my opinion, the fact that Pushbullet offers browser extensions for all the major browsers is a great plus! Moreover, I feel it easier to navigate in the app, find what you are looking for, and tweak it (ie. the notification thingy). In a few words, we could say that Pushbullet is more basic, maybe even less &ldquo;bloated&rdquo;. Like I didn&rsquo;t see any ads in Pushbullet, while I see some using MightyText webpage.</p>
-<p>Now, if you want to follow that road but feel to restricted by those 2 apps, you can also have a look a few other alternatives such as <a href="https://joaoapps.com/join-sms-from-anything-with-a-browser/" target="_blank" rel="noopener noreferrer">Join</a> or <a href="https://play.google.com/store/apps/details?id=xyz.klinker.messenger&amp;hl=en" target="_blank" rel="noopener noreferrer">Pulse</a>. They look like pretty strong competitors as well.</p>
+<p>Now, if you want to follow that road but feel to restricted by those 2 apps, you can also have a look a few other alternatives such as <a href="https://joaoapps.com/join-sms-from-anything-with-a-browser/" target="_blank" rel="noopener noreffer ">Join</a> or <a href="https://play.google.com/store/apps/details?id=xyz.klinker.messenger&amp;hl=en" target="_blank" rel="noopener noreffer ">Pulse</a>. They look like pretty strong competitors as well.</p>
 <p>I hope you enjoyed this article and that it might have helped you. Better yet, given you faith again in your texting business!</p>
 <p>Do not hesitate to let me know if you use any other similar app, most especially if you love it.</p>
-]]></description></item><item><title>Install Kodi on macOS</title><link>https://www.masoopy.com/install-kodi-on-macos/</link><pubDate>Thu, 12 Jan 2017 16:56:52 +0100</pubDate><dc:creator>Denis G.</dc:creator><guid>https://www.masoopy.com/install-kodi-on-macos/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>Install Kodi on macOS</title><link>https://www.masoopy.com/install-kodi-on-macos/</link><pubDate>Thu, 12 Jan 2017 16:56:52 +0100</pubDate><author>Denis G.</author><guid>https://www.masoopy.com/install-kodi-on-macos/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/2021/02/instll_kodi_macos.png" referrerpolicy="no-referrer">
             </div><p>Have a Mac? Want to enjoy the current best media center? Follow our guide and install Kodi on macOS!</p>
 <h2 id="install-kodi-on-macos">Install Kodi on macOS</h2>
 <p>Don’t worry, this is easy as pie!</p>
 <ul>
-<li>Browse to <a href="https://kodi.tv/download/" target="_blank" rel="noopener noreferrer">Kodi official website</a>.</li>
+<li>Browse to <a href="https://kodi.tv/download/" target="_blank" rel="noopener noreffer ">Kodi official website</a>.</li>
 <li>Scroll down to “Current release” and select the Mac OS X installer. Download it :</li>
 </ul>
 <p></p>
