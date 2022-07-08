@@ -1,6 +1,6 @@
 baseURL = "https://www.masoopy.com/"
 defaultContentLanguage = 'en'
-theme = "LoveIt"
+theme = "loveit"
 enableRobotsTXT = true
 rssLimit = 10
 
